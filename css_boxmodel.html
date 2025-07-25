@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/css_boxmodel.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>CSS Box Model</h1>
+        <p>
+          Das CSS-Boxmodell beschreibt, wie Browser Elemente auf einer Webseite
+          darstellen, indem sie jedes Element als rechteckige Box behandeln.
+          Diese Box besteht aus vier Teilen: Inhalt, Innenabstand (padding),
+          Rahmen (border) und Außenabstand (margin). Jedes dieser Elemente trägt
+          zur Größe und Positionierung der Box bei.
+        </p>
+        <section class="boxsizing">
+          <h2>Box-Sizing: border-box</h2>
+          <p>
+            Der Wert border-box der CSS-Eigenschaft box-sizing entspricht direkt
+            der insgesamt gerenderten Größe eines Elements – einschließlich
+            Padding (Innenabstand) und Border (Rahmen) – in Verbindung mit den
+            Höhe- und Breitenangaben. Der Standardwert der Eigenschaft
+            box-sizing ist content-box. Der Wert border-box wird empfohlen, wenn
+            es notwendig ist, Padding und Rahmen mit anzupassen, nicht aber nur
+            den Inhalt. Zum Beispiel berechnet der Wert border-box die Höhe
+            eines Elements wie folgt: Höhe = Inhaltshöhe + Padding + Rahmen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspboxsizing">
+            .container&lbrace;<br />
+            &nbsp;&nbsp;box-sizing: border-box;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="minmax">
+          <h2>Höhe und Breite - Min/Max</h2>
+          <p>
+            Die CSS-Eigenschaften min-width und min-height können verwendet
+            werden, um eine minimale Breite und minimale Höhe eines
+            Element-Containers festzulegen. Die Eigenschaften max-width und
+            max-height können verwendet werden, um maximale Breiten und Höhen
+            für Element-Boxen zu definieren.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspminmax">
+            (Trotz des Breitenwerts 500px wird diese Box maximal 200px breit
+            sein.) <br /><br />
+            .column&lbrace;<br />
+            &nbsp;&nbsp;max-width: 200px;<br />
+            &nbsp;&nbsp;width: 500px;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="margincol">
+          <h2>Margin Collapse</h2>
+          <p>
+            CSS Margin Collapse (Zusammenfallen von Rändern) tritt auf, wenn die
+            oberen und unteren Außenabstände (Margins) von Blockelementen zu
+            einem einzigen Abstand zusammengefasst werden, der dem größten
+            einzelnen Margin-Wert entspricht. Margin Collapse tritt nur bei
+            vertikalen Rändern auf, nicht bei horizontalen. <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspcolapse">
+            (Statt einem Abstand von 50px, entsteht hier ein Abstand von 30px)
+            <br /><br />
+            .block-one&lbrace;<br />
+            &nbsp;&nbsp;margin: 20px;<br />
+            &rbarr;
+            <br /><br />
+            .block-two&lbrace;<br />
+            &nbsp;&nbsp;margin: 30px;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="autokey">
+          <h2>auto Keyword</h2>
+          <p>
+            Der Wert auto kann zusammen mit der CSS-Eigenschaft margin verwendet
+            werden, um ein Element horizontal innerhalb seines Containers zu
+            zentrieren. Die margin-Eigenschaft berücksichtigt dabei die Breite
+            des Elements und verteilt den restlichen verfügbaren Platz
+            gleichmäßig auf den linken und rechten Außenabstand. <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspauto">
+            Div&lbrace;<br />
+            &nbsp;&nbsp;margin: auto;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="overflow">
+          <h2>Dealing with overflow</h2>
+          <p>
+            Wenn der Inhalt zu groß für seinen Container ist, legt die
+            CSS-Eigenschaft overflow fest, wie der Browser mit diesem Problem
+            umgeht. Standardmäßig ist der Wert auf visible gesetzt, wodurch der
+            Inhalt zusätzlichen Platz einnimmt. Alternativ kann overflow auf
+            hidden gesetzt werden, um den überlaufenden Inhalt auszublenden,
+            oder auf scroll, wodurch der überlaufende Inhalt über Scrollleisten
+            innerhalb des ursprünglichen Containers zugänglich gemacht wird.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspoverflow">
+            .small-block&lbrace;<br />
+            &nbsp;&nbsp;overflow: scroll;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="visibility">
+          <h2>The visibility Property</h2>
+          <p>
+            Die CSS-Eigenschaft visibility wird verwendet, um versteckte
+            Elemente für den Benutzer unsichtbar zu machen, ohne sie von der
+            Seite zu entfernen. Dadurch bleibt die Struktur und Organisation der
+            Seite unverändert.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspvisibility">
+            .invisible-elements&lbrace;<br />
+            &nbsp;&nbsp;visibility: hidden;<br />
+            &rbrace;
+          </code>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

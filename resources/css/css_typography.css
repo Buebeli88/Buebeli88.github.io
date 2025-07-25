@@ -1,0 +1,40 @@
+h2, h3, h4, h5, h6 {
+    border-top: 2px solid rgb(47, 125, 189);
+}
+
+.bspfam {
+    width: 45%;
+}
+
+.bspfam1, .bspfam2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspfam2 {
+    float: right;
+    font-family: "Times New Roman";
+}
+
+.bspfam3, .bspfam4 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspfam4 {
+    float: right;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.bspweight1, .bspweight2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspweight2 {
+    float: right;
+}
+
+.bspweight3 {
+    font-weight: 700;
+}

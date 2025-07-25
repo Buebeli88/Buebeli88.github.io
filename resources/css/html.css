@@ -1,0 +1,167 @@
+h2, h3, h4, h5, h6 {
+    border-top: 2px solid rgb(47, 125, 189);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.h1element {
+    color: black;
+}
+
+.bspelement1, .bspelement2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspelement2 {
+    float: right;
+}
+
+.bspwhitespace1, .bspwhitespace2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspwhitespace2 {
+    float: right;
+}
+
+.bsplinebreak1, .bsplinebreak2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsplinebreak2 {
+    float: right;
+}
+
+.bspstrong1, .bspstrong2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspstrong2 {
+    float: right;
+}
+
+.bspemphasis1, .bspemphasis2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspemphasis2 {
+    float: right;
+}
+
+.bsplist1, .bsplist2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsplist2 {
+    float: right;
+}
+
+.bspol1, .bspol2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspol2 {
+    float: right;
+}
+
+.bspul1, .bspul2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspul2 {
+    float: right;
+}
+
+.bspimage1, .bspimage2 {
+    display: inline-block;
+    width: 45%;
+    height: 12.5rem;
+}
+
+.bspimage2 {
+    float: right;
+}
+
+.bspvideo1, .bspvideo2 {
+    display: inline-block;
+    width: 45%;
+    height: 19.5rem;
+}
+
+.bspvideo2 {
+    float: right;
+}
+
+.bsphtmlatt1, .bsphtmlatt2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsphtmlatt2 {
+    float: right;
+}
+
+.bspthead1, .bspthead2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspthead2 {
+    float: right;
+}
+
+.bsptbody1, .bsptbody2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsptbody2 {
+    float: right;
+}
+
+.bspth1, .bspth2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspth2 {
+    float: right;
+}
+
+.bsptd1, .bsptd2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsptd2 {
+    float: right;
+}
+
+.bsprow1, .bsprow2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsprow2 {
+    float: right;
+}
+
+.bspcol1, .bspcol2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspcol2 {
+    float: right;
+}

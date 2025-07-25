@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command Lines</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/commandlines.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>Command Lines</h1>
+        <p>
+          Eine Command Line, auch Kommandozeile, Konsole oder Terminal genannt,
+          ist eine textbasierte Schnittstelle, über die ein Benutzer mit einem
+          Computer interagiert, indem er Befehle eingibt. Anstatt eine grafische
+          Benutzeroberfläche (GUI) zu verwenden, werden Befehle direkt in die
+          Zeile eingegeben und vom System ausgeführt.
+        </p>
+        <section class="filesystem">
+          <h2>Filesystem Struktur</h2>
+          <p>
+            Das Dateisystem eines Computers organisiert die vom Computer
+            gespeicherten Daten so, dass sie vom Benutzer leicht abgerufen
+            werden können. Dateien werden in der Regel in einer baumartigen
+            Struktur dargestellt, bei der jedes übergeordnete Verzeichnis eine
+            beliebige Anzahl von untergeordneten Verzeichnissen enthalten kann.
+            Das Wurzelverzeichnis (Root-Verzeichnis) befindet sich dabei an der
+            Basis des Baums.
+          </p>
+        </section>
+        <section class="commandline">
+          <h2>The Command Line</h2>
+          <p>
+            Die Kommandozeile ermöglicht es einem Benutzer, im Dateisystem zu
+            navigieren und eingebaute Programme oder eigene Skripte auszuführen.
+            In Unix wird die Kommandozeilenschnittstelle Bash genannt, und die
+            Eingabeaufforderung (Shell Prompt) ist das $.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspcommandline"> $ </code>
+        </section>
+        <section class="pwd">
+          <h2>Print Working Directory pwd</h2>
+          <p>
+            Der Shell-Befehl `pwd` zeigt den Dateipfad vom Root-Verzeichnis bis
+            zum aktuellen Arbeitsverzeichnis an.
+          </p>
+          <code class="bsppwd">
+            $ pwd <br />
+            /Users/sonny/Downloads
+          </code>
+        </section>
+        <section class="list">
+          <h2>List ls</h2>
+          <p>
+            Der Shell-Befehl ls wird verwendet, um den Inhalt eines
+            Verzeichnisses aufzulisten. Wenn keine Argumente angegeben werden,
+            listet er den Inhalt des aktuellen Arbeitsverzeichnisses auf.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsplist">
+            $ ls <br />
+            Desktop resume.pdf photo.png
+          </code>
+        </section>
+        <section class="changedirectory">
+          <h2>Change Directory cd</h2>
+          <p>
+            Der Shell-Befehl cd wird verwendet, um sich im Dateisystem eines
+            Computers zu bewegen. Er akzeptiert verschiedene Argumente:
+          </p>
+          <ul>
+            <li>Vollständige Dateipfade.</li>
+            <li>Name von Unterverzeichnissen des aktuellen Verzeichnisses.</li>
+            <li>
+              .. das übergeorgnete Verzeichnis des aktuellen Verzeichnisses.
+            </li>
+          </ul>
+          <code class="bspchangedirectory">
+            $ cd some-directory <br />
+            $ cd ../some-directory
+          </code>
+        </section>
+        <section class="mkdir">
+          <h2>Make Directory mkdir</h2>
+          <p>
+            Der Shell-Befehl `mkdir` wird verwendet, um ein neues Verzeichnis im
+            Dateisystem entsprechend seinem Argument zu erstellen. Wird ein
+            Dateipfad angegeben, wird das neue Verzeichnis am Ende dieses Pfads
+            angelegt. Andernfalls wird das neue Verzeichnis im aktuellen
+            Arbeitsverzeichnis erstellt.
+          </p>
+          <code class="bspmkdir">
+            $ mkdir new-directory <br />
+            $ ls <br />
+            old-directory new-directory
+          </code>
+        </section>
+        <section class="touch">
+          <h2>Create New File touch</h2>
+          <p>
+            Der Shell-Befehl touch erstellt eine neue Datei im aktuellen
+            Arbeitsverzeichnis mit dem angegebenen Namen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsptouch">
+            $ touch grocery-list.txt
+          </code>
+        </section>
+        <section class="helper">
+            <h2>Helper Commands</h2>
+            <p>Hilfsbefehle für die Kommandozeile sind unter anderem:</p>
+            <ul>
+                <li>clear, um das Terminal zu löschen</li>
+                <li>tab, um die Eingabe automatisch zu vervollständigen</li>
+                <li>↑ und ↓, um durch vorherige Befehle zu blättern</li>
+            </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
