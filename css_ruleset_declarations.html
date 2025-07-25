@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/css_ruleset_declarations.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>CSS</h1>
+        <p>
+          Cascading Style Sheets (CSS) is used to define styles for your web
+          pages, including the design, layout and variations in display for
+          different devices and screen sizes.
+        </p>
+        <div class="rule_declarations">
+          <h2>CSS Ruleset & Declarations</h2>
+          <p>
+            Ein CSS Ruleset 1 oder mehrere "Selectors" und 1 oder mehrerer
+            "Declarations". Eine "Declaration" ist das "Key-Value" pärchen (Key
+            = Property). Eine "Declaration" wird benutzt um die Individuellen-
+            und Gruppenelementen zu "stylen" und ihnen eine Struktur zu
+            verpassen."Key" und "Value" werden durch ein ":" getrennt und die
+            ganze "Declaration" wird mit einem ";" beendet.
+          </p>
+          <p>Hier sind ein paar Selektoren</p>
+          <ul>
+            <li>Element: &lt;h1&gt;, &lt;p&gt; oder &lt;body&gt;</li>
+            <li>Class: .navigation oder .image wolf</li>
+            <li>ID: #navigation oder #image wolf</li>
+          </ul>
+          <p>Ruleset Format</p>
+          <p>
+            selector &lbrace;<br />
+            property-name: value;<br />
+            &rbrace;
+          </p>
+          <p>
+            CSS Declaration Format <br />
+            property-name: value;
+          </p>
+          <p>Property-name (Key) and Value</p>
+          <p>Beispiel:</p>
+          <div class="bspset1">
+            <p>h1 is the Selector</p>
+            <p>
+              h1 &lbrace;<br />
+              text-align: center;<br />
+              color: purple;<br />
+              width: 100px;<br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="bspset2">
+            <p>HTML & CSS:</p>
+            <p class="pselector">h1 is the selector</p>
+          </div>
+        </div>
+        <div class="comments">
+          <h2>CSS Comments</h2>
+          <p>
+            Wie in einem HTML-Dokument können wir auch hier, Kommentare
+            einfügen. Diese werden weder eine Funktion ausführen noch im Browser
+            sichtbar sein. Üblich zum Dokumentieren des Codes, eine Idee
+            erklärung oder zum festhalten von zukünftigen Ideen. Es sollte
+            vermieden werden die Kommentare zur "Sektionierung" zu verwenden.
+          </p>
+          <p>Beispiel:</p>
+          <p>/* Dieser Teil wird für die Navigation verwendet */</p>
+        </div>
+        <div class="imporant">
+          <h2>!important Rule</h2>
+          <p>
+            !important wird in einer Deklaration verwendet um andere
+            Deklarationen für eine "Property zu überschreiben und ignoriert
+            spezifische Selektoren. Es sollte aber generell vermieden werden die
+            !important Rule zu verwenden.
+          </p>
+        </div>
+        <div class="resourceurl">
+          <h2>Resource URL's</h2>
+          <p>
+            Die "URL ()" Funktion wird genutzt um Resourcen anzugeben, ähnlich
+            dem File Path in HTML. Diese Funktion wird für diverse "Properties"
+            wie z.B. "background-image" verwendet.
+          </p>
+          <p>Beispiel:</p>
+          <p>background-image: url("../resources/image/image.png")</p>
+        </div>
+      </main>
+      <footer>
+        <p class="pfooter">Creator Steven Justice</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Colors</title>
+    <link rel="stylesheet" href="/resources/css/layout.css" />
+    <link rel="stylesheet" href="/resources/css/css_colors.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>CSS Colors</h1>
+        <section class="foreground">
+          <h2>Foreground Color</h2>
+          <p>
+            Dies setzt die Textfarbe auf den gewünschten Wert. Die Farbe kann
+            entweder durch über "Keyword", Hexadecimal, rgb oder HSL gesetzt
+            werden. <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspforeground1">
+            p&lbrace;<br />
+            &nbsp;&nbsp;color: #2a2aff; <br />
+            &rbrace;<br /><br />
+            oder <br /><br />
+            span &lbrace;<br />
+            &nbsp;&nbsp;color: green; <br />
+            &rbrace;
+          </code>
+          <div class="bspforeground2">
+            Dieser "<span class="bspforeground3">Text</span>" wird gefärbt.
+          </div>
+        </section>
+        <section class="backgroundcolor">
+          <h2>Background Color</h2>
+          <p>
+            Dies wird benutzt um die Hintergrundfarbe zu setzen. <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspbackground1">
+            p&lbrace;<br />
+            &nbsp;&nbsp;background-color: blue; <br />
+            &rbrace;
+            <br /><br />
+            oder <br /><br />
+            p&lbrace;<br />
+            &nbsp;&nbsp;background-color: blue; <br />
+            &rbrace;
+          </code>
+          <div class="bspbackground2">
+            <p>Hier wird die Hintergrundfarbe gesetzt</p>
+          </div>
+        </section>
+        <section class="keywords">
+          <h2>Color name Keywords</h2>
+          <p>
+            Um die Farbe zu setzen können Keywords benutzt werden. Darunter
+            versteht man die Namen der Farben. <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspkeywords">
+            h1&lbrace;<br />
+            &nbsp;&nbsp;color: aqua; <br />
+            &rbrace; <br /><br />
+            oder <br /><br />
+            li&lbrace;<br />
+            &nbsp;&nbsp;color: khaki; <br />
+            &rbrace;
+          </code>
+          <div class="bspkeywords1">
+            Dieser "<span class="bspkeywords2">Text</span>" wird gefärbt.
+            <br /><br />
+            oder <br /><br />
+            Dieser "<span class="bspkeywords3">Text</span>" wird gefärbt.
+          </div>
+        </section>
+        <section class="hexadecimal">
+          <h2>Hexadecimal Colors</h2>
+          <p>
+            Farben können auch hexidecimal angegeben werden. Die Werte können in
+            16 verschiedenen "Symbolen" angegeben werden. 0-9 und a-f. Die Farbe
+            besteht aus 3 2er Gruppen, welche für rot, grün und blau stehen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsphexadecimal">
+            .red&lbrace;<br />
+            &nbsp;&nbsp;color: #ff0000; <br />
+            &rbrace; <br /><br />
+            oder <br /><br />
+            &nbsp;&nbsp;.short-blue&lbrace; <br />
+            color: #00f; <br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="opacity">
+          <h2>Opacity</h2>
+          <p>
+            Dieses Element wird benutzt um die "Durchsichtigkeit" des Elements
+            zu setzten. Die reichweite der Einheit geht von 0 (durchsichtig) bis
+            zu 1 (Opaque/volle Sicht).
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspopacity">
+            p&lbrace; <br />
+            &nbsp;&nbsp;opacity: 0.5; <br />
+            &rbrace;
+          </code>
+          <div class="bspopacity1">
+            Dieser Text ist "normal". (opacity 1) <br /><br />
+            und
+            <p class="bspopacity2">
+              Dieser Text ist "halb durchsichtig". (opacity 0.5)
+            </p>
+          </div>
+        </section>
+        <section class="rgb">
+          <h2>rgb() Colors</h2>
+          <p>
+            Farben können mit RBG-Farben angegeben werden, mit der benutzung des
+            "rgb()" Syntax. Die Einheit wird mit 3 "Values" rot, grün und blau
+            repräsentierend gesetzt. Die Grösse geht von 0 zu 255.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsprgb">
+            .hot-pink&lbrace;<br />
+            &nbsp;&nbsp;color: rgb(249, 2, 171); <br />
+            &rbrace;
+            <br /><br />
+            oder
+            <br /><br />
+            .green&lbrace;<br />
+            &nbsp;&nbsp;color: rgb(0, 255, 0); <br />
+            &rbrace;
+          </code>
+          <div class="bsprgb1">
+            Dieser "<span class="bsprgb2">Text</span>" wird gefärbt.
+            <br /><br />
+            oder
+            <br /><br />
+            Dieser "<span class="bsprgb3">Text</span>" wird gefärbt.
+          </div>
+        </section>
+        <section class="hsl">
+          <h2>HSL Colors</h2>
+          <p>
+            Farben können auch mit dem HSL Color System deklariert werden durch
+            den "hsl()" Syntax. Dieser benutzt 3 Einheiten: "hue" (Die Farbe
+            selbst), "saturation" (Die Intensität) und "lightness". Die "hue"
+            Einheit wird mit einer Reichweite von 0-360 angegeben, wärend
+            "saturation" und "lightness" in Prozenten angegeben wird.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsphsl1">
+            .light-blue&lbrace;<br />
+            &nbsp;&nbsp;background-color: hsl(200, 70%, 50%); <br />
+            &rbrace;
+          </code>
+          <div class="bsphsl2">Dieser Text hat eine Hintergrundfarbe.</div>
+        </section>
+        <section class="coloralpha">
+          <h2>Color Alpha Value</h2>
+          <p>
+            Der Alpha Wert bestimmt die Durchsichtigkeit von Farbein in CSS.
+            Dieser Wert kann für RGB und HSL Farben benutz werden, mit dem
+            gebrauch von rgba() und hsla() und gibt beiden Einheiten einen 4ten
+            Wert. Alpha Werte können von 0.0 (komplett Durchsichtig) und 1.0
+            (volle Sicht) varieren. Es kann auch also "transparent" benutzt
+            werden um den gleichen Effekt wie 0.0 zu erziehlen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspalpha1">
+            .midground&lbrace;<br />
+            &nbsp;&nbsp;background-color: rgba(0, 255, 0, 0.5);<br />
+            &rbrace;
+            <br /><br />
+            oder
+            <br /><br />
+            .foreground&lbrace;<br />
+            &nbsp;&nbsp;background-color: hsla(34, 100%, 50%, 0.1);<br />
+            &rbrace;
+            <br /><br />
+            oder
+            <br /><br />
+            .transparent&lbrace;<br />
+            &nbsp;&nbsp;color: transparent;<br />
+            &rbrace;<br><br>
+          </code>
+          <div class="bspalpha2">
+            <span class="bspalpha3"
+              >Dieser Text hat eine Hintergrundfarbe.</span
+            >
+            <br /><br />
+            oder
+            <br /><br />
+            <span class="bspalpha4"
+              >Dieser Text hat eine Hintergrundfarbe.</span
+            >
+            <br /><br />
+            oder
+            <br /><br />
+            Selektiere den Bereich unter diesem Text. <br />
+            <span class="bspalpha5">Dieser Text ist "Transparent"</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+h2, h3, h4, h5, h6 {
+    border-top: 2px solid rgb(47, 125, 189);
+}
+
+.bspforeground1, .bspforeground2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspforeground2 {
+    float: right;
+}
+
+.bspforeground3 {
+    color: green;
+}
+
+.bspbackground1, .bspbackground2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspbackground2 {
+    float: right;
+    background-color: blue;
+    font-weight: bolder;
+    color: white;
+}
+
+.bspkeywords, .bspkeywords1 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspkeywords1 {
+    float: right;
+}
+
+.bspkeywords2 {
+    color: aqua;
+}
+
+.bspkeywords3 {
+    color: khaki;
+}
+
+.opacity {
+    height: 13.5rem;
+}
+
+.bspopacity, .bspopacity1 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspopacity1 {
+    float: right;
+}
+
+.bspopacity2 {
+    opacity: 0.5;
+}
+
+.bsprgb, .bsprgb1 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsprgb1 {
+    float: right;
+}
+
+.bsprgb2 {
+    color: rgb(249, 2, 171);
+}
+
+.bsprgb3 {
+    color: rgb(0,255,0);
+}
+
+.bsphsl1, .bsphsl2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bsphsl2 {
+    float: right;
+    background-color: hsl(200, 70%, 50%);
+}
+
+.bspalpha1, .bspalpha2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.bspalpha2 {
+    float: right;
+}
+
+.bspalpha3 {
+    background-color: rgba(0, 255,0, 0.5);
+}
+
+.bspalpha4 {
+    background-color: hsla(34, 100%, 50%, 0.1);
+}
+
+.bspalpha5 {
+    color: transparent;
+}

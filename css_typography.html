@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/css_typography.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>CSS Typography</h1>
+        <p>
+          Unter CSS Typography versteht man die Anwendung von Cascading Style
+          Sheets (CSS) zur Gestaltung der Typografie, also der Schriftart,
+          Schriftgröße, Schriftstil, Schriftstärke und des Textlayouts auf
+          Webseiten.
+        </p>
+        <div class="fontfamily">
+          <h2>Font Family</h2>
+          <p>
+            Die "Property" font-family wird benutzt um die Schriftart zu setzen.
+            Der Browser muss in der Lage sein den gewählten "Font" auch
+            darzustellen. Der "Font" sollte demnach entweder auf dem Gerät
+            vorhanden sein oder als "web-font" gelinkt werden. Hat ein "Font"
+            Name mehrere Wörter, werden diese in "" Gänsefüschen gehalten.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspfam">
+            <p>
+              Wie man die generelle Schriftart des Dokuments/Browsers setzt.
+            </p>
+            <p>
+              html &lbrace;<br />
+              font-family: Arial;<br />
+              &rbrace;
+            </p>
+            <p>
+              Oder ein Spezifisches Element (Welches die generelle Schriftart
+              überschrieben wird).
+            </p>
+          </div>
+          <div class="bspfam1">
+            <p>
+              h2 &lbrace;<br />
+              font-family: "Times New Roman";<br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="bspfam2">
+            <p>Here's a Text in "Times New Roman"</p>
+          </div>
+          <p>oder</p>
+          <div class="bspfam3">
+            <p>
+              .header &lbrace;<br />
+              font-family: "Franklin Gothic Medium";
+            </p>
+          </div>
+          <div class="bspfam4">
+            <p>Here's a Text in "Franklin Gothic Medium</p>
+          </div>
+        </div>
+        <div class="fontface">
+          <h2>CSS @font-face Rule</h2>
+          <p>
+            Die @font-face Rule ermöglicht das importieren von "external" Fonts
+            direkt ins Stylesheet. Die "Ablage" muss spezifisch in dieser "Rule"
+            angegeben werden. Sie ermöglicht auf das laden von Lokalen Fonts.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            @font-face &lbrace;<br />
+            font-family: Gleegoo;<br />
+            src: url ("../resources/fonts/Gleegoo-Regular.ttf") oder den
+            web-link zu diesem "Font"<br />
+            format ("truetype");
+          </p>
+        </div>
+        <div class="linkingfonts">
+          <h2>CSS Linking Fonts</h2>
+          <p>
+            Durch "Linking Fonts" ist es möglich der Seite einen WebFont für
+            dein Dokument zu geben. Diese Fonts werden durch einen &lt;link&gt;
+            Tag im HTML Dokument im &lt;head&gt; eingefügt. Soblad die URL im
+            "href" Attribut ist, kann dieser Font benutzt werden.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsplinkingf">
+            &lt;head&gt;<br />
+            &nbsp;&nbsp;&lt;link
+            href="https://fonts.googleapis.com/css?family=Droid%20Serif"
+            rel="stylesheet"&gt;<br />
+            &lt;/head&gt;
+          </div>
+          <div class="fallbackfonts">
+            <h2>CSS Fallback Fonts</h2>
+            <p>
+              Es ist sinnvoll beim setzen einer Font-Family auch "Fallback
+              Fonts" zu setzen. Diese werden benutzt, wenn der "Haupt-Font" vom
+              Browser nicht geladen werden kann. In der Font-Family sind alle
+              Fonts hinter dem ersten ein "Fallback Font". Zudem sollte als
+              letzer "Fallback Font" ein "serif" oder "sans-serif" gesetzt
+              werden.
+            </p>
+            <p>Beispiel:</p>
+            <div class="bspfallbackf">
+              <p>
+                p &lbrace;<br />
+                font-family: Helvetica, Arial, serif;<br />
+                &rbrace;
+              </p>
+            </div>
+          </div>
+          <div class="fontsize">
+            <h2>Font-Size</h2>
+            <p>
+              Die "Font Size" gibt an wie gross der ausgewählte Text dargestellt
+              werden soll. Dafür können verschiedene Einheigen benutzt werden.
+              <br /><br />
+              Übliche Einheiten: <br />
+              px, em und rem
+            </p>
+            <p>Beispiel:</p>
+            <p>
+              p &lbrace;<br />
+              font-size: 1rem; <br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="unitem">
+            <h2>Unit em</h2>
+            <p>
+              In CSS wird die Einheit em benutzt um die Relative grösse des
+              Kontents darzustellen. 1 em Einheit representiert die "Base Font
+              Size" des aktuellen Elements. Im Beispielcode wird die Textgrösse
+              im &lt;span&gt; Element 15px gross sein.
+            </p>
+            <p>Beispiel:</p>
+            <p>
+              .nav-container &lbrace;<br />
+              font-size: 10px; <br />
+              &rbrace;<br /><br />
+              .nav-bontainer span &lbrace;<br />font-size: 1.5em; (10 x 1.5 =
+              15px) <br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="unitrem">
+            <h2>Unit rem</h2>
+            <p>
+              Die Einheit rem wird benutzt umd die Grösse im Verhältnis zum
+              "Root"Element zu setzen, welche im &lt;html&gt; gesetzt wird.
+            </p>
+            <p>Beispiel:</p>
+            html &lbrace;<br />
+            font-size: 18px; <br />
+            &rbrace;<br />
+            <br />
+            span &lbrace;<br />
+            font-size: 2rem; (18 x 2 = 36px) <br />
+            &rbrace;
+          </div>
+          <div class="fontweight">
+            <h2>font-weight Property</h2>
+            <p>
+              Das "Font Weight" bestimmt wie dick oder dünn ein Text dargestellt
+              werden soll. Dies kann durch Zahlen von 100 bis 900 in 100er
+              Schritten dargestellt werden, Oder auch durch Text wie "Bold",
+              "Bolder". Bold entspricht einem Wert von 400 und Bolder von 700.
+            </p>
+            <p>Beispiel:</p>
+            <div class="bspweight">
+              <div class="bspweight1">
+                <p>
+                  p&lbrace;<br />
+                  font-weight: 700; <br />
+                  &rbrace; <br /><br />
+                  oder <br /><br />
+                  p&lbrace;<br />
+                  font-weight: bolder; <br />
+                  &rbrace;
+                </p>
+              </div>
+              <div class="bspweight2">
+                <p>
+                  Dieser "<span class="bspweight3">Text</span>" wird dicker.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="textalign">
+            <h2>Text Align</h2>
+            <p>
+              Dies wird genutzt um die Ausrichtung des Textes zu bestimmen. Es
+              kann left, right oder center ausgewählt werden.
+            </p>
+            <p>Beispiel:</p>
+            <p>
+              p&lbrace;<br />
+              text-alignt: right; <br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="fontstyle">
+            <h2>font-style Property</h2>
+            <p>
+              Dies entscheidet den Style des gewählten Textes und kann auf
+              "italic" gesetzt sein. (Gleich die &lt;em&gt; in HTML)
+            </p>
+            <p>Beispiel:</p>
+            <p>
+              p&lbrace;<br />
+              font-style: italic; <br />
+              &rbrace;
+            </p>
+          </div>
+          <div class="lineheight">
+            <h2>line-height Property</h2>
+            <p>
+              Die "line-heigt" gibt an, wieviel Platz zwischen den Textlinien
+              dargestellt wird. Es können Zahlen mit oder ohne Einheiten
+              verwendet werden. Die benutzten Einheiten sind px, %, em und rem.
+              Der angegebene Wert kann nie negativ sein.
+            </p>
+            <p>Beispiel:</p>
+            <p>
+              p&lbrace;<br />
+              line-height: 10px; <br />
+              &rbrace;
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

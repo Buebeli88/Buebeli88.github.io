@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/html.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>HTML</h1>
+        <p>
+          HTML (Hyper Text Markup Language) wird benutzt, um einer Webseite
+          Inhalte zu geben und einem Webbrowser eine Struktur zu verpassen.
+        </p>
+        <div class="elementcontent">
+          <h2>Element Content</h2>
+          <p>
+            Der Inhalt (Content) eines HTML Elements ist die Information
+            zwischen dem Öffnungs- (opening tag) und dem Endtag (closing tag)
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspelement">
+            <div class="bspelement1">
+              <p>Code:</p>
+              <p>
+                &lt;h1&gt;Codeacademy is awesome!&lt;/h1&gt;<br />
+                Hier ist "Codeacademy is awesome!" der Inhalt
+              </p>
+            </div>
+            <div class="bspelement2">
+              <p>HTML:</p>
+              <h1 class="h1element">Codeacademy is awesom!</h1>
+            </div>
+          </div>
+        </div>
+        <div class="openingtag">
+          <h2>Opening Tag</h2>
+          <p>
+            Der Syntax eines "Opening Tag" ist ein «Kleiner als» gefolgt vom
+            Elementnamen und einem "Grösser als".
+          </p>
+          <p>Beispiel:</p>
+          <p>&lt;div&gt;</p>
+        </div>
+        <div class="closingtag">
+          <h2>Closing Tag</h2>
+          <p>
+            Ein "Closing Tag" wird benutzt, um das ende eines HTML Elements
+            anzugeben. Der Syntax eines «Closing Tag» ist ein "Kleiner als"
+            gefolgt von einem "Slash", dem Elementnamen und einem "Grösser als".
+          </p>
+          <p>Beispiel:</p>
+          <p>&lt;body&gt;<br />|<br />&lt;/body&gt;</p>
+        </div>
+        <div class="documenttypedeclaration">
+          <h2>Document Type Declaration</h2>
+          <p>
+            Die erste Linie in einem HTML Dokument muss immer mit &lt;!DOCTYPE
+            html&gt; deviniert sein. Diese Deklaration sagt dem Webbrowser was
+            für eine Art von Dokument zu erwarten ist. In diesem Falle ein HTML5
+            Dokument.
+          </p>
+          <p>Beispiel:</p>
+          <p>&lt;!DOCTYPE html&gt;</p>
+        </div>
+        <div class="htmlstruktur">
+          <h2>HTML Struktur</h2>
+          <p>
+            HTML hat eine Familienbaumstruktur. Ein Element kann Eltern,
+            Grosseltern, Geschwister, Kinder, Enkelkinder, etc. haben.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&lt;div&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;It's div's child and body's
+            grandschilde&lt;/h1&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;It's h1's sibling&lt;/h2&gt;<br />
+            &nbsp;&nbsp;&lt;/div&gt;<br />
+            &lt;/body&gt;
+          </p>
+        </div>
+        <div class="comments">
+          <h2>Comments</h2>
+          <p>
+            Kommentare werden vom Webbrower nicht dargestellt und sind nur im
+            HTML Dokument selbst sichtbar. Sie können einen Abschnitt
+            beschreiben, Gedanken/Ideen festhalten oder Zukünftige Arbeiten
+            aufzeigen. Ein Kommentar kann nur eine einzige Linie benutzen aber
+            auch mehrere.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;!-- Main Site Content --&gt;<br />&lt;div&gt;Content&lt;/div&gt;
+          </p>
+          <p>oder</p>
+          <p>
+            &lt;!--<br />
+            Comments can be <br />Multiple lines long.<br />--&gt;
+          </p>
+        </div>
+        <div class="whitespace">
+          <h2>Whitespace</h2>
+          <p>
+            Als Whitespace werden Tabs, Leerschläge und Zeichenumbrüche
+            bezeichnet. Diese werden in der Darstellung des Webbrowsers
+            ignoriert und dienen hauptsächlich zur Strukturierung des HTML/CSS
+            Dokuments.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspwhitespace">
+            <div class="bspwhitespace1">
+              <p>Code:</p>
+              <p>&lt;p&gt;Test Paragraph&lt;/p&gt;</p>
+              <p>
+                &lt;!-- Der "Whitespace" der über und unter dieser Zeile ist,
+                wird vom Browser ignoriert --&gt;
+              </p>
+              <p>
+                &lt;p&gt;Another Test Paragraph, this will sit right under the
+                first Paragraph, no extra space between.
+              </p>
+            </div>
+            <div class="bspwhitespace2">
+              <p>HTML:</p>
+              <p>Test Paragraph</p>
+              <p>
+                Another Test Paragraph, this will sit right under the first
+                Paragraph, no extra space between.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="htmlelement">
+          <h2>&lt;html&gt; Element</h2>
+          <p>
+            Das &lt;html&gt; Element sollte direkt nach dem &lt;!DOCTYPE
+            html&gt; eingefügt werden und beinhaltet den ganzen Inhalt und die
+            Struktur des Dokuments.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&nbsp;&nbsp;Inhalt und
+            Struktur der Seite.<br />&lt;/html&gt;
+          </p>
+        </div>
+        <div class="headelement">
+          <h2>&lt;head&gt; Element</h2>
+          <p>
+            Das &lt;head&gt; Element beinhaltet generelle Informationen über die
+            HTML Seite, die nicht im Browser angezeigt werden. Diese
+            Informationen nennt man auch "Metadaten". Title oder Linkts zu
+            Stylesheets werden hier üblicherweise angegeben.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &nbsp;&nbsp;&lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Metadaten werden hier eingefügt
+            --&gt;<br />
+            &nbsp;&nbsp;&lt;/head&gt;<br />
+            &lt;/html&gt;
+          </p>
+        </div>
+        <div class="titleelement">
+          <h2>&lt;title&gt; Element</h2>
+          <p>
+            Das &lt;title&gt; Element zeigt den Titel der Seite im Browser/Tab
+            an. Das Element wird nur im &lt;head&gt; Element eingefügt.
+          </p>
+          <p>Beipiel:</p>
+          <p>
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &nbsp;&nbsp;&lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titel der HTML
+            Seite&lt;/title&gt;<br />
+            &nbsp;&nbsp;&lt;/html&gt;<br />
+            &lt;/html&gt;
+          </p>
+        </div>
+        <div class="bodyelement">
+          <h2>&lt;body&gt; Element</h2>
+          <p>
+            Im &lt;body&gt; Element wird der ganze Inhalt und Struktur der im
+            Browser dargestellten Seite. Es kann nur ein &lt;body&gt; Element
+            pro Dokument existieren.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&lt;h1&gt;Learn to code with CodeAcademy&lt;/h1&gt;<br />
+            &lt;/body&gt;
+          </p>
+        </div>
+        <div class="attributenamevalues">
+          <h2>Attribute Name and Values</h2>
+          <p>
+            Ein HTML Attribut besteht aus einem Namen und einen Wert. Es kann
+            auch ein zusätzlicher "syntay" eingefügt werden: name="value"
+            welcher im "opening tag»" zugefügt wird. Dieser wird das "Verhalten"
+            dieses Elements ändern.
+          </p>
+          <p>Beispiel:</p>
+          <p>&lt;Elementname name="value"&gt;Inhalt&lt;/Elementname&gt;</p>
+        </div>
+        <div class="headingelement">
+          <h2>&lt;h1&gt; bis &lt;h6&gt; Heading Elemente</h2>
+          <p>
+            Ein HTML Dokument kann 6 verschiedene Heading Elemente darstellen.
+            Vom grössten &lt;h1&gt; bis zum kleinsten &lt;h6&gt;
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;h1&gt;Breaking News&lt;/h2&gt;<br />&lt;h2&gt;This is the 1st
+            subheading&lt;/h2&gt;<br />&lt;h3&gt;This is the 2nd
+            subheading&lt;/h3&gt;<br />...<br />&lt;h6&gt;This is the 5th
+            subheading &lt;/h6&gt;
+          </p>
+        </div>
+        <div class="paragraph">
+          <h2>&lt;p&gt; Paragraph Element</h2>
+          <p>Dieses Element beinhaltet einen Textblock.</p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;p&gt;This is a block of text! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.&lt;/p&gt;
+          </p>
+        </div>
+        <div class="linebreak">
+          <h2>&lt;br&gt; Line Break Element</h2>
+          <p>
+            Ein &lt;br&gt; Line Break Element ist ein Zeilenumbruch, der vom
+            Browser auch dargestellt wird. (Im Gegensatz zum «normalen»
+            Zeilenumbruch, siehe "Whitespace") Dieses Element nutzt nur einen
+            "opening tag" und KEINEN "closing tag".
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsplinebreak">
+            <div class="bsplinebreak1">
+              <p>Code:</p>
+              <p>
+                &lt;p&gt;<br />&nbsp;&nbsp;A line break haiku. &lt;br&gt;<br />&nbsp;&nbsp;Poems
+                are a great use case. &lt;br&gt;<br />&nbsp;&nbsp;Oh joy! A line
+                break.<br />&lt;/p&gt;
+              </p>
+            </div>
+            <div class="bsplinebreak2">
+              <p>HTML:</p>
+              <p>
+                A line break haiku. <br />
+                Poems are a great use case. <br />
+                Oh joy! A line break.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="strongelement">
+          <h2>&lt;strong&gt; Strong Element</h2>
+          <p>
+            Das &lt;strong&gt; Element setzt den Text zwischen dem "opening tag"
+            und "closing tag" auf bold (Fett). Dies kann zusätzlich zu CSS
+            funktionen über HTML benutzt werden. (Wird aber nur die "normale"
+            bold funktion übernehmen, welche in CSS für 400 steht)
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspstrong">
+            <div class="bspstrong1">
+              <p>Code:</p>
+              <p>
+                &lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt;
+                text!&lt;/p&gt;
+              </p>
+            </div>
+            <div class="bspstrong2">
+              <p>HTML:</p>
+              <p>This is <strong>important</strong> text!</p>
+            </div>
+          </div>
+        </div>
+        <div class="emphasis">
+          <h2>&lt;em&gt; Emphasis Element</h2>
+          <p>
+            Dieses Element wird den Text zwischen dem "opening tag" und "closing
+            tag" auf italicize setzten. Dies kann zusätzlich zu CSS funktionen
+            über HTML benutzt werden.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspemphasis">
+            <div class="bspemphasis1">
+              <p>Code:</p>
+              <p>
+                &lt;p&gt;This &lt;em&gt;word&lt;/em&gt; will be emphasized in
+                italics.&lt;/p&gt;
+              </p>
+            </div>
+            <div class="bspemphasis2">
+              <p>HTML:</p>
+              <p>This <em>word</em> will be emphasized in italics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="divelement">
+          <h2>&lt;div&gt; Div Element</h2>
+          <p>
+            Das &lt;div&gt; Element wird genutzt um "Boxen" (container) zu
+            erstellen, welche das HTML-Dokument in Sektionen aufteilt. Ein
+            &lt;div&gt; Element kann sogenannten "flow content" beinhalten.
+            (z.B. headings, paragraphs, links, images, etc…) Div steht für
+            «division». In Zusammenhang mit CSS und andere Tools (z.B.
+            JavaScript) werden hier auch oft noch class und ID benutzt, um die
+            &lt;div&gt; Container zu benennen, resp. anzusteuern.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;div&gt;<br />
+            &nbsp;&nbsp;&lt;h1&gt;A section of grouped elements&lt;/h1&gt;<br />
+            &nbsp;&nbsp;&lt;p&gt;Here's some text for the section&lt;/p&gt;<br />
+            &lt;/div&gt;<br />
+            &lt;div&gt;<br />
+            &nbsp;&nbsp;&lt;h1&gt;Second section of grouped
+            elements&lt;/h1&gt;<br />
+            &nbsp;&nbsp;&lt;p&gt;Here's some text&lt;/p&gt;<br />
+            &lt;/div&gt;
+          </p>
+        </div>
+        <div class="spanelement">
+          <h2>&lt;span&gt; Span Element</h2>
+          <p>
+            Das &lt;span&gt; Element ist ein sogenannter "inline" Container für
+            Text und kann zum Stylen dieser Gruppe benutzt werden. Jedoch ist
+            das &lt;span&gt; Element ein allgemeiner Container um einen Teil des
+            Textes eines grösseren Text zu trennen. Sollten andere Semantische
+            Elemente zur Verfügung stehen sollten diese Vorrang haben.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;p&gt;&lt;span&gt;This text&lt;/span&gt; may be styled
+            differently than the surrounding text.&lt;/p&gt;
+          </p>
+        </div>
+        <div class="listitem">
+          <h2>&lt;li&gt; List Item Element</h2>
+          <p>
+            Das &lt;li&gt; Element generiert eine Liste von "Items". Diese Liste
+            wird in 2 Kategorien unterteilt:<br />
+          </p>
+          <ul>
+            <li>Ordered Lists &lt;ol&gt;</li>
+            <li>Unordered Lists &lt;ul&gt;</li>
+          </ul>
+          <p>Beispiel:</p>
+          <div class="bsplist">
+            <div class="bsplist1">
+              <p>Code:</p>
+              <p>
+                &lt;ol&gt;<br />
+                &nbsp;&nbsp;&lt;li&gt;Head east on Prince St&lt;/li&gt;<br />
+                &nbsp;&nbsp;&lt;li&gt;Turn left on Elisabeth&lt;/li&gt;<br />
+                &lt;/ol&gt;
+              </p>
+              <p>und</p>
+              <p>
+                &lt;ul&gt;<br />|&nbsp;&lt;li&gt;Cookies&lt;/li&gt;<br />|&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br />&lt;/ul&gt;
+              </p>
+            </div>
+            <div class="bsplist2">
+              <p>HTML:</p>
+              <ol>
+                <li>Head east on Prince St</li>
+                <li>Turn left on Elisabeth</li>
+              </ol>
+              <p>und</p>
+              <ul>
+                <li>Cookies</li>
+                <li>Milk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="orderelist">
+          <h2>&lt;ol&gt; Ordered List Element</h2>
+          <p>
+            Das &lt;ol&gt; Element generiert standartmässig eine nummerierte
+            Liste.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspol">
+            <div class="bspol1">
+              <p>Code></p>
+              <p>
+                &lt;ol&gt;<br />&nbsp;&nbsp;&lt;li&gt;Preheat oven to
+                325F&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&gt;Drop cookie
+                dougth&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&gt;Bake for
+                15min&lt;/li&gt;<br />&lt;/ol&gt;
+              </p>
+            </div>
+            <div class="bspol2">
+              <p>HTML:</p>
+              <ol>
+                <li>Preheat oven to 325F</li>
+                <li>Drop cookie dougth</li>
+                <li>Bake for 15min</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="unorderedlist">
+          <h2>&lt;ul&gt; Unordered List Element</h2>
+          <p>
+            Das &lt;ul&gt; Element generiert eine nicht nummerierte Liste.
+            Standartmässig werden hier Punkte statt Nummern als Listenelement
+            dargestellt.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspul">
+            <div class="bspul1">
+              <p>Code:</p>
+              <p>
+                &lt;ul&gt;<br />
+                &nbsp;&nbsp;&lt;li&gt;Play more music&lt;/li&gt;<br />
+                &nbsp;&nbsp;&lt;li&gt;Read more Books&lt;/li&gt;<br />
+                &lt;/ul&gt;
+              </p>
+            </div>
+            <div class="bspul2">
+              <p>HTML:</p>
+              <ul>
+                <li>Play more music</li>
+                <li>Read more Books</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="anchorelement">
+          <h2>&lt;a&gt; Anchor Element</h2>
+          <p>
+            Das &lt;a&gt; Element wird benutzt um im HTML-Dokument einen
+            Hyperlink zu erstellen. Der Hyperlink kann zu einer anderen Website,
+            einem File auf dem gleichen Server, ein «punk» auf der gleichen
+            Seite oder einer anderen URL über das «href» Attribut weisen. Das
+            «href» Attribut bestimmt das Ziel des Hyperlinks. Text oder auf
+            Bilder die zwischen dem «opening tag» und «closing tag» sind, werden
+            zum Hyperlink.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;a href="http://www.codeacademy.com"&gt;Visit this site&lt;/a&gt;
+          </p>
+          <p>oder</p>
+          <p>
+            &lt;a href="https://www.codeacademy.com"&gt;<br />
+            &nbsp;&nbsp;&lt;img src="logo.jpg"&gt;Click this image<br />&lt;/a&gt;
+          </p>
+        </div>
+        <div class="targetattribut">
+          <h2>&lt;target&gt; Target Attribute</h2>
+          <p>
+            Das &lt;target&gt; Attribut bestimmt, wo der Hyperlink geöffnet
+            wird. Der wird "_blank" wird den Link standartmässig in einem neuen
+            «Tab» öffnen, in einem älteren Browser evtl. auch in einem neuen
+            "Fenster" oder die Einstellungen im Browser wurden so geändert das
+            immer ein neues "Fenster" geöffnet wird.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;a href="https://google.com" target="_blank"&gt;This anchor
+            element links to google and will open in a new tab or
+            window.&lt;/a&gt;
+          </p>
+        </div>
+        <div class="linkdifpartpage">
+          <h2>Link to a different part of the page #</h2>
+          <p>
+            Das &lt;a&gt; Anchor Element kann Hyperlinks zu verschiedenen Teilen
+            einer Seite führen. Dazu wird im "href" Attribute ein "#"" benutzt,
+            gefolgt von der "ID" des gewünschten Elements.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;div&gt;<br />
+            &nbsp;&nbsp;&lt;p id="id-of-element-to-link-to"&gt;A different part
+            of the page!&lt;/p&gt;<br />
+            &lt;/div&gt;<br />
+            &lt;a href="#id-of-element-to-link-to"&gt;Take me to a different
+            part of the page&lt;/a&gt;
+          </p>
+        </div>
+        <div class="filepath">
+          <h2>File Path</h2>
+          <p>
+            Ein URL Weg in HTML kann ein "absoluter" Weg sein, wie z.B. eine
+            komplette URL. (Beispiel:
+            https://developer.mozilla.org/en-US/docs/Learn) Oder ein Relativer
+            File Weg der zu einem Lokalem Dokument im gleichen Ordner oder auf
+            dem gleichen Server führt. Z.B. .style.css. Ein Relativer Weg
+            beginnt mit ./ gefolgt vom "file path" zur Lokalen Datei.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;a href="https://developer.mozilla.org/en-US/docs/web"&gt;The URL
+            for this anchor element is an absolute file path.&lt;/a&gt;
+          </p>
+          <p>oder</p>
+          <p>
+            &lt;a href=".about.html"&gt;The URL for this anchor element is a
+            relative file path.&lt;/a&gt;
+          </p>
+        </div>
+        <div class="imageelement">
+          <h2>&lt;img&gt; Image Element</h2>
+          <p>
+            Ein &lt;img&gt; Element hinterlegt ein Bild im Dokument. Das "src"
+            Attribut beinhaltet die URL des Bildes und ist demnach Pflicht. Das
+            &lt;img&gt; Element ist ein sogennantes «empty element>, was
+            bedeutet das es keinen "closing tag" besitzt.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspimage">
+            <div class="bspimage1">
+              <p>Code:</p>
+              <p>&lt;img src="resources/images/cutecat.jpg" /&gt;</p>
+            </div>
+            <div class="bspimage2">
+              <p>HTML:</p>
+              <img
+                src="resources/images/cutecat.jpg"
+                width="280"
+                height="180"
+                alt="A Cute Cat"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="altattribute">
+          <h2>"alt" Attribute</h2>
+          <p>
+            Im &lt;img&gt; Element sollte immer auch ein alternativer Text
+            stehen, welcher über das "alt" Attribut erteilt wird. Dieser
+            alternative Text wird nur dann, im Browser dargestellt, wenn das
+            Bild nicht "geladen" werden kann. (Z.B. Das Bildformat wird vom
+            Browser nicht erkannt, das Bild wurde blockiert, ein Fehler in der
+            URL.) Dieser Text wird auch von einen "Screen Reader" vorgelesen und
+            hilft demnach den Inhalt der Seite auch von Sehbeeinträchtigten
+            besser zu verstehen. Ein "alt" Attribut funktionier wie ein
+            "ARIA-Label" hat aber noch zusätzliche Funktionen und sollte daher
+            bei Bildern Vorrang haben.
+          </p>
+          <p>
+            Wenn ein "alt" Attribut verwendet wird, sollten folgene Sachen
+            beachtet werden:
+          </p>
+          <ol>
+            <li>
+              Generell sollte der "value" vom "alt" Attribut nur das Bild
+              Beschreiben.
+            </li>
+            <li>
+              Für Bilder die als Hyperlink dienen, sollte das "alt" Attribut
+              auch den Inhalt des Links beschreiben.
+            </li>
+            <li>
+              Bei einem Bild ohne Informationen (wie ein dekorativer Rahmen)
+              sollte der Inhalt des "alt" Attributs leer sein, das Attribut
+              sollte aber nicht weggelassen werden.
+            </li>
+            <li>
+              Sollte ein Bild schon beschrieben werden. (z.B. In einem
+              Textabschnitt unter dem Bild selbst) Wird auch hier ein leeres
+              "alt" Attribut verwendet. Die Beschreibung sollte nicht dupliziert
+              werden durch das "alt" Attribut.
+            </li>
+            <li>
+              Der Inhalt eines "alt" Attributs sollte nicht mehr als 150 Zeichen
+              beinhalten.
+            </li>
+          </ol>
+          <p>Beispiel:</p>
+          <p>&lt;img src="path/to/image" alt="text describing image" /&gt;</p>
+        </div>
+        <div class="videoelement">
+          <h2>&lt;video&gt; Video Element</h2>
+          <p>
+            Ein &lt;video&gt; Element wird im Browser einen "Media Player"
+            anzeigen. Im "src" Attribut wir die URL des Videos hinterlegt. Das
+            hinzufügen des "control" Attribute, gibt dem Video noch die
+            Wiedergabefunktionen wie "play" oder "stop". Ein &lt;video&gt;
+            Element benutzt im Gegensatz des "img" Elements einen "opening tag"
+            und einen "closing tag". Der Inhalt dazwischen ist der "fallback"
+            text (gleich wie ein "alt" Attribut beim "img" Element) und wird nur
+            dargestellt, wenn das Video nicht funktioniert.
+          </p>
+          <p>
+            Seiten wie YouTube bieten auch Optionen wie "Einbetten/Embed" an mit
+            ganzem Code.
+          </p>
+          <p>Beispielt:</p>
+          <div class="bspvideo">
+            <div class="bspvideo1">
+              <p>Code:</p>
+              <p>
+                &lt;video src="resources/videos/cutecats.mp4" control&gt;<br />
+                &nbsp;&nbsp;Video not supportet<br />&lt; /video&gt;
+              </p>
+            </div>
+            <div class="bspvideo2">
+              <p>HTML mit der "embed" Funktion von YouTube:</p>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/tpiyEe_CqB4?si=a8Esy-K8UmRAy1Hq"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+                Video no supportet</iframe
+              >
+            </div>
+          </div>
+        </div>
+        <div class="htmlattributes">
+          <h2>HTML Attribute</h2>
+          <p>
+            Ein Attribut wird immer im "opening tag" eines Elements verwendet.
+            Durch das hinzufügen eines Attributs kann ein Element spezifischer
+            angepasst werden und auch für weitere Nutzungen anvisiert werden.
+            (Mit Hilfe von "id" und "class") Grundsätzlich sollte zum anvisieren
+            eines Elements zum stylen über CSS ein "class" Attribut dem "id"
+            Attribut bevorzugt werden. (ID's werden in anderen Tools mehr
+            benutzt und sind einzigartig)
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsphtmlatt">
+            <div class="bsphtmlatt1">
+              <p>Code:</p>
+              <p>
+                &lt;p class="my-paragraph" style="color: green;"&gt;Here's some
+                text for a paragraph that is being altered by HTML
+                Attributes&lt;/p&gt;
+              </p>
+              <p>oder</p>
+              <p>
+                &lt;p id="my-paragraph" style="color: red;"&gt;Here's some text
+                of a paragraph that is being altered by HTML
+                Attributes&lt;/p&gt;
+              </p>
+            </div>
+            <div class="bsphtmlatt2">
+              <p>HTML:</p>
+              <p class="my-paragraph" style="color: green">
+                Here's some text for a paragraph that is being altered by HTML
+                Attributes
+              </p>
+              <p>oder</p>
+              <p id="my-paragraph" style="color: red">
+                Here's some text of a paragraph that is being altered by HTML
+                Attributes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uniqueid">
+          <h2>Unique ID Attributes</h2>
+          <p>
+            Im HTML-Dokument können Elemente mit spezifischen und einzigartigen
+            "id" Attributen versehen werden, welche zur Unterscheidung anderer
+            "gleichen" Elemente dient. Bei gebrauch, können "id" Attribute
+            direkt von CSS oder JavaScript anvisiert werden und diese Elemente
+            zu manipulieren, formatieren oder ihnen spezifische Instruktionen zu
+            geben. Der Inhalt des "id" Attributs sollte nur Buchstaben (a-Z),
+            Nummern (0-9), hyphens (-), underscores (_) und periods(.)
+            enthalten. Genauso werden keine Leerzeichen benutzt.
+          </p>
+          <p>Beispiel:</p>
+          <p>&lt;h1 id="A1"&gt;Hello World&lt;/h1&gt;</p>
+        </div>
+        <div class="tableelement">
+          <h2>&lt;table&gt; Table Element</h2>
+          <p>
+            Im HTML-Dokument wird ein &lt;table&gt; Element benutzt um eine
+            Tabelle mit Reihen (rows) und Spalten (columns) zu erstellen.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;!-- rows and columns will go here --&gt;<br />
+            &lt;/table&gt;
+          </p>
+        </div>
+        <div class="tablehead">
+          <h2>&lt;thead&gt; Table Head Element</h2>
+          <p>Das &lt;thead&gt; Element ist der "header" der Tabelle.</p>
+          <p>Beispiel:</p>
+          <div class="bspthead">
+            <div class="bspthead1">
+              <p>Code:</p>
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;thead&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tf&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;heading
+                1&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;heading
+                2&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;/thead&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bspthead2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>heading 1</th>
+                    <th>heading 2</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tablebody">
+          <h2>&lt;tbody&gt; Table Body Element</h2>
+          <p>
+            Das &lt;tbody&gt; Element ist ein Semantisches Element. Es
+            beinhaltet die ganzen Tabellendaten ausser der "header" und "footer"
+            Daten. Der &lt;tbody&gt; enthält die &lt;tr&gt; "row" Elemente und
+            zeigt an dass das &lt;tr&gt; Element den "body" der Tabelle
+            ausmachen. Ein &lt;table&gt; Element kann nicht &lt;tbody&gt; UND
+            &lt;tr&gt; als direkte "Kinder" haben.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsptbody">
+            <div class="bsptbody1">
+              <p>Code:</p>
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;tbody&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row
+                1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row
+                2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;/tbody&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bsptbody2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>row 1</td>
+                  </tr>
+                  <tr>
+                    <td>row 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tablefooter">
+          <h2>&lt;tfoot&gt; Table Footer Element</h2>
+          <p>
+            Das &lt;tfoot&gt; Element gibt der Tabelle ein "footer" Reihe,
+            welche z.B. zum zusammenfassen einer Reihe genutzt werden kann.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;thead&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+            &nbsp;&nbsp;&lt;/thead&gt;<br />
+            &nbsp;&nbsp;&lt;tbody&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+            &nbsp;&nbsp;&lt;/tbody&gt;<br />
+            &nbsp;&nbsp;&lt;tfoot&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+            &nbsp;&nbsp;&lt;/tfoot&gt;<br />
+            &lt;/table&gt;
+          </p>
+        </div>
+        <div class="tablerow">
+          <h2>&lt;tr&gt; Table Row Element</h2>
+          <p>
+            Das &lt;tr&gt; Element wird benutzt, um der Tabelle eine Zusätzliche
+            Reihe für Daten &lt;td&gt; oder Headings &lt;th&gt; zu geben.
+          </p>
+          <p>Beispiel:</p>
+          <p>
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </p>
+        </div>
+        <div class="tableheading">
+          <h2>&lt;th&gt; Table Heading Element</h2>
+          <p>
+            Das &lt;th&gt; Element wird benutzt um einer Reihe oder Spalte einen
+            Titel zu verpassen. Dieses Element muss in einem &lt;tr&gt; Element
+            sein.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspth">
+            <div class="bspth1">
+              <p>Code:</p>
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;column&lt;/th&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bspth2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <tr>
+                  <th>column</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tabledata">
+          <h2>&lt;td&gt; Table Data Element</h2>
+          <p>
+            Das &lt;td&gt; Element wird in einer Reihe (&lt;tr&gt;) eingesetzt
+            um Daten in der Tabelle anzuzeigen.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsptd">
+            <div class="bsptd1">
+              <p>Code:</p>
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;cell one data&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;cell two data&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bsptd2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <tr>
+                  <td>cell one data</td>
+                  <td>cell two data</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="rowspan">
+          <h2>"rowspan" Attribut</h2>
+          <p>
+            Ähnlich zum "colspan" Attribut wird das "rowspan" Attribut
+            verwendet, um einem Element zu sagen, es solle mehrere Reihen in der
+            Tabelle besetzten. Die "value" des Attributs geht von 1 (default)
+            bis hin zu 65534.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bsprow">
+            <div class="bsprow1">
+              <p>Code:</p>
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 1:&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th rowspan="2"&gt; (this row will
+                span 2 rows):&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 3:&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bsprow2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <tr>
+                  <th>row 1:</th>
+                  <td>col 1</td>
+                  <td>col 2</td>
+                </tr>
+                <tr>
+                  <th rowspan="2">(this row will span 2 rows):</th>
+                  <td>col 1</td>
+                  <td>col 2</td>
+                </tr>
+                <tr>
+                  <td>col 1</td>
+                  <td>col 2</td>
+                </tr>
+                <tr>
+                  <th>row 3:</th>
+                  <td>col 1</td>
+                  <td>col 2</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="colspan">
+          <h2>"colspan" Attribut</h2>
+          <p>
+            Das "colspan" Attribut in einem Header &lt;th&gt; oder in
+            Tabellendaten &lt;td&gt; gibt an wieviele Reihen in einer Spalte
+            benutzt werden. Die «value» geht von 1(default) bis hin zu 1000.
+          </p>
+          <p>Beispiel:</p>
+          <div class="bspcol">
+            <div class="bspcol1">
+              <p>
+                &lt;table&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 1:&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 3&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &nbsp;&nbsp;&lt;tr&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 2:&lt;/th&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;col 1 (will span 2
+                columns)&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 3&lt;/td&gt;<br />
+                &nbsp;&nbsp;&lt;/tr&gt;<br />
+                &lt;/table&gt;
+              </p>
+            </div>
+            <div class="bspcol2">
+              <p>HTML (Border with CSS):</p>
+              <table>
+                <tr>
+                  <th>row 1:</th>
+                  <td>col 1</td>
+                  <td>col 2</td>
+                  <td>col 3</td>
+                </tr>
+                <tr>
+                  <th>row 2:</th>
+                  <td colspan="2">col 1 (will span 2 columns)</td>
+                  <td>col 2</td>
+                  <td>col 3</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p class="pfooter">Creator Steven Justice</p>
+      </footer>
+    </div>
+  </body>
+</html>

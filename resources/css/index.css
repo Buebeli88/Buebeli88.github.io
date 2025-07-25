@@ -1,0 +1,24 @@
+body {
+    width: 100%;
+}
+
+.index {
+    margin-top: 4rem;
+    border-top: 2px solid rgb(47, 125, 189);
+}
+
+.h2index {
+    margin-bottom: 3rem;
+}
+
+li {
+    line-height: 1.75rem;
+}
+
+.cssindex {
+    border-top: 2px solid rgb(47, 125, 189);
+}
+
+.commandindex {
+    border-top: 2px solid rgb(47, 125, 189)
+}
