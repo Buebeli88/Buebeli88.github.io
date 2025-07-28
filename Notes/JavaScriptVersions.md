@@ -75,3 +75,7 @@ Wenn du also an jedem JavaScript-Projekt arbeiten möchtest – ob alt oder neu 
 
 Aber keine Sorge – unser JavaScript-Kurs deckt beides ab!
 Starte jetzt, um die Grundlagen von JavaScript zu meistern und deine Programmierkenntnisse auf ein neues Level zu bringen! 🚀
+
+cheatsheets von codeacademy
+
+https://www.codecademy.com/resources/cheatsheets/all
