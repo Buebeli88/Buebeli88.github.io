@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display and Positioning</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/css_display_positioning.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>Display and Positioning</h1>
+        <p>
+          In CSS bezeichnen display und position zwei fundamentale Eigenschaften
+          zur Gestaltung des Layouts von Webseiten. display bestimmt, wie ein
+          Element als Box gerendert wird (z.B. als Block, Inline-Element oder
+          als Teil eines Flex- oder Grid-Layouts). position legt fest, wie ein
+          Element im Dokument positioniert wird, also wie es sich zu anderen
+          Elementen oder dem Viewport verhält.
+          <br /><br />
+          Positionierung in CSS bietet Designern und Entwicklern Möglichkeiten,
+          HTML-Elemente auf einer Webseite zu positionieren. Die CSS-Eigenschaft
+          position kann auf static, relative, absolute oder fixed gesetzt
+          werden.
+        </p>
+        <section class="display">
+          <h2>"display" Property</h2>
+          <p>
+            Die CSS-Eigenschaft display bestimmt die Art der Darstellung eines
+            Elements. Die gebräuchlichsten Werte für diese Eigenschaft sind
+            block, inline und inline-block. <br /><br />
+            Block-Level-Elemente nehmen die volle Breite ihres Containers ein,
+            erzeugen Zeilenumbrüche davor und danach und können in Höhe und
+            Breite manuell angepasst werden. <br /><br />
+            Inline-Elemente nehmen so wenig Platz wie möglich ein, fließen
+            horizontal und können in Höhe und Breite nicht manuell angepasst
+            werden. <br /><br />
+            Inline-Block-Elemente können nebeneinander angezeigt werden und ihre
+            Höhe sowie Breite können manuell angepasst werden.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspdisplay">
+            .container1&lbrace;<br />
+            &nbsp;&nbsp;display: block;<br />
+            &rbrace;
+            <br /><br />
+            .container2&lbrace;<br />
+            &nbsp;&nbsp;display: inline;<br />
+            &rbrace;
+            <br /><br />
+            .container3&lbrace;<br />
+            &nbsp;&nbsp;display: inline-block;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="fixed">
+          <h2>Fixed CSS Positioning</h2>
+          <p>
+            Hat die CSS-Position den Wert fixed, wird das Element an einer
+            festen Stelle auf der Seite verankert. Das feste Element bleibt
+            unabhängig vom Scrollen immer an derselben Position. <br /><br />
+            Die Navigationsleiste ist ein gutes Beispiel für ein Element, das
+            häufig auf position: fixed; gesetzt wird, sodass der Benutzer durch
+            die Webseite scrollen kann und dennoch jederzeit Zugriff auf die
+            Navigationsleiste hat.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspfixed">
+            #navbar&lbrace;<br />
+            &nbsp;&nbsp;position: fixed;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="relative">
+          <h2>Postition: relative</h2>
+          <p>
+            Der Wert relative der CSS-Eigenschaft position ermöglicht es, ein
+            Element relativ zu seiner ursprünglichen Position auf einer Webseite
+            zu positionieren. Die Offset-Eigenschaften können verwendet werden,
+            um die tatsächliche Position des Elements relativ zu seiner
+            ursprünglichen Position festzulegen. Ohne die Offset-Eigenschaften
+            hat diese Deklaration keine Auswirkung auf die Positionierung und
+            verhält sich wie der Standardwert static der Eigenschaft position.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsprelative">
+            .element&lbrace;<br />
+            &nbsp;&nbsp;position: absolute;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="absolute">
+          <h2>Position: absolute</h2>
+          <p>
+            Der Wert absolute der CSS-Eigenschaft position ermöglicht es einem
+            Element, Geschwisterelemente zu ignorieren und stattdessen relativ
+            zu seinem nächstgelegenen Elternelement positioniert zu werden, das
+            entweder relativ oder absolut positioniert ist. Der Wert absolute
+            entfernt ein Element vollständig aus dem Dokumentenfluss. Durch die
+            Verwendung der Positionsattribute top, left, bottom und right kann
+            ein Element wie erwartet an jeder beliebigen Stelle positioniert
+            werden.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspabsolute">
+            .element&lbrace;<br />
+            &nbsp;&nbsp;position: absolute;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="fixed">
+          <h2>Position: fixed</h2>
+          <p>
+            In CSS bedeutet position: fixed, dass ein Element relativ zum
+            Browserfenster (Viewport) positioniert wird und immer an derselben
+            Stelle bleibt, auch wenn die Seite gescrollt wird. Das Element wird
+            also nicht mit dem Inhalt verschoben, sondern bleibt fest an seiner
+            Position verankert.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspfixed">
+            .element&lbrace;<br />
+            &nbsp;&nbsp;position: fixed;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="sticky">
+          <h2>Position: sticky</h2>
+          <p>
+            "Position: sticky" in CSS ist eine Positionierungsmethode, die ein
+            Element zwischen relativer und fixer Positionierung umschalten
+            lässt, basierend auf der Scrollposition des Benutzers. Es verhält
+            sich zunächst wie ein Element mit position: relative, bis es einen
+            bestimmten Schwellenwert im Viewport erreicht (z.B. 10px von oben),
+            und wechselt dann zu position: fixed und bleibt an dieser Stelle
+            "kleben", während der Rest der Seite weiter scrollt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspsticky">
+            .element&lbrace;<br />
+            &nbsp;&nbsp;positin: sticky;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="float">
+          <h2>Property: float</h2>
+          <p>
+            Die CSS-Eigenschaft float bestimmt, wie weit links oder rechts ein
+            Element innerhalb seines Elternelements schweben soll. Der Wert left
+            lässt ein Element an der linken Seite seines Containers schweben,
+            und der Wert right lässt ein Element an der rechten Seite seines
+            Containers schweben. Für die Eigenschaft float muss die Breite des
+            Containers angegeben werden, ansonsten nimmt das Element die volle
+            Breite seines enthaltenden Elements ein.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspfloat">
+            .left&lbrace;<br />
+            &nbsp;&nbsp;float: left;<br />
+            &rbrace;<br /><br />
+            .right&lbrace;<br />
+            &nbsp;&nbsp;float: right;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="clear">
+          <h2>Property: clear</h2>
+          <p>
+            Die CSS-Eigenschaft clear legt fest, wie sich ein Element verhalten
+            soll, wenn es innerhalb desselben übergeordneten Elements auf ein
+            anderes Element stößt. clear wird üblicherweise in Kombination mit
+            Elementen verwendet, die die CSS-Eigenschaft float besitzen. Damit
+            wird bestimmt, auf welchen Seiten schwebende (floatende) Elemente
+            erlaubt sind zu schweben.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspclear">
+            .element&lbrace;<br />
+            &nbsp;&nbsp;clear: left;<br />
+            &rbrace;
+            <br /><br />
+            .element&lbrace;<br />
+            &nbsp;&nbsp;clear: right;<br />
+            &rbrace;
+            <br /><br />
+            .element&lbrace;<br />
+            &nbsp;&nbsp;clear: both;<br />
+            &rbrace;
+            <br /><br />
+            .element&lbrace;<br />
+            &nbsp;&nbsp;clear: none;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="zindex">
+          <h2>Property: z-index</h2>
+          <p>
+            Die CSS-Eigenschaft z-index legt fest, wie weit hinten oder wie weit
+            vorne ein Element auf einer Webseite erscheint, wenn es sich mit
+            anderen Elementen überlappt. Die Eigenschaft z-index verwendet
+            ganzzahlige Werte, die positiv oder negativ sein können. Das Element
+            mit dem höchsten z-index-Wert befindet sich im Vordergrund, während
+            das Element mit dem niedrigsten z-index-Wert im Hintergrund liegt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspzindex">
+            .element1&lbrace;<br />
+            &nbsp;&nbsp;position: absolute;<br />
+            &nbsp;&nbsp;z-index: 1;<br />
+            &rbrace;
+            <br /><br />
+            .element2&lbrace;<br />
+            &nbsp;&nbsp;position: absolute;<br />
+            &nbsp;&nbsp;z-index: -1;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="footerpos">
+          <h2>Positioning: Footer</h2>
+          <p>
+            Es gibt verschiedene Angehensweisen den Footer immer unten zu
+            positionieren. Eine der einfacheren Methoden, ist "old school". In
+            welcher man den Inhalt des "Bodys" in einen "div" einpackt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspfooterpos">
+            HTML <br />
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&lt;div class="container"&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Beispiel&lt;/h1&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Beispiel Text&lt;/p&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;etc... <br />
+            &nbsp;&nbsp;&lt;/div&gt;<br />
+            &nbsp;&nbsp;&lt;footer&gt;DER FUSS&lt;/footer&gt;<br />
+            &lt;/body&gt;<br /><br />
+            Danach gibt man dem "container" noch eine min.höhe vom "Viewport"
+            minus der Footer Höher.
+            <br /><br />
+            Beispiel:
+            <br /><br />
+            .container&lbrace;<br />
+            &nbsp;&nbsp;min-height: calc(100vh - 55px);<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="borderrad">
+          <h2>Border Radius</h2>
+          <p>
+            In CSS bezeichnet border-radius die Eigenschaft, mit der die Ecken
+            eines HTML-Elements abgerundet werden können. Sie ermöglicht es, die
+            Ecken von Elementen wie Rechtecken oder Quadraten mit einem Radius
+            zu versehen, wodurch sie eine runde oder elliptische Form erhalten.
+            <br><br>
+            Beispiel:
+          </p>
+          <code class="bspborderrad">
+            .navigation&lbrace;<br>
+            &nbsp;&nbsp;border-radius: 5px;<br>
+            &rbrace;<br><br>
+            oder
+            <br><br>
+            .navigation&lbrace;<br>
+            &nbsp;&nbsp;border-radius: 10%;<br>
+            &rbrace;
+          </code>
+          <div class="bspborderrad1">
+            Beispiel mit Hintergrundfarbe
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

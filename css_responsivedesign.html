@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="resources/css/layout.css" />
+    <link rel="stylesheet" href="resources/css/css_responsivedesign.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>Responsive Design</h1>
+        <p>
+          Responsive Design in CSS ist ein Ansatz zur Gestaltung von Webseiten,
+          der sicherstellt, dass die Webseite auf verschiedenen Bildschirmgrößen
+          und Geräten optimal dargestellt wird. Es passt das Layout, die Bilder
+          und den Text automatisch an die Bildschirmgröße des Geräts an, das der
+          Benutzer verwendet, sei es ein Desktop-Computer, ein Tablet oder ein
+          Smartphone.
+        </p>
+        <section class="mediafeature">
+          <h2>Media Features in Media Queries</h2>
+          <p>
+            Media Queries in der Webentwicklung stellen sicher, dass ein
+            Website-Design responsiv ist. Dies geschieht durch die Erstellung
+            maßgeschneiderter Stylesheets, die auf der Auflösung des Geräts
+            basieren, auf dem die Website angezeigt wird. Der Browser erkennt
+            die Bildschirmgröße und wendet die CSS-Stile für diese
+            Bildschirmgröße basierend auf den angegebenen Media-Features an.
+            Media Queries können Regeln festlegen, die sich auf Eigenschaften
+            wie Bildschirmbreite, Bildschirmauflösung und Geräteausrichtung
+            beziehen. Diese Media-Regeln können durch Kommata getrennt werden.
+            Wenn eine der Media-Regeln zutrifft, wird das zugehörige CSS
+            angewendet.
+          </p>
+        </section>
+        <section class="rangesmediaquerie">
+          <h2>Ranges in Media Queries</h2>
+          <p>
+            Media Queries können CSS verwenden, um Bildschirmgrößen innerhalb
+            eines bestimmten Bereichs anzusprechen, indem mehrere Breiten
+            und/oder Höhen verwendet werden. Dies ist ein effektives Werkzeug
+            für responsives Design, das eine Vielzahl von Bildschirmgrößen mit
+            einer einzigen CSS-Media-Query abdecken kann. Um einen Bereich für
+            die Breite oder Höhe festzulegen, wird die minimale Bildschirmgröße
+            mit min-width und/oder min-height definiert und die maximale mit
+            max-width oder max-height. Diese Eigenschaften werden in Kombination
+            mit dem and-Operator verwendet.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsprange">
+            @media only screen and (min-width: 480px) and (max-width:
+            600px)&lbrace;<br />
+            &nbsp;&nbsp;(ruleset for 480px - 600px) <br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="mediaquerie">
+          <h2>Media Query</h2>
+          <p>
+            Eine CSS Media Query kann verwendet werden, um die Darstellung und
+            das Layout einer Website an verschiedene Bildschirmgrößen
+            anzupassen. Eine Media Query beginnt mit dem @media-Schlüsselwort
+            und wird von einer oder mehreren Bedingungen gefolgt, die
+            Bildschirmgröße, Ausrichtung, Auflösung und/oder andere
+            Eigenschaften prüfen. Wenn diese Bedingungen erfüllt sind, werden
+            alle CSS-Regeln innerhalb der Media Query auf die Seite angewendet.
+            Media Queries werden im responsiven Webdesign verwendet, um durch
+            gezielte Stylesheets verschiedene Gerätetypen wie Laptops, Tablets,
+            Mobilgeräte und mehr anzusprechen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspmediaquerie">
+            Für Bildschirmgrößen kleiner oder gleich 480px (höchstwahrscheinlich
+            ein mobiles Gerät) wird die Schriftgröße des &lt;body&gt;-Elements
+            auf 12px gesetzt und die Breite des Elements mit der ID #photo auf
+            100%
+            <br /><br />
+            @media only screen and (max-width: 480px)&lbrace;<br />
+            &nbsp;&nbsp;body&lbrace;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 12px;<br />
+            &nbsp;&nbsp;&rbrace;
+            <br /><br />
+            &nbsp;&nbsp;#photo&lbrace;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+            &nbsp;&nbsp;&rbrace;<br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="typemediaquery">
+          <h2>Media Type in Media Queries</h2>
+          <p>
+            Beim Schreiben von Media Queries in CSS verwenden wir das
+            Schlüsselwort only, um den Gerätetyp anzugeben. Ursprünglich
+            unterstützte CSS eine Vielzahl von Medientypen wie screen, print und
+            handheld. Um responsives Design zu gewährleisten und verschiedene
+            Bildschirmgrößen zu berücksichtigen, wird heutzutage das
+            Schlüsselwort screen immer für die Anzeige von Inhalten verwendet.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bsptypemediaquery">
+            @meida only screen and (min-width: 600px)&lbrace;<br />
+            &nbsp;&nbsp;Ruleset for &gt;=600px <br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="andoperator">
+          <h2>Operator and in Media Queries</h2>
+          <p>
+            Durch die Verwendung des and-Operators beim Schreiben von Media
+            Queries in CSS können wir angeben, dass mehrere Media-Features
+            erforderlich sind. Zum Beispiel könnten wir eine bestimmte Breite
+            sowie eine bestimmte Auflösung verlangen, damit ein CSS-Regelsatz
+            angewendet wird. Der and-Operator erlaubt es, mehrere Media-Features
+            miteinander zu verknüpfen, wodurch wir gezielter auf bestimmte
+            Bildschirmtypen eingehen können, während wir responsive Designs
+            erstellen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code class="bspandoperator">
+            @media only screen and (max-width: 480) and (min-resolution:
+            300dpi)&lbrace;<br />
+            &nbsp;&nbsp;Ruleset <br />
+            &rbrace;
+          </code>
+        </section>
+        <section class="percentages">
+          <h2>Benutzung von Prozenten in CSS</h2>
+          <p>
+            Anstatt eine feste Breite mit Einheiten wie px oder cm zu
+            definieren, können in CSS Prozentsätze verwendet werden, um die Höhe
+            und Breite von Kindelementen relativ zu den Abmessungen ihres
+            Elternelements festzulegen. Die Kindelemente wachsen oder schrumpfen
+            entsprechend den angegebenen Prozentwerten, wenn sich die Größe des
+            Elternelements ändert.
+            <br><br>
+            Beispiel:
+          </p>
+          <code class="bsppercentages">
+            .news-row&lbrace;<br>
+            &nbsp;&nbsp;height: 300px;<br>
+            &nbsp;&nbsp;width: 500px;<br>
+            &rbrace;<br><br>
+            .news-row .news-column&lbrace;<br>
+            &nbsp;&nbsp;height: 80%; (240px) <br>
+            &nbsp;&nbsp;width: 50%; (250px) <br>
+            &rbrace;
+          </code>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
