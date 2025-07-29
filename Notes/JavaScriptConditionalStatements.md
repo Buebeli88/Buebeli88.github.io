@@ -167,11 +167,11 @@ Operator	Name	Beschreibung
 !	NOT-Operator (auch "Bang-Operator")	Kehrt den Wahrheitswert um (true → false und umgekehrt)
 
 🧠 Merke:
-&& → beide Bedingungen müssen true sein
+&& → beide Bedingungen müssen true sein (and operator)
 
-|| → mindestens eine Bedingung muss true sein
+|| → mindestens eine Bedingung muss true sein  (or operator)
 
-! → kehrt true in false um und umgekehrt
+! → kehrt true in false um und umgekehrt (not operator / bang operator)
 
 Mit diesen Operatoren kannst du deine if-Statements deutlich flexibler gestalten.
 
@@ -212,3 +212,305 @@ Im Wesentlichen nimmt der !-Operator einen Wert, der true ist, und gibt false zu
 
 Logische Operatoren werden häufig in bedingten Anweisungen verwendet, um unserer Programmierung eine weitere Logik-Ebene hinzuzufügen.
 
+Beispiel:
+
+let mood = 'sleepy';
+let tirednessLevel = 6;
+
+if (mood === 'sleepy' && tirednessLevel > 8) {
+  console.log('time to sleep');
+} else {
+  console.log('not bed time yet');
+}
+
+---------------------------------------
+
+Truthy und Falsy
+Betrachten wir, wie nicht-boolean Datentypen – wie Strings oder Zahlen – ausgewertet werden, wenn sie innerhalb einer Bedingung geprüft werden.
+
+Manchmal möchtest du lediglich überprüfen, ob eine Variable existiert, ohne dass sie unbedingt einen bestimmten Wert haben muss — du willst nur wissen, ob der Variable überhaupt ein Wert zugewiesen wurde.
+
+Hier ist ein Beispiel:
+
+let myVariable = 'I Exist!';
+
+if (myVariable) {
+   console.log(myVariable)
+} else {
+   console.log('The variable does not exist.')
+}
+
+Der Codeblock innerhalb der if-Anweisung wird ausgeführt, weil myVariable einen „truthy“ Wert hat; obwohl der Wert von myVariable nicht ausdrücklich true ist, wird er in einem booleschen oder bedingten Kontext als wahr ausgewertet, da ihm ein nicht-falsy Wert zugewiesen wurde.
+
+Welche Werte gelten also als falsy, also werden als false ausgewertet, wenn sie als Bedingung geprüft werden? Zu den falsy-Werten gehören:
+
+0
+
+Leere Zeichenketten wie "" oder ''
+
+null — steht dafür, dass kein Wert vorhanden ist
+
+undefined — steht dafür, dass eine deklarierte Variable keinen Wert hat
+
+NaN (Not a Number) — kein gültiger numerischer Wert
+
+Hier ist ein Beispiel mit Zahlen:
+
+let numberOfApples = 0;
+
+if (numberOfApples){
+   console.log('Let us eat apples!');
+} else {
+   console.log('No apples left!');
+}
+
+// Prints 'No apples left!'
+
+Die Bedingung wird als false ausgewertet, weil der Wert von numberOfApples 0 ist.
+Da 0 ein falsy Wert ist, wird der Codeblock innerhalb der else-Anweisung ausgeführt.
+
+Beispiel:
+
+let wordCount = 7;
+
+if (wordCount) {
+  console.log("Great! You've started your work!");
+} else {
+  console.log('Better get to work!');
+}
+
+
+let favoritePhrase = '';
+
+if (favoritePhrase) {
+  console.log("This string doesn't seem to be empty.");
+} else {
+  console.log('This string is definitely empty.');
+}
+
+------------------------------------------------------
+
+Zuweisung mit Truthy und Falsy
+Truthy- und falsy-Auswertungen eröffnen viele Möglichkeiten für Kurzschreibweisen!
+
+Angenommen, du hast eine Website und möchtest den Benutzernamen verwenden, um eine persönliche Begrüßung anzuzeigen.
+Manchmal hat der Benutzer jedoch kein Konto, wodurch die Variable username einen falsy Wert haben kann.
+
+Der folgende Code prüft, ob username definiert ist, und weist einen Standardwert zu, falls nicht:
+
+let username = '';
+let defaultName;
+
+if (username) {
+  defaultName = username;
+} else {
+  defaultName = 'Stranger';
+}
+
+console.log(defaultName); // Prints: Stranger
+
+Wenn du dein Wissen über logische Operatoren kombinierst, kannst du eine Kurzschreibweise für den obigen Code verwenden.
+
+In einer booleschen Bedingung weist JavaScript einer Variable den truthy Wert zu, wenn du den ||-Operator bei der Zuweisung verwendest:
+
+let username = '';
+let defaultName = username || 'Stranger';
+
+console.log(defaultName); // Prints: Stranger
+
+Weil bei ||- oder Oder-Anweisungen zuerst die linke Bedingung geprüft wird, erhält die Variable defaultName den tatsächlichen Wert von username, wenn dieser truthy ist. Ist username hingegen falsy, wird defaultName der Wert 'Stranger' zugewiesen.
+
+Dieses Prinzip wird auch als Short-Circuit-Evaluation bezeichnet.
+
+Beispiel:
+
+let tool = '';
+
+// Use short circuit evaluation to assign  writingUtensil variable below:
+let writingUtensil = tool || 'pen'
+
+console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+print: The pen is mightier than the sword.
+
+oder
+
+let tool = 'marker';
+
+// Use short circuit evaluation to assign  writingUtensil variable below:
+let writingUtensil = tool || 'pen'
+
+console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+print: The marker is mightier than the sword.
+
+----------------------------------------------------------------
+
+Ternärer Operator
+Im Sinne einer Kurzschreibweise können wir den ternären Operator verwenden, um eine if...else-Anweisung zu vereinfachen.
+
+Schau dir das Beispiel einer if...else-Anweisung an:
+
+let isNightTime = true;
+
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+
+Wir können den ternären Operator verwenden, um dieselbe Funktionalität auszuführen:
+
+isNightTime ? console.log('Turn on the lights!')
+: console.log('Turn off the lights!');
+
+Im obigen Beispiel:
+
+Die Bedingung, isNightTime, steht vor dem ?.
+Nach dem ? folgen zwei Ausdrücke, die durch einen Doppelpunkt : getrennt sind.
+Wenn die Bedingung als wahr (true) ausgewertet wird, wird der erste Ausdruck ausgeführt.
+Wenn die Bedingung als falsch (false) ausgewertet wird, wird der zweite Ausdruck ausgeführt.
+
+Wie bei if...else-Anweisungen können ternäre Operatoren für Bedingungen verwendet werden, die zu wahr oder falsch ausgewertet werden.
+
+Beispiele:
+
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.')
+: console.log('You will not need a key to open the door.');
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!')
+: console.log('Incorrect!');
+
+let favoritePhrase = 'Love That!';
+
+(favoritePhrase === 'Love That!') ? console.log('I love that!')
+: console.log("I don't love that!");
+
+------------------------------------------------------------------------
+
+Else-If-Anweisungen
+Wir können weitere Bedingungen zu unserer if...else-Anweisung mit einer else if-Anweisung hinzufügen. Die else if-Anweisung ermöglicht mehr als zwei mögliche Ergebnisse. Du kannst so viele else if-Anweisungen hinzufügen, wie du möchtest, um komplexere Bedingungen zu erstellen!
+
+Die else if-Anweisung steht immer nach der if-Anweisung und vor der else-Anweisung. Sie nimmt ebenfalls eine Bedingung entgegen. Schauen wir uns die Syntax an:
+
+let stopLight = 'yellow';
+
+if (stopLight === 'red') {
+  console.log('Stop!');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down.');
+} else if (stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+
+Die else if-Anweisungen ermöglichen mehrere mögliche Ergebnisse. if/else if/else-Anweisungen werden von oben nach unten gelesen, sodass der erste Ausdruck, der von oben nach unten als wahr (true) ausgewertet wird, auch der Codeblock ist, der ausgeführt wird.
+
+Im obigen Beispiel wird stopLight === 'red' als falsch ausgewertet, während stopLight === 'yellow' als wahr bewertet wird. Daher wird der Code innerhalb der ersten else if-Anweisung ausgeführt. Die übrigen Bedingungen werden nicht mehr geprüft. Wenn keine der Bedingungen wahr gewesen wäre, hätte der Code im else-Block ausgeführt werden.
+
+Beispiel:
+let season = 'summer';
+
+if (season === 'spring') {
+  console.log('It\'s spring! The trees are budding!');
+} else if (season === 'winter') {
+  console.log('It\'s winter! Everything is covered in snow.');
+} else if (season === 'fall') {
+  console.log('It\'s fall! Leaves are falling!');
+} else if (season === 'summer') {
+  console.log('It\'s sunny and warm because it\'s summer!');
+} else {
+  console.log('Invalid season.');
+}
+
+----------------------------------------------------------------------
+
+Das Schlüsselwort switch
+else if-Anweisungen sind ein großartiges Werkzeug, wenn wir mehrere Bedingungen überprüfen müssen. In der Programmierung kommt es häufig vor, dass wir mehrere Werte prüfen und jeden von ihnen unterschiedlich behandeln müssen. Zum Beispiel:
+
+let groceryItem = 'papaya';
+
+if (groceryItem === 'tomato') {
+  console.log('Tomatoes are $0.49');
+} else if (groceryItem === 'papaya'){
+  console.log('Papayas are $1.29');
+} else {
+  console.log('Invalid item');
+}
+
+Im obigen Code haben wir eine Reihe von Bedingungen, die prüfen, ob ein Wert mit der Variable groceryItem übereinstimmt. Unser Code funktioniert zwar, aber stell dir vor, wir müssten 100 verschiedene Werte prüfen! So viele else if-Anweisungen zu schreiben, klingt nach viel Aufwand!
+
+Eine switch-Anweisung bietet eine alternative Syntax, die leichter zu lesen und zu schreiben ist. Eine switch-Anweisung sieht so aus:
+
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
+
+// Prints 'Papayas are $1.29'
+
+Das Schlüsselwort switch startet die Anweisung und wird gefolgt von ( ... ), das den Wert enthält, mit dem jeder case verglichen wird. Im Beispiel ist der Wert oder Ausdruck der switch-Anweisung groceryItem.
+Innerhalb des Blocks { ... } gibt es mehrere cases. Das Schlüsselwort case prüft, ob der Ausdruck dem angegebenen Wert entspricht, der ihm folgt. Der Wert nach dem ersten case ist 'tomato'. Wenn der Wert von groceryItem 'tomato' wäre, würde der console.log()-Befehl in diesem case ausgeführt werden.
+Da der Wert von groceryItem 'papaya' ist, wird der dritte case ausgeführt — "Papayas are $1.29" wird in der Konsole ausgegeben.
+Das Schlüsselwort break weist den Computer an, den Block zu verlassen und keinen weiteren Code oder weitere cases im Codeblock auszuführen.
+Hinweis: Ohne break-Anweisungen würde der erste passende case zwar ausgeführt werden, aber auch alle folgenden cases, unabhängig davon, ob sie passen oder nicht — einschließlich des default. Dieses Verhalten unterscheidet sich von if/else-Bedingungen, die nur einen Codeblock ausführen.
+Am Ende jeder switch-Anweisung gibt es eine default-Anweisung. Wenn keiner der cases zutrifft, wird der Code im default-Block ausgeführt.
+
+Beispiel
+
+let athleteFinalPosition = 'first place';
+
+switch (athleteFinalPosition) {
+  case 'first place':
+  console.log('You get the gold medal!');
+  break;
+  case 'second place':
+  console.log('You get the silver medal!');
+  break;
+  case 'third place':
+  console.log('You get the bronze medal!');
+  break;
+  default:
+  console.log('No medal awarded.');
+  break;
+}
+
+----------------------------------------------
+
+Zusammenfassung
+Gut gemacht! Hier sind einige der wichtigsten Konzepte zu Bedingungen:
+
+Eine if-Anweisung prüft eine Bedingung und führt eine Aufgabe aus, wenn diese Bedingung als wahr (true) ausgewertet wird.
+
+if...else-Anweisungen treffen binäre Entscheidungen und führen unterschiedliche Codeblöcke basierend auf einer angegebenen Bedingung aus.
+
+Wir können weitere Bedingungen mit else if-Anweisungen hinzufügen.
+
+Vergleichsoperatoren wie <, >, <=, >=, === und !== können zwei Werte vergleichen.
+
+Der logische Und-Operator && prüft, ob beide angegebenen Ausdrücke wahr sind.
+
+Der logische Oder-Operator || prüft, ob mindestens einer der angegebenen Ausdrücke wahr ist.
+
+Der Negationsoperator ! kehrt die Wahrheitswerte (truthiness/falsiness) eines Wertes um.
+
+Der ternäre Operator ist eine Kurzschreibweise, um prägnante if...else-Anweisungen zu vereinfachen.
+
+Eine switch-Anweisung kann verwendet werden, um das Schreiben mehrerer else if-Anweisungen zu vereinfachen. Das Schlüsselwort break verhindert, dass weitere Fälle in einer switch-Anweisung geprüft und ausgeführt werden.
