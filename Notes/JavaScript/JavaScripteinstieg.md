@@ -229,6 +229,7 @@ console.log('Codecademy'.toUpperCase());
 console.log('    Remove whitespace   '.trim());
 
 ----------------------------------------------------
+Eingebaute Objekte
 
 Neben console gibt es noch weitere in JavaScript integrierte Objekte. Später werden wir unsere eigenen Objekte erstellen, aber vorerst bieten diese „eingebauten“ Objekte viele nützliche Funktionen.
 

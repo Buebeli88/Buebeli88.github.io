@@ -103,7 +103,9 @@ if(sale) {
   console.log('Time to wait for a sale.')
 }
 
--------------------------------------------------------
+----------------------------------------------- -------
+
+Vergleichsoperatoren
 
 Beim Schreiben von Bedingungen (z. B. in if-Anweisungen) müssen wir oft Werte miteinander vergleichen. Dafür verwenden wir sogenannte Vergleichsoperatoren (comparison operators).
 

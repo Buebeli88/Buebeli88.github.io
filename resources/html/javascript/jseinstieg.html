@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Einstieg</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jseinstieg.css" />
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <main>
+        <h1>JavaScript Einstieg</h1>
+        <section class="konsole">
+          <h2>Konsole</h2>
+          <p>
+            Die Konsole ist ein Bedienfeld, das wichtige Meldungen – wie
+            Fehlermeldungen – für Entwickler/innen anzeigt. Ein Großteil der
+            Arbeit, die der Computer mit unserem Code erledigt, bleibt
+            standardmäßig unsichtbar. Wenn wir jedoch etwas sichtbar machen
+            möchten, können wir direkt in die Konsole „drucken“ bzw. ausgeben.
+            <br /><br />
+            In JavaScript bezieht sich das Schlüsselwort console auf ein Objekt,
+            also eine Sammlung von Daten und Funktionen, die wir in unserem Code
+            verwenden können. Schlüsselwörter sind fest in die
+            JavaScript-Sprache integriert, sodass der Computer sie erkennt und
+            besonders behandelt.
+            <br /><br />
+            Eine solche Funktion – auch Methode genannt – des console-Objekts
+            ist die Methode .log(). Wenn wir console.log() schreiben, wird das,
+            was wir in die Klammern setzen, in der Konsole ausgegeben bzw.
+            geloggt.
+            <br /><br />
+            Es wird sehr nützlich für uns sein, Werte in die Konsole auszugeben,
+            damit wir nachvollziehen können, was unser Code gerade macht.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code> console.log(5) </code>
+          <div class="bspkonsole">
+            <p>Output:</p>
+            5
+          </div>
+        </section>
+        <section class="kommentare">
+          <h2>Kommentare</h2>
+          <p>
+            Programmieren ist oft eine sehr kooperative Tätigkeit. Außerdem kann
+            unser eigener Code schnell schwer verständlich werden – manchmal
+            schon, wenn wir nur eine Stunde später wieder darauf schauen! Aus
+            diesen Gründen ist es oft hilfreich, Notizen im Code zu hinterlassen
+            – für andere Entwickler/innen oder für uns selbst.
+            <br /><br />
+            Während wir JavaScript schreiben, können wir sogenannte Kommentare
+            in unseren Code einfügen, die der Computer beim Ausführen des
+            Programms ignoriert. Diese Kommentare sind nur für Menschen gedacht.
+            <br /><br />
+            Kommentare können erklären, was der Code macht, Anweisungen für
+            andere Entwickler*innen enthalten oder andere nützliche Hinweise
+            bieten.
+            <br /><br />
+            In JavaScript gibt es zwei Arten von Kommentaren:
+          </p>
+          <ul>
+            <li>
+              Ein einzeiliger Kommentar kommentiert eine einzelne Zeile und wird
+              mit zwei Schrägstrichen // am Anfang der Zeile gekennzeichnet.
+            </li>
+            <li>
+              Multi-Line Kommentare welche über sich über mehreren Zeilen ziehen
+              und am Anfang mit /* und am Ende mit */ gekennzeichnet sind.
+            </li>
+          </ul>
+          <p>Beispiel:</p>
+          <code>
+            // Prints 5 to the console
+            <br />
+            console.log(5);
+            <br /><br />
+            oder Multi - Line Kommentare
+            <br /><br />
+            /* <br />
+            This is all commented <br />
+            console.log(10); <br />
+            None of this is going to run! <br />
+            console.log(99); <br />
+            */
+            <br /><br />
+            oder Kommentare mitten im Code
+            <br /><br />
+            console.log(/*IGNORED!*/ 5); // Still just prints 5
+          </code>
+        </section>
+        <section class="datentypen">
+          <h2>Datentypen</h2>
+          <p>
+            Datentypen sind Klassifizierungen, die wir den verschiedenen Arten
+            von Daten zuweisen, die wir in der Programmierung verwenden. In
+            JavaScript gibt es acht grundlegende Datentypen:
+          </p>
+          <ul>
+            <li>
+              Number (Zahl): Jede Zahl, auch Dezimalzahlen – z. B. 4, 8, 1516,
+              23.42.
+            </li>
+            <li>
+              BigInt: Sehr große Zahlen, die größer als 2⁵³–1 oder kleiner als
+              –(2⁵³–1) sind. Sie werden mit einem n am Ende dargestellt: z. B.
+              1234567890123456n.
+            </li>
+            <li>
+              String (Zeichenkette): Jede Gruppe von Zeichen auf der Tastatur
+              (Buchstaben, Zahlen, Leerzeichen, Symbole usw.), die in einfache
+              ('...') oder doppelte ("...") Anführungszeichen gesetzt wird. Wir
+              bevorzugen einfache Anführungszeichen. Manche bezeichnen einen
+              String auch einfach als ein schickeres Wort für Text.
+            </li>
+            <li>
+              Boolean (Boolescher Wert): Dieser Datentyp kennt nur zwei mögliche
+              Werte: true (wahr) oder false (falsch) – ohne Anführungszeichen.
+              Man kann sich Booleans gut als Ein-/Aus-Schalter oder als Antwort
+              auf eine Ja-/Nein-Frage vorstellen.
+            </li>
+            <li>
+              Null: Dieser Datentyp steht für das absichtliche Fehlen eines
+              Werts und wird mit dem Schlüsselwort null (ohne Anführungszeichen)
+              dargestellt.
+            </li>
+            <li>
+              Undefined: Wird mit dem Schlüsselwort undefined (ebenfalls ohne
+              Anführungszeichen) dargestellt. Es bedeutet ebenfalls, dass ein
+              Wert nicht existiert, wird jedoch anders verwendet als null.
+              undefined steht für ein nicht gesetztes oder nicht zugewiesenes
+              Element.
+            </li>
+            <li>
+              Symbol: Ein neuerer Datentyp in JavaScript, der für eindeutige
+              Bezeichner verwendet wird – vor allem in komplexeren Anwendungen.
+              Du musst dir darüber jetzt noch keine Gedanken machen.
+            </li>
+            <li>
+              Object (Objekt): Eine Sammlung zusammengehöriger Daten. Objekte
+              sind komplexer als die anderen Datentypen.
+            </li>
+          </ul>
+          <p>
+            Die ersten sieben dieser Typen gelten als primitive Datentypen. Sie
+            sind die grundlegendsten Bausteine in JavaScript. Objekte hingegen
+            sind komplexer.
+            <br /><br />
+            Am Anfang wirken acht Datentypen vielleicht nicht besonders viel,
+            aber du wirst schnell sehen, wie viele Möglichkeiten sich eröffnen,
+            sobald wir sie gezielt einsetzen. Vor allem mit Objekten lassen sich
+            später sehr komplexe Datenstrukturen erstellen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            console.log('JavaScript'); <br />
+            console.log(2011); <br />
+            console.log('Woohoo! I lov to code!'); <br />
+            console.log(20.49);
+          </code>
+        </section>
+        <section class="arithmetischeop">
+          <h2>Arithmetische Operatoren</h2>
+          <p>
+            Grundlegende Rechenoperationen sind beim Programmieren oft sehr
+            nützlich.
+            <br /><br />
+            Ein Operator ist ein Zeichen, das in unserem Code eine bestimmte
+            Aufgabe ausführt. JavaScript bietet mehrere eingebaute arithmetische
+            Operatoren, mit denen wir mathematische Berechnungen mit Zahlen
+            durchführen können. Dazu gehören die folgenden Operatoren und ihre
+            jeweiligen Symbole:
+          </p>
+          <ul>
+            <li>Addition: +</li>
+            <li>Subtraktion: -</li>
+            <li>Multiplikation: *</li>
+            <li>Division: /</li>
+            <li>Rest (Modulo): %</li>
+          </ul>
+          <p>Beispiel:</p>
+          <code>
+            console.log(0 + 3.5); <br />
+            console.log(2025 - 1969); <br />
+            console.log(65 / 249); <br />
+            console.log(0.2708 * 100);
+          </code>
+        </section>
+        <section class="stringverk">
+          <h2>String - Verkettung</h2>
+          <p>
+            Operatoren sind nicht nur für Zahlen da! Wenn der +Operator auf zwei
+            Strings angewendet wird, fügt er den rechten String an den linken
+            String an.
+            <br /><br />
+            Dieser Vorgang, einen String an einen anderen anzufügen, nennt sich
+            Verkettung.
+            <br /><br />
+            Der Computer fügt die Strings genau so zusammen, wie sie sind, daher
+            müssen wir das gewünschte Leerzeichen zwischen den beiden Strings
+            selbst mitgeben.
+            <br /><br />
+            Genau wie bei der normalen Mathematik können wir unsere Operationen
+            kombinieren oder verketten, um ein Endergebnis zu erhalten:
+            <br /><br />
+            Beispiele:
+          </p>
+          <code>
+            console.log('Hello'+'World'); <br />
+            console.log('Hello '+'World'); <br />
+          </code>
+          <div class="bspverk">
+            <p>
+              Output:
+              <br /><br />
+              HelloWorld <br />
+              Hello World
+            </p>
+          </div>
+        </section>
+        <section class="eigenschaften">
+          <h2>Eigenschaften</h2>
+          <p>
+            Wenn wir ein neues Datenelement in ein JavaScript-Programm
+            einführen, speichert der Browser es als Instanz eines Datentyps.
+            Alle Datentypen haben Zugriff auf bestimmte Eigenschaften, die an
+            jede Instanz weitergegeben werden.
+            <br /><br />
+            Zum Beispiel hat jede String-Instanz eine Eigenschaft namens length,
+            die die Anzahl der Zeichen in diesem String speichert. Wir können
+            Informationen über eine Eigenschaft abrufen, indem wir den String
+            mit einem Punkt und dem Eigenschaftsnamen ergänzen.
+            <br /><br />
+            Der Punkt (.) ist ein weiterer Operator! Wir nennen ihn den
+            Punktoperator.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            console.log('Teaching the world how to code'.length); // Prints 30
+          </code>
+        </section>
+        <section class="methoden">
+          <h2>Methoden</h2>
+          <p>
+            Methoden sind Aktionen, die wir ausführen können. Datentypen haben
+            Zugriff auf bestimmte Methoden, mit denen wir Instanzen dieses
+            Datentyps bearbeiten können. JavaScript bietet viele String-Methoden
+            an.
+            <br /><br />
+            Wir rufen diese Methoden auf , indem wir eine Instanz mit folgendem
+            ergänzen:
+          </p>
+          <ul>
+            <li>einem Punkt (dem Punktoperator)</li>
+            <li>geöffneten und geschlossenen Klammern</li>
+          </ul>
+          <p>
+            Wenn wir console.log() verwenden, rufen wir die Methode .log() des
+            Objekts console auf.
+            <br /><br />Eine Liste der eingebauten String-Methoden findest du in
+            der JavaScript-Dokumentation. Entwickler/innen nutzen
+            Dokumentationen als Nachschlagewerk. Dort werden
+            JavaScript-Schlüsselwörter, Methoden und Syntax beschrieben.
+            <br /><br />
+            Eine Liste mit allen möglichen Methoden findest du
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+              target="_blank"
+              >hier!</a
+            >
+            <br /><br />
+            Beispiele:
+          </p>
+          <code>
+            console.log('Codeacademy'.toUpperCase());
+            <br /><br />
+            console.log('&nbsp;&nbsp;&nbsp;&nbsp;Remove
+            whitespace&nbsp;&nbsp;&nbsp;&nbsp;'.trim());
+          </code>
+          <div class="bspmethoden">
+            Output:
+            <br /><br />
+            CODEACADEMY
+            <br /><br />
+            Remove whitespace
+          </div>
+        </section>
+        <section class="eingebauteobj">
+          <h2>Eingebaute Objekte</h2>
+          <p>
+            In JavaScript sind eingebaute Objekte (auch als native oder globale
+            Objekte bezeichnet) vordefinierte Objekte, die bereits in der
+            Sprache vorhanden sind und für verschiedene Aufgaben verwendet
+            werden können, ohne dass sie explizit definiert werden müssen. Sie
+            stellen grundlegende Datentypen, Funktionen und Werkzeuge bereit,
+            die für die Entwicklung von JavaScript-Anwendungen unerlässlich
+            sind.
+            <br /><br />
+            Wichtige eingebaute Objekte:
+          </p>
+          <ul>
+            <li>
+              Object: Der grundlegende Prototyp für alle Objekte in JavaScript.
+              Es stellt methoden für die Arbeit mit objekten bereit, wie z.B.
+              defineProperty, create, und getPrototypeOf.
+            </li>
+            <li>
+              Array: Ermöglicht die Arbeit an Arrays (Listen von Werten). Es
+              bietet methoden zum Hinzufügen, Entfernen, Sortieren und Iterieren
+              von Elementen.
+            </li>
+            <li>
+              String: Dient zur Arbeit mit Textzeichenketten. Es stellt Methoden
+              zur Manipulation von Zeichenketten bereit, wie z.B. substing,
+              toUpperCase, und toLowerCase.
+            </li>
+            <li>
+              Number: Ermöglicht die Arbeit mit numerischen Werten. Es bietet
+              Methoden zum Konvertieren von Werten in Zahlen, zur Formatierung
+              von Zahlen und zur Druchführung mathematischer Operationen.
+            </li>
+            <li>
+              Math: Bietet mathematische Funktionen und Konstanten, wie z.B.
+              Math.PI, Math.sqrt, und Math.random.
+            </li>
+            <li>
+              Date: Ermöglicht die Arbeit mit Datum und Uhrzeit. Es bietet
+              Methoden zum Erstellen, Formatieren und Verarbeiten von Datums-
+              und Zeitangaben.
+            </li>
+            <li>
+              Boolean: Stellt die booleschen Datentypen dar, die entweder true
+              oder false sein können.
+            </li>
+            <li>Function: Ein Objekt, das eine Funktion repräsentiert.</li>
+            <li>
+              RegExp: Ermöglicht die Arbeit mit regulären Ausdrücken zur
+              Mustererkennung in Zeichenketten.
+            </li>
+            <li>
+              Error: Stellt die Basisklasse für alle Fehlerobjekte dar und wird
+              für die Fehlerbehandlung verwendet.
+            </li>
+          </ul>
+          <p>
+            Eine Liste mit allen möglichen Methoden findest du
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
+              target="_blank"
+              >hier!</a
+            >
+            <br /><br />
+            Beispiele:
+          </p>
+          <code>
+            console.log(Math.floor(math.random() * 100));
+            <br /><br />
+            console.log(Number.isInteger(2017));
+          </code>
+          <div class="bspeingeb">
+            <p>
+              Output:
+              <br /><br />
+              Zufällgie abgerundete Zahl
+              <br><br>
+              true
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
