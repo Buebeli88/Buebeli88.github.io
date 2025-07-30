@@ -5,13 +5,9 @@ html {
 }
 
 section {
-    width: 90%;
-    margin: 0 auto;
 }
 
 main {
-    width: 90%;
-    margin: 0 auto;
 }
 
 h1 {
@@ -42,6 +38,8 @@ footer {
 .container {
     min-height: calc(100vh - 6.8rem);
     padding-top: 3rem;
+    width: 80%;
+    margin: auto;
 }
 
 .pfooter{

@@ -1,5 +1,12 @@
-body {
-    width: 100%;
+
+
+.akthema, .gpthema {
+    display: inline-block;
+    width: 45%;
+}
+
+.gpthema {
+    float: right;
 }
 
 .index {
