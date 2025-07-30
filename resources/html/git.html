@@ -61,24 +61,27 @@
             dieser Lektion noch mehr erfahren werden.
           </p>
           <p>
-            +------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------+
+            +------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+----------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+---------------------------+
             <br />
             | Working
             Directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
             ---> |&nbsp;Staging Area&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| --->
-            |&nbsp;Repository&nbsp;&nbsp;&nbsp;| <br />
+            |&nbsp;Repository&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+            <br />
             | 📝 Dateien
             erstellen&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            ✅ Änderungen | | 📦 Versionen | <br />
+            ✅ Änderungen |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 📦
+            Versionen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br />
             | ✏️ Dateien bearbeiten
             |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            vormerken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| |
+            vormerken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
             dauerhaft speichern | <br />
             | 🗑️ Dateien
             löschen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            | | <br />
-            +------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br />
+            +------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+----------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+---------------------------+
           </p>
           <p>Pfeile (→) zeigen den Ablauf:</p>
           <ul>
@@ -133,7 +136,10 @@
           <p>
             So entscheidest du selbst, ob du nur einzelne Dateien oder gleich
             alles auf einmal hinzufügen willst.
+            <br /><br />
+            Beispiel:
           </p>
+          <code> $ git add -A </code>
         </section>
         <section class="gitdiff">
           <h2>Befehl: git diff</h2>
@@ -176,7 +182,10 @@
             (hinzugefüght) oder - (entfernt) vorangestellt, um die Änderugen zu
             kennzeichnen. Es ist ein nützliches Werkzeug, um Änderugen zu
             überprüfen, bevor sie committtet oder gemerged werden.
+            <br /><br />
+            Beispiel:
           </p>
+          <code> $ git diff </code>
         </section>
         <section class="gitcommit">
           <h2>Befehl: git commit</h2>
@@ -209,19 +218,48 @@
             Reihenfolge dar, wobei die neuesten Commits zuerst angezeigt werden.
             Mit git log kann man den Verlauf eines Projekts einsehen, ihn
             filtern und nach bestimmten Änderungen suchen.
-            <br><br>
+            <br /><br />
             In der Ausgabe beachte:
           </p>
           <ul>
-            <li>Einen 40-stelligen Code, genannt SHA, der den Commit eindeutig identifiziert. Dieser wird in orangener Schrift angezeigt.</li>
+            <li>
+              Einen 40-stelligen Code, genannt SHA, der den Commit eindeutig
+              identifiziert. Dieser wird in orangener Schrift angezeigt.
+            </li>
             <li>Den Autor des Commits (du selbst!)</li>
             <li>Datum und Uhrzeit des Commits.</li>
             <li>Die Commit-nachricht.</li>
           </ul>
           <p>Beispiel:</p>
-          <code>
-            $ git log
-          </code>
+          <code> $ git log </code>
+        </section>
+        <section class="gitpush">
+          <h2>Befehl: git push</h2>
+          <p>
+            Der Befehl git push wird verwendet, um Änderungen von einem lokalen
+            Git-Repository auf ein Remote-Repository (z.B. auf GitHub oder
+            GitLab) hochzuladen. Vereinfacht gesagt, synchronisiert git push den
+            lokalen Stand mit dem Remote-Repository, sodass andere Entwickler
+            deine Änderungen sehen und mit ihnen arbeiten können.
+            <br /><br />
+            Zwecke:
+          </p>
+          <ul>
+            <li>
+              Veröffentlichung von Änderungen: git push ist der primäre Weg, um
+              deine lokalen Änderugen mit anderen Entwicklern zu teilen.
+            </li>
+            <li>
+              Sinchronisation mit dem Team: Es hilft, die lokale Entwicklung mit
+              einem zentralen Repository zu synchronisieren.
+            </li>
+            <li>
+              Teilen von Branches und Tags: Du kannst auch bestimmte Branches
+              oder Tags mit git push hochladen.
+            </li>
+          </ul>
+          <p>Beispiel:</p>
+          <code> $ git push </code>
         </section>
       </main>
     </div>
