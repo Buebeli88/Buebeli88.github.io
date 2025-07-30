@@ -31,6 +31,7 @@ Master the art of looping by creating a program that talks like a whale!
 These projects will help you practice building fluency in JavaScript.
 
 We are excited for you to start your journey into Learn JavaScript!
+
 -----------------------------------------------------------------------------------
 
 Was ist JavaScript?
