@@ -2,7 +2,7 @@ html {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    background-color: lightgrey;
+    background-color: whitesmoke;
 }
 
 section {
@@ -16,7 +16,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(47, 125, 189);
+    color: darkred;
     font-weight: 1000;
 }
 
@@ -27,23 +27,32 @@ header {
     width: 100%;
     top: -8px;
     z-index: 1;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
 }
 
-nav {
-    float: right;
-    height: 4.25rem;
-    align-content: center;
-    justify-content: space-between;
+.left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4px;
 }
 
-.navlink {
-    color: lightgray;
+.right {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+    margin-top: 4px;
+}
+
+
+
+a {
     text-decoration: none;
-    font-weight: bold;
+    color: whitesmoke;
     font-size: 1.25rem;
-    margin-right: 3rem;
 }
 
 footer {
