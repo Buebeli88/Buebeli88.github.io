@@ -7,61 +7,72 @@
     <link rel="stylesheet" href="../../css/layout.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
     <div class="container">
       <main>
         <h1>Element Content</h1>
-        <div class="elementcontent">
-          <h2>Element Content</h2>
-          <p>
-            Der Inhalt (Content) eines HTML Elements ist die Information
-            zwischen dem Öffnungs- (opening tag) und dem Endtag (closing tag)
-          </p>
-          <p>Beispiel:</p>
-          <div class="bspelement">
-            <div class="bspelement1">
-              <p>Code:</p>
-              <p>
-                &lt;h1&gt;Codeacademy is awesome!&lt;/h1&gt;<br />
-                Hier ist "Codeacademy is awesome!" der Inhalt
-              </p>
-            </div>
-            <div class="bspelement2">
-              <p>HTML:</p>
-              <h1 class="h1element">Codeacademy is awesom!</h1>
-            </div>
-          </div>
-        </div>
-        <div class="openingtag">
+        <p>
+          Der Begriff "Element Content" in HTML bezieht sich auf den Inhalt, der
+          zwischen dem öffnenden und schließenden Tag eines HTML-Elements steht.
+          Dieser Inhalt kann reiner Text, andere HTML-Elemente oder sogar andere
+          Arten von Daten sein, die innerhalb des Elementbereichs definiert
+          sind.
+        </p>
+        <section class="openingtag">
           <h2>Opening Tag</h2>
           <p>
-            Der Syntax eines "Opening Tag" ist ein «Kleiner als» gefolgt vom
-            Elementnamen und einem "Grösser als".
+            Ein HTML-Opening-Tag (auch Start-Tag genannt) ist der Beginn eines
+            HTML-Elements und kennzeichnet den Beginn eines Abschnitts, der von
+            diesem Element umschlossen wird. Es besteht aus dem Elementnamen in
+            spitzen Klammern.
+            <br /><br />
+            Beispiel:
           </p>
-          <p>Beispiel:</p>
-          <p>&lt;div&gt;</p>
-        </div>
-        <div class="closingtag">
+          <code> &lt;div&gt; </code>
+        </section>
+        <section class="closingtag">
           <h2>Closing Tag</h2>
           <p>
-            Ein "Closing Tag" wird benutzt, um das ende eines HTML Elements
-            anzugeben. Der Syntax eines «Closing Tag» ist ein "Kleiner als"
-            gefolgt von einem "Slash", dem Elementnamen und einem "Grösser als".
+            Ein Closing Tag (oder End-Tag) in HTML kennzeichnet das Ende eines
+            HTML-Elements. Es besteht aus einem Schrägstrich (/) gefolgt vom
+            Elementnamen, eingeschlossen in spitze Klammern.
+            <br /><br />
+            Beispiel:
           </p>
-          <p>Beispiel:</p>
-          <p>&lt;body&gt;<br />|<br />&lt;/body&gt;</p>
-        </div>
-        <div class="attributenamevalues">
+          <code> &lt;/div&gt; </code>
+        </section>
+        <section class="attributenamevalues">
           <h2>Attribute Name and Values</h2>
           <p>
-            Ein HTML Attribut besteht aus einem Namen und einen Wert. Es kann
-            auch ein zusätzlicher "syntay" eingefügt werden: name="value"
-            welcher im "opening tag»" zugefügt wird. Dieser wird das "Verhalten"
-            dieses Elements ändern.
+            In HTML beziehen sich Name und Wert auf die Attribute eines
+            HTML-Elements. Ein Attribut besteht immer aus einem Namen (Name) und
+            einem zugehörigen Wert (Value), die zusammen eine Erweiterung oder
+            zusätzliche Information zum Element darstellen. Man schreibt sie im
+            öffnenden Tag des Elements.
+            <br /><br />
+            Beispiel:
           </p>
-          <p>Beispiel:</p>
-          <p>&lt;Elementname name="value"&gt;Inhalt&lt;/Elementname&gt;</p>
-        </div>
+          <code
+            >&lt;Elementname Name="Wert"&gt;Inhalt&lt;/Elementname&gt;
+            <br /><br />
+          </code>
+        </section>
       </main>
     </div>
     <footer>
