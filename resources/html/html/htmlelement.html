@@ -27,6 +27,162 @@
     <div class="container">
       <main>
         <h1>HTML Element</h1>
+        <p>
+          Ein HTML-Element ist ein Baustein eines HTML-Dokuments, der dem
+          Browser Anweisungen gibt, wie ein bestimmter Inhalt dargestellt und
+          interpretiert werden soll. Es besteht in der Regel aus einem öffnenden
+          Tag, einem Inhalt und einem schließenden Tag. Einige Elemente sind
+          jedoch "selbstschließende" und benötigen kein End-Tag.
+        </p>
+        <section class="htmlelement">
+          <h2>&lt;html&gt; Element</h2>
+          <p>
+            Das &lt;html&gt; Element sollte direkt nach dem &lt;!DOCTYPE
+            html&gt; eingefügt werden und beinhaltet den ganzen Inhalt und die
+            Struktur des Dokuments.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &nbsp;&nbsp;Inhalt und Struktur der Seite.<br />
+            &lt;/html&gt;
+          </code>
+        </section>
+        <section class="headelement">
+          <h2>&lt;head&gt; Element</h2>
+          <p>
+            Das &lt;head&gt; Element beinhaltet generelle Informationen über die
+            HTML Seite, die nicht im Browser angezeigt werden. Diese
+            Informationen nennt man auch "Metadaten". Title oder Linkts zu
+            Stylesheets werden hier üblicherweise angegeben.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &nbsp;&nbsp;&lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Metadaten werden hier eingefügt
+            --&gt;<br />
+            &nbsp;&nbsp;&lt;/head&gt;<br />
+            &lt;/html&gt;
+          </code>
+        </section>
+        <section class="metaelement">
+          <h2>&lt;meta/&gt; Element</h2>
+        </section>
+        <section class="titleelement">
+          <h2>&lt;title&gt; Element</h2>
+          <p>
+            Das &lt;title&gt; Element zeigt den Titel der Seite im Browser/Tab
+            an. Das Element wird nur im &lt;head&gt; Element eingefügt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &nbsp;&nbsp;&lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titel der HTML
+            Seite&lt;/title&gt;<br />
+            &nbsp;&nbsp;&lt;/html&gt;<br />
+            &lt;/html&gt;
+          </code>
+        </section>
+        <section class="bodyelement">
+          <h2>&lt;body&gt; Element</h2>
+          <p>
+            Im &lt;body&gt; Element wird der ganze Inhalt und Struktur der im
+            Browser dargestellten Seite. Es kann nur ein &lt;body&gt; Element
+            pro Dokument existieren.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&lt;h1&gt;Learn to code with CodeAcademy&lt;/h1&gt;<br />
+            &lt;/body&gt;
+          </code>
+        </section>
+        <section class="headingelement">
+          <h2>&lt;h1&gt; bis &lt;h6&gt; Heading Elemente</h2>
+          <p>
+            Ein HTML Dokument kann 6 verschiedene Heading Elemente darstellen.
+            Vom grössten &lt;h1&gt; bis zum kleinsten &lt;h6&gt;
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;h1&gt;Breaking News&lt;/h1&gt;<br />
+            &lt;h2&gt;This is the 1st subheading&lt;/h2&gt;<br />
+            &lt;h3&gt;This is the 2nd subheading&lt;/h3&gt;<br />
+            ...<br />
+            &lt;h6&gt;This is the 5th subheading &lt;/h6&gt;
+          </code>
+        </section>
+        <section class="paragraph">
+          <h2>&lt;p&gt; Paragraph Element</h2>
+          <p>
+            Dieses Element beinhaltet einen Textblock.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            &lt;p&gt;This is a block of text! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.&lt;/p&gt;
+          </code>
+        </section>
+        <section class="linebreak">
+          <h2>&lt;br&gt; Line Break Element</h2>
+          <p>
+            Ein &lt;br&gt; Line Break Element ist ein Zeilenumbruch, der vom
+            Browser auch dargestellt wird. (Im Gegensatz zum «normalen»
+            Zeilenumbruch, siehe "Whitespace") Dieses Element nutzt nur einen
+            "opening tag" und KEINEN "closing tag".
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;p&gt;<br />&nbsp;&nbsp;A line break haiku. &lt;br&gt;<br />&nbsp;&nbsp;Poems
+            are a great use case. &lt;br&gt;<br />&nbsp;&nbsp;Oh joy! A line
+            break.<br />&lt;/p&gt;
+          </code>
+          <div>
+            HTML:
+            <br /><br />
+            A line break haiku. <br />
+            Poems are a great use case. <br />
+            Oh joy! A line break.
+          </div>
+        </section>
+        <section class="strongelement">
+          <h2>&lt;strong&gt; Strong Element</h2>
+          <p>
+            Das &lt;strong&gt; Element setzt den Text zwischen dem "opening tag"
+            und "closing tag" auf bold (Fett). Dies kann zusätzlich zu CSS
+            funktionen über HTML benutzt werden. (Wird aber nur die "normale"
+            bold funktion übernehmen, welche in CSS für 400 steht)
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt;
+            text!&lt;/p&gt;
+          </code>
+          <div>
+            <p>
+              HTML:
+              <br /><br />
+              This is <strong>important</strong> text!
+            </p>
+          </div>
+        </section>
       </main>
     </div>
     <footer>
