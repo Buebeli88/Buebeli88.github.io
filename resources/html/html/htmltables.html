@@ -152,9 +152,186 @@
           <p>
             Das &lt;tr&gt; Element wird benutzt, um der Tabelle eine Zusätzliche
             Reihe für Daten &lt;td&gt; oder Headings &lt;th&gt; zu geben.
-            <br><br>
+            <br /><br />
             Beispiel:
           </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </code>
+        </section>
+        <section class="theadelement">
+          <h2>&lt;th&gt; Table Heading Element</h2>
+          <p>
+            Das &lt;th&gt; Element wird benutzt um einer Reihe oder Spalte einen
+            Titel zu verpassen. Dieses Element muss in einem &lt;tr&gt; Element
+            sein.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;column&lt;/th&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </code>
+          <div>
+            <p>HTML (Border with CSS):</p>
+            <table>
+              <tr>
+                <th>column</th>
+              </tr>
+              <tr>
+                <td>1</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <section class="tabledata">
+          <h2>&lt;td&gt; Table Data Element</h2>
+          <p>
+            Das &lt;td&gt; Element wird in einer Reihe (&lt;tr&gt;) eingesetzt
+            um Daten in der Tabelle anzuzeigen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;cell one data&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;cell two data&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </code>
+          <div>
+            <p>HTML (Border with CSS):</p>
+            <table>
+              <tr>
+                <td>cell one data</td>
+                <td>cell two data</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <section class="rowspan">
+          <h2>"rowspan" Attribut</h2>
+          <p>
+            Ähnlich zum "colspan" Attribut wird das "rowspan" Attribut
+            verwendet, um einem Element zu sagen, es solle mehrere Reihen in der
+            Tabelle besetzten. Die "value" des Attributs geht von 1 (default)
+            bis hin zu 65534.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 1:&lt;/th&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th rowspan="2"&gt; (this row will span 2
+            rows):&lt;/th&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 3:&lt;/th&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </code>
+          <div>
+            <p>HTML (Border with CSS):</p>
+            <table>
+              <tr>
+                <th>row 1:</th>
+                <td>col 1</td>
+                <td>col 2</td>
+              </tr>
+              <tr>
+                <th rowspan="2">(this row will span 2 rows):</th>
+                <td>col 1</td>
+                <td>col 2</td>
+              </tr>
+              <tr>
+                <td>col 1</td>
+                <td>col 2</td>
+              </tr>
+              <tr>
+                <th>row 3:</th>
+                <td>col 1</td>
+                <td>col 2</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <section class="colspan">
+          <h2>"colspan" Attribut</h2>
+          <p>
+            Das "colspan" Attribut in einem Header &lt;th&gt; oder in
+            Tabellendaten &lt;td&gt; gibt an wieviele Reihen in einer Spalte
+            benutzt werden. Die «value» geht von 1(default) bis hin zu 1000.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Code:
+            <br /><br />
+            &lt;table&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 1:&lt;/th&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 1&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 3&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &nbsp;&nbsp;&lt;tr&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;row 2:&lt;/th&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;col 1 (will span 2
+            columns)&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 2&lt;/td&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;col 3&lt;/td&gt;<br />
+            &nbsp;&nbsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+          </code>
+          <div>
+            <p>HTML (Border with CSS):</p>
+            <table>
+              <tr>
+                <th>row 1:</th>
+                <td>col 1</td>
+                <td>col 2</td>
+                <td>col 3</td>
+              </tr>
+              <tr>
+                <th>row 2:</th>
+                <td colspan="2">col 1 (will span 2 columns)</td>
+                <td>col 2</td>
+                <td>col 3</td>
+              </tr>
+            </table>
+          </div>
         </section>
       </main>
     </div>
