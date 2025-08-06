@@ -8,9 +8,137 @@
     <link rel="stylesheet" href="../../css/javascript/jsverionen.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
     <div class="container">
-      <main></main>
+      <main>
+        <h1>JavaScript Versionen</h1>
+        <section class="geschichte">
+          <h2>Ein Blick in die Geschichte von JavaScript</h2>
+          <p>
+            JavaScript wurde 1995 von Netscape Communications eingeführt –
+            damals als Skriptsprache für Webdesigner und Entwickler, um
+            Webseiten interaktiv zu gestalten. Bereits ein Jahr später reichte
+            Netscape die Sprache bei Ecma International ein, einer Organisation,
+            die sich der Standardisierung von Programmiersprachen widmet. Ziel
+            war es, einheitliche Regeln für Skriptsprachen zu schaffen und so
+            die Kompatibilität zu fördern.
+            <br /><br />
+            1997 veröffentlichte Ecma den Standard ECMA-262, der die erste
+            Version einer Skriptsprache namens ECMAScript (kurz ES) definierte.
+            Dieser Standard legte die Grundregeln für die Struktur und den
+            Aufbau von JavaScript-Funktionen fest. Mit der Zeit entwickelten
+            sich neue Programmierparadigmen, und die Anforderungen der
+            Entwickler wuchsen. Neuere ECMAScript-Versionen sorgten dafür, dass
+            alte und neue JavaScript-Versionen weiterhin kompatibel blieben.
+          </p>
+        </section>
+        <section class="unterschied">
+          <h2>ECMAScript vs. JavaScript - was ist der Unterschied?</h2>
+          <p>
+            Um das klarzustellen: JavaScript ist die praktische
+            Programmiersprache, mit der du Anwendungen und Webseiten
+            programmierst.
+            <br />
+            ECMAScript hingegen ist der theoretische Standard, an dem sich
+            JavaScript orientiert.
+            <br /><br />
+            Wenn du also Begriffe wie ES6 oder JavaScript ES6 hörst, bedeutet
+            das: Diese Version von JavaScript folgt dem Standard der sechsten
+            ECMAScript-Edition. Manchmal liest du auch ES2015 – das ist
+            dasselbe, denn diese Edition wurde im Jahr 2015 veröffentlicht.
+          </p>
+        </section>
+        <section class="ES6">
+          <h2>Warum ist ES6 bis heute so wichtig?</h2>
+          <p>
+            Vielleicht fragst du dich, warum ein Update aus dem Jahr 2015 immer
+            noch so relevant ist, obwohl es inzwischen neuere Versionen wie ES7
+            oder ES8 gibt. Die Antwort ist einfach: ES6 war das größte und
+            bedeutendste Update seit der Einführung des Standards 1997!
+            <br /><br />
+            Viele Entwickler nennen ES6 auch „Modern JavaScript“, weil es
+            zahlreiche wichtige Neuerungen brachte, darunter:
+          </p>
+          <ul>
+            <li>
+              Neue Schlüsselwörter wie "let" und "const" zu Variablendeklaration
+            </li>
+            <li>
+              Die kompakte Funktionssyntax durch sogenannte Arrow Functions
+            </li>
+            <li>Die Einführung von Klassen (Classes)</li>
+            <li>Standardwerte für Funktionsparameter</li>
+            <li>
+              Promises für die effiziente Verarbeitung asynchroner Vorgägne
+            </li>
+            <li>Und vieles mehr!</li>
+          </ul>
+          <p>
+            Moderne Browser unterstützen mittlerweile den Großteil der
+            ES6-Funktionalitäten, was Entwicklern ermöglicht, diese neuen
+            Features effektiv zu nutzen. Das spart nicht nur Zeit, sondern macht
+            den Code auch deutlich kürzer und übersichtlicher.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            Vor ES6:
+            <br /><br />
+            var greeting = function() &lbrace; <br />
+            &nbsp;&nbsp;console.log('Hello World!'); <br />
+            &rbrace;;
+            <br /><br />Mit ES6: (Arrow Function): <br /><br />
+            const greeting = () => console.log('Hello World');
+          </code>
+          <p>
+            Aber Vorsicht: Arrow Functions sind nicht nur eine andere
+            Schreibweise – sie bringen auch neue Verhaltensweisen und technische
+            Besonderheiten mit sich. Trotzdem hat sich ES6 in der
+            Entwickler-Community fest etabliert.
+          </p>
+        </section>
+        <section class="praxis">
+          <h2>ES6 in der Praxis</h2>
+          <p>
+            Dank der neuen ES6-Syntax lässt sich das beliebte objektorientierte
+            Programmierparadigma (OOP) leichter umsetzen. Entwickler, die
+            bereits Erfahrung mit Sprachen wie Java oder C# haben, finden so
+            einen einfacheren Einstieg in JavaScript.
+            <br /><br />
+            Ein weiterer Grund für die große Beliebtheit von ES6 ist, dass viele
+            moderne Frameworks – etwa React – auf ES6 basieren. Wer moderne
+            Tools und Frameworks lernen möchte, kommt an ES6 also kaum vorbei.
+          </p>
+        </section>
+        <section class="altercode">
+          <h2>Was ist mit älterem Code?</h2>
+          <p>
+            Trotz aller Vorteile von ES6 sollte man älteren Code – sogenannten
+            Legacy Code – nicht vergessen. Viele bestehende Projekte wurden noch
+            mit pre-ES6 JavaScript entwickelt und werden weiterhin gepflegt.
+            <br /><br />
+            Wenn du also an allen Arten von JavaScript-Projekten arbeiten
+            möchtest – ob alt oder neu – solltest du sowohl mit der Syntax vor
+            ES6 als auch mit der modernen ES6-Syntax vertraut sein.
+          </p>
+        </section>
+      </main>
     </div>
     <footer>
       <p class="pfooter">Creator Steven Justice</p>
