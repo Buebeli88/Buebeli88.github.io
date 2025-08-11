@@ -18,6 +18,8 @@ Stell dir das wie farbige Kästchen vor: Jedes Kästchen ist eine Variable – d
 
 In dieser Lektion werden wir lernen, wie man mit den Schlüsselwörtern var, let und const Variablen erstellt.
 
+done!
+
 ----------------------------------------------------------------------------------
 
 Eine Variable erstellen: var
@@ -64,6 +66,8 @@ var favoriteFood = 'pizza';
 var numOfSlices = 8
 console.log(favoriteFood);
 console.log(numOfSlices);
+
+done!!
 
 --------------------------------------------------------------------------
 

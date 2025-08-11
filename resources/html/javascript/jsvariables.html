@@ -1,13 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variablen</title>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/javascript/jsvariables.css/">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsvariables.css/" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Variablen</h1>
+        <p>
+          In der Programmierung sind Variablen wie kleine Behälter für
+          Informationen. Man kann sie sich als beschriftete Kästchen im Speicher
+          eines Computers vorstellen – in ihnen liegt ein bestimmter Wert, etwa
+          ein Benutzername, eine Kontonummer oder eine persönliche Begrüßung.
+          Diese Informationen können später wieder abgerufen und genutzt werden.
+          <br /><br />
+          Das Besondere an Variablen: Sie erlauben es uns, Daten mit
+          verständlichen, aussagekräftigen Namen zu versehen. So bleibt der
+          Programmcode nicht nur funktional, sondern auch nachvollziehbar – für
+          uns selbst und für andere.
+          <br /><br />
+          Zusammengefasst:
+          <br />
+          Variablen speichern Werte im Speicher und geben ihnen eine
+          beschreibende Bezeichnung. Dabei können wir im Wesentlichen drei Dinge
+          mit Variablen tun:
+        </p>
+        <ul>
+          <li>Eine Variable mit einem passenden Namen definieren</li>
+          <li>
+            Einen Wert in dieser Variable speichern oder ihn bei Bedarf
+            aktualisieren
+          </li>
+          <li>Den gespeicherten Wert wieder abrufen</li>
+        </ul>
+        <p>
+          Wichtig ist: Eine Variable ist nicht der Wert selbst, sondern enthält
+          ihn. Sie steht stellvertretend für den Wert und verweist durch ihren
+          Namen darauf.
+          <br /><br />
+          Stell dir das so vor:
+          <br />
+          Eine Variable ist wie ein farbiges Kästchen mit einem Etikett. Das
+          Etikett ist der Name der Variable, und im Inneren liegt der
+          gespeicherte Wert.
+        </p>
+        <section class="varstellen">
+          <h2>Eine Variable erstellen</h2>
+          <p>
+            var, let und const – Variablen in JavaScript
+            <br />
+            Mit der Einführung von ES6 (ECMAScript 2015) hielt eine ganze Reihe
+            neuer Funktionen Einzug in JavaScript. Eine der bedeutendsten
+            Neuerungen war die Einführung zweier neuer Schlüsselwörter: let und
+            const. Mit ihnen lassen sich – genau wie mit dem bisherigen var –
+            Variablen deklarieren. Vor ES6 stand Entwicklern ausschließlich das
+            Schlüsselwort var zur Verfügung, um Variablen zu erstellen.
+          </p>
+        </section>
+        <section class="varregeln">
+          <h2>Regeln für Variablennamen</h2>
+          <p>
+            Beim Benennen von Variablen solltest du einige grundlegende Regeln
+            beachten:
+          </p>
+          <ul>
+            <li>
+              <strong
+                >Variablennamen dürfen nicht mit einer Zahl beginnen.</strong
+              >
+              <br />
+              Richtig: user1 – Falsch: 1user
+            </li>
+            <li>
+              <strong>Groß- und Kleinschreibung spielt eine Rolle.</strong>
+              <br />
+              myName und myname sind zwei verschiedene Variablen. Es ist jedoch
+              keine gute Praxis, ähnliche Namen mit nur unterschiedlicher
+              Groß-/Kleinschreibung zu verwenden – das führt schnell zu
+              Verwirrung.
+            </li>
+            <li>
+              <strong>Vermeide reservierte Schlüsselwörter.</strong> <br />
+              Du darfst keine Wörter als Variablennamen verwenden, die bereits
+              für die Sprache selbst reserviert sind (wie function, return,
+              const usw.). Eine vollständige Liste findest du in der
+              MDN-Dokumentation zu Schlüsselwörtern.
+            </li>
+          </ul>
+        </section>
+        <section class="variablevar">
+          <h2>Variable var</h2>
+          <p>
+            Vor ES6 stand Entwicklern ausschließlich das Schlüsselwort var zur
+            Verfügung, um Variablen zu erstellen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            var myName = 'Arya'; <br />
+            console.log(myName);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Arya
+          </code>
+          <p>Werfen wir einen genaueren Blick auf das Beispiel:</p>
+          <ul>
+            <li>
+              var ist ein JavaScript-Schlüsselwort und steht für "variable". Es
+              wird verwendet, um eine neue Variable zu deklarieren.
+            </li>
+            <li>
+              myName ist der Name der Variable. Die Schreibweise folgt dem
+              sogenannten camelCase: Dabei beginnt das erste Wort klein, und
+              jedes weitere Wort startet mit einem Großbuchstaben (z. B.
+              firstName, userScore).
+            </li>
+            <li>
+              = ist der Zuweisungsoperator. Er weist der Variablen den
+              angegebenen Wert zu.
+            </li>
+            <li>
+              'Arya' ist der Wert, der in der Variablen gespeichert wird. Man
+              sagt auch: Die Variable wurde mit diesem Wert initialisiert.
+            </li>
+            <li>
+              Mit console.log(myName) wird der Wert der Variable in der Konsole
+              ausgegeben.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
 </html>
