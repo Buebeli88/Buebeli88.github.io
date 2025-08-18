@@ -10,6 +10,10 @@ h6 {
     color: lightgray;
 }
 
+.gr {
+    color: green;
+}
+
 .t {
     color: rgb(20, 214, 228);
 }
@@ -22,8 +26,33 @@ h6 {
     color: whitesmoke;
 }
 
-.structur0 {
+.structur0,
+.comments2,
+.comments4,
+.whitespace0 {
     background-image: url(../../images/backgroundgrey.png);
     color: rgb(77, 123, 209);
 }
 
+.comments0 {
+    display: flex;
+    gap: 10px;
+}
+
+.comments1,
+.comments3 {
+    flex: 1;
+}
+
+.comments2,
+.comments4 {
+    height: 6.5rem;
+}
+
+.whitespace1 {
+    border: 2px solid rgb(48, 46, 46);
+}
+
+li {
+    line-height: 1.5rem;
+}

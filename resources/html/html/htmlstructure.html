@@ -43,6 +43,7 @@
         </p>
         <div class="structur0">
           <code>
+            <br>
             <span class="g">&lt;</span>body<span class="g">&gt;</span><br />
             &nbsp;&nbsp;<span class="g">&lt;</span>div<span class="g">&gt;</span
             ><br />
@@ -58,6 +59,7 @@
               >&gt;</span
             ><br />
             <span class="g">&lt;</span>/body<span class="g">&gt;</span>
+            <br><br>
           </code>
         </div>
         <section class="indentation">
@@ -79,17 +81,33 @@
             angezeigt wird. Er dient dazu, den Code für Entwickler
             verständlicher zu machen, Anmerkungen zu hinterlassen oder temporär
             Code auszublenden.
-            <br /><br />
-            Beispiel:
           </p>
-          <code>
-            &lt;!-- Main Site Content --&gt;<br />&lt;div&gt;Content&lt;/div&gt;
-            <br /><br />
-            oder
-            <br /><br />
-            &lt;!--<br />
-            Comments can be <br />multiple Lines long.<br />--&gt;
-          </code>
+          <div class="comments0">
+            <div class="comments1">
+              <p>Beispiel:</p>
+              <div class="comments2">
+                <code>
+                  <br />
+                  <span class="gr"
+                    >&lt;!-- Main Site Content --&gt;<br />&lt;div&gt;Content&lt;/div&gt;</span
+                  >
+                </code>
+              </div>
+            </div>
+            <div class="comments3">
+              <p>oder</p>
+              <div class="comments4">
+                <code>
+                  <br>
+                  <span class="gr"
+                    >&lt;!--<br />
+                    Comments can be <br />multiple Lines long.<br />--&gt;</span
+                  >
+                  <br><br>
+                </code>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="whitespace">
           <h2>Whitespace</h2>
@@ -104,25 +122,38 @@
             <br /><br />
             Beispiel:
           </p>
+
+          <p>Code:</p>
           <code>
-            Code: &lt;p&gt;Test Paragraph&lt;/p&gt;
-            <br /><br />
-            &lt;!-- Der "Whitespace" der über und unter dieser Zeile ist, wird
-            vom Browser ignoriert --&gt;
-            <br /><br />
-            &lt;p&gt;Another Test Paragraph, this will sit right under the first
-            Paragraph, no extra space between.
-            <div class="bspwhitespace">
-              <p>
-                HTML:
-                <br /><br />
-                Test Paragraph
-                <br />
-                Another Test Paragraph, this will sit right under the first
-                Paragraph, no extra space between.
-              </p>
+            <div class="whitespace0">
+              <br />
+              <span class="g">&lt;</span>p<span class="g">&gt;</span
+              ><span class="w">Test Paragraph</span
+              ><span class="g">&lt;/</span>p<span class="g">&gt;</span>
+              <br /><br />
+              <span class="gr"
+                >&lt;!-- Der "Whitespace" der über und unter dieser Zeile ist,
+                wird vom Browser ignoriert --&gt;</span
+              >
+              <br /><br />
+              <span class="g">&lt;</span>p<span class="g">&gt;</span
+              ><span class="w">Another Test Paragraph.</span
+              ><span class="g">&lt;/</span>p<span class="g">&gt;</span>
+              <span class="gr"
+                >&lt;!-- this will sit right under the first Paragraph, no extra
+                space between. --&gt;</span
+              >
+              <br /><br />
             </div>
           </code>
+          <p>HTML:</p>
+          <div class="whitespace1">
+            <p>
+              Test Paragraph
+              <br />
+              Another Test Paragraph.
+            </p>
+          </div>
         </section>
         <section class="semantic">
           <h2>Semantic</h2>
@@ -136,7 +167,7 @@
             <br /><br />
             Beispiel:
           </p>
-          <ul>
+          <ul class="semantic0">
             <li>
               Statt &lt;div class="navigation"&gt;, sollte &lt;nav&gt; verwendet
               werden, um eine Navigation zu kennzeichnen.
