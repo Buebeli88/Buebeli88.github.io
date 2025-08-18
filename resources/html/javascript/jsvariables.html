@@ -291,7 +291,7 @@
             Der Operator += addiert den angegebenen Wert zur Variable und weist
             das Ergebnis derselben Variable zu.
             <br /><br />
-            Weitere mathematische Zuweisungsoperatoren <br>
+            Weitere mathematische Zuweisungsoperatoren <br />
             <!--Will ich dann in eine tabelle-->
             Operator / Beschreibung / Entspricht <br />
             += / Addition und Zuweisung / x += 2 => x = x + 2 <br />
@@ -302,6 +302,153 @@
             Mathematische Zuweisungsoperatoren ermöglichen es, Rechenoperationen
             direkt mit einer Variablen zu verknüpfen. Dies führt zu kürzerem,
             übersichtlicherem und effizienterem Code.
+          </p>
+        </section>
+        <section class="inkdek">
+          <h2>Inkrement - und Dekrement - Operator</h2>
+          <p>
+            Zu den mathematischen Zuweisungsoperatoren zählen auch der
+            Inkrementoperator (++) und der Dekrementoperator (--). <br />
+            Der Inkrementoperator erhöht den Wert einer Variablen um 1, während
+            der Dekrementoperator den Wert um 1 verringert.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let a = 10; <br />
+            a++; <br />
+            console.log(a);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            11
+            <br /><br />
+            let b =10; <br />
+            b--; <br />
+            console.log(b);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            19
+          </code>
+          <p>
+            Wie bei den Operatoren +=, -=, *=, /= wird auch hier der aktuelle
+            Wert einer Variablen verändert und der neue Wert gespeichert.
+            <br /><br />
+            Durch die Verwendung dieser Operatoren lassen sich einfache
+            Erhöhungs- oder Verringerungsvorgänge effizient darstellen und
+            umsetzen.
+          </p>
+        </section>
+        <section class="stringverk">
+          <h2>String - Verkettung mit Variablen</h2>
+          <p>
+            Strings können nicht nur direkt verwendet, sondern auch miteinander
+            kombiniert werden. Dies erfolgt häufig durch die sogenannte
+            String-Verkettung.
+            <br /><br />
+            Der +-Operator dient dazu, mehrere String-Werte miteinander zu
+            verbinden – unabhängig davon, ob es sich um direkte Zeichenfolgen
+            oder um Variablen handelt, in denen diese gespeichert sind.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let myPet = 'armadillo'; <br />
+            console.log('I own a pet' + myPet + '.');
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            I own a pet armadillo.
+          </code>
+          <p>
+            In diesem Beispiel wird der Variable myPet der Wert 'armadillo'
+            zugewiesen. Anschließend erfolgt die Verkettung aus drei
+            Bestandteilen: dem Text 'I own a pet ', dem in myPet gespeicherten
+            String und dem abschließenden Punkt '.'.
+            <br /><br />
+            Die String-Verkettung stellt eine grundlegende Methode dar, um
+            dynamisch zusammengesetzte Textausgaben zu erzeugen – insbesondere
+            im Zusammenspiel mit Variablen.
+          </p>
+        </section>
+        <section class="stringinterpol">
+          <h2>String - Interpolation</h2>
+          <p>
+            Seit der ES6-Version von JavaScript besteht die Möglichkeit,
+            Variablen direkt in Zeichenketten einzufügen. Dies geschieht
+            mithilfe sogenannter Template Literals.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            const myPet = 'armadillo'; console.log(`I own a pet ${myPet}.`);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            I own a pet armadillo.
+          </code>
+          <p>
+            Ein Template Literal wird mit sogenannten Backticks ` umschlossen.
+            <br /><br />
+            Innerhalb eines solchen Literals können Platzhalter in der Form
+            ${variable} verwendet werden. An diesen Stellen wird der Wert der
+            jeweiligen Variable automatisch eingefügt.
+            <br /><br />
+            Durch die Interpolation des Ausdrucks `I own a pet ${myPet}.`
+            entsteht der String:
+            <br /><br />
+            <strong>I own a pet armadillo.</strong>
+            <br /><br />
+            Einer der grössten Vorteile von Template Literals liegt in der
+            verbesserten Lesbarkeit des Codes. Die Struktur des resultierenden
+            Text lässt sich auf einen Blick erfassen, ohne zusätzliche
+            Verkettungen oder Escape - Zeichen für Anführungszeichen.
+            <br /><br />
+            Durch den Einsatz von Template Literals wird die String - Erzeugung
+            übersichtlicher und effizienter gestaltet besonders bei längeren
+            oder dynamischen zusammgesetzten Texten.
+          </p>
+        </section>
+        <section class="typeof">
+          <h2>Der typeof - Operator</h2>
+          <p>
+            In der Programmierung spielt die Kenntnis des jeweiligen Datentyps
+            einer Variable eine wichtige Rolle. Zur Überprüfung des Datentyps
+            kann der Operator typeof eingesetzt werden.
+            <br /><br />
+            Der typeof - Operator analysiert den Wert, der sich rechts von ihm
+            befindet, und gibt einen String zurück, der den jeweiligen Datentyp
+            beschreibt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            const unknown1 ? 'foo'; <br />
+            console.log(typeof unknown1);
+            <br /><br />
+            const unknown2 = 10; <br />
+            console.log(typeof unknown2);
+            <br /><br />
+            const unknown3 = true; <br />
+            console.log(typeof unknown3);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            string
+            <br /><br />
+            number
+            <br /><br />
+            boolean
+          </code>
+          <p>
+            Im ersten Beispiel enthält die Variable unknown1 den Wert 'foo',
+            also eine Zeichenkette. Die Anwendung von typeof auf diesem Wert
+            liefert daher das Ergebnis 'string'.
+            <br /><br />
+            Die Verwendung von typeof ist besonders hilfreich bei dynamisch
+            typisierten Sprachen wie JavaScript, um den aktuellen Typ einer
+            Variable jederzeit ermitteln zu können.
           </p>
         </section>
       </main>

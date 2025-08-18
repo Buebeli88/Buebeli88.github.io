@@ -226,6 +226,8 @@ let lostDollar = 50;
 gainedDollar++;
 lostDollar--;
 
+done!
+
 ------------------------------------------
 
 String-Verkettung mit Variablen
@@ -248,6 +250,8 @@ Beispiele:
 
 let favoriteAnimal = 'scorpion'
 console.log('My favorite animal: ' +favoriteAnimal);
+
+done!
 
 ------------------------------------------------------------------------
 
@@ -276,6 +280,8 @@ const myName = 'Steve'
 const myCity = 'Bern'
 console.log(`My name is ${myName}. My favorite city is ${myCity}`);
 //Outpute will be: My name is Steve. My favorite city is Bern
+
+done!
 
 ------------------------------------------------------------------------------------
 
@@ -307,6 +313,8 @@ newVariable = 1;
 console.log(typeof newVariable);
 
 //Output. first one will be string and the second will be number
+
+done!
 
 ---------------------------------------------------------------------
 
