@@ -22,9 +22,8 @@ h6 {
     color: whitesmoke;
 }
 
-.openingtag1,
-.closingtag1,
-.attributenamevalues1 {
-    background-color: rgb(48, 46, 46);
+.structur0 {
+    background-image: url(../../images/backgroundgrey.png);
     color: rgb(77, 123, 209);
 }
+

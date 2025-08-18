@@ -22,9 +22,7 @@ h6 {
     color: whitesmoke;
 }
 
-.openingtag1,
-.closingtag1,
-.attributenamevalues1 {
+.doctype {
     background-color: rgb(48, 46, 46);
     color: rgb(77, 123, 209);
 }

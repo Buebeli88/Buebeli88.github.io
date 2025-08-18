@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Statements</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link
+      rel="stylesheet"
+      href="../../css/javascript/jsconditionalstatements.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Conditional Statements</h1>
+        <p>
+          Was sind bedingte Anweisungen (Conditional Statements)?
+          <br /><br />
+          Im Alltag basieren viele Handlungen auf bestimmten Bedingungen. Ein
+          typische Beispiel: Bei Müdigkeit erfolgt der Gang ins Bett,
+          andernfalls beginnt der Tag mit deiner Aktivitäg.
+          <br /><br />
+          Solche Entscheidungsprozesse lassen sich in Programmen mithilfe von
+          bedingten Anweisungen (Conditional Statements) abbilden.
+          <br /><br />
+          Eine bedingte Anweisung überprüft, ob eine bestimmte Bedingung erfüllt
+          ist, und führt daraufhin eine Aktion aus. Wird die Bedingung nicht
+          erfüllt, kann alternativ eine andere Anweisung ausgeführt werden.
+          <br /><br />
+          Diese Form der Logik ermöglicht es Programmen, flexibel und
+          situationsabhängig zu reagieren.
+        </p>
+        <section class="ifstatement">
+          <h2>if - Anweisung</h2>
+          <p>
+            Viele Handlungen erfolgen auf Basis bestimmter Bedingungen,
+            beispielsweise:
+          </p>
+          <ul>
+            <li>Bei schönem Wetter erfolgt ein Aufenthalt im Freien.</li>
+            <li>Läutet der Wecker, wird er ausgestellt.</li>
+            <li>Bei Müdigkeit erfolgt der Gang ins Bett.</li>
+          </ul>
+          <p>
+            Ähnliche Entscheidungsstruckturen lassen sich in der Programmierung
+            mit einer if - Anweisung abbilden.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            if (true) { <br />
+            &nbsp;&nbsp;console.log('This message will print!'); <br />
+            }
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            This message will print!
+          </code>
+          <p>Eine if - Anweisung besteht aus folgenden Elementen:</p>
+          <ol>
+            <li>Dem Schlüsselwort if, gefolgt von runden Klammern ()</li>
+            <li>
+              Innerhalb der Klammern befindet sich eine Bedingung, die entweder
+              true (wahr) oder false (falsch) ergibt
+            </li>
+            <li>
+              Anschliessend folgt ein Codeblock in geschweiften Klammern {}
+            </li>
+          </ol>
+          <p>
+            Ergibt die Bedingung true, wird der Code im Block ausgeführt. Ist
+            die Bedingung false, wird der Codeblock übersprungen.
+          </p>
+        </section>
+        <section class="ifelse">
+          <h2>if...else - Anweisung</h2>
+          <p>
+            Eine einfache if - Anweisung prüft eine Bedingung und führt den
+            Codeblock nur aus, wenn diese Bedingung true ist.
+            <br /><br />
+            Sollte die Bedingung jedoch false sein und eine alternative Aktion
+            gewünscht wird, kommt die else - Anweisung zum Einsatz. Sie
+            definiert einen Codeblock, der ausgeführt wird, wenn die Bedingung
+            der if - Anweisung nicht erfüllt ist.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            if (false) { <br />
+            &nbsp;&nbsp;console.log('The code in this block will not run.');
+            <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('But the code in this block will!'); <br />
+            }
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            But the code in this block will!
+          </code>
+          <p>
+            Eine else - Anweisung steht immer in Verbindung mit einer if -
+            Anweisung, zusammen bilden sie eine if...else - Anweisung.
+            <br /><br />
+            Charakteristika einer if...else - Anweisung:
+          </p>
+          <ul>
+            <li>
+              Die else - Anweisung folgt unmittelbar nach dem Codeblock der if -
+              Anweisung.
+            </li>
+            <li>Sie beginnt mit dem Schlüsselwort else.</li>
+            <li>
+              Der Codeblock der else - Anweisung wird in geschweiften Klammern
+              {} eingeschlossen.
+            </li>
+            <li>
+              Der Code innerhalb des else - Blocks wird nur ausgeführt, wenn die
+              Bedingung der if - Anweisung den Wert false ergibt.
+            </li>
+          </ul>
+        </section>
+        <section class="vergleichsop">
+          <h2>Vergleichsoperatoren</h2>
+          <p>
+            Beim Formulieren von Bedingungen, beispielsweise in if -
+            Anweisungen, ist ein Vergleich von Werten oft erforderlich. Dazu
+            dienen die sogenannten Vergleichsoperatoren (comparison operators).
+            <br /><br />
+            Übersicht nützlicher Vergleichsoperatoen in JavaScript:
+            <!--Hier Tabelle einfügen-->
+            <br /><br />
+            Operator / Bedeutung / Beispiel <br />
+            &lt; / Kleiner als / 3 &lt; 5 => true <br />
+            &gt; / Grösser als / 10 &gt; 7 => true <br />
+            &lt;= / Kleiner oder gleich / 4 &lt;= 4 => true <br />
+            &gt;= / Grösser oder gleich / 6 &gt;= 9 => false <br />
+            === / Gleich (Wert und Typ) / 5 === 5 => true <br />
+            !== / Ungleich (Wert oder Typ) / 3 !== '3' => true
+            <br /><br />
+            Wichtig: <br />
+            Diese Operatoren vergleichen den Wert links mit dem Wert rechts und
+            liefern stets ein Boolean - Ergebnis: true oder false.
+            <br /><br />
+            Vergleichsausdrücke lassen sich als Fragen formulieren:
+          </p>
+          <ul>
+            <li>Antwort "Ja" => Ausdruck ergibt true</li>
+            <li>Antwort "Nein" => Ausdruck ergibt false</li>
+          </ul>
+          <p>Grundaufbau von Vergleichsausdrücken:</p>
+          <ul>
+            <li>
+              Zwei Werte, die verglichen werden (z.B. Zahlen, Strings,
+              Variablen).
+            </li>
+            <li>
+              Ein Vergleichsoperator, der die beiden Werte verbindet (z.B. &gt;,
+              &lt;, &gt;=, &lt;=, ===, !==).
+            </li>
+          </ul>
+        </section>
+        <section class="logischeop">
+          <h2>Logische Operatoren (Logical Operators)</h2>
+          <p>
+            Beim Arbeiten mit Bedingungen spielen Booleans - also die Werte true
+            und false - eine zentrale Rolle. Um mehrere Bedingungen zu
+            verknüpfen oder ihre Bedeutung zu verändern, stellt JavaScript drei
+            logische Operatoren zur Verfügung.
+            <!--Tabelle einfügen-->
+            <br /><br />
+            Operator / Name / Beschreibung <br />
+            && / Und - Operator (AND) / Gibt true zurück, wenn
+            <strong>alle</strong> Bedingungen erfüllt sind. <br />
+            || / ODER - Operator (OR) / Gibt true zurück, wenn
+            <strong>eine</strong> Bedingung erfüllt ist. <br />
+            ! / NICHT - Operator (NOT / "Bang") / Kehrt den Warheitswert um
+            (true zu false, false zu true).
+            <br /><br />
+            Grundregeln:
+          </p>
+          <ul>
+            <li>
+              && => Alle verknüpften Bedingungen müssen den Wert true haben
+            </li>
+            <li>|| => Es reicht aus, wenn eine der Bedingungen true ist</li>
+            <li>! => Der Wahrheitswert wird umgekehrt</li>
+          </ul>
+          <p>Anwendungsbeispiel: && (UND - Operator)</p>
+          <code>
+            if (stopLight === 'green' && pedestrians === 0) { <br />
+            &nbsp;&nbsp;console.log('Go!'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('Stop'); <br />
+            }
+          </code>
+          <p>
+            In diesem Beispiel wird die Anweisung nur ausgeführt, wenn beide
+            Bedingungen erfüllt sind. Ist auch nur eine davon false, wird der
+            alternative Codeblock ausgeführt.
+            <br /><br />
+            Anwendungsbeispiel: || (ODER - Operator)
+          </p>
+          <code>
+            if (day === 'Saturday' || day === 'Sunday') { <br />
+            &nbsp;&nbsp;console.log('Enjoy the weekend!'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('Do some work.'); <br />
+            }
+          </code>
+          <p>
+            Beim ODER - Operator genügt es, wenn eine der Bedingungen den Wert
+            true hat, um den ersten Codeblock auszufürhen.
+            <br /><br />
+            Anwendungsbeispiel: ! (NICHT - Operator)
+          </p>
+          <code>
+            let exited = true; <br />
+            console.log(!exited);
+            <br /><br />
+            let sleepy = false; <br />
+            console.log(!sleepy);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            false
+            <br /><br />
+            true
+          </code>
+          <p>
+            Der NOT - Operator kehrt den Wahrheitswert eines Ausdrucks um. Wird
+            true übergeben, ergibt sich false und umgekehrt.
+            <br /><br />
+            Logische Operatoren erweitern die Ausdruckskraft von Bedingungen und
+            ermöglichen differenzierte Entscheidungslogik in Programmen.
+          </p>
+        </section>
+        <section class="truthyfalsy">
+          <h2>Truthy und Falsy</h2>
+          <p>
+            Nicht alle Bedingungen in Programmen basieren auf expliziten Boolean
+            - Werten (true oder false). Auch andere Datentypen - wie
+            Zeichenketten oder Zahlen - können in bedingten Ausdrücken verwendet
+            und entsprechend ausgewertet werden.
+            <br /><br />
+            Ein häufiger Anwendungsfall besteht darin, lediglich zu prüfen, ob
+            eine Variable ein Wert zugewiesen wurde, unabhängig vom konkreten
+            Inhalt.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let myVariable = 'I Exist!';
+            <br /><br />
+            if (myVariable) { <br />
+            &nbsp;&nbsp;console.log(myVariable); <br />
+            } else { <br />
+            console.log('The variable does not exist.'); <br />
+            }
+          </code>
+          <p>
+            In diesem Fall wird der Code im if - Block ausgeführt, da der Wert
+            von myVariable als truthy gild. Obwohl es sich nicht um true im
+            engerem Sinne handelt, wird der Wert in einem logischen Kontext als
+            wahr interpretiert.
+            <br /><br />
+            Was gild als falsy? <br />
+            Ein falsy - Wert wird in einem booleschen Ausdruck als false
+            interpretiert. Zu den falsy - Werten in JavaScript zählen:
+          </p>
+          <ul>
+            <li>0</li>
+            <li>Leere Zeichenketten ("" oder '')</li>
+            <li>null (kein Wert vorhanden)</li>
+            <li>
+              undefined (Variable ist deklariert, aber nicht initialisiert)
+            </li>
+            <li>NaN (kein gültiger numerischer Wert)</li>
+          </ul>
+          <p>Beispiel: Falsy - Wert in einer Bedingung</p>
+          <code>
+            let numberOfApples = 0;
+            <br /><br />if (numberOfApples) { <br />
+            &nbsp;&nbsp;('Let us eat apples!'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('No apples left!'); <br />
+            }
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            No apples left!
+          </code>
+          <p>
+            Die Unterscheidung zwischen truthy und falsy ist essenziell für das
+            Verständnis bedingter Anweisungen in JavaScript. Sie ermöglicht eine
+            flexible Handhabung von Variablen in logischen Ausdrücken - auch
+            ohne explizite Booleans.
+          </p>
+        </section>
+        <section class="zuweisungy">
+          <h2>Zuweisung mit Truthy und Falsy</h2>
+          <p>
+            Die Konzepte truthy und falsy ermöglichen elegante Kurzschreibweisen
+            in JavaScript - besonders bei der Zuweisung von Standardwerten.
+            <br /><br />
+            Ein häufiger Anwendungsfall: Eine Variable, beispielsweise username,
+            enthält unter Umständen kein Wert. Um dennoch einen brauchbaren
+            Fallback bereitzustellen, kann eine bedingte Zuweisung erfolgen.
+            <br /><br />
+            Klassische Schreibweise:
+          </p>
+          <code>
+            let username = ''; <br />
+            let defaultName;
+            <br /><br />
+            if (username) { <br />
+            &nbsp;&nbsp;defaultName = username; <br />
+            } else { <br />
+            &nbsp;&nbsp;defaultName = 'Stranger'; <br />
+            }
+            <br /><br />
+            console.log(defaultName);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Stranger
+          </code>
+          <p>
+            In diesem Beispiel wird überprütf, ob username einen truthy Wert
+            enthält. Ist dies nicht der Fall, erhält defaultName den
+            alternativen Wert 'Stranger'.
+            <br /><br />
+            Kurzschreibweise mit || (ODER - Operator)
+          </p>
+          <code>
+            let username = ''; <br />
+            let derfaultName = username || 'Stranger';
+            <br /><br />
+            console.log(defaultName);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Stranger
+          </code>
+          <p>
+            Diese Schreibweise nutzt das Prinzip der Short - Circuit Evaluation:
+            <br />
+            Zuerst wird der linke Ausdruck ausgewertet. ist dieser truthy, wird
+            er übernommen. Andernfalls greift der rechte Ausdruck als
+            Ersatzwert.
+            <br /><br />
+            Short - Circuit Evaluation mit dem || - Operator bietet eine
+            effiziente Möglichkeit, Stantardwerte zuzuweisen - besonders dann ,
+            wenn Variablen möglicherweise lerr, undefiniert oder andersweitig
+            falsy sind.
+          </p>
+        </section>
+        <section class="ternär">
+          <h2>Ternärer Operator</h2>
+          <p>
+            Der ternäre Operator bietet eine kompakte Alternative zur
+            klassischen if...else - Anweisung und ermöglich eine
+            Kurzschreibweise bei bedingten Ausdrücken.
+            <br /><br />
+            Beispiel mit if...else:
+          </p>
+          <code>
+            let isNightTime = true;
+            <br /><br />
+            if (isNightTime) { <br />
+            &nbsp;&nbsp;console.log('Turn on the lights!'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('Turn off the lights!'); <br />
+            }
+          </code>
+          <p>Dieselbe Logik mit dem ternären Operator:</p>
+          <code>
+            isNightTime ! console.log('Turn on the lights!') <br />
+            : console.log('Turn off the lights!');
+          </code>
+          <p>Erläuterung</p>
+          <ul>
+            <li>Die Bedingungen stehen vor dem Fragezeichen ?.</li>
+            <li>
+              Danach folgen zwei Ausdrücke, getrennt durch einen Doppelpunkt:.
+            </li>
+            <li>
+              Ist die Bedinung wahr (true), wird der erste Ausdruck ausgeführt.
+            </li>
+            <li>
+              Ist die Bedingung (false), erfolgt die Ausführung des zweiten
+              Ausdrucks.
+            </li>
+          </ul>
+          <p>
+            Der ternäre Operator eignet sich für alle Bedingungen, die zu einem
+            Wahrheitswert ausgewertet werden.
+            <br /><br />
+            Der ternäre Operator ermöglicht eine übersichtliche prägnante
+            Formulierung von Bedingungen mit zwei möglichen Ausgaben - eine
+            elegante Alternative zur traditionellen if...else - Struktur.
+          </p>
+        </section>
+        <section class="elseif">
+          <h2>else - if - Anweisung</h2>
+          <p>
+            Die else if - Anweisung erweitert die einfache if...else - Struktur
+            um zusätzliche Bedingungen und ermöglicht somit mehr als zwei
+            mögliche Ausgänge. Beliebig viele else if - Zweige lassen sich
+            anfügen, um komplexe Entscheidungslogiken abzubilden.
+            <br /><br />
+            Aufbau und Reihenfolge <br />
+            Eine else if - Anweisung folgt stehts auf eine if - Anweisung und
+            steht vor einer optionalen abschliessenden else - Anweisung. Sie
+            nimmt eine Bedingung entgegen, die überprüft wird, falls alle
+            vorherigen Bedingungen als falsch ausgewertet wurden.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let stopLight = 'yellow';
+            <br /><br />
+            if (stopLight === 'red') { &nbsp;&nbsp;console.log('Stop!'); <br />
+            } else if (stopLight === 'yellow') { <br />
+            &nbsp;&nbsp;console.log('Slow down.'); <br />
+            } else if (stopLight === 'green') { <br />
+            &nbsp;&nbsp;console.log('go'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('Caution, unknown!'); <br />
+            }
+          </code>
+          <p>
+            Die Bedingungen werden der Reihe nach von oben nach unten grprüft.
+            Sobald eine Bedingung als wahr (true) erkannt wird, wird der
+            zugehörige Codeblock ausgeführt, und alle weiteren Prüfungen
+            entfallen. <br /><br />Im Beispiel ist die erste Bedingung stopLight
+            === 'red' falsch, die zweite Bedingung stopLight === 'yellow' jedoch
+            wahr. Deshalb erfolgt die Ausgabe "Slow down."; nachfolgende
+            Bedingungen bleiben unerheblich. Sollte keine Bedingung zutreffen,
+            greift der Code im else - Block. <br /><br />
+            if...else if...else - Ketten erlauben die Abbildung von mehrstufigen
+            Entscheidungsprozessen, bei denen verschiedene Bedingungen
+            sequenziell geprüft und passende Aktionen ausgeführt werden.
+          </p>
+        </section>
+        <section class="switch">
+          <h2>Das Schlüsselwort switch</h2>
+          <p>
+            else if - Anweisungen sind nützlich, wenn mehrere Bedingugen
+            überprüft werden müssen. Häufig besteht jedoch die Aufgabe darin,
+            einen Wert mit vielen möglichen Varianten zu vergleichen und jeden
+            Fall unterschiedlich zu behandeln. <br /><br />
+            Beispiel mit else if:
+          </p>
+          <code>
+            let groceryItem = 'papaya';
+            <br /><br />
+            if (groceryItem === 'tomato') { <br />
+            &nbsp;&nbsp;console.log('Tomatoes are $0.40'); <br />
+            } else if (groceryItem === 'papaya') { <br />
+            &nbsp;&nbsp;console.log('Papayas are $1.29'); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log('Invalid Item'); <br />
+            }
+          </code>
+          <p>
+            Dieser Code funktioniert, doch bei einer Vielzahl von Werten (zum
+            Beispiel 100) wird der Code unübersichtlich und aufwendig.
+            <br /><br />
+            Alternative: Die switch - Anweisung <br />
+            Die switch - Anweisung bietet eine übersichtlichere und besser
+            lesbare Möglichkeit, mehrere Fälle zu prüfen:
+          </p>
+          <code>
+            let groceryItem = 'papaya';
+            <br /><br />
+            switch (groceryTiem) { <br />
+            &nbsp;&nbsp;case 'tomato' : <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Tomatoes are $0.49'); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break; <br />
+            &nabla;&nbsp;case 'lime': <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Limes are $1.49'); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break; <br />
+            &nbsp;&nbsp;case 'papaya': <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Papayas are $1.29'); <br />
+            &nbsp;&nbsp;&nabla;&nbsp;break; <br />
+            &nbsp;&nbsp;default: <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Invalid item'); <br />
+            &nbsp;&nbsp;&nabla;&nbsp;break; <br />
+            }
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Papayas are $1.29
+          </code>
+          <p>Erklärung der switch - Struktur:</p>
+          <ul>
+            <li>
+              Das Schlüsselwort switch wird gefolgt von runden Klammern (...),
+              in denen ein Ausdruck oder Wert steht, der mit den einzelnen case
+              - Werten verglichen wird. Hier ist das der Wert von groceryItem.
+            </li>
+            <li>
+              Innerhalb der geschweiften Klammern {...} folgen mehrere case -
+              Blöcke
+            </li>
+            <li>
+              Jeder case prüft, ob der Wert des switch - Ausdrucks mit dem
+              nachfolgenden Wert übereinstimmt.
+            </li>
+            <li>
+              Wird eine Übereinstimmung gefunden, wird der zugehörige Code
+              ausgeführt.
+            </li>
+            <li>
+              Das Schlüsselwort break sorgt dafür, dass nach Ausführung des
+              passenden Codes die switch - Anweisung verlassen wird. Ohne break
+              würde die Ausführung in alle folgenden case - Blöcken
+              "hineinfallen" (Fallthrough), was meist unerwünscht ist.
+            </li>
+            <li>
+              Die default - Anweisung am Ende fungiert als "Fangnetz" für alle
+              Fälle, die keinem case entsprechen.
+            </li>
+          </ul>
+          <p>
+            Die switch - Anweisung ist besonders geeignet, wenn viele mögliche
+            Werte einzeln behandelt werden müssen. Sie schafft Klarheit und
+            reduziert komplexe if...else if - Ketten.
+          </p>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

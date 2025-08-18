@@ -23,6 +23,8 @@ switch-Anweisung
 
 Also: Wenn du bereit bist, diese Konzepte zu lernen, geh zur nächsten Lektion — ansonsten, lies dir die Konzepte nochmal durch, sieh dir das Diagramm an und bereite dich vor!
 
+done!
+
 ----------------------------------------
 
 If-Anweisung (If Statement)
@@ -61,6 +63,8 @@ let sale = true
 if (sale) {
   console.log('Time to buy!')
 }
+
+done!
 
 ----------------------------------------------------------
 
@@ -102,6 +106,8 @@ if(sale) {
 } else {
   console.log('Time to wait for a sale.')
 }
+
+done!
 
 ----------------------------------------------- -------
 
@@ -154,6 +160,8 @@ if (hungerLevel > 7) {
 } else {
   console.log('We can eat later!');
 }
+
+done!
 
 -------------------------------------------
 
@@ -225,6 +233,8 @@ if (mood === 'sleepy' && tirednessLevel > 8) {
   console.log('not bed time yet');
 }
 
+done!
+
 ---------------------------------------
 
 Truthy und Falsy
@@ -290,6 +300,8 @@ if (favoritePhrase) {
   console.log('This string is definitely empty.');
 }
 
+done!
+
 ------------------------------------------------------
 
 Zuweisung mit Truthy und Falsy
@@ -346,6 +358,8 @@ console.log(`The ${writingUtensil} is mightier than the sword.`);
 
 print: The marker is mightier than the sword.
 
+done!
+
 ----------------------------------------------------------------
 
 Ternärer Operator
@@ -392,6 +406,8 @@ let favoritePhrase = 'Love That!';
 (favoritePhrase === 'Love That!') ? console.log('I love that!')
 : console.log("I don't love that!");
 
+done!
+
 ------------------------------------------------------------------------
 
 Else-If-Anweisungen
@@ -429,6 +445,8 @@ if (season === 'spring') {
 } else {
   console.log('Invalid season.');
 }
+
+done!
 
 ----------------------------------------------------------------------
 
@@ -493,6 +511,8 @@ switch (athleteFinalPosition) {
   console.log('No medal awarded.');
   break;
 }
+
+done!
 
 ----------------------------------------------
 
