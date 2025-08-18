@@ -104,6 +104,8 @@ let changeMe = true;
 changeMe = false;
 console.log (changeMe);
 
+done!
+
 ---------------------------------------------
 
 Eine Variable erstellen: const
@@ -131,6 +133,8 @@ Beispiel:
 const entree = 'Enchiladas';
 console.log(entree);
 entree = 'Tacos'
+
+done!
 
 ---------------------------------------------
 
@@ -187,6 +191,8 @@ console.log('The value of levelUp:', levelUp);
 console.log('The value of powerLevel:', powerLevel);
 console.log('The value of multiplyMe:', multiplyMe);
 console.log('The value of quarterMe:', quarterMe);
+
+done!
 
 ---
 

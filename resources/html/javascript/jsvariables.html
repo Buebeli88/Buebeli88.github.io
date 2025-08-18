@@ -76,7 +76,18 @@
             const. Mit ihnen lassen sich – genau wie mit dem bisherigen var –
             Variablen deklarieren. Vor ES6 stand Entwicklern ausschließlich das
             Schlüsselwort var zur Verfügung, um Variablen zu erstellen.
+            <br /><br />
+            Wann sollte let oder const verwendet werden?
           </p>
+          <ul>
+            <li>
+              Wenn sich der Wert der Variable im Laufe des Programms ändern
+              soll, verwende let.
+            </li>
+            <li>
+              Wenn der Wert fest bleiben soll, ist const die richtige Wahl.
+            </li>
+          </ul>
         </section>
         <section class="varregeln">
           <h2>Regeln für Variablennamen</h2>
@@ -110,7 +121,7 @@
           </ul>
         </section>
         <section class="variablevar">
-          <h2>Variable var</h2>
+          <h2>Variable: var</h2>
           <p>
             Vor ES6 stand Entwicklern ausschließlich das Schlüsselwort var zur
             Verfügung, um Variablen zu erstellen.
@@ -150,6 +161,148 @@
               ausgegeben.
             </li>
           </ul>
+        </section>
+        <section class="variablelet">
+          <h2>Variable: let</h2>
+          <p>
+            Das Schlüsselwort let, wurde mit ES6 eingeführt. Es ermöglicht die
+            Deklaration von Variablen, deren Werte später geändert (neu
+            zugewiesen) werden können.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let meal = 'Enchiladas'; <br />
+            console.log(meal);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Enchiladas
+            <br /><br />
+            meal = 'Burrito'; <br />
+            console.log(meal)
+          </code>
+          <p>
+            Ein weiterer wichtiger Aspekt bei der Verwendung von let (wie auch
+            bei var) ist, dass man eine Variable deklarieren kann, ohne ihr
+            sofort einen Wert zuzuweisen.
+            <br /><br />
+            In diesem Fall wird die Variable automatisch mit dem Wert undefined
+            initialisiert:
+          </p>
+          <code>
+            let price; <br />
+            console.log(price);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            undefinded
+            <br /><br />
+            price = 350; <br />
+            console.log(price);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            350
+          </code>
+          <p>Wichtig zu beachten:</p>
+          <ul>
+            <li>
+              Wird einer mit let deklarierten Variable kein Wert zugewiesen,
+              erhält sie automatisch den Wert undefined.
+            </li>
+            <li>
+              Der Variable kann später problemlos ein neuer Wert zugewiesen
+              werden.
+            </li>
+          </ul>
+          <p>
+            Mit let deklarierte Variablen sind also flexibel, da ihre Werte im
+            Laufe des Programms verändert werden können.
+          </p>
+        </section>
+        <section class="varialeconst">
+          <h2>Variable: const</h2>
+          <p>
+            Das Schlüsselwort const wurde mit ES6 eingeführt und steht für
+            „Konstante“. Es wird verwendet, um Variablen zu deklarieren, deren
+            Wert nicht verändert werden soll.
+            <br /><br />
+            Ähnlich wie bei let und var kann auch mit const ein beliebiger Wert
+            gespeichert werden. Die Syntax zur Deklaration ist ebenfalls
+            identisch:
+          </p>
+          <code>
+            const myName = 'Gilberto'; <br />
+            console.log(myName);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            Gilberto
+          </code>
+          <p>
+            Der entscheidende Unterschied: <br />
+            Eine mit const deklarierte Variable darf nicht neu zugewiesen
+            werden. Versucht man es dennoch, führt das zu einem TypeError.
+            <br /><br />
+            Ein weiterer wichtiger Punkt: <br />
+            Konstanten müssen bei der Deklaration sofort einen Wert erhalten.
+            Andernfalls wirft JavaScript einen SyntaxError.
+          </p>
+        </section>
+        <section class="mathoperatoren">
+          <h2>Mathematische Zuweisungsoperatoren</h2>
+          <p>
+            Mit mathematischen Zuweisungsoperatoren lassen sich Werte von
+            Variablen berechnen und direkt aktualisieren.
+            <br /><br />
+            Beispiel:
+          </p>
+          <code>
+            let w = 4; <br />
+            w = w +1;
+            <br /><br />
+            console.log(w);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            5
+          </code>
+          <p>
+            In diesem Beispiel erhält die Variable w zunächst den Wert 4.
+            Anschließend wird 1 addiert und das Ergebnis erneut w zugewiesen.
+            Das Resultat ist 5.
+            <br /><br />
+            Vereinfachte Schreibweise <br />
+            Die gleiche Operation kann durch den Zuweisungsoperator += abgekürzt
+            werden:
+          </p>
+          <code>
+            let w = 4; <br />
+            w += 1;
+            <br /><br />
+            console.log(w);
+            <br /><br />
+            Ausgabe:
+            <br /><br />
+            5
+          </code>
+          <p>
+            Der Operator += addiert den angegebenen Wert zur Variable und weist
+            das Ergebnis derselben Variable zu.
+            <br /><br />
+            Weitere mathematische Zuweisungsoperatoren <br>
+            <!--Will ich dann in eine tabelle-->
+            Operator / Beschreibung / Entspricht <br />
+            += / Addition und Zuweisung / x += 2 => x = x + 2 <br />
+            -= / Subtraktion und Zuweisung / x -= 5 => x = x - 5 <br />
+            *= / Multiplikation und Zuweisung / x *= 3 => x = x * 3 <br />
+            /= / Division und Zuweisung / x /= 2 => x = x / 2
+            <br /><br />
+            Mathematische Zuweisungsoperatoren ermöglichen es, Rechenoperationen
+            direkt mit einer Variablen zu verknüpfen. Dies führt zu kürzerem,
+            übersichtlicherem und effizienterem Code.
+          </p>
         </section>
       </main>
     </div>
