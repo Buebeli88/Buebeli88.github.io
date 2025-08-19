@@ -6,6 +6,12 @@
     <title>HTML Structure</title>
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/html/structure.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -28,124 +34,111 @@
     <div class="container">
       <main>
         <h1>HTML Struktur</h1>
+        <div class="zweispaltig">
+          <p>
+            In HTML bezieht sich die Struktur auf die Anordnung und Organisation
+            von Elementen innerhalb eines Dokuments, um eine sinnvolle und
+            übersichtliche Darstellung von Inhalten zu gewährleisten.
+          </p>
+          <p>
+            Diese Struktur wird durch HTML-Elemente wie Überschriften, Absätze,
+            Listen und andere Tags definiert, die dem Browser mitteilen, wie der
+            Inhalt angezeigt werden soll.
+          </p>
+        </div>
         <p>
-          In HTML bezieht sich die Struktur auf die Anordnung und Organisation
-          von Elementen innerhalb eines Dokuments, um eine sinnvolle und
-          übersichtliche Darstellung von Inhalten zu gewährleisten. Diese
-          Struktur wird durch HTML-Elemente wie Überschriften, Absätze, Listen
-          und andere Tags definiert, die dem Browser mitteilen, wie der Inhalt
-          angezeigt werden soll.
-          <br /><br />
           HTML hat eine Familienbaumstruktur. Ein Element kann Eltern,
           Grosseltern, Geschwister, Kinder, Enkelkinder, etc. haben.
           <br /><br />
           Beispiel:
         </p>
         <div class="structur0">
-          <code>
-            <br>
-            <span class="g">&lt;</span>body<span class="g">&gt;</span><br />
-            &nbsp;&nbsp;<span class="g">&lt;</span>div<span class="g">&gt;</span
-            ><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="g">&lt;</span>h1<span class="g"
-              >&gt;</span
-            ><span class="w">It's div's child and body's grandchilde</span
-            ><span class="g">&lt;/</span>h1<span class="g">&gt;</span><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="g">&lt;</span>h2<span class="g"
-              >&gt;</span
-            ><span class="w">It's h1's sibling</span
-            ><span class="g">&lt;/</span>h2<span class="g">&gt;</span><br />
-            &nbsp;&nbsp;<span class="g">&lt;</span>/div<span class="g"
-              >&gt;</span
-            ><br />
-            <span class="g">&lt;</span>/body<span class="g">&gt;</span>
-            <br><br>
-          </code>
+          <pre><code class="language-html" class="structure1">
+&lt;body&gt;
+&nbsp;&nbsp;&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;It's div's child and body's grandchilde&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;It's h1's sibling&lt;/h2&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/body&gt;
+          </code></pre>
         </div>
         <section class="indentation">
           <h2>Indentation</h2>
-          <p>
-            Indentation in HTML bezieht sich auf das Hinzufügen von Leerzeichen
-            oder Tabs am Anfang von Codezeilen, um die Struktur des
-            HTML-Dokuments visuell zu verbessern. Obwohl HTML-Code auch ohne
-            Einrückung funktioniert, macht die richtige Indentation den Code
-            lesbarer und einfacher zu verwalten, insbesondere bei komplexen
-            Strukturen mit verschachtelten Elementen.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Indentation in HTML bezieht sich auf das Hinzufügen von
+              Leerzeichen oder Tabs am Anfang von Codezeilen, um die Struktur
+              des HTML-Dokuments visuell zu verbessern.
+            </p>
+            <p>
+              Obwohl HTML-Code auch ohne Einrückung funktioniert, macht die
+              richtige Indentation den Code lesbarer und einfacher zu verwalten,
+              insbesondere bei komplexen Strukturen mit verschachtelten
+              Elementen.
+            </p>
+          </div>
         </section>
         <section class="comments">
           <h2>Comments</h2>
-          <p>
-            Ein HTML-Kommentar ist eine Textnotiz innerhalb eines
-            HTML-Dokuments, die vom Browser ignoriert und nicht auf der Webseite
-            angezeigt wird. Er dient dazu, den Code für Entwickler
-            verständlicher zu machen, Anmerkungen zu hinterlassen oder temporär
-            Code auszublenden.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Ein HTML-Kommentar ist eine Textnotiz innerhalb eines
+              HTML-Dokuments, die vom Browser ignoriert und nicht auf der
+              Webseite angezeigt wird.
+            </p>
+            <p>
+              Er dient dazu, den Code für Entwickler verständlicher zu machen,
+              Anmerkungen zu hinterlassen oder temporär Code auszublenden.
+            </p>
+          </div>
           <div class="comments0">
             <div class="comments1">
               <p>Beispiel:</p>
               <div class="comments2">
-                <code>
-                  <br />
-                  <span class="gr"
-                    >&lt;!-- Main Site Content --&gt;<br />&lt;div&gt;Content&lt;/div&gt;</span
-                  >
-                </code>
+                <pre><code class="language-html">
+&lt;!-- Main Site Content --&gt;
+&lt;div&gt;Content&lt;/div&gt;
+
+                </code></pre>
               </div>
             </div>
             <div class="comments3">
               <p>oder</p>
               <div class="comments4">
-                <code>
-                  <br>
-                  <span class="gr"
-                    >&lt;!--<br />
-                    Comments can be <br />multiple Lines long.<br />--&gt;</span
-                  >
-                  <br><br>
-                </code>
+                <pre><code class="language-html">
+&lt;!--<br />
+Comments can be <br />multiple Lines long.
+--&gt;
+                </code></pre>
               </div>
             </div>
           </div>
         </section>
         <section class="whitespace">
           <h2>Whitespace</h2>
-          <p>
-            In HTML bezieht sich Whitespace auf Leerzeichen, Tabulatoren,
-            Zeilenumbrüche und andere Zeichen, die keine sichtbaren Inhalte
-            darstellen, aber dennoch Speicherplatz belegen und zur
-            Strukturierung des Codes dienen. Browser interpretieren Whitespace
-            in HTML oft als einzelne Leerzeichen, d.h. mehrere
-            aufeinanderfolgende Whitespace-Zeichen werden zu einem einzigen
-            zusammengefasst.
-            <br /><br />
-            Beispiel:
-          </p>
-
+          <div class="zweispaltig">
+            <p>
+              In HTML bezieht sich Whitespace auf Leerzeichen, Tabulatoren,
+              Zeilenumbrüche und andere Zeichen, die keine sichtbaren Inhalte
+              darstellen, aber dennoch Speicherplatz belegen und zur
+              Strukturierung des Codes dienen.
+            </p>
+            <p>
+              Browser interpretieren Whitespace in HTML oft als einzelne
+              Leerzeichen, d.h. mehrere aufeinanderfolgende Whitespace-Zeichen
+              werden zu einem einzigen zusammengefasst.
+            </p>
+          </div>
+          <p>Beispiel:</p>
           <p>Code:</p>
-          <code>
-            <div class="whitespace0">
-              <br />
-              <span class="g">&lt;</span>p<span class="g">&gt;</span
-              ><span class="w">Test Paragraph</span
-              ><span class="g">&lt;/</span>p<span class="g">&gt;</span>
-              <br /><br />
-              <span class="gr"
-                >&lt;!-- Der "Whitespace" der über und unter dieser Zeile ist,
-                wird vom Browser ignoriert --&gt;</span
-              >
-              <br /><br />
-              <span class="g">&lt;</span>p<span class="g">&gt;</span
-              ><span class="w">Another Test Paragraph.</span
-              ><span class="g">&lt;/</span>p<span class="g">&gt;</span>
-              <span class="gr"
-                >&lt;!-- this will sit right under the first Paragraph, no extra
-                space between. --&gt;</span
-              >
-              <br /><br />
-            </div>
-          </code>
+          <pre><code class="language-html">
+&lt;p&gt;Test Paragraph&lt;/p&gt;
+&lt;!-- Der "Whitespace" der über und unter dieser Zeile ist, wird
+vom Browser ignoriert --&gt;
+
+&lt;p&gt;Another Test Paragraph.&lt;/p&gt;
+&lt;!-- this will sitright under the first Paragraph, no extra space between. --&gt;
+          </code></pre>
           <p>HTML:</p>
           <div class="whitespace1">
             <p>
@@ -157,33 +150,39 @@
         </section>
         <section class="semantic">
           <h2>Semantic</h2>
-          <p>
-            Semantik in HTML bezieht sich auf die Verwendung von HTML-Elementen,
-            die ihre Bedeutung und Funktion im Inhalt einer Webseite klar
-            definieren, anstatt sie nur als generische Container (wie
-            &lt;div&gt; oder &lt;span&gt;) zu verwenden. Es geht also darum, den
-            Inhalt basierend auf seiner Bedeutung zu strukturieren, nicht nur
-            basierend auf seinem Aussehen.
-            <br /><br />
-            Beispiel:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Semantik in HTML bezieht sich auf die Verwendung von
+              HTML-Elementen, die ihre Bedeutung und Funktion im Inhalt einer
+              Webseite klar definieren, anstatt sie nur als generische Container
+              (wie &lt;div&gt; oder &lt;span&gt;) zu verwenden.
+            </p>
+            <p>
+              Es geht also darum, den Inhalt basierend auf seiner Bedeutung zu
+              strukturieren, nicht nur basierend auf seinem Aussehen.
+            </p>
+          </div>
           <ul class="semantic0">
             <li>
-              Statt &lt;div class="navigation"&gt;, sollte &lt;nav&gt; verwendet
-              werden, um eine Navigation zu kennzeichnen.
+              Statt &lt;div class="navigation"&gt;, sollte
+              <span class="g">&lt;nav&gt;</span> verwendet werden, um eine
+              Navigation zu kennzeichnen.
             </li>
             <li>
-              Statt &lt;div class="footer"&gt;, sollte &lt;footer&gt; verwendet
-              werden, um den Fußbereich der Seite zu kennzeichnen.
+              Statt &lt;div class="footer"&gt;, sollte
+              <span class="g">&lt;footer&gt;</span> verwendet werden, um den
+              Fußbereich der Seite zu kennzeichnen.
             </li>
             <li>
-              Statt &lt;div class="article"&gt;, sollte &lt;article&gt;
+              Statt &lt;div class="article"&gt;, sollte
+              <span class="g">&lt;article&gt;</span>
               verwendet werden, um einen eigenständigen Inhalt wie einen
               Blogartikel zu kennzeichnen.
             </li>
             <li>
-              Statt &lt;div class="main"&gt;, sollte &lt;main&gt; verwendet
-              werden, um den Hauptinhalt einer Seite zu kennzeichnen.
+              Statt &lt;div class="main"&gt;, sollte
+              <span class="g">&lt;main&gt;</span> verwendet werden, um den
+              Hauptinhalt einer Seite zu kennzeichnen.
             </li>
           </ul>
         </section>

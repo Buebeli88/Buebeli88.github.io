@@ -6,6 +6,12 @@
     <title>Element Content</title>
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/html/elementcontent.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -28,56 +34,65 @@
     <div class="container">
       <main>
         <h1>Element Content</h1>
-        <p>
-          Der Begriff "Element Content" in HTML bezieht sich auf den Inhalt, der
-          zwischen dem öffnenden und schließenden Tag eines HTML-Elements steht.
-          Dieser Inhalt kann reiner Text, andere HTML-Elemente oder sogar andere
-          Arten von Daten sein, die innerhalb des Elementbereichs definiert
-          sind.
-        </p>
+        <div class="zweispaltig">
+          <p>
+            Der Begriff "Element Content" in HTML bezieht sich auf den Inhalt,
+            der zwischen dem öffnenden und schließenden Tag eines HTML-Elements
+            steht.
+          </p>
+          <p>
+            Dieser Inhalt kann reiner Text, andere HTML-Elemente oder sogar
+            andere Arten von Daten sein, die innerhalb des Elementbereichs
+            definiert sind.
+          </p>
+        </div>
         <section class="openingtag">
           <h2>Opening Tag</h2>
-          <p>
-            Ein HTML-Opening-Tag (auch Start-Tag genannt) ist der Beginn eines
-            HTML-Elements und kennzeichnet den Beginn eines Abschnitts, der von
-            diesem Element umschlossen wird. Es besteht aus dem Elementnamen in
-            spitzen Klammern.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code class="openingtag1">
-            <span class="g">&lt;</span>div<span class="g">&gt; </span></code
-          >
+          <div class="zweispaltig">
+            <p>
+              Ein HTML-Opening-Tag (auch Start-Tag genannt) ist der Beginn eines
+              HTML-Elements und kennzeichnet den Beginn eines Abschnitts,
+            </p>
+            <p>
+              der von diesem Element umschlossen wird. Es besteht aus dem
+              Elementnamen in spitzen Klammern.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <code class="language-html"> &lt;div&gt;</code>
         </section>
         <section class="closingtag">
           <h2>Closing Tag</h2>
-          <p>
-            Ein Closing Tag (oder End-Tag) in HTML kennzeichnet das Ende eines
-            HTML-Elements. Es besteht aus einem Schrägstrich (/) gefolgt vom
-            Elementnamen, eingeschlossen in spitze Klammern.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code class="closingtag1"
-            ><span class="g"> &lt;/</span>div<span class="g">&gt;</span>
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Ein Closing Tag (oder End-Tag) in HTML kennzeichnet das Ende eines
+              HTML-Elements.
+            </p>
+            <p>
+              Es besteht aus einem Schrägstrich (/) gefolgt vom Elementnamen,
+              eingeschlossen in spitze Klammern.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <code class="language-html">&lt;/div&gt; </code>
         </section>
         <section class="attributenamevalues">
           <h2>Attribute Name and Values</h2>
-          <p>
-            In HTML beziehen sich Name und Wert auf die Attribute eines
-            HTML-Elements. Ein Attribut besteht immer aus einem Namen (Name) und
-            einem zugehörigen Wert (Value), die zusammen eine Erweiterung oder
-            zusätzliche Information zum Element darstellen. Man schreibt sie im
-            öffnenden Tag des Elements.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code class="attributenamevalues1">
-            <span class="g">&lt;</span>Elementname <span class="t">Name</span
-            ><span class="w">=</span><span class="o">"Wert"</span
-            ><span class="g">&gt;</span><span class="w">Inhalt</span
-            ><span class="g">&lt;/</span>Elementname<span class="g">&gt;</span>
+          <div class="zweispaltig">
+            <p>
+              In HTML beziehen sich Name und Wert auf die Attribute eines
+              HTML-Elements. Ein Attribut besteht immer aus einem Namen (Name)
+              und einem zugehörigen Wert (Value),
+            </p>
+            <p>
+              die zusammen eine Erweiterung oder zusätzliche Information zum
+              Element darstellen. Man schreibt sie im öffnenden Tag des
+              Elements.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <code class="language-html">
+            &lt;Elementname Name ="Wert"&gt;Inhalt&lt;/Elementname&gt;
             <br /><br />
           </code>
         </section>

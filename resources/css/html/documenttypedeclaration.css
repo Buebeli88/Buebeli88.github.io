@@ -6,23 +6,18 @@ h6 {
     border-top: 1px solid black;
 }
 
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
 .g {
-    color: lightgray;
+    background-color: lightgray;
 }
 
-.t {
-    color: rgb(20, 214, 228);
-}
-
-.o {
-    color: rgb(255, 123, 0);
-}
-
-.w {
-    color: whitesmoke;
-}
-
-.doctype {
-    background-color: rgb(48, 46, 46);
-    color: rgb(77, 123, 209);
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
 }

@@ -1,0 +1,101 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.linebreak0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.linebreak1,
+.linebreak2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.strong0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.strong1,
+.strong2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.emph0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.emph1,
+.emph2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.ol0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;    
+}
+
+.ol1,
+.ol2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.ul0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.ul1,
+.ul2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.img0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.img1,
+.img2 {
+    flex: 1;
+    min-width: 0;
+}

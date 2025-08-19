@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Element</title>
     <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/html/htmlelement.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -27,100 +34,102 @@
     <div class="container">
       <main>
         <h1>HTML Element</h1>
-        <p>
-          Ein HTML-Element ist ein Baustein eines HTML-Dokuments, der dem
-          Browser Anweisungen gibt, wie ein bestimmter Inhalt dargestellt und
-          interpretiert werden soll. Es besteht in der Regel aus einem öffnenden
-          Tag, einem Inhalt und einem schließenden Tag. Einige Elemente sind
-          jedoch "selbstschließende" und benötigen kein End-Tag.
-        </p>
+        <div class="zweispaltig">
+          <p>
+            Ein HTML-Element ist ein Baustein eines HTML-Dokuments, der dem
+            Browser Anweisungen gibt, wie ein bestimmter Inhalt dargestellt und
+            interpretiert werden soll.
+          </p>
+          <p>
+            Es besteht in der Regel aus einem öffnenden Tag, einem Inhalt und
+            einem schließenden Tag. Einige Elemente sind jedoch
+            "selbstschließende" und benötigen kein End-Tag.
+          </p>
+        </div>
         <section class="htmlelement">
           <h2>&lt;html&gt; Element</h2>
-          <p>
-            Das &lt;html&gt; Element sollte direkt nach dem &lt;!DOCTYPE
-            html&gt; eingefügt werden und beinhaltet den ganzen Inhalt und die
-            Struktur des Dokuments.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;!DOCTYPE html&gt;<br />
-            &lt;html&gt;<br />
-            &nbsp;&nbsp;Inhalt und Struktur der Seite.<br />
-            &lt;/html&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;html&gt; Element sollte direkt nach dem &lt;!DOCTYPE
+              html&gt; eingefügt werden
+            </p>
+            <p>
+              und beinhaltet den ganzen Inhalt und die Struktur des Dokuments.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&nbsp;&nbsp;Inhalt und Struktur der Seite.
+&lt;/html&gt;</code></pre>
         </section>
         <section class="headelement">
           <h2>&lt;head&gt; Element</h2>
-          <p>
-            Das &lt;head&gt; Element beinhaltet generelle Informationen über die
-            HTML Seite, die nicht im Browser angezeigt werden. Diese
-            Informationen nennt man auch "Metadaten". Title oder Linkts zu
-            Stylesheets werden hier üblicherweise angegeben.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;!DOCTYPE html&gt;<br />
-            &lt;html&gt;<br />
-            &nbsp;&nbsp;&lt;head&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Metadaten werden hier eingefügt
-            --&gt;<br />
-            &nbsp;&nbsp;&lt;/head&gt;<br />
-            &lt;/html&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;head&gt; Element beinhaltet generelle Informationen über
+              die HTML Seite, die nicht im Browser angezeigt werden.
+            </p>
+            <p>
+              Diese Informationen nennt man auch "Metadaten". Title oder Linkts
+              zu Stylesheets werden hier üblicherweise angegeben.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Metadaten werden hier eingefügt--&gt;
+&nbsp;&nbsp;&lt;/head&gt;
+&lt;/html&gt;</code></pre>
         </section>
         <section class="metaelement">
           <h2>&lt;meta/&gt; Element</h2>
         </section>
         <section class="titleelement">
           <h2>&lt;title&gt; Element</h2>
-          <p>
-            Das &lt;title&gt; Element zeigt den Titel der Seite im Browser/Tab
-            an. Das Element wird nur im &lt;head&gt; Element eingefügt.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;!DOCTYPE html&gt;<br />
-            &lt;html&gt;<br />
-            &nbsp;&nbsp;&lt;head&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titel der HTML
-            Seite&lt;/title&gt;<br />
-            &nbsp;&nbsp;&lt;/html&gt;<br />
-            &lt;/html&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;title&gt; Element zeigt den Titel der Seite im Browser/Tab
+              an. Das Element wird nur im &lt;head&gt; Element eingefügt.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titel der HTMLSeite&lt;/title&gt;
+&nbsp;&nbsp;&lt;/html&gt;
+&lt;/html&gt;</code></pre>
         </section>
         <section class="bodyelement">
           <h2>&lt;body&gt; Element</h2>
-          <p>
-            Im &lt;body&gt; Element wird der ganze Inhalt und Struktur der im
-            Browser dargestellten Seite. Es kann nur ein &lt;body&gt; Element
-            pro Dokument existieren.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;body&gt;<br />
-            &nbsp;&nbsp;&lt;h1&gt;Learn to code with CodeAcademy&lt;/h1&gt;<br />
-            &lt;/body&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Im &lt;body&gt; Element ist der ganze Inhalt und die Struktur, der
+              im Browser dargestellten Seite. Es kann nur ein &lt;body&gt;
+              Element pro Dokument existieren.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;body&gt;
+&nbsp;&nbsp;&lt;h1&gt;Learn to code with CodeAcademy&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
         </section>
         <section class="headingelement">
           <h2>&lt;h1&gt; bis &lt;h6&gt; Heading Elemente</h2>
-          <p>
-            Ein HTML Dokument kann 6 verschiedene Heading Elemente darstellen.
-            Vom grössten &lt;h1&gt; bis zum kleinsten &lt;h6&gt;
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;h1&gt;Breaking News&lt;/h1&gt;<br />
-            &lt;h2&gt;This is the 1st subheading&lt;/h2&gt;<br />
-            &lt;h3&gt;This is the 2nd subheading&lt;/h3&gt;<br />
-            ...<br />
-            &lt;h6&gt;This is the 5th subheading &lt;/h6&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Ein HTML Dokument kann 6 verschiedene Heading Elemente darstellen.
+              Vom grössten &lt;h1&gt; bis zum kleinsten &lt;h6&gt;
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;h1&gt;Breaking News&lt;/h1&gt;
+&lt;h2&gt;This is the 1st subheading&lt;/h2&gt;
+&lt;h3&gt;This is the 2nd subheading&lt;/h3&gt;
+...
+&lt;h6&gt;This is the 5th subheading &lt;/h6&gt;</code></pre>
         </section>
         <section class="paragraph">
           <h2>&lt;p&gt; Paragraph Element</h2>
@@ -129,300 +138,329 @@
             <br /><br />
             Beispiel:
           </p>
-          <code>
-            &lt;p&gt;This is a block of text! Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.&lt;/p&gt;
-          </code>
+          <pre><code class="language-html">&lt;p&gt;This is a block of text! Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code></pre>
         </section>
         <section class="linebreak">
           <h2>&lt;br&gt; Line Break Element</h2>
-          <p>
-            Ein &lt;br&gt; Line Break Element ist ein Zeilenumbruch, der vom
-            Browser auch dargestellt wird. (Im Gegensatz zum «normalen»
-            Zeilenumbruch, siehe "Whitespace") Dieses Element nutzt nur einen
-            "opening tag" und KEINEN "closing tag".
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;p&gt;<br />&nbsp;&nbsp;A line break haiku. &lt;br&gt;<br />&nbsp;&nbsp;Poems
-            are a great use case. &lt;br&gt;<br />&nbsp;&nbsp;Oh joy! A line
-            break.<br />&lt;/p&gt;
-          </code>
-          <div>
-            HTML:
-            <br /><br />
-            A line break haiku. <br />
-            Poems are a great use case. <br />
-            Oh joy! A line break.
+          <div class="zweispaltig">
+            <p>
+              Ein &lt;br&gt; Line Break Element ist ein Zeilenumbruch, der vom
+              Browser auch dargestellt wird. (Im Gegensatz zum «normalen»
+              Zeilenumbruch, siehe "Whitespace")
+            </p>
+            <p>
+              Dieses Element nutzt nur einen "opening tag" und KEINEN "closing
+              tag".
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="linebreak0">
+            <div class="linebreak1">
+              <p>Code:</p>
+              <div>
+                <pre><code class="language-html">&lt;p&gt;
+&nbsp;&nbsp;A line break haiku. &lt;br&gt;
+&nbsp;&nbsp;Poemsare a great use case. &lt;br&gt;
+&nbsp;&nbsp;Oh joy! A linebreak.
+&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+            <div class="linebreak2">
+              <p>HTML:</p>
+              <p>
+                A line break haiku. <br />
+                Poems are a great use case. <br />
+                Oh joy! A line break.
+              </p>
+            </div>
           </div>
         </section>
         <section class="strongelement">
           <h2>&lt;strong&gt; Strong Element</h2>
-          <p>
-            Das &lt;strong&gt; Element setzt den Text zwischen dem "opening tag"
-            und "closing tag" auf bold (Fett). Dies kann zusätzlich zu CSS
-            funktionen über HTML benutzt werden. (Wird aber nur die "normale"
-            bold funktion übernehmen, welche in CSS für 400 steht)
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt;
-            text!&lt;/p&gt;
-          </code>
-          <div>
+          <div class="zweispaltig">
             <p>
-              HTML:
-              <br /><br />
-              This is <strong>important</strong> text!
+              Das &lt;strong&gt; Element setzt den Text zwischen dem "opening
+              tag" und "closing tag" auf bold (Fett). Dies kann zusätzlich zu
+              CSS funktionen über HTML benutzt werden.
             </p>
+            <p>
+              (Wird aber nur die "normale" bold funktion übernehmen, welche in
+              CSS für 400 steht)
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="strong0">
+            <div class="strong1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;p&gt;
+  This is &lt;strong&gt;important&lt;/strong&gt;text!
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="strong2">
+              <p>
+                HTML:
+                <br /><br />
+                This is <strong>important</strong> text!
+              </p>
+            </div>
           </div>
         </section>
         <section class="emphasis">
           <h2>&lt;em&gt; Emphasis Element</h2>
-          <p>
-            Dieses Element wird den Text zwischen dem "opening tag" und "closing
-            tag" auf italicize setzten. Dies kann zusätzlich zu CSS funktionen
-            über HTML benutzt werden.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;p&gt;This &lt;em&gt;word&lt;/em&gt; will be emphasized in
-            italics.&lt;/p&gt;
-          </code>
-          <div>
+          <div class="zweispaltig">
             <p>
-              HTML:
-              <br /><br />
-              This <em>word</em> will be emphasized in italics.
+              Dieses Element wird den Text zwischen dem "opening tag" und
+              "closing tag" auf italicize setzten.
             </p>
+            <p>
+              Dies kann zusätzlich zu CSS funktionen über HTML benutzt werden.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="emph0">
+            <div class="emph1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;p&gt;
+  This &lt;em&gt;word&lt;/em&gt; will be emphasized
+  in italics.
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="emph2">
+              <p>
+                HTML:
+                <br /><br />
+                This <em>word</em> will be emphasized in italics.
+              </p>
+            </div>
           </div>
         </section>
         <section class="divelement">
           <h2>&lt;div&gt; Div Element</h2>
-          <p>
-            Das &lt;div&gt; Element wird genutzt um "Boxen" (container) zu
-            erstellen, welche das HTML-Dokument in Sektionen aufteilt. Ein
-            &lt;div&gt; Element kann sogenannten "flow content" beinhalten.
-            (z.B. headings, paragraphs, links, images, etc…) Div steht für
-            «division». In Zusammenhang mit CSS und andere Tools (z.B.
-            JavaScript) werden hier auch oft noch class und ID benutzt, um die
-            &lt;div&gt; Container zu benennen, resp. anzusteuern.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;div&gt;<br />
-            &nbsp;&nbsp;&lt;h1&gt;A section of grouped elements&lt;/h1&gt;<br />
-            &nbsp;&nbsp;&lt;p&gt;Here's some text for the section&lt;/p&gt;<br />
-            &lt;/div&gt;<br />
-            &lt;div&gt;<br />
-            &nbsp;&nbsp;&lt;h1&gt;Second section of grouped
-            elements&lt;/h1&gt;<br />
-            &nbsp;&nbsp;&lt;p&gt;Here's some text&lt;/p&gt;<br />
-            &lt;/div&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;div&gt; Element wird genutzt um "Boxen" (container) zu
+              erstellen, welche das HTML-Dokument in Sektionen aufteilt. Ein
+              &lt;div&gt; Element kann sogenannten "flow content" beinhalten.
+              (z.B. headings, paragraphs, links, images, etc…)
+            </p>
+            <p>
+              Div steht für «division». In Zusammenhang mit CSS und andere Tools
+              (z.B. JavaScript) werden hier auch oft noch class und ID benutzt,
+              um die &lt;div&gt; Container zu benennen, resp. anzusteuern.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;div&gt;
+&nbsp;&nbsp;&lt;h1&gt;A section of grouped elements&lt;/h1&gt;
+&nbsp;&nbsp;&lt;p&gt;Here's some text for the section&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&lt;h1&gt;Second section of groupedelements&lt;/h1&gt;
+&nbsp;&nbsp;&lt;p&gt;Here's some text&lt;/p&gt;
+&lt;/div&gt;</code></pre>
         </section>
         <section class="spanelement">
           <h2>&lt;span&gt; Span Element</h2>
-          <p>
-            Das &lt;span&gt; Element ist ein sogenannter "inline" Container für
-            Text und kann zum Stylen dieser Gruppe benutzt werden. Jedoch ist
-            das &lt;span&gt; Element ein allgemeiner Container um einen Teil des
-            Textes eines grösseren Text zu trennen. Sollten andere Semantische
-            Elemente zur Verfügung stehen sollten diese Vorrang haben.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            &lt;p&gt;&lt;span&gt;This text&lt;/span&gt; may be styled
-            differently than the surrounding text.&lt;/p&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;span&gt; Element ist ein sogenannter "inline" Container
+              für Text und kann zum Stylen dieser Gruppe benutzt werden. Jedoch
+              ist das &lt;span&gt; Element ein allgemeiner Container um einen
+              Teil des Textes,
+            </p>
+            <p>
+              eines grösseren Text zu trennen. Sollten andere Semantische
+              Elemente zur Verfügung stehen sollten diese Vorrang haben.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;p&gt;&lt;span&gt;This text&lt;/span&gt; may be styleddifferently than the surrounding text.&lt;/p&gt;</code></pre>
         </section>
         <section class="listelement">
           <h2>&lt;li&gt; List Item Element</h2>
-          <p>
-            Ein List Item (Listenelement), repräsentiert durch das HTML-Element
-            &lt;li&gt;, ist ein einzelnes Element in einer Liste. Es wird
-            verwendet, um Elemente in geordneten Listen (&lt;ol&gt;),
-            ungeordneten Listen (&lt;ul&gt;) oder Menüs (&lt;menu&gt;)
-            darzustellen. In ungeordneten Listen und Menüs werden Listenelemente
-            standardmäßig mit Aufzählungszeichen dargestellt, während sie in
-            geordneten Listen mit einer Nummerierung (oder einem anderen Zähler)
-            versehen werden.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Ein List Item (Listenelement), repräsentiert durch das
+              HTML-Element &lt;li&gt;, ist ein einzelnes Element in einer Liste.
+              Es wird verwendet, um Elemente in geordneten Listen (&lt;ol&gt;),
+              ungeordneten Listen (&lt;ul&gt;) oder Menüs (&lt;menu&gt;)
+              darzustellen.
+            </p>
+            <p>
+              In ungeordneten Listen und Menüs werden Listenelemente
+              standardmäßig mit Aufzählungszeichen dargestellt, während sie in
+              geordneten Listen mit einer Nummerierung (oder einem anderen
+              Zähler) versehen werden.
+            </p>
+          </div>
         </section>
         <section class="olelement">
           <h2>&lt;ol&gt; Ordered List Element</h2>
-          <p>
-            Das &lt;ol&gt; Element generiert standartmässig eine nummerierte
-            Liste.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;ol&gt;<br />
-            &nbsp;&nbsp;&lt;li&gt;Preheat oven to 325F&lt;/li&gt;<br />
-            &nbsp;&nbsp;&lt;li&gt;Drop cookie dougth&lt;/li&gt;<br />
-            &nbsp;&nbsp;&lt;li&gt;Bake for 15min&lt;/li&gt;<br />
-            &lt;/ol&gt;
-          </code>
-          <div>
-            <p>HTML:</p>
-            <ol>
-              <li>Preheat oven to 325F</li>
-              <li>Drop cookie dougth</li>
-              <li>Bake for 15min</li>
-            </ol>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;ol&gt; Element generiert standartmässig eine nummerierte
+              Liste.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="ol0">
+            <div class="ol1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;ol&gt;
+&nbsp;&nbsp;&lt;li&gt;Preheat oven to 325F&lt;/li&gt;
+&nbsp;&nbsp;&lt;li&gt;Drop cookie dougth&lt;/li&gt;
+&nbsp;&nbsp;&lt;li&gt;Bake for 15min&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            <div class="ol2">
+              <p>HTML:</p>
+              <ol>
+                <li>Preheat oven to 325F</li>
+                <li>Drop cookie dougth</li>
+                <li>Bake for 15min</li>
+              </ol>
+            </div>
           </div>
         </section>
         <section class="ulelement">
           <h2>&lt;ul&gt; Unordered List Element</h2>
-          <p>
-            Das &lt;ul&gt; Element generiert eine nicht nummerierte Liste.
-            Standartmässig werden hier Punkte statt Nummern als Listenelement
-            dargestellt.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;ul&gt;<br />
-            &nbsp;&nbsp;&lt;li&gt;Play more music&lt;/li&gt;<br />
-            &nbsp;&nbsp;&lt;li&gt;Read more Books&lt;/li&gt;<br />
-            &lt;/ul&gt;
-          </code>
-          <div>
-            <p>HTML:</p>
-            <ul>
-              <li>Play more music</li>
-              <li>Read more Books</li>
-            </ul>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;ul&gt; Element generiert eine nicht nummerierte Liste.
+              Standartmässig werden hier Punkte statt Nummern als Listenelement
+              dargestellt.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="ul0">
+            <div class="ul1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;ul&gt;
+&nbsp;&nbsp;&lt;li&gt;Play more music&lt;/li&gt;
+&nbsp;&nbsp;&lt;li&gt;Read more Books&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div class="ul2">
+              <p>HTML:</p>
+              <ul>
+                <li>Play more music</li>
+                <li>Read more Books</li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="anchorelement">
           <h2>&lt;a&gt; Anchor Element</h2>
-          <p>
-            Das &lt;a&gt; Element wird benutzt um im HTML-Dokument einen
-            Hyperlink zu erstellen. Der Hyperlink kann zu einer anderen Website,
-            einem File auf dem gleichen Server, ein «punk» auf der gleichen
-            Seite oder einer anderen URL über das «href» Attribut weisen. Das
-            «href» Attribut bestimmt das Ziel des Hyperlinks. Text oder auf
-            Bilder die zwischen dem «opening tag» und «closing tag» sind, werden
-            zum Hyperlink.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;a href="http://www.codeacademy.com"&gt;Visit this site&lt;/a&gt;
-            <br /><br />
-            oder
-            <br /><br />
-            &lt;a href="https://www.codeacademy.com"&gt;<br />
-            &nbsp;&nbsp;&lt;img src="logo.jpg"&gt;Click this image<br />&lt;/a&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;a&gt; Element wird benutzt um im HTML-Dokument einen
+              Hyperlink zu erstellen. Der Hyperlink kann zu einer anderen
+              Website, einem File auf dem gleichen Server, ein «punk» auf der
+              gleichen Seite oder einer anderen URL über das «href» Attribut
+              weisen.
+            </p>
+            <p>
+              Das «href» Attribut bestimmt das Ziel des Hyperlinks. Text oder
+              auf Bilder die zwischen dem «opening tag» und «closing tag» sind,
+              werden zum Hyperlink.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;a href="http://www.codeacademy.com"&gt;Visit this site&lt;/a&gt;
+
+oder
+
+&lt;a href="https://www.codeacademy.com"&gt;<br />
+&nbsp;&nbsp;&lt;img src="logo.jpg"&gt;Click this image<br />&lt;/a&gt;</code></pre>
         </section>
         <section class="targetattribut">
           <h2>&lt;target&gt; Target Attribute</h2>
-          <p>
-            Das &lt;target&gt; Attribut bestimmt, wo der Hyperlink geöffnet
-            wird. Der wird "_blank" wird den Link standartmässig in einem neuen
-            «Tab» öffnen, in einem älteren Browser evtl. auch in einem neuen
-            "Fenster" oder die Einstellungen im Browser wurden so geändert das
-            immer ein neues "Fenster" geöffnet wird.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;a href="https://google.com" target="_blank"&gt;This anchor
-            element links to google and will open in a new tab or
-            window.&lt;/a&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;target&gt; Attribut bestimmt, wo der Hyperlink geöffnet
+              wird. Der wird "_blank" wird den Link standartmässig in einem
+              neuen «Tab» öffnen, in einem älteren Browser evtl.
+            </p>
+            <p>
+              auch in einem neuen "Fenster" oder die Einstellungen im Browser
+              wurden so geändert das immer ein neues "Fenster" geöffnet wird.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;a href="https://google.com" target="_blank"&gt;This anchor
+element links to google and will open in a new tab or
+window.&lt;/a&gt;</code></pre>
         </section>
         <section class="linkpart">
           <h2>Link to a different part of the page #</h2>
-          <p>
-            Das &lt;a&gt; Anchor Element kann Hyperlinks zu verschiedenen Teilen
-            einer Seite führen. Dazu wird im "href" Attribute ein "#"" benutzt,
-            gefolgt von der "ID" des gewünschten Elements.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;div&gt;<br />
-            &nbsp;&nbsp;&lt;p id="id-of-element-to-link-to"&gt;A different part
-            of the page!&lt;/p&gt;<br />
-            &lt;/div&gt;<br />
-            &lt;a href="#id-of-element-to-link-to"&gt;Take me to a different
-            part of the page&lt;/a&gt;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Das &lt;a&gt; Anchor Element kann Hyperlinks zu verschiedenen
+              Teilen einer Seite führen.
+            </p>
+            <p>
+              Dazu wird im "href" Attribute ein "#"" benutzt, gefolgt von der
+              "ID" des gewünschten Elements.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;div&gt;
+&nbsp;&nbsp;&lt;p id="id-of-element-to-link-to"&gt;A different part
+  of the page!&lt;/p&gt;
+&lt;/div&gt;
+&lt;a href="#id-of-element-to-link-to"&gt;Take me to a differentpart of the page&lt;/a&gt;</code></pre>
         </section>
         <section class="filepath">
           <h2>File Path</h2>
-          <p>
-            Ein URL Weg in HTML kann ein "absoluter" Weg sein, wie z.B. eine
-            komplette URL. (Beispiel:
-            https://developer.mozilla.org/en-US/docs/Learn) Oder ein Relativer
-            File Weg der zu einem Lokalem Dokument im gleichen Ordner oder auf
-            dem gleichen Server führt. Z.B. .style.css. Ein Relativer Weg
-            beginnt mit ./ gefolgt vom "file path" zur Lokalen Datei.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;a href="https://developer.mozilla.org/en-US/docs/web"&gt;The URL
-            for this anchor element is an absolute file path.&lt;/a&gt;
-            <br /><br />
+          <div class="zweispaltig">
+            <p>
+              Ein URL Weg in HTML kann ein "absoluter" Weg sein, wie z.B. eine
+              komplette URL. (Beispiel:
+              https://developer.mozilla.org/en-US/docs/Learn) Oder ein Relativer
+              File Weg,
+            </p>
+            <p>
+              der zu einem Lokalem Dokument im gleichen Ordner oder auf dem
+              gleichen Server führt. Z.B. .style.css. Ein Relativer Weg beginnt
+              mit ./ gefolgt vom "file path" zur Lokalen Datei.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;a href="https://developer.mozilla.org/en-US/docs/web"&gt;The URL
+for this anchor element is an absolute file path.&lt;/a&gt;
+
             oder
-            <br /><br />
-            &lt;a href=".about.html"&gt;The URL for this anchor element is a
-            relative file path.&lt;/a&gt;
-          </code>
+
+&lt;a href=".about.html"&gt;The URL for this anchor element is a
+relative file path.&lt;/a&gt;</code></pre>
         </section>
         <section class="imageelement">
           <h2>&lt;img&gt; Image Element</h2>
-          <p>
-            Ein &lt;img&gt; Element hinterlegt ein Bild im Dokument. Das "src"
-            Attribut beinhaltet die URL des Bildes und ist demnach Pflicht. Das
-            &lt;img&gt; Element ist ein sogennantes "empty element", was
-            bedeutet das es keinen "closing tag" besitzt.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            <p>&lt;img src="resources/images/cutecat.jpg" /&gt;</p>
-          </code>
-          <div>
-            <p>HTML:</p>
-            <img
-              src="../../images/cutecat.jpg"
-              width="280"
-              height="180"
-              alt="A Cute Cat"
-            />
+          <div class="zweispaltig">
+            <p>
+              Ein &lt;img&gt; Element hinterlegt ein Bild im Dokument. Das "src"
+              Attribut beinhaltet die URL des Bildes und ist demnach Pflicht.
+            </p>
+            <p>
+              Das &lt;img&gt; Element ist ein sogennantes "empty element", was
+              bedeutet das es keinen "closing tag" besitzt.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="img0">
+            <div class="img1">
+              <p>Code:</p>
+              <pre><code class="language-html"><p>&lt;img src="resources/images/cutecat.jpg" /&gt;</p></code></pre>
+            </div>
+            <div class="img2">
+              <p>HTML:</p>
+              <img
+                src="../../images/cutecat.jpg"
+                width="280"
+                height="180"
+                alt="A Cute Cat"
+              />
+            </div>
           </div>
         </section>
         <section class="altattribute">

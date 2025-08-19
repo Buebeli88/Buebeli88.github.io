@@ -6,37 +6,30 @@ h6 {
     border-top: 1px solid black;
 }
 
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
 .g {
-    color: lightgray;
+    background-color: lightgray;
 }
 
-.gr {
-    color: green;
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
-.t {
-    color: rgb(20, 214, 228);
-}
-
-.o {
-    color: rgb(255, 123, 0);
-}
-
-.w {
-    color: whitesmoke;
-}
-
-.structur0,
-.comments2,
-.comments4,
-.whitespace0 {
-    background-image: url(../../images/backgroundgrey.png);
-    color: rgb(77, 123, 209);
+pre {
+    display: flex;
+    justify-content: center;
 }
 
 .comments0 {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .comments1,
@@ -46,7 +39,7 @@ h6 {
 
 .comments2,
 .comments4 {
-    height: 6.5rem;
+    height: 9.5rem;
 }
 
 .whitespace1 {

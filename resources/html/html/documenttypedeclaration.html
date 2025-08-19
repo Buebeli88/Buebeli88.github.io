@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Type Declaration</title>
     <link rel="stylesheet" href="../../css/layout.css" />
-    <link rel="stylesheet" href="../../css/html/documenttypedeclaration.css">
+    <link rel="stylesheet" href="../../css/html/documenttypedeclaration.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -28,18 +34,18 @@
     <div class="container">
       <main>
         <h1>Document Type Declaration</h1>
-        <p>
-          Die Document Type Declaration (DTD), oft als Doctype bezeichnet, ist
-          eine Anweisung am Anfang eines HTML-Dokuments, die dem Browser
-          mitteilt, welche HTML-Version verwendet wird. Sie ist keine
-          HTML-Markierung, sondern eine Anweisung für den Browser, wie das
-          Dokument interpretiert und gerendert werden soll.
-          <br><br>
-          Beispiel:
-        </p>
-        <code class="doctype">
-          <span class="g">&lt;</span>!DOCTYPE <span class="t">html</span><span class="g">&gt;</span>
-        </code>
+        <div class="zweispaltig">
+          <p>
+            Die Document Type Declaration (DTD), oft als Doctype bezeichnet, ist
+            eine Anweisung am Anfang eines HTML-Dokuments, die dem Browser
+            mitteilt, welche HTML-Version verwendet wird.
+          </p>
+          <p>
+            Sie ist keine HTML-Markierung, sondern eine Anweisung für den
+            Browser, wie das Dokument interpretiert und gerendert werden soll.
+          </p>
+        </div>
+        <code class="language-html"> &lt;!DOCTYPE html&gt; </code>
       </main>
     </div>
     <footer>
