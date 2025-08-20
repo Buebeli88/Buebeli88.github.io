@@ -1,73 +1,130 @@
-h2, h3, h4, h5, h6 {
-    border-top: 2px solid rgb(47, 125, 189);
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
 }
 
-.bspforeground1, .bspforeground2 {
-    display: inline-block;
-    width: 45%;
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
 }
 
-.bspforeground2 {
-    float: right;
+li {
+    line-height: 1.5rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.fore0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.fore1,
+.fore2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .bspforeground3 {
     color: green;
 }
 
-.bspbackground1, .bspbackground2 {
-    display: inline-block;
-    width: 45%;
+.bac0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bspbackground2 {
-    float: right;
+.bac1,
+.bac2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.bac3 {
     background-color: blue;
     font-weight: bolder;
-    color: white;
+    color: whitesmoke;
 }
 
-.bspkeywords, .bspkeywords1 {
-    display: inline-block;
-    width: 45%;
+.keyw0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bspkeywords1 {
-    float: right;
+.keyw1,
+.keyw2 {
+    flex: 1;
+    min-width: 0;
 }
+
 
 .bspkeywords2 {
     color: aqua;
 }
 
 .bspkeywords3 {
-    color: khaki;
+    color: blueviolet;
 }
 
-.opacity {
-    height: 13.5rem;
+.hexa0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bspopacity, .bspopacity1 {
-    display: inline-block;
-    width: 45%;
+.hexa1,
+.hexa2 {
+    flex: 1;
+    min-width: 0;
 }
 
-.bspopacity1 {
-    float: right;
+.opa0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.opa1,
+.opa2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .bspopacity2 {
     opacity: 0.5;
 }
 
-.bsprgb, .bsprgb1 {
-    display: inline-block;
-    width: 45%;
+.rgb0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bsprgb1 {
-    float: right;
+.rgb1,
+.rgb2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .bsprgb2 {
@@ -78,23 +135,32 @@ h2, h3, h4, h5, h6 {
     color: rgb(0,255,0);
 }
 
-.bsphsl1, .bsphsl2 {
-    display: inline-block;
-    width: 45%;
+.hsl0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bsphsl2 {
-    float: right;
+.hsl1,
+.hsl2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.hsl3 {
     background-color: hsl(200, 70%, 50%);
 }
 
-.bspalpha1, .bspalpha2 {
-    display: inline-block;
-    width: 45%;
+.cola0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bspalpha2 {
-    float: right;
+.cola1,
+.cola2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .bspalpha3 {

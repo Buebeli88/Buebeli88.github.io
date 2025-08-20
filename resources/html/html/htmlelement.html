@@ -465,21 +465,27 @@ relative file path.&lt;/a&gt;</code></pre>
         </section>
         <section class="altattribute">
           <h2>"alt" Attribute</h2>
-          <p>
-            Im &lt;img&gt; Element sollte immer auch ein alternativer Text
-            stehen, welcher über das "alt" Attribut erteilt wird. Dieser
-            alternative Text wird nur dann, im Browser dargestellt, wenn das
-            Bild nicht "geladen" werden kann. (Z.B. Das Bildformat wird vom
-            Browser nicht erkannt, das Bild wurde blockiert, ein Fehler in der
-            URL.) Dieser Text wird auch von einen "Screen Reader" vorgelesen und
-            hilft demnach den Inhalt der Seite auch von Sehbeeinträchtigten
-            besser zu verstehen. Ein "alt" Attribut funktionier wie ein
-            "ARIA-Label" hat aber noch zusätzliche Funktionen und sollte daher
-            bei Bildern Vorrang haben.
-            <br /><br />
-            Wenn ein "alt" Attribut verwendet wird, sollten folgene Sachen
-            beachtet werden:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Im &lt;img&gt; Element sollte immer auch ein alternativer Text
+              stehen, welcher über das "alt" Attribut erteilt wird. Dieser
+              alternative Text wird nur dann, im Browser dargestellt, wenn das
+              Bild nicht "geladen" werden kann. (Z.B. Das Bildformat wird vom
+              Browser nicht erkannt, das Bild wurde blockiert, ein Fehler in der
+              URL.)
+            </p>
+            <p>
+              Dieser Text wird auch von einen "Screen Reader" vorgelesen und
+              hilft demnach den Inhalt der Seite auch von Sehbeeinträchtigten
+              besser zu verstehen. Ein "alt" Attribut funktionier wie ein
+              "ARIA-Label" hat aber noch zusätzliche Funktionen und sollte daher
+              bei Bildern Vorrang haben.
+            </p>
+            <p>
+              Wenn ein "alt" Attribut verwendet wird, sollten folgene Sachen
+              beachtet werden:
+            </p>
+          </div>
           <ol>
             <li>
               Generell sollte der "value" vom "alt" Attribut nur das Bild
@@ -506,86 +512,96 @@ relative file path.&lt;/a&gt;</code></pre>
             </li>
           </ol>
           <p>Beispiel:</p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;img src="path/to/image" alt="text describing image" /&gt;
-          </code>
+          <pre><code class="language-html">&lt;img src="path/to/image" alt="text describing image" /&gt;</code></pre>
         </section>
         <section class="videoelement">
           <h2>&lt;video&gt; Video Element</h2>
-          <p>
-            Ein &lt;video&gt; Element wird im Browser einen "Media Player"
-            anzeigen. Im "src" Attribut wir die URL des Videos hinterlegt. Das
-            hinzufügen des "control" Attribute, gibt dem Video noch die
-            Wiedergabefunktionen wie "play" oder "stop". Ein &lt;video&gt;
-            Element benutzt im Gegensatz des "img" Elements einen "opening tag"
-            und einen "closing tag". Der Inhalt dazwischen ist der "fallback"
-            text (gleich wie ein "alt" Attribut beim "img" Element) und wird nur
-            dargestellt, wenn das Video nicht funktioniert.
-            <br /><br />
-            Seiten wie YouTube bieten auch Optionen wie "Einbetten/Embed" an mit
-            ganzem Code.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;video src="resources/videos/cutecats.mp4" control&gt;<br />
-            &nbsp;&nbsp;Video not supportet<br />&lt; /video&gt;
-          </code>
-          <div>
-            <p>HTML mit der "embed" Funktion von YouTube:</p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/tpiyEe_CqB4?si=a8Esy-K8UmRAy1Hq"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            >
-              Video no supportet</iframe
-            >
+          <div class="zweispaltig">
+            <p>
+              Ein &lt;video&gt; Element wird im Browser einen "Media Player"
+              anzeigen. Im "src" Attribut wir die URL des Videos hinterlegt. Das
+              hinzufügen des "control" Attribute, gibt dem Video noch die
+              Wiedergabefunktionen wie "play" oder "stop".
+            </p>
+            <p>
+              Ein &lt;video&gt; Element benutzt im Gegensatz des "img" Elements
+              einen "opening tag" und einen "closing tag". Der Inhalt dazwischen
+              ist der "fallback" text (gleich wie ein "alt" Attribut beim "img"
+              Element) und wird nur dargestellt, wenn das Video nicht
+              funktioniert.
+            </p>
+            <p>
+              Seiten wie YouTube bieten auch Optionen wie "Einbetten/Embed" an
+              mit ganzem Code.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="video0">
+            <div class="video1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;video src="resources/videos/cutecats.mp4" control&gt;
+&nbsp;&nbsp;Video not supportet<br />&lt; /video&gt;</code></pre>
+            </div>
+            <div class="video2">
+              <p>HTML mit der "embed" Funktion von YouTube:</p>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/tpiyEe_CqB4?si=a8Esy-K8UmRAy1Hq"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+                Video no supportet</iframe
+              >
+            </div>
           </div>
         </section>
         <section class="htlmattributes">
           <h2>HTML Attribute</h2>
-          <p>
-            Ein Attribut wird immer im "opening tag" eines Elements verwendet.
-            Durch das hinzufügen eines Attributs kann ein Element spezifischer
-            angepasst werden und auch für weitere Nutzungen anvisiert werden.
-            (Mit Hilfe von "id" und "class") Grundsätzlich sollte zum anvisieren
-            eines Elements zum stylen über CSS ein "class" Attribut dem "id"
-            Attribut bevorzugt werden. (ID's werden in anderen Tools mehr
-            benutzt und sind einzigartig)
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            &lt;p class="my-paragraph" style="color: green;"&gt;Here's some text
-            for a paragraph that is being altered by HTML Attributes&lt;/p&gt;
-            <br /><br />
-            oder
-            <br /><br />
-            &lt;p id="my-paragraph" style="color: red;"&gt;Here's some text of a
-            paragraph that is being altered by HTML Attributes&lt;/p&gt;
-          </code>
-          <div>
-            <p>HTML:</p>
-            <p class="my-paragraph" style="color: green">
-              Here's some text for a paragraph that is being altered by HTML
-              Attributes
+          <div class="zweispaltig">
+            <p>
+              Ein Attribut wird immer im "opening tag" eines Elements verwendet.
+              Durch das hinzufügen eines Attributs kann ein Element spezifischer
+              angepasst werden und auch für weitere Nutzungen anvisiert werden.
             </p>
-            <p>oder</p>
-            <p id="my-paragraph" style="color: red">
-              Here's some text of a paragraph that is being altered by HTML
-              Attributes
+            <p>
+              (Mit Hilfe von "id" und "class") Grundsätzlich sollte zum
+              anvisieren eines Elements zum stylen über CSS ein "class" Attribut
+              dem "id" Attribut bevorzugt werden. (ID's werden in anderen Tools
+              mehr benutzt und sind einzigartig)
             </p>
+          </div>
+          <p>Beispiel:</p>
+          <div class="htmla0">
+            <div class="htmla1">
+              <p>Code:</p>
+              <pre><code class="language-html">&lt;p class="my-paragraph" style="color: green;"&gt;
+  Here's some text for a paragraph that is
+  being altered by HTML Attributes
+&lt;/p&gt;
+
+oder
+
+&lt;p id="my-paragraph" style="color: red;"&gt;
+  Here's some text of a paragraph that is
+  being altered by HTML Attributes
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="htmla2">
+              <p>HTML:</p>
+              <p class="my-paragraph" style="color: green">
+                Here's some text for a paragraph that is being altered by HTML
+                Attributes
+              </p>
+              <p>oder</p>
+              <p id="my-paragraph" style="color: red">
+                Here's some text of a paragraph that is being altered by HTML
+                Attributes
+              </p>
+            </div>
           </div>
         </section>
         <section class="classattribute">
@@ -593,19 +609,23 @@ relative file path.&lt;/a&gt;</code></pre>
         </section>
         <section class="idattribute">
           <h2>Unique ID Attributes</h2>
-          <p>
-            Im HTML-Dokument können Elemente mit spezifischen und einzigartigen
-            "id" Attributen versehen werden, welche zur Unterscheidung anderer
-            "gleichen" Elemente dient. Bei gebrauch, können "id" Attribute
-            direkt von CSS oder JavaScript anvisiert werden und diese Elemente
-            zu manipulieren, formatieren oder ihnen spezifische Instruktionen zu
-            geben. Der Inhalt des "id" Attributs sollte nur Buchstaben (a-Z),
-            Nummern (0-9), hyphens (-), underscores (_) und periods(.)
-            enthalten. Genauso werden keine Leerzeichen benutzt.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code> &lt;h1 id="A1"&gt;Hello World&lt;/h1&gt; </code>
+          <div class="zweispaltig">
+            <p>
+              Im HTML-Dokument können Elemente mit spezifischen und
+              einzigartigen "id" Attributen versehen werden, welche zur
+              Unterscheidung anderer "gleichen" Elemente dient. Bei gebrauch,
+              können "id" Attribute direkt von CSS oder JavaScript anvisiert
+              werden und diese Elemente zu manipulieren, formatieren oder ihnen
+              spezifische Instruktionen zu geben.
+            </p>
+            <p>
+              Der Inhalt des "id" Attributs sollte nur Buchstaben (a-Z), Nummern
+              (0-9), hyphens (-), underscores (_) und periods(.) enthalten.
+              Genauso werden keine Leerzeichen benutzt.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-html">&lt;h1 id="A1"&gt;Hello World&lt;/h1&gt;</code></pre>
         </section>
       </main>
     </div>

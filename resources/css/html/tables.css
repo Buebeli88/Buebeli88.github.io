@@ -32,98 +32,81 @@ pre {
     overflow-x: auto;
 }
 
-.linebreak0 {
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.thead0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.linebreak1,
-.linebreak2 {
+.thead1,
+.thead2 {
     flex: 1;
     min-width: 0;
 }
 
-.strong0 {
+.tbod0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.strong1,
-.strong2 {
+.tbod1,
+.tbod2 {
     flex: 1;
     min-width: 0;
 }
 
-.emph0 {
+.th0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.emph1,
-.emph2 {
+.th1,
+.th2 {
     flex: 1;
     min-width: 0;
 }
 
-.ol0 {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;    
-}
-
-.ol1,
-.ol2 {
-    flex: 1;
-    min-width: 0;
-}
-
-.ul0 {
+.td0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.ul1,
-.ul2 {
+.td1,
+.td2 {
     flex: 1;
     min-width: 0;
 }
 
-.img0 {
+.trows0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.img1,
-.img2 {
+.trows1,
+.trows2 {
     flex: 1;
     min-width: 0;
 }
 
-.video0 {
+.tcols0 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.video1,
-.video2 {
-    flex: 1;
-    min-width: 0;
-}
-
-.htmla0 {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.htmla1,
-.htmla2 {
+.tcols1,
+.tcols2 {
     flex: 1;
     min-width: 0;
 }

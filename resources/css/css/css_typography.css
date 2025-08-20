@@ -1,38 +1,95 @@
-h2, h3, h4, h5, h6 {
-    border-top: 2px solid rgb(47, 125, 189);
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
 }
 
-.bspfam {
-    width: 45%;
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
 }
 
-.bspfam1, .bspfam2 {
-    display: inline-block;
-    width: 45%;
+li {
+    line-height: 1.5rem;
 }
 
-.bspfam2 {
-    float: right;
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.fontf1 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.fontf2,
+.fontf3 {
+    flex: 1;
+    min-width: 0;
+}
+
+.fontf3 {
+    font-family: Arial;
+}
+
+.fontf4 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.fontf5,
+.fontf6 {
+    flex: 1;
+    min-width: 0;
+}
+
+.fontf6 {
     font-family: "Times New Roman";
 }
 
-.bspfam3, .bspfam4 {
-    display: inline-block;
-    width: 45%;
+.fontf7 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.bspfam4 {
-    float: right;
-    font-family: 'Franklin Gothic Medium';
+.fontf8,
+.fontf9 {
+    flex: 1;
+    min-width: 0;
 }
 
-.bspweight1, .bspweight2 {
-    display: inline-block;
-    width: 45%;
+.fontf9 {
+    font-family: "Franklin Gothic Mediom";
 }
 
-.bspweight2 {
-    float: right;
+.fontw0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.fontw1,
+.fontw2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .bspweight3 {

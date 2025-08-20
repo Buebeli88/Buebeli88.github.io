@@ -1,14 +1,47 @@
-h2, h3, h4, h5, h6 {
-    border-top: 2px solid rgb(47, 125, 189);
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
 }
 
-.bspset1, .bspset2 {
-    display: inline-block;
-    width: 45%;
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
 }
 
-.bspset2 {
-    float: right;
+li {
+    line-height: 1.5rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.selec0 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.selec1,
+.selec2 {
+    flex: 1;
+    min-width: 0;
 }
 
 .pselector {
