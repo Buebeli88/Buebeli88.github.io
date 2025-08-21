@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variablen</title>
     <link rel="stylesheet" href="../../css/layout.css" />
-    <link rel="stylesheet" href="../../css/javascript/jsvariables.css/" />
+    <link rel="stylesheet" href="../../css/javascript/jsvariables.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -28,24 +34,32 @@
     <div class="container">
       <main>
         <h1>Variablen</h1>
-        <p>
-          In der Programmierung sind Variablen wie kleine Behälter für
-          Informationen. Man kann sie sich als beschriftete Kästchen im Speicher
-          eines Computers vorstellen – in ihnen liegt ein bestimmter Wert, etwa
-          ein Benutzername, eine Kontonummer oder eine persönliche Begrüßung.
-          Diese Informationen können später wieder abgerufen und genutzt werden.
-          <br /><br />
-          Das Besondere an Variablen: Sie erlauben es uns, Daten mit
-          verständlichen, aussagekräftigen Namen zu versehen. So bleibt der
-          Programmcode nicht nur funktional, sondern auch nachvollziehbar – für
-          uns selbst und für andere.
-          <br /><br />
-          Zusammengefasst:
-          <br />
-          Variablen speichern Werte im Speicher und geben ihnen eine
-          beschreibende Bezeichnung. Dabei können wir im Wesentlichen drei Dinge
-          mit Variablen tun:
-        </p>
+        <div class="zweispaltig">
+          <p>
+            In der Programmierung sind Variablen wie kleine Behälter für
+            Informationen. Man kann sie sich als beschriftete Kästchen im
+            Speicher eines Computers vorstellen – in ihnen liegt ein bestimmter
+            Wert,
+          </p>
+          <p>
+            etwa ein Benutzername, eine Kontonummer oder eine persönliche
+            Begrüßung. Diese Informationen können später wieder abgerufen und
+            genutzt werden.
+          </p>
+          <p>
+            Das Besondere an Variablen: Sie erlauben es uns, Daten mit
+            verständlichen, aussagekräftigen Namen zu versehen. So bleibt der
+            Programmcode nicht nur funktional,
+          </p>
+          <p>sondern auch nachvollziehbar – für uns selbst und für andere.</p>
+          <p>
+            Zusammengefasst:
+            <br />
+            Variablen speichern Werte im Speicher und geben ihnen eine
+            beschreibende Bezeichnung. Dabei können wir im Wesentlichen drei
+            Dinge mit Variablen tun:
+          </p>
+        </div>
         <ul>
           <li>Eine Variable mit einem passenden Namen definieren</li>
           <li>
@@ -54,31 +68,39 @@
           </li>
           <li>Den gespeicherten Wert wieder abrufen</li>
         </ul>
-        <p>
-          Wichtig ist: Eine Variable ist nicht der Wert selbst, sondern enthält
-          ihn. Sie steht stellvertretend für den Wert und verweist durch ihren
-          Namen darauf.
-          <br /><br />
-          Stell dir das so vor:
-          <br />
-          Eine Variable ist wie ein farbiges Kästchen mit einem Etikett. Das
-          Etikett ist der Name der Variable, und im Inneren liegt der
-          gespeicherte Wert.
-        </p>
+        <div class="zweispaltig">
+          <p>
+            Wichtig ist:<br />
+            Eine Variable ist nicht der Wert selbst, sondern enthält ihn. Sie
+            steht stellvertretend für den Wert und verweist durch ihren Namen
+            darauf.
+          </p>
+          <p>
+            Stell dir das so vor:
+            <br />
+            Eine Variable ist wie ein farbiges Kästchen mit einem Etikett. Das
+            Etikett ist der Name der Variable, und im Inneren liegt der
+            gespeicherte Wert.
+          </p>
+        </div>
         <section class="varstellen">
           <h2>Eine Variable erstellen</h2>
-          <p>
-            var, let und const – Variablen in JavaScript
-            <br />
-            Mit der Einführung von ES6 (ECMAScript 2015) hielt eine ganze Reihe
-            neuer Funktionen Einzug in JavaScript. Eine der bedeutendsten
-            Neuerungen war die Einführung zweier neuer Schlüsselwörter: let und
-            const. Mit ihnen lassen sich – genau wie mit dem bisherigen var –
-            Variablen deklarieren. Vor ES6 stand Entwicklern ausschließlich das
-            Schlüsselwort var zur Verfügung, um Variablen zu erstellen.
-            <br /><br />
-            Wann sollte let oder const verwendet werden?
-          </p>
+          <div class="zweispaltig">
+            <p>
+              var, let und const – Variablen in JavaScript
+              <br /><br />
+              Mit der Einführung von ES6 (ECMAScript 2015) hielt eine ganze
+              Reihe neuer Funktionen Einzug in JavaScript. Eine der
+              bedeutendsten Neuerungen war die Einführung zweier neuer
+              Schlüsselwörter: let und const.
+            </p>
+            <p>
+              Mit ihnen lassen sich – genau wie mit dem bisherigen var –
+              Variablen deklarieren. Vor ES6 stand Entwicklern ausschließlich
+              das Schlüsselwort var zur Verfügung, um Variablen zu erstellen.
+            </p>
+            <p>Wann sollte let oder const verwendet werden?</p>
+          </div>
           <ul>
             <li>
               Wenn sich der Wert der Variable im Laufe des Programms ändern
@@ -91,7 +113,7 @@
         </section>
         <section class="varregeln">
           <h2>Regeln für Variablennamen</h2>
-          <p>
+          <p class="zweispaltig">
             Beim Benennen von Variablen solltest du einige grundlegende Regeln
             beachten:
           </p>
@@ -122,20 +144,15 @@
         </section>
         <section class="variablevar">
           <h2>Variable: var</h2>
-          <p>
+          <p class="zweispaltig">
             Vor ES6 stand Entwicklern ausschließlich das Schlüsselwort var zur
             Verfügung, um Variablen zu erstellen.
             <br /><br />
             Beispiel:
           </p>
-          <code>
-            var myName = 'Arya'; <br />
-            console.log(myName);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Arya
-          </code>
+          <pre><code class="language-js">var myName = 'Arya';
+console.log(myName);
+// Ausgabe: Arya</code></pre>
           <p>Werfen wir einen genaueren Blick auf das Beispiel:</p>
           <ul>
             <li>
@@ -164,25 +181,21 @@
         </section>
         <section class="variablelet">
           <h2>Variable: let</h2>
-          <p>
+          <p class="zweispaltig">
             Das Schlüsselwort let, wurde mit ES6 eingeführt. Es ermöglicht die
             Deklaration von Variablen, deren Werte später geändert (neu
             zugewiesen) werden können.
             <br /><br />
             Beispiel:
           </p>
-          <code>
-            let meal = 'Enchiladas'; <br />
-            console.log(meal);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Enchiladas
-            <br /><br />
-            meal = 'Burrito'; <br />
-            console.log(meal)
-          </code>
-          <p>
+          <pre><code class="language-js">let meal = 'Enchiladas';
+console.log(meal);
+// Ausgabe: Enchiladas
+
+meal = 'Burrito';
+console.log(meal)
+// Ausgabe: Burrito</code></pre>
+          <p class="zweispaltig">
             Ein weiterer wichtiger Aspekt bei der Verwendung von let (wie auch
             bei var) ist, dass man eine Variable deklarieren kann, ohne ihr
             sofort einen Wert zuzuweisen.
@@ -190,21 +203,14 @@
             In diesem Fall wird die Variable automatisch mit dem Wert undefined
             initialisiert:
           </p>
-          <code>
-            let price; <br />
-            console.log(price);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            undefinded
-            <br /><br />
-            price = 350; <br />
-            console.log(price);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            350
-          </code>
+          <pre><code class="language-js">
+let price;
+console.log(price);
+// Ausgabe: undefinded
+
+price = 350;
+console.log(price);
+// Ausgabe: 350</code></pre>
           <p>Wichtig zu beachten:</p>
           <ul>
             <li>
@@ -216,240 +222,257 @@
               werden.
             </li>
           </ul>
-          <p>
+          <p class="zweispaltig">
             Mit let deklarierte Variablen sind also flexibel, da ihre Werte im
             Laufe des Programms verändert werden können.
           </p>
         </section>
         <section class="varialeconst">
           <h2>Variable: const</h2>
-          <p>
-            Das Schlüsselwort const wurde mit ES6 eingeführt und steht für
-            „Konstante“. Es wird verwendet, um Variablen zu deklarieren, deren
-            Wert nicht verändert werden soll.
-            <br /><br />
-            Ähnlich wie bei let und var kann auch mit const ein beliebiger Wert
-            gespeichert werden. Die Syntax zur Deklaration ist ebenfalls
-            identisch:
-          </p>
-          <code>
-            const myName = 'Gilberto'; <br />
-            console.log(myName);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Gilberto
-          </code>
-          <p>
-            Der entscheidende Unterschied: <br />
-            Eine mit const deklarierte Variable darf nicht neu zugewiesen
-            werden. Versucht man es dennoch, führt das zu einem TypeError.
-            <br /><br />
-            Ein weiterer wichtiger Punkt: <br />
-            Konstanten müssen bei der Deklaration sofort einen Wert erhalten.
-            Andernfalls wirft JavaScript einen SyntaxError.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Das Schlüsselwort const wurde mit ES6 eingeführt und steht für
+              „Konstante“. Es wird verwendet, um Variablen zu deklarieren, deren
+              Wert nicht verändert werden soll.
+            </p>
+            <p>
+              Ähnlich wie bei let und var kann auch mit const ein beliebiger
+              Wert gespeichert werden. Die Syntax zur Deklaration ist ebenfalls
+              identisch:
+            </p>
+          </div>
+          <pre><code class="language-js">const myName = 'Gilberto';
+console.log(myName);
+// Ausgabe: Gilberto</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Der entscheidende Unterschied: <br /><br />
+              Eine mit const deklarierte Variable darf nicht neu zugewiesen
+              werden. Versucht man es dennoch, führt das zu einem TypeError.
+            </p>
+            <p>
+              Ein weiterer wichtiger Punkt: <br /><br />
+              Konstanten müssen bei der Deklaration sofort einen Wert erhalten.
+              Andernfalls wirft JavaScript einen SyntaxError.
+            </p>
+          </div>
         </section>
         <section class="mathoperatoren">
           <h2>Mathematische Zuweisungsoperatoren</h2>
-          <p>
+          <p class="zweispaltig">
             Mit mathematischen Zuweisungsoperatoren lassen sich Werte von
             Variablen berechnen und direkt aktualisieren.
             <br /><br />
             Beispiel:
           </p>
-          <code>
-            let w = 4; <br />
-            w = w +1;
-            <br /><br />
-            console.log(w);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            5
-          </code>
+          <pre><code class="language-js">let w = 4;
+w = w +1;
+
+console.log(w);
+// Ausgabe: 5</code></pre>
           <p>
             In diesem Beispiel erhält die Variable w zunächst den Wert 4.
             Anschließend wird 1 addiert und das Ergebnis erneut w zugewiesen.
             Das Resultat ist 5.
-            <br /><br />
+          </p>
+          <p class="zweispaltig">
             Vereinfachte Schreibweise <br />
             Die gleiche Operation kann durch den Zuweisungsoperator += abgekürzt
             werden:
           </p>
-          <code>
-            let w = 4; <br />
-            w += 1;
-            <br /><br />
-            console.log(w);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            5
-          </code>
+          <pre><code class="language-js">let w = 4;
+w += 1;
+
+console.log(w);
+// Ausgabe: 5</code></pre>
           <p>
             Der Operator += addiert den angegebenen Wert zur Variable und weist
             das Ergebnis derselben Variable zu.
-            <br /><br />
-            Weitere mathematische Zuweisungsoperatoren <br />
-            <!--Will ich dann in eine tabelle-->
-            Operator / Beschreibung / Entspricht <br />
-            += / Addition und Zuweisung / x += 2 => x = x + 2 <br />
-            -= / Subtraktion und Zuweisung / x -= 5 => x = x - 5 <br />
-            *= / Multiplikation und Zuweisung / x *= 3 => x = x * 3 <br />
-            /= / Division und Zuweisung / x /= 2 => x = x / 2
-            <br /><br />
-            Mathematische Zuweisungsoperatoren ermöglichen es, Rechenoperationen
-            direkt mit einer Variablen zu verknüpfen. Dies führt zu kürzerem,
-            übersichtlicherem und effizienterem Code.
           </p>
+          <p>Weitere mathematische Zuweisungsoperatoren:<br /></p>
+          <table>
+            <tr>
+              <th>Operator</th>
+              <th>Beschreibung</th>
+              <th>Entspricht</th>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>Addition und Zuweisung</td>
+              <td>x += 2 => x = x + 2</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>Subtraktion und Zuweisung</td>
+              <td>x -= 5 => y = y - 5</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>Multiplikation und Zuweisung</td>
+              <td>x *= 3 => x = x * 3</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>Division und Zuweisung</td>
+              <td>x /= 2 => x = x / 2</td>
+            </tr>
+          </table>
+          <div class="zweispaltig">
+            <p>
+              Mathematische Zuweisungsoperatoren ermöglichen es,
+              Rechenoperationen direkt mit einer Variablen zu verknüpfen.
+            </p>
+            <p>
+              Dies führt zu kürzerem, übersichtlicherem und effizienterem Code.
+            </p>
+          </div>
         </section>
         <section class="inkdek">
           <h2>Inkrement - und Dekrement - Operator</h2>
-          <p>
-            Zu den mathematischen Zuweisungsoperatoren zählen auch der
-            Inkrementoperator (++) und der Dekrementoperator (--). <br />
-            Der Inkrementoperator erhöht den Wert einer Variablen um 1, während
-            der Dekrementoperator den Wert um 1 verringert.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            let a = 10; <br />
-            a++; <br />
-            console.log(a);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            11
-            <br /><br />
-            let b =10; <br />
-            b--; <br />
-            console.log(b);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            19
-          </code>
-          <p>
-            Wie bei den Operatoren +=, -=, *=, /= wird auch hier der aktuelle
-            Wert einer Variablen verändert und der neue Wert gespeichert.
-            <br /><br />
-            Durch die Verwendung dieser Operatoren lassen sich einfache
-            Erhöhungs- oder Verringerungsvorgänge effizient darstellen und
-            umsetzen.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Zu den mathematischen Zuweisungsoperatoren zählen auch der
+              Inkrementoperator (++) und der Dekrementoperator (--).
+            </p>
+            <p>
+              Der Inkrementoperator erhöht den Wert einer Variablen um 1,
+              während der Dekrementoperator den Wert um 1 verringert.
+            </p>
+          </div>
+          <p>Beispie:</p>
+          <pre><code class="language-js">let a = 10;
+a++;
+console.log(a);
+// Ausgabe: 11
+
+let b =10;
+b--;
+console.log(b);
+// Ausgabe: 19</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Wie bei den Operatoren +=, -=, *=, /= wird auch hier der aktuelle
+              Wert einer Variablen verändert und der neue Wert gespeichert.
+            </p>
+            <p>
+              Durch die Verwendung dieser Operatoren lassen sich einfache
+              Erhöhungs- oder Verringerungsvorgänge effizient darstellen und
+              umsetzen.
+            </p>
+          </div>
         </section>
         <section class="stringverk">
           <h2>String - Verkettung mit Variablen</h2>
-          <p>
-            Strings können nicht nur direkt verwendet, sondern auch miteinander
-            kombiniert werden. Dies erfolgt häufig durch die sogenannte
-            String-Verkettung.
-            <br /><br />
-            Der +-Operator dient dazu, mehrere String-Werte miteinander zu
-            verbinden – unabhängig davon, ob es sich um direkte Zeichenfolgen
-            oder um Variablen handelt, in denen diese gespeichert sind.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            let myPet = 'armadillo'; <br />
-            console.log('I own a pet' + myPet + '.');
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            I own a pet armadillo.
-          </code>
-          <p>
-            In diesem Beispiel wird der Variable myPet der Wert 'armadillo'
-            zugewiesen. Anschließend erfolgt die Verkettung aus drei
-            Bestandteilen: dem Text 'I own a pet ', dem in myPet gespeicherten
-            String und dem abschließenden Punkt '.'.
-            <br /><br />
-            Die String-Verkettung stellt eine grundlegende Methode dar, um
-            dynamisch zusammengesetzte Textausgaben zu erzeugen – insbesondere
-            im Zusammenspiel mit Variablen.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Strings können nicht nur direkt verwendet, sondern auch
+              miteinander kombiniert werden. Dies erfolgt häufig durch die
+              sogenannte String-Verkettung.
+            </p>
+            <p>
+              Der +-Operator dient dazu, mehrere String-Werte miteinander zu
+              verbinden – unabhängig davon, ob es sich um direkte Zeichenfolgen
+              oder um Variablen handelt, in denen diese gespeichert sind.
+            </p>
+          </div>
+          <pre><code class="language-js">let myPet = 'armadillo';
+console.log('I own a pet' + myPet + '.');
+// Ausgabe: I own a pet armadillo.</code></pre>
+          <div class="zweispaltig">
+            <p>
+              In diesem Beispiel wird der Variable myPet der Wert 'armadillo'
+              zugewiesen. Anschließend erfolgt die Verkettung aus drei
+              Bestandteilen: dem Text 'I own a pet ', dem in myPet gespeicherten
+              String und dem abschließenden Punkt '.'.
+            </p>
+            <p>
+              Die String-Verkettung stellt eine grundlegende Methode dar, um
+              dynamisch zusammengesetzte Textausgaben zu erzeugen – insbesondere
+              im Zusammenspiel mit Variablen.
+            </p>
+          </div>
         </section>
         <section class="stringinterpol">
           <h2>String - Interpolation</h2>
-          <p>
-            Seit der ES6-Version von JavaScript besteht die Möglichkeit,
-            Variablen direkt in Zeichenketten einzufügen. Dies geschieht
-            mithilfe sogenannter Template Literals.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            const myPet = 'armadillo'; console.log(`I own a pet ${myPet}.`);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            I own a pet armadillo.
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Seit der ES6-Version von JavaScript besteht die Möglichkeit,
+              Variablen direkt in Zeichenketten einzufügen.
+            </p>
+            <p>Dies geschieht mithilfe sogenannter Template Literals.</p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">const myPet = 'armadillo'; console.log(`I own a pet ${myPet}.`);
+// Ausgabe: I own a pet armadillo.</code></pre>
           <p>
             Ein Template Literal wird mit sogenannten Backticks ` umschlossen.
-            <br /><br />
-            Innerhalb eines solchen Literals können Platzhalter in der Form
-            ${variable} verwendet werden. An diesen Stellen wird der Wert der
-            jeweiligen Variable automatisch eingefügt.
-            <br /><br />
-            Durch die Interpolation des Ausdrucks `I own a pet ${myPet}.`
-            entsteht der String:
-            <br /><br />
-            <strong>I own a pet armadillo.</strong>
-            <br /><br />
-            Einer der grössten Vorteile von Template Literals liegt in der
-            verbesserten Lesbarkeit des Codes. Die Struktur des resultierenden
-            Text lässt sich auf einen Blick erfassen, ohne zusätzliche
-            Verkettungen oder Escape - Zeichen für Anführungszeichen.
-            <br /><br />
-            Durch den Einsatz von Template Literals wird die String - Erzeugung
-            übersichtlicher und effizienter gestaltet besonders bei längeren
-            oder dynamischen zusammgesetzten Texten.
           </p>
+          <div class="zweispaltig">
+            <p>
+              Innerhalb eines solchen Literals können Platzhalter in der Form
+              ${variable} verwendet werden. An diesen Stellen wird der Wert der
+              jeweiligen Variable automatisch eingefügt.
+            </p>
+            <p>
+              Durch die Interpolation des Ausdrucks `I own a pet ${myPet}.`
+              entsteht der String:
+            </p>
+          </div>
+          <p>
+            <strong>I own a pet armadillo.</strong>
+          </p>
+          <div class="zweispaltig">
+            <p>
+              Einer der grössten Vorteile von Template Literals liegt in der
+              verbesserten Lesbarkeit des Codes. Die Struktur des resultierenden
+              Text lässt sich auf einen Blick erfassen, ohne zusätzliche
+              Verkettungen oder Escape - Zeichen für Anführungszeichen.
+            </p>
+            <p>
+              Durch den Einsatz von Template Literals wird die String -
+              Erzeugung übersichtlicher und effizienter gestaltet besonders bei
+              längeren oder dynamischen zusammgesetzten Texten.
+            </p>
+          </div>
         </section>
         <section class="typeof">
           <h2>Der typeof - Operator</h2>
-          <p>
-            In der Programmierung spielt die Kenntnis des jeweiligen Datentyps
-            einer Variable eine wichtige Rolle. Zur Überprüfung des Datentyps
-            kann der Operator typeof eingesetzt werden.
-            <br /><br />
-            Der typeof - Operator analysiert den Wert, der sich rechts von ihm
-            befindet, und gibt einen String zurück, der den jeweiligen Datentyp
-            beschreibt.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            const unknown1 ? 'foo'; <br />
-            console.log(typeof unknown1);
-            <br /><br />
-            const unknown2 = 10; <br />
-            console.log(typeof unknown2);
-            <br /><br />
-            const unknown3 = true; <br />
-            console.log(typeof unknown3);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            string
-            <br /><br />
-            number
-            <br /><br />
-            boolean
-          </code>
-          <p>
-            Im ersten Beispiel enthält die Variable unknown1 den Wert 'foo',
-            also eine Zeichenkette. Die Anwendung von typeof auf diesem Wert
-            liefert daher das Ergebnis 'string'.
-            <br /><br />
-            Die Verwendung von typeof ist besonders hilfreich bei dynamisch
-            typisierten Sprachen wie JavaScript, um den aktuellen Typ einer
-            Variable jederzeit ermitteln zu können.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              In der Programmierung spielt die Kenntnis des jeweiligen Datentyps
+              einer Variable eine wichtige Rolle. Zur Überprüfung des Datentyps
+              kann der Operator typeof eingesetzt werden.
+            </p>
+            <p>
+              Der typeof - Operator analysiert den Wert, der sich rechts von ihm
+              befindet, und gibt einen String zurück, der den jeweiligen
+              Datentyp beschreibt.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">const unknown1 ? 'foo';
+console.log(typeof unknown1);
+// Ausgabe: string
+
+const unknown2 = 10;
+console.log(typeof unknown2);
+// Ausgabe: number
+
+const unknown3 = true;
+console.log(typeof unknown3);
+// Ausgabe: boolean</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Im ersten Beispiel enthält die Variable unknown1 den Wert 'foo',
+              also eine Zeichenkette. Die Anwendung von typeof auf diesem Wert
+              liefert daher das Ergebnis 'string'.
+            </p>
+            <p>
+              Die Verwendung von typeof ist besonders hilfreich bei dynamisch
+              typisierten Sprachen wie JavaScript, um den aktuellen Typ einer
+              Variable jederzeit ermitteln zu können.
+            </p>
+          </div>
         </section>
       </main>
     </div>
