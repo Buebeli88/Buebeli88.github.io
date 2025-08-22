@@ -1,0 +1,55 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    line-height: 1.5rem;
+}
+
+.nohead {
+    color: black;
+}
+
+
+th,
+td {
+    border: 1px solid black;
+    width: 10rem;
+    text-align: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.imgf {
+    display: flex;
+    margin: 0 auto;
+}

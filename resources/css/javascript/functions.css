@@ -48,3 +48,8 @@ table {
     justify-content: center;
     border-collapse: collapse;
 }
+
+.imgf {
+    display: flex;
+    margin: 0 auto;
+}

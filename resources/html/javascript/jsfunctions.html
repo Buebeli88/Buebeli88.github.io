@@ -6,6 +6,12 @@
     <title>Funktionen</title>
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/javascript/functions.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -28,7 +34,7 @@
     <div class="container">
       <main>
         <h1>Funktionen</h1>
-        <p>
+        <p class="zweispaltig">
           Was sind Funktionen? <br /><br />
           Wenn du zum ersten Mal lernst, wie man die Fläche eines Rechtecks
           berechnet, gibt es eine klare Schrittfolge:
@@ -38,60 +44,66 @@
           <li>Miss die Höhe des Rechtecks.</li>
           <li>Multipliziere Breite und Höhe miteinander.</li>
         </ol>
-        <p>
+        <p class="zweispaltig">
           Mit etwas Übung kannst du die Fläche schnell berechnen, ohne jedes Mal
           alle Schritte einzeln durchzugehen.
           <br /><br />
           Im Code sieht das so aus:
         </p>
-        <code>
-          const width = 10; <br />
-          const height = 6; <br />
-          const area = width * height; <br />
-          console.log(area); // Ausgabe: 60
-        </code>
-        <p>
+        <pre><code class="language-js">const width = 10;
+const height = 6;
+const area = width * height;
+console.log(area);
+// Ausgabe: 60
+</code></pre>
+        <p class="zweispaltig">
           Stell dir nun vor, du sollst die Fläche von drei verschiedenen
           Rechtecken berechnen:
         </p>
-        <code>
-          // Fläche des ersten Rechtecks <br />
-          const width1 = 10; <br />
-          const height1 = 6; <br />
-          const area1 = width1 * height1;
-          <br /><br />
-          // Fläche des zweiten Rechtecks <br />
-          const width2 = 4; <br />
-          const height2 = 9; <br />
-          const area2 = width2 * height2;
-          <br /><br />
-          // Fläche des dritten Rechtecks <br />
-          const width3 = 10; <br />
-          const height3 = 10; <br />
-          const area3 = width3 * height3;
-        </code>
-        <p>
-          In der Programmierung begegnet uns oft die Aufgabe, denselben Vorgang
-          mehrfach auszuführen. Anstatt denselben Code immer wieder neu zu
-          schreiben, können wir ihn in einem einzelnen, wiederverwendbaren
-          Codeblock zusammenfassen und mit einer Aufgabe verknüpfen.
-          <br /><br />
-          Genau das sind Funktionen: Wiederverwendbare Bausteine im Code, die
-          eine Folge von Anweisungen bündeln, um eine bestimmte Aufgabe zu
-          erledigen. So kannst du denselben Prozess ganz einfach immer wieder
-          aufrufen – ohne ihn jedes Mal neu schreiben zu müssen.
-        </p>
+        <pre><code class="language-js">// Fläche des ersten Rechtecks
+const width1 = 10;
+const height1 = 6;
+const area1 = width1 * height1;
+
+// Fläche des zweiten Rechtecks
+const width2 = 4;
+const height2 = 9;
+const area2 = width2 * height2;
+
+// Fläche des dritten Rechtecks
+const width3 = 10;
+const height3 = 10;
+const area3 = width3 * height3;</code></pre>
+        <div class="zweispaltig">
+          <p>
+            In der Programmierung begegnet uns oft die Aufgabe, denselben
+            Vorgang mehrfach auszuführen. Anstatt denselben Code immer wieder
+            neu zu schreiben, können wir ihn in einem einzelnen,
+            wiederverwendbaren Codeblock zusammenfassen und mit einer Aufgabe
+            verknüpfen.
+          </p>
+          <p>
+            Genau das sind Funktionen: Wiederverwendbare Bausteine im Code, die
+            eine Folge von Anweisungen bündeln, um eine bestimmte Aufgabe zu
+            erledigen. So kannst du denselben Prozess ganz einfach immer wieder
+            aufrufen – ohne ihn jedes Mal neu schreiben zu müssen.
+          </p>
+        </div>
         <section class="funktionsdeklarationen">
           <h2>Funktionsdeklarationen</h2>
-          <p>
-            In JavaScript gibt es viele Möglichkeiten, eine Funktion zu
-            erstellen. Eine davon ist die sogenannte Funktionsdeklaration.
-            Ähnlich wie bei einer Variablendeklaration, bei der ein Wert an
-            einen Namen gebunden wird, verknüpft eine Funktionsdeklaration eine
-            Funktion mit einem Bezeichner – also einem Namen.
-            <br /><br />
-            Aufbau einer Funktionsdeklaration:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              In JavaScript gibt es viele Möglichkeiten, eine Funktion zu
+              erstellen. Eine davon ist die sogenannte Funktionsdeklaration.
+              Ähnlich wie bei einer Variablendeklaration,
+            </p>
+            <p>
+              bei der ein Wert an einen Namen gebunden wird, verknüpft eine
+              Funktionsdeklaration eine Funktion mit einem Bezeichner – also
+              einem Namen.
+            </p>
+          </div>
+          <p>Aufbau einer Funktionsdeklaration:</p>
           <ul>
             <li>Das Schlüsselwort "function".</li>
             <li>
@@ -104,26 +116,27 @@
               Aufgabe der Funktion definiert.
             </li>
           </ul>
-          <p>
-            Eine Funktionsdeklaration definiert also eine Funktion, die unter
-            einem bestimmten Namen abrufbar ist. Im nächsten Abschnitt werden
-            wir anschauen, wie der Code innerhalb des Funktionskörpers
-            ausgeführt wird.
-            <br /><br />
-            Ein wichtiger Punkt, den du kennen solltest, ist das Hoisting in
-            JavaScript. Diese Eigenschaft bewirkt, dass Funktionsdeklarationen
-            bereits vor ihrer eigentlichen Definition im Code aufgerufen werden
-            können.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            sayHello();
-            <br /><br />
-            function sayHello() &lbrace; <br />
-            &nbsp;&nbsp;console.log("Hallo!"); <br />
-            &rbrace;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Eine Funktionsdeklaration definiert also eine Funktion, die unter
+              einem bestimmten Namen abrufbar ist. Im nächsten Abschnitt werden
+              wir anschauen, wie der Code innerhalb des Funktionskörpers
+              ausgeführt wird.
+            </p>
+            <p>
+              Ein wichtiger Punkt, den du kennen solltest, ist das Hoisting in
+              JavaScript. Diese Eigenschaft bewirkt, dass Funktionsdeklarationen
+              bereits vor ihrer eigentlichen Definition im Code aufgerufen
+              werden können.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">sayHello();
+
+function sayHello() &lbrace;
+  console.log("Hallo!"); <br />
+&rbrace;
+// Ausgabe: Hallo!</code></pre>
           <p>
             Obwohl der Funktionsaufruf vor der Deklaration steht, funktioniert
             der Code - das ist dank Hoisting möglich. Jedoch gilt Hoisting nicht
@@ -131,54 +144,59 @@
             <br /><br />
             Für weitere Informationen siehe:
             <a
+              class="nohead"
               href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"
               target="_blank"
-              >Hoisting</a
+              >Hoisting!</a
             >
-            Wo Text des links???
           </p>
         </section>
         <section class="aufrufen">
           <h2>Eine Funktion aufrufen</h2>
-          <p>
-            Eine Funktionsdeklaration allein sorgt noch nicht dafür, dass der
-            Code im Funktionskörper ausgeführt wird. Sie beschreibt lediglich,
-            dass diese Funktion existiert. Erst durch einen Funktionsaufruf wird
-            der Code innerhalb des Funktionskörpers tatsächlich ausgeführt.
-            <br /><br />
-            Um eine funktion aufzurufen, schreibst du einfach den Namen der
-            Funktion, gefolgt von runden Klammern ():
-            <br /><br />
-            sayThanks();
-            <br /><br />
-            Dieser Aurfur aktiviert die Funktionen und führt alle Anweisungen
-            innerhalb des Funktionskörpers aus - also den Code, der in den
-            geschweiften Klammern &lbrace;&rbrace; der Funktionsdeklaration
-            steht.
-            <br /><br />
-            Das Tolle: Du kannst eine Funktion so oft aufrufen, wie du möchtest
-            - immer dann, wenn die Aufgabe erneut erledigt werden soll.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            function sayThanks() &lbrace; <br />
-            &nbsp;&nbsp;console.log('Thank you for your purchase! We appreciate
-            your business'); <br />
-            &rbrace;
-            <br /><br />
-            sayThanks(); <br />
-            sayThanks(); <br />
-            sayThanks();
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Thank you for your purchase! We appreciate your business <br />
-            Thank you for your purchase! We appreciate your business <br />
-            Thank you for your purchase! We appreciate your business
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Eine Funktionsdeklaration allein sorgt noch nicht dafür, dass der
+              Code im Funktionskörper ausgeführt wird. Sie beschreibt lediglich,
+              dass diese Funktion existiert.
+            </p>
+            <p>
+              Erst durch einen Funktionsaufruf wird der Code innerhalb des
+              Funktionskörpers tatsächlich ausgeführt.
+            </p>
+            <p>
+              Um eine funktion aufzurufen, schreibst du einfach den Namen der
+              Funktion, gefolgt von runden Klammern ():
+            </p>
+            <p>sayThanks();</p>
+            <p>
+              Dieser Aurfur aktiviert die Funktionen und führt alle Anweisungen
+              innerhalb des Funktionskörpers aus - also den Code, der in den
+              geschweiften Klammern &lbrace;&rbrace; der Funktionsdeklaration
+              steht.
+            </p>
+            <p>
+              Das Tolle: Du kannst eine Funktion so oft aufrufen, wie du
+              möchtest - immer dann, wenn die Aufgabe erneut erledigt werden
+              soll.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function sayThanks() &lbrace;
+  console.log('Thank you for your purchase! We appreciate
+  your business');
+&rbrace;
+
+sayThanks();
+sayThanks();
+sayThanks();
+
+/*
+Ausgabe:
+
+Thank you for your purchase! We appreciate your business
+Thank you for your purchase! We appreciate your business
+Thank you for your purchase! We appreciate your business
+*/</code></pre>
           <p>
             Je öfter du die Funktion aufrufst, desto öfter wird der enthaltene
             Code ausgeführt – so sparst du dir das wiederholte Schreiben
@@ -187,117 +205,139 @@
         </section>
         <section class="parameterargumente">
           <h2>Parameter und Argumente</h2>
-          <p>
-            Bisher haben wir Funktionen kennengelernt, die eine Aufgabe ohne
-            Eingaben ausführen. Doch viele Funktionen können Eingaben
-            entgegennehmen, um ihre Arbeit individuell anzupassen und flexibler
-            zu gestalten.
-            <br /><br />
-            Parameter
-            <br /><br />
-            Beim Deklarieren einer Funktion kannst du Parameter festlegen.
-            Parameter sind sozusagen Platzhalter für Werte, die der Funktion
-            beim Aufruf übergeben werden. Sie ermöglichen es der Funktion, mit
-            diesen Eingaben zu arbeiten und eine Aufgabe basierend auf den
-            übergebenen Informationen zu erledigen.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Bisher haben wir Funktionen kennengelernt, die eine Aufgabe ohne
+              Eingaben ausführen. Doch viele Funktionen können Eingaben
+              entgegennehmen,
+            </p>
+            <p>
+              um ihre Arbeit individuell anzupassen und flexibler zu gestalten.
+            </p>
+            <p>Parameter</p>
+          </div>
+          <div class="zweispaltig">
+            <p>
+              Beim Deklarieren einer Funktion kannst du Parameter festlegen.
+              Parameter sind sozusagen Platzhalter für Werte, die der Funktion
+              beim Aufruf übergeben werden.
+            </p>
+            <p>
+              Sie ermöglichen es der Funktion, mit diesen Eingaben zu arbeiten
+              und eine Aufgabe basierend auf den übergebenen Informationen zu
+              erledigen.
+            </p>
+          </div>
           <img
+            class="imgf"
             src="../../../Notes/JavaScript/images/function_parameters.svg"
             alt=""
+            width="800"
           />
-          <p>
-            Im Beispiel oben nimmt die Funktion calculateArea zwei Parameter
-            entgegen: width und height. Innerhalb des Funktionskörpers verhalten
-            sich diese Parameter wie normale Variablen. Sie dienen als
-            Platzhalter für die Werte, die später bei einem Funktionsaufruf
-            übergeben werden und miteinander multipliziert werden, um die Fläche
-            zu berechnen.
-            <br /><br />
-            Argumente beim Funktionsaufruf
-            <br /><br />
-            Beim Aufrufen einer Funktion mit Parametern gibst du die
-            entsprechenden Werte – die sogenannten Argumente – in den Klammern
-            hinter dem Funktionsnamen an.
-          </p>
-          <img src="../../../Notes/JavaScript/images/by_value.svg" alt="" />
-          <p>
-            Hier werden die Zahlen 10 und 6 als Argumente übergeben. Wichtig
-            ist, dass die Reihenfolge der Argumente mit der Reihenfolge der
-            Parameter übereinstimmt: Das erste Argument wird width zugewiesen,
-            das zweite height.
-            <br /><br />
-            Argumente können auch Variablen sein:
-          </p>
-          <img src="../../../Notes/JavaScript/images/by_variable.svg" alt="" />
-          <p>
+          <div class="zweispaltig">
+            <p>
+              Im Beispiel oben nimmt die Funktion calculateArea zwei Parameter
+              entgegen: width und height. Innerhalb des Funktionskörpers
+              verhalten sich diese Parameter wie normale Variablen.
+            </p>
+            <p>
+              Sie dienen als Platzhalter für die Werte, die später bei einem
+              Funktionsaufruf übergeben werden und miteinander multipliziert
+              werden, um die Fläche zu berechnen.
+            </p>
+            <p>
+              Argumente beim Funktionsaufruf
+              <br /><br />
+              Beim Aufrufen einer Funktion mit Parametern gibst du die
+              entsprechenden Werte – die sogenannten Argumente – in den Klammern
+              hinter dem Funktionsnamen an.
+            </p>
+          </div>
+          <img
+            class="imgf"
+            src="../../../Notes/JavaScript/images/by_value.svg"
+            alt=""
+            width="800"
+          />
+          <div class="zweispaltig">
+            <p>
+              Hier werden die Zahlen 10 und 6 als Argumente übergeben. Wichtig
+              ist, dass die Reihenfolge der Argumente mit der Reihenfolge der
+              Parameter übereinstimmt:
+            </p>
+            <p>Das erste Argument wird width zugewiesen, das zweite height.</p>
+            <p>Argumente können auch Variablen sein:</p>
+          </div>
+          <img
+            class="imgf"
+            src="../../../Notes/JavaScript/images/by_variable.svg"
+            alt=""
+            width="800"
+          />
+          <p class="zweispaltig">
             In diesem Beispiel werden die Werte für Breite und Höhe zunächst in
             Variablen gespeichert und dann als Argumente an die Funktion
             übergeben.
             <br /><br />
             Beispiel:
           </p>
-          <code>
-            Code:
-            <br /><br />
-            function sayThanks(name) &lbrace; <br />
-            &nbsp;&nbsp;console.log('Thank you for your purchase, ' + name + '!
-            We appreciate your business'); <br />
-            &rbrace;
-            <br /><br />
-            sayThanks('Cole');
-            <br /><br />
-            Dieser Funktionsaufruf gibt aus:
-            <br /><br />
-            Thank you for your purchase, Cole! We appreciate your business.
-          </code>
+          <pre><code class="language-js">function sayThanks(name) &lbrace;
+  console.log('Thank you for your purchase, ' + name + '!
+  We appreciate your business');
+&rbrace;
+
+sayThanks('Cole');
+
+// Ausgabe: Thank you for your purchase, Cole! We appreciate your business.</code></pre>
         </section>
         <section class="standardparameter">
           <h2>Standardparameter</h2>
-          <p>
-            Eine praktische Neuerung, die mit ES6 eingeführt wurde, ist die
-            Möglichkeit, Standardparameter zu verwenden. Sie erlauben es, einem
-            Parameter einen voreingestellten Wert zuzuweisen – und zwar für den
-            Fall, dass beim Funktionsaufruf kein Argument übergeben wird oder
-            das Argument den Wert undefined hat.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            function greeting(name = 'stranger') &lbrace; <br />
-            &nbsp;&nbsp;console.log('Hello, $&lbrace;name&rbrace;!'); <br />
-            &rbrace;
-            <br /><br />
-            greeting('Nick'); <br />
-            greeting();
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Hello, Nick! <br />
-            Hello, stranger!
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Eine praktische Neuerung, die mit ES6 eingeführt wurde, ist die
+              Möglichkeit, Standardparameter zu verwenden. Sie erlauben es,
+              einem Parameter einen voreingestellten Wert zuzuweisen –
+            </p>
+            <p>
+              und zwar für den Fall, dass beim Funktionsaufruf kein Argument
+              übergeben wird oder das Argument den Wert undefined hat.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function greeting(name = 'stranger') &lbrace;
+  console.log('Hello, $&lbrace;name&rbrace;!');
+&rbrace;
+
+greeting('Nick');
+greeting();
+
+/*
+Ausgabe:
+
+Hello, Nick!
+Hello, stranger!
+*/</code></pre>
           <p>
             Hier erhält der Parameter name standardmäßig den Wert 'stranger',
             falls beim Aufruf kein Wert angegeben wird.
             <br /><br />
             Ein weiteres Beispiel:
           </p>
-          <code>
-            function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 =
-            'eggs') &lbrace; <br />
-            &nbsp;&nbsp;console.log('Remember to buy $&lbrace;item1&rbrace;');
-            <br />
-            &nbsp;&nbsp;console.log('Remember to buy $&lbrace;item2&rbrace;');
-            <br />
-            &nbsp;&nbsp;console.log('Remember to buy $&lbrace;item3&rbrace;');
-            <br /><br />
-            makeShoppingList();
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            Remember to buy milk <br />
-            Remember to buy bread <br />
-            Remember to buy eggs
-          </code>
+          <pre><code class="language-js">function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 ='eggs') &lbrace;
+  console.log('Remember to buy $&lbrace;item1&rbrace;');
+
+  console.log('Remember to buy $&lbrace;item2&rbrace;');
+
+  console.log('Remember to buy $&lbrace;item3&rbrace;');
+
+makeShoppingList();
+/*
+Ausgabe:
+
+Remember to buy milk
+Remember to buy bread
+Remember to buy eggs
+*/</code></pre>
           <p>
             Dank Standardparametern kannst du Funktionen noch flexibler
             gestalten, ohne bei jedem Aufruf alle Argumente angeben zu müssen.
@@ -305,83 +345,84 @@
         </section>
         <section class="return">
           <h2>Rückgabewert (Return)</h2>
-          <p>
-            Wenn eine Funktion aufgerufen wird, führt der Computer den
-            enthaltenen Code aus und liefert ein Ergebnis zurück – den
-            sogenannten Rückgabewert. Standardmäßig ist dieser Wert undefined,
-            sofern nichts anderes festgelegt wurde.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            function rectangleArea(width, height) &lbrace; <br />
-            &nbsp;&nbsp;let area = width * height; <br />
-            &rbrace;
-            <br /><br />
-            console.log(rectangleArea(5, 7));
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            undefined
-          </code>
-          <p>
-            Hier haben wir eine Funktion definiert, die die Fläche eines
-            Rechtecks anhand der Parameter width und height berechnet. Beim
-            Aufruf mit den Werten 5 und 7 erwarten wir eigentlich die Fläche 35.
-            Stattdessen gibt die Konsole jedoch undefined aus.
-            <br /><br />
-            Haben wir einen Fehler gemacht? Nein! Die Funktion hat tatsächlich
-            korrekt gerechnet, aber das Ergebnis wurde nicht zurückgegeben oder
-            gespeichert.
-            <br /><br />
-            Damit eine Funktion ein Ergebnis zurückliefert, verwenden wir das
-            Schlüsselwort return. Es folgt der Wert, den die Funktion
-            zurückgeben soll. Wird kein return angegeben, gibt die Funktion
-            automatisch undefined zurück.
-            <br /><br />
-            Wichtig: Sobald eine return-Anweisung ausgeführt wird, endet die
-            Funktion sofort – nachfolgender Code im Funktionskörper wird nicht
-            mehr ausgeführt.
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Wenn eine Funktion aufgerufen wird, führt der Computer den
+              enthaltenen Code aus und liefert ein Ergebnis zurück – den
+              sogenannten Rückgabewert.
+            </p>
+            <p>
+              Standardmäßig ist dieser Wert undefined, sofern nichts anderes
+              festgelegt wurde.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function rectangleArea(width, height) &lbrace;
+  let area = width * height;
+&rbrace;
+
+console.log(rectangleArea(5, 7));
+// Ausgabe: undefined</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Hier haben wir eine Funktion definiert, die die Fläche eines
+              Rechtecks anhand der Parameter width und height berechnet. Beim
+              Aufruf mit den Werten 5 und 7 erwarten wir eigentlich die Fläche
+              35. Stattdessen gibt die Konsole jedoch undefined aus.
+            </p>
+            <p>
+              Haben wir einen Fehler gemacht? Nein! Die Funktion hat tatsächlich
+              korrekt gerechnet, aber das Ergebnis wurde nicht zurückgegeben
+              oder gespeichert.
+            </p>
+            <p>
+              Damit eine Funktion ein Ergebnis zurückliefert, verwenden wir das
+              Schlüsselwort return. Es folgt der Wert, den die Funktion
+              zurückgeben soll. Wird kein return angegeben, gibt die Funktion
+              automatisch undefined zurück.
+            </p>
+            <p>
+              Wichtig: Sobald eine return-Anweisung ausgeführt wird, endet die
+              Funktion sofort – nachfolgender Code im Funktionskörper wird nicht
+              mehr ausgeführt.
+            </p>
+          </div>
           <img
+            class="imgf"
             src="../../../Notes/JavaScript/images/function return.svg"
             alt=""
+            width="800"
           />
-          <p>Ein Beispiel dazu:</p>
-          <code>
-            function rectangleArea(width, height) &rbrace; <br />
-            &nbsp;&nbsp; if (width &lt; 0 || height &lt; 0) &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return 'You need positive integers to
-            calculate area!'; <br />
-            &nbsp;&nbsp;&rbrace; <br />
-            &nbsp;&nbsp;return width * height; <br />
-            &rbrace;
-          </code>
-          <p>
-            Hier prüft die Funktion zuerst, ob width oder height negativ sind.
-            Falls ja, gibt sie eine Fehlermeldung zurück und beendet die
-            Ausführung. Nur wenn beide Werte positiv sind, wird die Fläche
-            berechnet und zurückgegeben.
-            <br /><br />
-            Warum ist return so wichtig?
-            <br /><br />
-            Mit return können Funktionen Werte ausgeben, die du anschliessend in
-            Variablen speichern und weiterverarbeiten kannst.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            function monitorCount(rows, columns) &lbrace; <br />
-            &nbsp;&nbsp;return rows * columns; <br />
-            &rbrace;
-            <br /><br />
-            const numOfMonitors = monitorCount(5, 4); <br />
-            console.log(numOfMonitors);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            20
-          </code>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function rectangleArea(width, height) &rbrace;
+  if (width &lt; 0 || height &lt; 0) &lbrace;
+    return 'You need positive integers to
+    calculate area!';
+  &rbrace;
+  return width * height;
+&rbrace;</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Hier prüft die Funktion zuerst, ob width oder height negativ sind.
+              Falls ja, gibt sie eine Fehlermeldung zurück und beendet die
+              Ausführung. Nur wenn beide Werte positiv sind, wird die Fläche
+              berechnet und zurückgegeben.
+            </p>
+            <p>
+              Warum ist return so wichtig?
+              <br /><br />
+              Mit return können Funktionen Werte ausgeben, die du anschliessend
+              in Variablen speichern und weiterverarbeiten kannst.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function monitorCount(rows, columns) &lbrace;
+  return rows * columns;
+&rbrace;
+
+const numOfMonitors = monitorCount(5, 4);
+console.log(numOfMonitors);
+// Ausgabe: 20</code></pre>
           <p>
             Hier wird die Anzahl der Monitore anhand der Anzahl der Reihen und
             Spalten berechnet und das Ergebnis in numOfMonitors gespeichert. So
@@ -390,37 +431,35 @@
         </section>
         <section class="hilfsfunktionen">
           <h2>Hilfsfunktionen</h2>
-          <p>
-            In der Programmierung kannst du den Rückgabewert einer Funktion auch
-            innerhalb einer anderen Funktion verwenden. Solche Funktionen, die
-            innerhalb anderer Funktionen aufgerufen werden, nennt man oft
-            Hilfsfunktionen.
-            <br /><br />
-            Hilfsfunktionen übernehmen kleine, klar definierte Aufgaben. Dadurch
-            wird dein Code übersichtlicher, leichter verständlich und im
-            Fehlerfall einfacher zu debuggen.
-            <br /><br />
-            Betrachten wir ein Beispiel: Wir wollen eine Funktion schreiben, die
-            eine Temperatur von Celsius in Fahrenheit umrechnet. Dazu bieten
-            sich zwei Funktionen an:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            function multiplyByNineFifths(number) &lbrace; <br />
-            &nbsp;&nbsp;return number * (9 / 5); <br />
-            &rbrace;
-            <br /><br />
-            function getFahrenheit(Celsius) &lbrace; <br />
-            &nbsp;&nbsp;return multiplyByNineFifths(celsius) + 32; <br />
-            &rbrace;
-            <br /><br />
-            getFahrenheit (15);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            59
-          </code>
+          <div class="zweispaltig">
+            <p>
+              In der Programmierung kannst du den Rückgabewert einer Funktion
+              auch innerhalb einer anderen Funktion verwenden. Solche
+              Funktionen, die innerhalb anderer Funktionen aufgerufen werden,
+              nennt man oft Hilfsfunktionen.
+            </p>
+            <p>
+              Hilfsfunktionen übernehmen kleine, klar definierte Aufgaben.
+              Dadurch wird dein Code übersichtlicher, leichter verständlich und
+              im Fehlerfall einfacher zu debuggen.
+            </p>
+            <p>
+              Betrachten wir ein Beispiel: Wir wollen eine Funktion schreiben,
+              die eine Temperatur von Celsius in Fahrenheit umrechnet. Dazu
+              bieten sich zwei Funktionen an:
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">function multiplyByNineFifths(number) &lbrace;
+  return number * (9 / 5);
+&rbrace;
+
+function getFahrenheit(Celsius) &lbrace;
+  return multiplyByNineFifths(celsius) + 32;
+&rbrace;
+
+getFahrenheit (15);
+// Ausgabe:59</code></pre>
           <p>So läuft das ab:</p>
           <ol>
             <li>getFahrenheit(15) wird aufgerufen.</li>
@@ -438,31 +477,24 @@
             </li>
             <li>Schliesslich gibt getFahrenheit(15) den Wert 59 zurück.</li>
           </ol>
-          <p>
+          <p class="zweispaltig">
             Durch den Einsatz von Hilfsfunktionen kannst du größere, komplexe
             Aufgaben in kleine, gut überschaubare Schritte zerlegen – das macht
             deinen Code modular, wiederverwendbar und leichter wartbar.
             <br /><br />
-            Weiteres Beispiel:
+            Beispiel:
           </p>
-          <code>
-            Code:
-            <br /><br />
-            function monitorCount(rows, colums) &lbrace; <br />
-            &nbsp;&nbsp;return rows * columns; <br />
-            &rbrace;
-            <br /><br />
-            function costOfMonitors(rows, columns) &lbrace; <br />
-            &nbsp;&nbsp;return monitorCount(rows, columns) * 200; <br />
-            &rbrace;
-            <br /><br />
-            const totalCost = costOfMonitors(5, 4); <br />
-            console.log(totalCost);
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            4000
-          </code>
+          <pre><code class="language-js">function monitorCount(rows, colums) &lbrace;
+  return rows * columns;
+&rbrace;
+
+function costOfMonitors(rows, columns) &lbrace;
+  return monitorCount(rows, columns) * 200;
+&rbrace;
+
+const totalCost = costOfMonitors(5, 4);
+console.log(totalCost);
+// Ausgabe: 4000</code></pre>
           <p>
             Hier berechnet monitorCount die Anzahl der Monitore, während
             costOfMonitors daraus die Gesamtkosten errechnet. Die Logik ist
@@ -471,14 +503,23 @@
         </section>
         <section class="funktionsausdrücke">
           <h2>Funktionsausdrücke</h2>
-          <p>
-            Eine weitere Möglichkeit, eine Funktion zu erstellen, ist der
-            sogenannte Funktionsausdruck. Dabei wird eine Funktion innerhalb
-            eines Ausdrucks definiert – meist ohne Namen. Solche anonymen
-            Funktionen werden häufig einer Variablen zugewiesen, um später auf
-            sie zugreifen zu können.
-          </p>
-          <img src="../../../Notes/JavaScript/images/expression.svg" alt="" />
+          <div class="zweispaltig">
+            <p>
+              Eine weitere Möglichkeit, eine Funktion zu erstellen, ist der
+              sogenannte Funktionsausdruck. Dabei wird eine Funktion innerhalb
+              eines Ausdrucks definiert – meist ohne Namen.
+            </p>
+            <p>
+              Solche anonymen Funktionen werden häufig einer Variablen
+              zugewiesen, um später auf sie zugreifen zu können.
+            </p>
+          </div>
+          <img
+            class="imgf"
+            src="../../../Notes/JavaScript/images/expression.svg"
+            alt=""
+            width="800"
+          />
           <p>Wie funktioniert ein Funktionsausdruck?</p>
           <ol>
             <li>
@@ -497,81 +538,78 @@
               Klammern auf, in denen du bei Bedarf Argumente übergibst.
             </li>
           </ol>
-          <p>
-            Wichtiger Unterschied zu Funktionsdeklarationen <br /><br />
-            Funktionsausdrücke werden nicht gehoben ("not hoisted"). Das
-            bedeutet, sie sind erst nach der Definition im Code aufrufbar. Ein
-            Aufruf davor führt zu einem Fehler.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Code:
-            <br /><br />
-            const plantNeedsWater = function(day) &lbrace; <br />
-            &nbsp;&nbsp;if (day === 'Wednesday') &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return true; <br />
-            &nbsp;&nbsp;&rbrace; else &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return false; <br />
-            &nbsp;&nbsp;&rbrace; <br />
-            &rbrace;;
-            <br /><br />
-            console.log(plantNeedsWater('Tuesday'));
-            <br /><br />
-            Ausgabe:
-            <br /><br />
-            false
-          </code>
+          <p>Wichtiger Unterschied zu Funktionsdeklarationen</p>
+          <div class="zweispaltig">
+            <p>
+              Funktionsausdrücke werden nicht gehoben ("not hoisted"). Das
+              bedeutet, sie sind erst nach der Definition im Code aufrufbar.
+            </p>
+            <p>Ein Aufruf davor führt zu einem Fehler.</p>
+          </div>
+          Beispiel:
+          <pre><code class="language-js">const plantNeedsWater = function(day) &lbrace;
+  if (day === 'Wednesday') &lbrace;
+    return true;
+  &rbrace; else &lbrace;
+    return false;
+  &rbrace;
+&rbrace;;
+
+console.log(plantNeedsWater('Tuesday'));
+// Ausgabe: false</code></pre>
         </section>
         <section class="arrowfunktion">
           <h2>Arrow - Funktionen</h2>
-          <p>
-            Mit ES6 kam die Arrow Function-Syntax – eine kompakte und elegante
-            Möglichkeit, Funktionen zu schreiben. Statt das Schlüsselwort
-            "function" auszuschreiben, nutzt man hier die sogenannte „Fat
-            Arrow“-Schreibweise () =>.
-            <br /><br />
-            Dabei schreibt man zuerst die Parameter in runden Klammern ( ),
-            gefolgt von einem Pfeil =>, der auf den Funktionskörper zeigt, der
-            in geschweiften Klammern { } steht:
-          </p>
-          <code>
-            const rectangleArea = (width, Height) => &lbrace; <br />
-            &nbsp;&nbsp;let area = width * height; <br />
-            &nbsp;&nbsp;return area; <br />
-            &rbrace;;
-          </code>
-          <p>
-            Warum Arrow - Funktionen? <br />
-            Arrow-Funktionen sparen dir das wiederholte Tippen von "function"
-            und machen den Code übersichtlicher und moderner. Es lohnt sich, mit
-            den verschiedenen Varianten vertraut zu sein, da du beim Lesen von
-            JavaScript-Code häufig auf alle möglichen Schreibweisen treffen
-            wirst.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code>
-            Funktionsausdruck:
-            <br /><br />
-            const plantNeedsWater = function(day) &lbrace; <br />
-            &nbsp;&nbsp;if (day === 'Wednesday') &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return true; <br />
-            &nbsp;&nbsp;&rbrace;else &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return false; <br />
-            &nbsp;&nbsp;&rbrace; <br />
-            &rbrace;;
-            <br /><br />
-            Arrow - Funktion
-            <br /><br />
-            const plantNeedsWater = (day) => &lbrace; <br />
-            &nbsp;&nbsp;if (day === 'Wednesday') &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return true; <br />
-            &nbsp;&nbsp;&rbrace;else &lbrace; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;return false; <br />
-            &nbsp;&nbsp;&rbrace; <br />
-            &rbrace;;
-          </code>
+          <div class="zweispaltig">
+            <p>
+              Mit ES6 kam die Arrow Function-Syntax – eine kompakte und elegante
+              Möglichkeit, Funktionen zu schreiben. Statt das Schlüsselwort
+              "function" auszuschreiben, nutzt man hier die sogenannte „Fat
+              Arrow“-Schreibweise () =>.
+            </p>
+            <p>
+              Dabei schreibt man zuerst die Parameter in runden Klammern ( ),
+              gefolgt von einem Pfeil =>, der auf den Funktionskörper zeigt, der
+              in geschweiften Klammern { } steht:
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">const rectangleArea = (width, Height) => &lbrace;
+  let area = width * height;
+  return area;
+&rbrace;;</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Warum Arrow - Funktionen? <br />
+              Arrow-Funktionen sparen dir das wiederholte Tippen von "function"
+              und machen den Code übersichtlicher und moderner. Es lohnt sich,
+              mit den verschiedenen Varianten vertraut zu sein,
+            </p>
+            <p>
+              <br />
+              da du beim Lesen von JavaScript-Code häufig auf alle möglichen
+              Schreibweisen treffen wirst.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">Funktionsausdruck:
+const plantNeedsWater = function(day) &lbrace;
+  if (day === 'Wednesday') &lbrace;
+    return true;
+  &rbrace;else &lbrace;
+    return false;
+  &rbrace;
+&rbrace;;
+
+Arrow - Funktion
+
+const plantNeedsWater = (day) => &lbrace;
+  if (day === 'Wednesday') &lbrace;
+    return true;
+  else &lbrace;
+    return false;
+  &rbrace;
+&rbrace;;</code></pre>
           <p>
             Beide Funktionen funktionieren identisch, die Arrow-Funktion ist
             jedoch kürzer und moderner.
@@ -579,12 +617,17 @@
         </section>
         <section class="kompaktearrow">
           <h2>Kompakte Arrow - Funktionen (Concise Body Arrow Functions)</h2>
-          <p>
-            JavaScript bietet verschiedene Möglichkeiten, Arrow-Funktionen
-            besonders schlank zu schreiben. Die kürzeste Form nennt man Concise
-            Body – eine kompakte Syntax, die den Code klarer und prägnanter
-            macht. Hier sind die wichtigsten Techniken im Überblick:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              JavaScript bietet verschiedene Möglichkeiten, Arrow-Funktionen
+              besonders schlank zu schreiben. Die kürzeste Form nennt man
+              Concise Body –
+            </p>
+            <p>
+              eine kompakte Syntax, die den Code klarer und prägnanter macht.
+              Hier sind die wichtigsten Techniken im Überblick:
+            </p>
+          </div>
           <ul>
             <li>
               Einzelner Parameter: <br />
@@ -593,8 +636,10 @@
               sind die Klammern jedoch Pflicht.
               <br /><br />
               <img
+                class="imgf"
                 src="../../../Notes/JavaScript/images/parameters.svg"
                 alt=""
+                width="800"
               />
             </li>
             <li>
@@ -604,21 +649,22 @@
               Ausdruck wird dann automatisch zurückgegeben - das nennt man
               implizite Rückgabe (implicit return).
               <br /><br />
-              <img src="../../../Notes/JavaScript/images/return.svg" alt="" />
+              <img
+                class="imgf"
+                src="../../../Notes/JavaScript/images/return.svg"
+                alt=""
+                width="800"
+              />
             </li>
           </ul>
           <p>Beispiel:</p>
-          <code>
-            Funktion:
-            <br /><br />
-            const squareNum = (num) => &lbrace; <br />
-            &nbsp;&nbsp;return num * num; <br />
-            &rbrace;;
-            <br /><br />
-            Kompakter:
-            <br /><br />
-            const squareNum = num => num * num;
-          </code>
+          <pre><code class="language-js">// Funktion:
+const squareNum = (num) => &lbrace;
+  return num * num;
+&rbrace;;
+
+// Kompakter:
+const squareNum = num => num * num;</code></pre>
           <p>Was sich geändert hat:</p>
           <ul>
             <li>
@@ -632,18 +678,14 @@
               ersetzt.
             </li>
           </ul>
-          <p>Ein weiteres Beispiel:</p>
-          <code>
-            Funktion:
-            <br /><br />
-            const plantNeedsWater = (day) => &lbrace; <br />
-            &nbsp;&nb return day === 'Wednesday' ? true : false; <br />
-            &rbrace;;
-            <br /><br />
-            Kompakter:
-            <br /><br />
-            const plantNeedsWater = day => day === 'Wednesday' ? true : false;
-          </code>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">// Funktion:
+const plantNeedsWater = (day) => &lbrace;
+  return day === 'Wednesday' ? true : false;
+&rbrace;;
+
+// Kompakter:
+const plantNeedsWater = day => day === 'Wednesday' ? true : false;</code></pre>
           <p>
             Diese kompakte Schreibweise macht deinen Code oft lesbarer und
             eleganter – besonders bei kurzen Funktionen!
