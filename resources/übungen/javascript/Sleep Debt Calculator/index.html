@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sleep Debt Calculator</title>
+</head>
+<body>
+  <h1>Sleep Debt Calculator</h1>
+  <button onclick="calculateSleepDebt()">Check My Sleep Debt</button>
+  <p id="result"></p>
+
+  <script>
+    function getSleepHours(day) {
+      day = day.toLowerCase();
+      switch (day) {
+        case 'monday': return 7;
+        case 'tuesday': return 6;
+        case 'wednesday': return 8;
+        case 'thursday': return 5;
+        case 'friday': return 7;
+        case 'saturday': return 9;
+        case 'sunday': return 8;
+        default: return 0;
+      }
+    }
+
+    function getActualSleepHours() {
+      return getSleepHours('Monday') +
+             getSleepHours('Tuesday') +
+             getSleepHours('Wednesday') +
+             getSleepHours('Thursday') +
+             getSleepHours('Friday') +
+             getSleepHours('Saturday') +
+             getSleepHours('Sunday');
+    }
+
+    function getIdealSleepHours() {
+      const idealHours = 8; // You can change this to your preferred amount
+      return idealHours * 7;
+    }
+
+    function calculateSleepDebt() {
+      const actualSleepHours = getActualSleepHours();
+      const idealSleepHours = getIdealSleepHours();
+      let message = '';
+
+      if (actualSleepHours === idealSleepHours) {
+        message = 'You got the perfect amount of sleep!';
+      } else if (actualSleepHours > idealSleepHours) {
+        const overSleep = actualSleepHours - idealSleepHours;
+        message = `You got more sleep than needed — ${overSleep} hour(s) over your ideal.`;
+      } else {
+        const underSleep = idealSleepHours - actualSleepHours;
+        message = `You should get some rest — you are ${underSleep} hour(s) under your ideal.`;
+      }
+
+      // Show the message on the web page
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>
