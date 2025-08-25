@@ -101,6 +101,74 @@
             </li>
           </ul>
         </section>
+        <section>
+          <h2>Schwellenwert</h2>
+          <p>
+            reCAPTCHA v3 funktioniert ohne Interaktion durch die Benutzer/innen,
+            sondern bewertet das Verhalten im Hintergrund mit einem Score
+            zweischen 0.0 (verdächtig) und 1.0 (menschlich).
+          </p>
+          <p>
+            Ein "Schwellenwert" (treshold) wird vom Entwickler festgelegt, z.B.
+            0.5 - darunter gild der Traffic als verdächtig und es wird eine
+            Ablehnung oder zusätzliche Validierung ausgelöst.
+          </p>
+        </section>
+        <section>
+          <h2>Tokens</h2>
+          <p>
+            reCAPTCHA v3-Tokens sind kleine Datenpakete, die von Googles
+            reCAPTCHA v3 - System generiert werden, um zu beurteilen, wie
+            wahrscheinlich es ist, dass eine bestimmte Aktion auf einer Website
+            von einem echten Menschen und nicht von einem Bot durchgeführt
+            wurde.
+            <br /><br />
+            Zusammenfassend:
+          </p>
+          <ul>
+            <li>
+              reCAPTCHA v3 ist eine unsichtbare Bot - Erkennungstechnologie von
+              Google.
+            </li>
+            <li>
+              Wenn ein Nutzer eine Aktion auf der Website macht (z.B. ein
+              Formular absendet), erzeugt reCAPTCHA v3 im Hintergrund ein Token.
+            </li>
+            <li>
+              Dieses Token enthält eine Bewertung (Score), die anzeigt, wie
+              wahrscheinlich es ist, dass die Aktion menschlich ist.
+            </li>
+            <li>
+              Das Token wird an den Server gesendet, der dann anhand des Tokens
+              entscheidet, ob die Aktion erlaubt wird oder ob weitere Prüfungen
+              nötig sind.
+            </li>
+          </ul>
+          <p>Technisch</p>
+          <ul>
+            <li>
+              Das Token ist eine kurze zeichenkette (String), die Informationen
+              über die Session und die Bewertung enthält.
+            </li>
+            <li>
+              Es wird an Googles Server validiert, um sicherzustellen, dass es
+              echt ist und nicht manipuliert wurde.
+            </li>
+          </ul>
+          <p>Warum das wichtig ist:</p>
+          <ul>
+            <li>
+              Im Gegensatz zu reCAPTCHA v2 (mit den Klicks auf "Ich bin kein
+              Roboter" oder Bilderrätseln), läuft v3 komplett im Hintergrund und
+              stört den Nutzer nicht.
+            </li>
+            <li>
+              Die Website kann dynamisch auf unterschiedliche Risikostufen
+              reagieren - z.B. bei niedrigem Score nochmal eine Prüfung
+              einbauen.
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
     <footer>
