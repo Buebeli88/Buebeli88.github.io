@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blöcke und Scope</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsblöckeundscope.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Blöcke und Scope</h1>
+        <div class="zweispaltig">
+          <p>
+            Bevor mehr über Scope gesprochen wird, müssen zuerst Blöcke
+            behandelt werden.
+            <br /><br />
+            Blöcke wurden bereits in Funktionen und if-Anweisungen verwendet.
+            Ein Block ist der Code, der sich innerhalb von geschweiften Klammern
+            {} befindet. Blöcke helfen dabei, eine oder mehrere Anweisungen
+            zusammenzufassen und dienen als wichtige strukturelle Markeireung im
+            Code.
+            <br /><br />
+            Ein Block kann eine Funktion sein, zum Beispiel:
+          </p>
+        </div>
+        <pre><code class="language-js">const logSkyColor = () => {
+  let color = 'blau';
+  console.log(color);
+};
+// Ausgabe: blau</code></pre>
+        <p>
+          Der Funktionskörper ist tatsächlich ein Block von Code. <br /><br />
+          Ein Block in einer if-Anweisung sieht so aus:
+        </p>
+        <pre><code class="language-js">if (dämmerung) {
+  let color = 'rosa';
+  console.log(color);
+};
+// Ausgabe: rosa</code></pre>
+        <section>
+          <h2>Globaler Scope</h2>
+          <div class="zweispaltig">
+            <p>
+              Scope bezeichnet den kontext, in dem Variablen deklariert werden.
+              Scope wird im Zusammenhang mit Blöcken betrachtet, weil Variablen
+              entweder ausserhalb oder innerhalb dieser Blöcke existieren
+              können.
+            </p>
+            <p>
+              im globalen Scope werden Variablen ausserhalb von Blöcken
+              deklariert. Diese heissen globale Variablen. Da globale Variablen
+              nicht an einen Block gebunden sind, sind sie überall im Programm
+              zugänglich, auch innerhalb von Blöcken.
+            </p>
+            <p>Beispiel für globalen Scope:</p>
+          </div>
+          <pre><code class="language-js">const colo = 'blau;
+const returnSkyColor = () => {
+  return color;
+};
+// Ausgabe: blau</code></pre>
+          <p>
+            Obwohl die Variable color ausserhalb des Blocks definiert ist, kann
+            sie im Funktionsblock verwendet werden, was globalen Scope bedeutet.
+          </p>
+        </section>
+        <section>
+          <h2>Block - Scope</h2>
+          <div class="zweispaltig">
+            <p>
+              Beim Block - Scope ist eine Variable, die innerhalb eines Blocks
+              definiert wird, nur innerhalb der geschweiften Klammern {}
+              sichtbar. Diese Variable hat also nur innerhalb dieses Blocks
+              Gültigkeit.
+            </p>
+            <p>
+              Variablen mit Block - Scope werden lokale Variablen gennant, da
+              sie nur innerhalb des jeweiligen Blocks verfügbar sind.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">const logSkyColor = () => {
+  let color = 'blau';
+  console.log(color);
+};
+// Ausgabe: blau</code></pre>
+          <p>Hier gilt:</p>
+          <ul>
+            <li>
+              Die Variable color ist nur innerhalb des Funktionsblocks
+              verfügbar.
+            </li>
+            <li>Ein Zugriff ausserhalb des Blocks führt zu einem Fehler</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Scope - Verschmutzung</h2>
+          <p class="zweispaltig">
+            Es scheint verlockend, Variablen immer global verfügbar zu machen,
+            doch zu viele globale Variablen können Probleme verursachen.
+          </p>
+          <div class="zweispaltig">
+            <p>
+              Globale Variablen belegen den globalen Namespace, der Variablen
+              aus dem gesamten Programm zugänglich macht. Diese Variablen
+              bleiben bis zum Ende des Programms bestehen, wodurch der globale
+              Namespace schnell überfüllt werden kann.
+            </p>
+            <p>
+              Scope - Verschmutzung entsteht, wenn zu viele Variablen im
+              globalen Namespace existieren oder Variablennamen in verschiedenen
+              Scopes wiederverwendetz werden. Das macht es schweirieg, Variablen
+              im Auge zu behalten, und kann zu unerwartetem Verhalten führen,
+              wenn globale und lokale Variablen kollidieren.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">let num = 50;
+
+const logNum = () => {
+  num = 100; // Variable wird neu zugewiesen, ohne "let"
+  console.log(num);
+};
+
+logNum(); // 100 wird ausgegeben
+console.log(num); // 100 wird ausgegeben</code></pre>
+          <p class="zweispaltig">
+            Hier wird die globale Variable num in der Funktion überschrieben,
+            ohne eine neue lokale Variable zu erstellen, was zu unerwartetem
+            Verhalten führen kann.
+          </p>
+        </section>
+        <section>
+          <h2>Gute Praxis für Scoping</h2>
+          <p class="zweispaltig">
+            Um Probleme mit globalen Variablen und Scope - Verschmutzung zu
+            vermeiden, sollten Variablen so eng wie möglich im Block - Scope
+            definiert werden. <br /><br />
+            Vorteile engen Scopes:
+          </p>
+          <ul>
+            <li>Bessere lesbarkeit durch klare Strukturiereung in Blöcken.</li>
+            <li>
+              Einfachere Nachvollziehbarkeit, welche Variablen zu welchen
+              Programmteilen gehören.
+            </li>
+            <li>Leichtere Wartung durch modularen Code.</li>
+            <li>
+              Speicherersparnis, da Variablen nach Block - Ausführung
+              verschwinden.
+            </li>
+          </ul>
+          <p>Beispiel mit if-Block:</p>
+          <pre><code class="language-js">const logSkyColor = () => {
+  const dusk = true;
+  let color = 'blau';
+  if (dusk) {
+    let color = 'rosa';
+    console.log(color); // rosa wir ausgegeben
+  }
+  console.log(color); // blau wird ausgegeben
+};</code></pre>
+          <p>Hier:</p>
+          <ul>
+            <li>Innerhalb des if-Blocks ist color rosa.</li>
+            <li>
+              Ausserhalb des if-Blocks, aber innerhalb der Funktion, ist color
+              blau.
+            </li>
+            <li>
+              Ausserhalb der Funktion exisitert color nicht, was zu einem Fehler
+              fürht.
+            </li>
+          </ul>
+          <div class="zweispaltig">
+            <p>
+              Besser wäre es, innerhalb des Blocks eine andere Variable zu
+              verwenden, um Namenskonflikte zu vermeiden.
+            </p>
+            <p>
+              Block - Scope ist ein wichtiges Werkzeug in JavaScript, da es
+              ermöglicht, Variablen präzise zu definieren und den globalen
+              Namenspace nicht zu verschmutzen.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Zusammenfassugn: Scope</h2>
+          <ul>
+            <li>
+              Scope bestimmt, wo Variablen im Programm zugänglich sind, abhängig
+              von ihrer Deklaration.
+            </li>
+            <li>
+              Blöcke sind Anweisungen innerhalb von geschweiften Klammern {}.
+            </li>
+            <li>
+              Globaler Scope erlaubt Zugriff auf Variablen von überall im
+              Programm.
+            </li>
+            <li>Globale Variablen existieren im globalen Scope.</li>
+            <li>
+              Block - Scope erlaubt Zugriff auf Variablen nur innerhalb eines
+              Blocks.
+            </li>
+            <li>Lokale Variablen existieren im Block - Scope.</li>
+            <li>Globaler namespace enthält globale informationen.</li>
+            <li>
+              Scope - Verschmutzung entsteht durch zu viele Variablen im
+              gleichen Namespace oder Namenswiederholung.
+            </li>
+          </ul>
+          <p class="zweispaltig">
+            Beim Programmieren ist es wichtig, Variablen möglichst eng zu
+            scopen, um sauberen, organisierten und modularen Code zu schreiben.
+          </p>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
