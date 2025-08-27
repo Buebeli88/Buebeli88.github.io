@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../../css/layout.css  " />
+    <link rel="stylesheet" href="../../css/javascript/jsarrays.css " />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Arrays</h1>
+        <p class="zweispaltig">
+          Das Organisieren und Speichern von Daten ist ein grundlegendes Konzept
+          in der Programmiereung. <br /><br />
+          Eine Methode zur Organisation von Daten im Alltag ist das Erstellen
+          von Listen.
+          <br /><br />Beispiel: <br /><br />Neujahrvorsätze:
+        </p>
+        <ol>
+          <li>Ein Tagebuch fürhen</li>
+          <li>Einen Falkenerei-Kurzs besuchen</li>
+          <li>Jonglieren lernen</li>
+        </ol>
+        <p>Diese liste in JavaScript als Array:</p>
+        <pre><code class="language-js">let neujahrsvorsätze = ['Ein Tagebuch führen', 'Einen Falkenerei-Kurzs besuchen', 'Jonglieren lernen'];</code></pre>
+        <section>
+          <h2>Ein Array erstellen</h2>
+          <div class="zweispaltig">
+            <p>
+              Ein Array kann durch ein sogenanntes Array-Literal erstellt
+              werden. Ein Array-Literal entsteht durch das Einschliessen der
+              Elemente in eckige Klammern []. Arrays können entweder
+              gleichartige oder unterschiedliche Datentypen enthalten.
+            </p>
+            <p>
+              Diagramm: <br />
+              Ein Array-Literal mit deri Elementen (ein String, eine Zahl, ein
+              Boolean), durch Kommas getrennt und von eckigen Klammern umbegen.
+            </p>
+            <p>Syntaxanalyse:</p>
+          </div>
+          <ul>
+            <li>Das Array wird duchr eckige Klammern [ ] dargestellt.</li>
+            <li>Jedes enthaltene Element wird als Element bezeichnet.</li>
+            <li>Drei unterschiedliche Elemente befinden sich in array.</li>
+            <li>Jedes Element hat einen unterschiedlichen Datentyp.</li>
+          </ul>
+          <p class="zweispaltig">
+            Ein Array kann auch einer Variablen zugewiesen werden - wie im
+            vorherigen Beispiel:
+          </p>
+          <pre><code class="language-js">let neujahrsvorsätze = ['Ein Tagebuch führen', 'Einen Falkenerei-Kurs besuchen', 'Jonglieren lernen'];</code></pre>
+        </section>
+        <section>
+          <h2>Elemente zugreifen</h2>
+          <p class="zweispaltig">
+            Jese Array-Element besitzt eine nummerierte Position - den Index.
+            Über diesen Index kann ein einzelnes Element angesprochen werden.
+            JavaScript-Arrays sind nullbasiert, d.h. das Zählen beginnt bei 0:
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">let städte = ['New York', 'Berlin', 'Tokio'];
+console.log(städte[0]);
+// Ausgabe: 'New York'</code></pre>
+          <p>Erklärung:</p>
+          <ul>
+            <li>Das Array städte enthält drei Elemente.</li>
+            <li>Über Klammernotation [ ] und Index erfolgt der Zugriff.</li>
+            <li>städte[0] greift auf das erste Element ('New York') zu.</li>
+          </ul>
+          <p>
+            Auch einzelne Zeichen in einem String sind über Indizes zugänglich:
+          </p>
+          <pre><code class="language-js">const hallo = 'Hallo Welt';
+console.log(hallo[6]);
+// Ausgabe: W</code></pre>
+        </section>
+        <section>
+          <h2>Arrays mit let und const</h2>
+          <p class="zweispaltig">
+            Variablen können mit let oder const deklariert werden. Mit let
+            deklarierte Variablen sind neu zuweisbar. Mit const deklarierte
+            Variablen nicht.
+            <br /><br />
+            Ein Array, das mit const deklariert wurde, bleibt änderbar - der
+            Inhalt kann verändert werden, aber die Referenz nicht.
+            <br /><br />
+            Beispielhafte Arrays: gewürze und utensilien
+          </p>
+          <pre><code class="language-js">let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = 'Mayo';
+console.log(condiments);
+// Ausgabe: ['Mayo', 'Mustard', 'Soy Sauce', 'Sriracha']
+condiments = ['Mayo'];
+console.log(condiments);
+// Ausgabe: ['Mayo']
+utensils[3] = 'Spoon';
+console.log(utensils);
+// Ausgabe: ['Fork', 'Knife', 'Chopsticks', 'Spoon']</code></pre>
+        </section>
+        <section>
+          <h2>Die .length - Eigenschaft</h2>
+          <p>
+            Die .length - Eigenschaft gibt die Anzahl der Elemente im Array
+            zurück:
+          </p>
+          <pre><code class="language-js">const neujahrsvorsätze = ['Ein Tagebuch führen', 'Einen Falknerei-Kurs besuchen'];
+
+console.log(neujahrsvorsätze.length);
+// Ausgabe: 2</code></pre>
+          <p>Zugriff über Punktnotation: array.length</p>
+        </section>
+        <section>
+          <h2>Die .push() - Methode</h2>
+          <p>
+            .push() fügt ein oder mehrere Elemente am Ende eines Arrays hinzu:
+          </p>
+          <pre><code class="language-js">const artikelVerfolgung = ['Artikel 0', 'Artikel 1', 'Artikel 2'];
+
+artikelVerfolgung.push('Artikel 3', 'Artikel 4');
+
+console.log(artikelVerfolgung); 
+// Ausgabe: ['Artikel 0', 'Artikel 1', 'Artikel 2', 'Artikel 3', 'Artikel 4']</code></pre>
+          <ul>
+            <li>.push() mutiert das Array.</li>
+            <li>Funktioniert mit einem oder mehreren Argumenten.</li>
+            <li>Wird über Punktnotation aufgerufen.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Die .pop() - Methode</h2>
+          <p>
+            .pop() entfernt das letzte Element eines Arrays und gibt dieses
+            zurück:
+          </p>
+          <pre><code class="language-js">const artikelVerfolgungNeu = ['Artikel 0', 'Artikel 1', 'Artikel 2'];
+
+const entfernt = artikelVerfolgungNeu.pop();
+
+console.log(artikelVerfolgungNeu); 
+// Ausgabe: ['Artikel 0', 'Artikel 1']
+console.log(entfernt);
+// Ausgabe: Artikel 2</code></pre>
+          <ul>
+            <li>.pop() benötigt keine Argumente.</li>
+            <li>Gibt das entfernte Element zurück.</li>
+            <li>Mutiert das Array.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Weitere Array-Methoden</h2>
+          <p class="zweispaltig">
+            Zusätzlich zu .push() und .pop() gibt es viele weitere
+            Array-Methoden.
+            <br /><br />
+            Beispiel:
+          </p>
+          <ul>
+            <li>.join()</li>
+            <li>.slice()</li>
+            <li>.splice()</li>
+            <li>.shift()</li>
+            <li>.unshift()</li>
+            <li>.concat()</li>
+          </ul>
+          <p class="zweispaltig">
+            Einige Methoden mutieren das Array (z.B. .push(), .pop() ), andere
+            nicht. Details in der Dokumentation (z.B. MDM Web Docs).
+          </p>
+        </section>
+        <section>
+          <h2>Arrays und Funktionen</h2>
+          <p class="zweispaltig">
+            Wird ein Array an eine Funktion übergeben und innerhalb der Funktion
+            geänder, bleibt diese Änderung bestehen - sogenanntes
+            Pass-by-Reference:
+          </p>
+          <pre><code class="language-js">const blumen = ['Pfingstrose', 'Narzisse', 'Ringelblume'];
+
+function blumeHinzufügen(arr) {
+  arr.push('Lilie');
+}
+
+blumeHinzufügen(blumen);
+console.log(blumen);
+// Ausgabe: ['Pfingstrose', 'Narzisse', 'Ringelblume', 'Lilie']</code></pre>
+          <p>Beispiel mit Muatation und Entfernen:</p>
+          <pre><code class="language-js">const konzepte = ['Arrays', 'können', 'verändert', 'werden'];
+
+function ändereArray(arr) {
+  arr[3] = 'VERÄNDERT';
+}
+ändereArray(konzepte);
+console.log(konzepte);
+
+function entferneElement(arr) {
+  arr.pop();
+}
+entferneElement(konzepte);
+console.log(konzepte);</code></pre>
+        </section>
+        <section>
+          <h2>Verschachtelte Arrays</h2>
+          <p>
+            Ein verschateltes Array enthält weitere Arrays. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const verschachteltesArray = [[1], [2, 3]];
+
+console.log(verschachteltesArray[1]); // Ausgabe: [2, 3]
+console.log(verschachteltesArray[1][0]); // Ausgabe: 2</code></pre>
+          <p class="zweispaltig">
+            Mehrere Ebenen von Klammernotation ermöglicheen den Zugriff auf
+            tiefer liegende Werte. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const zahlenCluster = [[1, 2], [3, 4], [5, 6]];
+
+const zielwert = zahlenCluster[2][1];
+console.log(zielwert); // Ausgabe: 6</code></pre>
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p>Die wichtigsten Konzepte:</p>
+          <ul>
+            <li>
+              Arrays sind geordnete Listen zur Datenspeicherung in JavaScript.
+            </li>
+            <li>Erstellung mit eckigen Klammern [ ].</li>
+            <li>
+              Elemente haben nummerierte Positionen (Index), beginnend bei 0.
+            </li>
+            <li>Zugriff auf Elemente über den Index: array[0].</li>
+            <li>Änderung eines Elements: array[0] = 'neuer Wert'.</li>
+            <li>.length gibt die Anzahl der Elemente zurück.</li>
+            <li>
+              Methoden wie .push() und .pop() fügen Elementen hinzu oder
+              entfernen sie.
+            </li>
+            <li>
+              Weitere Methoden: .slice(), .shift(), .splice(), .join() etc.
+            </li>
+            <li>Manche Methoden mutieren das Arra, andere nicht.</li>
+            <li>
+              Arrays bleiben auch bei const deklarierbar veränderbar (nicht nue
+              zuweisbar).
+            </li>
+            <li>
+              Veränderungen in Arrays innerhalb von Funktionen wirken sich auch
+              ausserhalb von aus(Pass-by-Reference).
+            </li>
+            <li>
+              Arrays können andere Arrays enthalten (verschachtelte Arrays).
+            </li>
+            <li>
+              Zugriff auf verschachtelte Elemente durch Ketten von Indizers.
+            </li>
+          </ul>
+          <p class="zweispaltig">
+            Die Fähigkeit, Arrays zu manipulieren, ist essenziell beim Umgang
+            mit Datenstrukturen in JavaScript.
+          </p>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
