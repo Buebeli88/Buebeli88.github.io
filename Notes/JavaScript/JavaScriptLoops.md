@@ -225,3 +225,119 @@ while (currentCard !== 'spade') {
 
 ----------------------------------------------------------------------------------
 
+Do...While Statements
+In some cases, we want a piece of code to run at least once and then loop based on a specific condition after its initial run. This is where the do...while statement comes in.
+
+A 
+do...while
+Preview: Docs Loading link description
+ statement says to do a task once and then keep doing it until a specified condition is no longer met. The syntax for a do...while statement looks like this:
+
+let countString = '';
+let i = 0;
+
+do {
+  countString = countString + i;
+  i++;
+} while (i < 5);
+
+console.log(countString);
+
+Copy to Clipboard
+
+In this example, the code block makes changes to the countString variable by appending the string form of the i variable to it. First, the code block after the do keyword is executed once. Then the condition is evaluated. If the condition evaluates to true, the block will execute again. The looping stops when the condition evaluates to false.
+
+Note that the while and do...while loops are different! Unlike the while loop, do...while will run at least once, whether or not the condition evaluates to true.
+
+const firstMessage = 'I will print!';
+const secondMessage = 'I will not print!'; 
+
+// A do while with a stopping condition that evaluates to false
+do {
+ console.log(firstMessage)
+} while (true === false);
+
+// A while loop with a stopping condition that evaluates to false
+while (true === false){
+  console.log(secondMessage)
+};
+
+Copy to Clipboard
+
+bsp
+
+let cupsOfSugarNeeded = 7;
+let cupsAdded = 0;
+
+do {
+  cupsAdded++;
+  console.log(`Cups added: ${cupsAdded}`);
+} while (cupsAdded < cupsOfSugarNeeded);
+
+-------------------------------------------------------------------------------
+
+The break Keyword
+Imagine we’re looking to adopt a dog. We plan to go to the shelter every day for a year and then give up. But what if we meet our dream dog on day 65? We don’t want to keep going to the shelter for the next 300 days just because our original plan was to go for a whole year. In our code, when we want to stop a loop from continuing to execute even though the original stopping condition we wrote for our loop hasn’t been met, we can use the keyword break.
+
+The 
+break keyword
+Preview: Docs Loading link description
+ allows programs to “break” out of the loop from within the loop’s block.
+
+Let’s check out the syntax of a break keyword:
+
+for (let i = 0; i < 99; i++) {
+  if (i > 2 ) {
+     break;
+  }
+  console.log('Banana.');
+}
+
+console.log('Orange you glad I broke out the loop!');
+
+Copy to Clipboard
+
+This is the output for the above code:
+
+Banana.
+Banana.
+Banana.
+Orange you glad I broke out the loop!
+
+Copy to Clipboard
+
+break 
+statements
+Preview: Docs Loading link description
+ can be especially helpful when we’re looping through large data structures! With breaks, we can add test conditions besides the stopping condition, and exit the loop when they’re met.
+
+ bsp
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+for (let i = 0; i < rapperArray.length; i++) {
+  console.log(rapperArray[i]);
+  if (rapperArray[i] === 'Notorious B.I.G.') {
+    break;
+  }
+}
+
+console.log("And if you don't know, now you know.");
+
+ ---------------------------------------------------------------------------------------------
+
+Review
+Great job! In this lesson, we learned how to write cleaner code with 
+loops
+Preview: Docs Loading link description
+. You now know:
+
+Loops perform repetitive actions, so we don’t have to code that process manually every time.
+How to write for loops with an iterator variable that increments or decrements
+How to use a for loop to iterate through an array
+A nested for loop is a loop inside another loop
+while loops allow for different types of stopping conditions
+Stopping conditions are crucial for avoiding infinite loops.
+do...while loops run code at least once — only checking the stopping condition after the first execution
+The break keyword allows programs to leave a loop during the execution of its block

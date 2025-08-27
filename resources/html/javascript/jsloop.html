@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsloop.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Schleifen (Loops)</h1>
+        <p>
+          Eine Schleife ist ein Programmierwerkzeug, das eine Reihe von
+          Anweisungen wiederholt, bis eine festgelegte Bedingung, die sogenannte
+          Abbruchbedingung, erreicht wird. Schleifen werden ständig verwendet!
+          Der allgemeine Begriff "iterieren" bedeutet einfach "wiederholen".
+          <br /><br />
+          Wenn eine Aufgabe im Code mehrfach ausgeführt werden muss, wird diese
+          oft in einer Funktion gebündelt. Ähnlich wird eine Schleife
+          geschrieben, wenn ein Prozess mehrfach hintereinander wiederholt
+          werden muss. Schleifen ermöglichen die Erstellung effizienter
+          Programme, die Prozesse automatisieren und skalierbar sowie gut
+          verwaltbar sind.
+          <br /><br />
+          Eine Schleife wiederholt eine Aktion, bis eine bestimmte Bedingung
+          erfüllt ist. Sobald die Bedingung erfüllt ist, stoppt die Schleife und
+          der Computer fährt mit dem nächsten Teil des Programms fort.
+        </p>
+        <section>
+          <h2>Manuelles Wiederholen von Aufgaben</h2>
+          <p>
+            Bevor eigene Schleifen geschrieben werden, soll gezeigt werden, wie
+            umständlich es wäre, wenn eine wiederholte Aufgabe immer wieder
+            manuell getippt werden müsste. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const vacationSpots = ['Thailand', 'Brazil', 'Romania'];
+
+console.log(vacationSpots[0]);
+console.log(vacationSpots[1]);
+console.log(vacationSpots[2]);</code></pre>
+        </section>
+        <section>
+          <h2>Die for - Schleife</h2>
+          <p>
+            Anstatt denselben Code immer wieder zu schreiben, erlauben Schleifen
+            dem Computer, einen bestimmten Codeblock automatisch zu wiederholen.
+            Eine Möglichkeit, dem cComputer diese Anweisungen zu geben, ist die
+            Verwendung von for - Schleife.
+            <br /><br />
+            Die typische for - Schleife enthält eine Iterationsvariable, die in
+            allen drei Ausdrücken verwendet wird: Initialisierung,
+            Abbruchbedingung und Aktualisierung der Variable bei jeder
+            Iteration. Iterationsvariablen können beliebige Namen haben, es ist
+            aber gute Praxis, beschreibende Namen zu verwenden.
+            <br /><br />
+            Eine for - Schleife enthält drei durch Semikolons getrennte
+            Ausdrücke in Klammern:
+          </p>
+          <ul>
+            <li>
+              Initialisierung: <br />
+              Startet die Schleife und deklariert oft die Iterationsvariable.
+            </li>
+            <li>
+              Abbruchbedingung: <br />
+              Die Bedingung, die geprüft wird - ist sie wahr, läuft der
+              Codeblock, ist sie falsch, stoppt die Schleife.
+            </li>
+            <li>
+              Iterationsschritt: <br />
+              Aktualisiert die Iterationsvariable nach jeder Runde.
+            </li>
+          </ul>
+          <pre><code class="language-js">for (let counter = 0; counter < 4; counter++) {
+  console.log(counter);
+}
+/*
+Ausgabe:
+0
+1
+2
+3
+*/</code></pre>
+          <p>
+            Erläuterung: <br />
+            Die Initialisierung ist let counter = 0, also beginnt das Zählen bei
+            0. <br />
+            Die Abbruchbedingung counter &lt; 4 sorgt dafür, dass die Schleife
+            läuft, solange counter kleiner als 4 ist. <br />
+            Der Iterationsschnitt counter++ erhöht counter nach jeder
+            Wiederholung um 1. <br />
+            Der Codeblock gibt den aktuellen Wert von counter aus und lä$uft bis
+            zur Abbruchbedingung.
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="">for (let counter = 5; counter < 11; counter++) {
+  console.log(counter);
+}</code></pre>
+        </section>
+        <section>
+          <h2>Schleife rückwärts durchlaufen</h2>
+          <p>
+            Soll eine for - Schleife rückwärts zählen, muss die
+            Iterationsvariable in der Initialisierung auf dem höchsten Wert
+            gesetzt werden, die Abbruchbedingung prüft, ob der Wert grösser oder
+            gleich dem niedrigsten Wert ist, und die Iterationsvariable wird
+            jeweils verringert. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">for (let counter = 3; counter >= 0; counter--) {
+  console.log(counter);
+}</code></pre>
+          <p>
+            Achtung: Unendliche Schleifen entstehen, wenn die Abbruchbedingung
+            nie erfüllt wird, wordurch das Programm blockiert. In solchen Fällen
+            hilft ein Seiten-Reload, um die Ausführung zu stoppen.
+          </p>
+        </section>
+        <section>
+          <h2>Schleifen durch Arrays</h2>
+          <p>
+            for - Schleifen sind praktisch, um durch Datenstrukturen wie Arrays
+            zu iterieren. Arrays speichern geordnete Daten wie Kunden- oder
+            Produktinformationen. Um z.B. jeden Preis in einen Produktkatalog zu
+            erhöhen, kann eine for - Schleife alle Elemente durchlaufen.
+            <br /><br />
+            Typischerweise wird in der Abbruchbedingung die Eigenschaft .length
+            des Arrays genutzt, um die Schleife über alle Elemente laufen zu
+            lassen.
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
+for (let i = 0; i < animals.length; i++) {
+  console.log(animals[i]);
+}
+/*
+Ausgabe:
+Grizzly Bear
+Sloth
+Sea Lion
+*/</code></pre>
+          <p>
+            Die Iterationsvariable i steht oft für "index". Die Bedingung i &lt;
+            animals.length sorgt dafür, dass nicht über das letzte Element
+            hinausgegangen wird, da Arrays bei 0 beginnen. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const vacationSpots = ['Bali', 'Paris', 'Tulum'];
+
+for (let i = 0; i < vacationSpots.length; i++) {
+  console.log('I would love to visit ' + vacationSpots[i]);
+}</code></pre>
+        </section>
+        <section>
+          <h2>Verschachtelte Schleifen</h2>
+          <p>
+            Eine Schleife innerhalb einer anderen Schleife heisst verschachtelte
+            Schleife. Ein Anwendungsfall ist der Vergleich von Elementen zweier
+            Arrays. Für jede Runde der äusseren Schleife läuft die innere
+            Schleife komplett durch. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const arrayA = [6, 19, 20];
+const arrayB = [19, 81, 2];
+
+for (let i = 0; i < arrayA.length; i++) {
+  for (let j = 0; j < arrayB.length; j++) {
+    if (arrayA[i] === arrayB[j]) {
+      console.log('Both arrays have the number: ' + arrayB[j]);
+    }
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h2>Die while - Schleife</h2>
+          <p>
+            Eine andere Schleifenart ist die while - Schleife. Dabei wird eine
+            Bedingung geprüft und der Codeblock so lange ausgeführt, wie die
+            Bedingung wahr ist. <br />br Beispiel Umwandlung einer for- in eine
+            while-Schleife:
+          </p>
+          <pre><code class="language-js">// for-Schleife
+for (let counterOne = 1; counterOne < 4; counterOne++) {
+  console.log(counterOne);
+}
+
+// while-Schleife
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}</code></pre>
+          <p>
+            Wichtig: Die Iterationsvariable muss innerhalb der Schleife
+            aktualisiert werden, sonst entsteht eine unendliche Schleife.
+            <br /><br />
+            while - Schleifen eignen sich, wenn nicht bekannt ist, wie oft die
+            Schleife laufen muss, z.B. "iss, solange Hunger besteht".
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const cards = ['diamond', 'spade', 'heart', 'club'];
+let currentCard;
+
+while (currentCard !== 'spade') {
+  currentCard = cards[Math.floor(Math.random() * 4)];
+  console.log(currentCard);
+}</code></pre>
+        </section>
+        <section>
+          <h2>Do...while - Schleife</h2>
+          <p>
+            Der Codeblock wird mindestens einmal ausgeführt und danach die
+            Abbruchbedingung geprüft. Falls die Bedingung wahr ist, läuft die
+            Schleife weiter. <br /><br />
+            Syntax:
+          </p>
+          <pre><code class="language-js">let countString = '';
+let i = 0;
+
+do {
+  countString += i;
+  i++;
+} while (i < 5);
+
+console.log(countString);</code></pre>
+          <p>
+            Unterschied zur while - Schleife: do...while führt den Codeblock
+            mindestens einmal aus, unabhängig von der Bedingung.
+          </p>
+        </section>
+        <section>
+          <h2>Das break - Schlüsselwort</h2>
+          <p>
+            Mit break kann eine Schleife vorzeitig verlassen werden, auch wenn
+            die Abbruchbedingung noch nicht erfüllt ist. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">for (let i = 0; i < 99; i++) {
+  if (i > 2) {
+    break;
+  }
+  console.log('Banana.');
+}
+
+console.log('Orange you glad I broke out the loop!');
+/*
+Ausgabe.
+Banana.
+Banana.
+Banana.
+Orange you glad i broke out the loop!
+*/</code></pre>
+          <p>
+            break ist besonders nützlich bei der Arbeit mit grossen
+            Datenstrukturen, um zusätzliche Abbruchbedingungen einzubauen.
+          </p>
+        </section>
+        <section>
+            <h2>Zusammenfassung</h2>
+            <ul>
+                <li>Schleifen automatisieren wiederholende Aufgaben, um manuelles Programmieren zu vermeiden.</li>
+                <li>for - Schleifen verwenden eine Iterationsvariable, die erhöht oder verringert wird.</li>
+                <li>for - Schleifen eignen sich gut für Arrays.</li>
+                <li>Verschachtelte Schleifen sind Schleifen innerhalb von Schleifen.</li>
+                <li>while - Schleifen ermöglichen flexible Abbruchbedingungen.</li>
+                <li>Abbruchbedingungen sind wichtig, um unendliche Schleifen zu verhindern.</li>
+                <li>Do...while - Schleifen fürhen den Code mindestens einmal aus.</li>
+                <li>break ermöglicht das vorzeitige Verlassen einer Schleife.</li>
+            </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
