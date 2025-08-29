@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Iteratoren</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsiteratoren.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../../html/html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Iteratoren</h1>
+        <div class="zweispaltig">
+          <p>
+            Stell dir vor, es gibt eine Einkaufsliste und es soll geprüft
+            werden, was sich auf dieser Liste befindet - dazu könnte jede Zeile
+            durchgegangen und jedes Element abgelesen werden. Diese häufige
+            Aufgabe ähnelt der Iteration über ein Array.
+          </p>
+          <p>
+            Ein Werkzeug, das zur Verfügung steht, ist die
+            <span class="g">for</span> - Schleife. Zusätzlich gibt es eingebaute
+            Array - Methoden, die spezialisierte Iterationen bieten.
+          </p>
+          <p>
+            Die eingebauten JavaScript - Araay - Methoden, die beim Iterieren
+            helfen, nennt man Iterationsmethoden, oft auch als
+            <strong>Iteratoren</strong> bezeichnet. Iteratoren sind Methoden,
+            die auf <strong>Arrays</strong> angewendet werden, um Elemente zu
+            manipulieren und Werte zurückzugeben.
+          </p>
+        </div>
+        <section>
+          <h2>Die <span class="g">.forEach()</span> - Methode</h2>
+          <div class="zweispaltig">
+            <p>
+              Die erste Iterationsmethode, die behandelt wird, ist
+              <span class="g">.forEach()</span>. Der Name deutet darauf hin,
+              dass <span class="g">.forEach()</span> denselben Code für jedes
+              Element eines Arrays ausführt <br /><br />
+              Beispiel:
+            </p>
+          </div>
+          <pre><code class="language-js">const groceries = ['apple', 'banana', 'carrot', 'date'];
+
+groceries.forEach(item => console.log(item));</code></pre>
+          <p>Erläuterung der Syntax von <span class="g">.forEach()</span>:</p>
+          <div class="zweispaltig">
+            <ul>
+              <li>
+                <span class="g">groceries.forEach()</span> ruft die Methode
+                <span class="g">forEach</span> für das Array
+                <span class="g">groceries</span> auf.
+              </li>
+              <li>
+                <span class="g">.forEach()</span> benötigt eine Callback -
+                Funktion als Argument. Eine Callback - Funktion ist eine
+                Funktion, die als Argument an eine andere Funktion übergeben
+                wird.
+              </li>
+              <li>
+                <span class="g">.forEach()</span> durchläuft das Array und führt
+                für jedes Element die Callback - Funktion aus. Dabei wird das
+                aktuelle Element als Argument an die Callback - Funktion
+                übergeben.
+              </li>
+              <li>
+                Der Rückgabewert von <span class="g">.forEach()</span> ist immer
+                <span class="g">undefined</span>.
+              </li>
+            </ul>
+          </div>
+          <p class="zweispaltig">
+            Ein alternativer Weg, die Callback - Funktion zu übergeben, ist die
+            Verwendung von Pfeilfunktionen:
+          </p>
+          <pre><code class="language-js">groceries.forEach(item => console.log(item));
+</code></pre>
+        </section>
+        <section>
+          <h2>Die <span class="g">.map()</span> - Methode</h2>
+          <div class="zweispaltig">
+            <p>
+              Die zweite Iterator - Methode ist <span class="g">.map()</span>.
+              Wenn <span class="g">.map()</span> auf ein Array angewendet wird,
+              erwartet es eine Callback - Funktion als Argument und gibt ein
+              neues Array zurück.
+            </p>
+          </div>
+          <pre><code class="language-js">const numbers = [1, 2, 3, 4, 5];
+
+const bigNumbers = numbers.map(number => number * 10);
+console.log(bigNumbers); // Ausgabe: [10, 20, 30, 40, 50]</code></pre>
+          <p>Erläuterung:</p>
+          <ul>
+            <li>
+              <span class="g">.map()</span> funktioniert ähnlich wie
+              <span class="g">.forEach()</span>, der grosse Unterschied ist,
+              dass <span class="g">.map()</span> ein neues Array zurückgibt.
+            </li>
+            <li>
+              In diesem Beispiel werden die Zahlen im Array
+              <span class="g">numbers</span>
+              mit 10 multipliziert und in das neue Array
+              <span class="g">bigNumbers</span>
+              gespeichert.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Die <span class="g">.filter()</span> - Methode</h2>
+          <div class="zweispaltig">
+            <p>
+              Eine weitere nützliche Iterator - Methode ist
+              <span class="g">.filter()</span>. Diese Methode gibt ein neues
+              Array zurück, das nur die Elemente enthält, die eine bestimmte
+              Bedingung erfüllen.
+            </p>
+          </div>
+          <pre><code class="language-js">const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door'];
+
+const shortWords = words.filter(word => word.length < 6);
+console.log(shortWords); // Ausgabe: ['chair', 'music', 'brick', 'pen', 'door']</code></pre>
+          <p>Erläuterung:</p>
+          <div class="zweispaltig">
+            <ul>
+              <li>
+                <span class="g">.filter()</span> überprüft jedes Element des
+                Arrays, um festzustellen, ob es eine Bedingung erfüllt (hier, ob
+                die Wortlänge kleiner als 6 ist).
+              </li>
+              <li>
+                Elemente, die die Bedingung erfüllen, werden in das neue Array
+                aufgenommen.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Die <span class="g">.findIndex()</span> - Methode</h2>
+          <p>
+            Manchmal muss der Index eines Elements in einem Array gefunden
+            werden. Die Methode <span class="g">.findIndex()</span> gibt den
+            Index des ersten Elements zurück, das in der Callback - Funktion als
+            <span class="g">true</span> bewertet wird.
+          </p>
+          <pre><code class="language-js">const jumbledNums = [123, 25, 78, 5, 9];
+
+const lessThanTen = jumbledNums.findIndex(num => num < 10);
+console.log(lessThanTen); // Ausgabe: 3
+console.log(jumbledNums[3]); // Ausgabe: 5</code></pre>
+          <p>Erläuterung:</p>
+          <ul>
+            <li>
+              <span class="g">.findIndex()</span> gibt den Index des ersten
+              Elements zurück, das die angegebene Bedingung erfüllt. Wird keine
+              Übereinstimmung gefunden, wird
+              <span class="g">-1</span> zurückgegeben.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Die <span class="g">.reduce()</span> - Methode</h2>
+          <p>
+            Die Methode <span class="g">.reduce()</span> reduziert das Array auf
+            einen einzelnen Wert, indem sie jeden Wert des Arrays mit einem
+            "Accumulator" zusammenfasst.
+          </p>
+          <pre><code class="language-js">const numbers = [1, 2, 4, 10];
+
+const summedNums = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(summedNums); // Ausgabe: 17</code></pre>
+          <p>Erläuterung:</p>
+          <ul>
+            <li>
+              <span class="g">.reduce()</span> nimmt einen "Accumulator" und
+              einen "currentValue". Die Rückgabewerte werden in
+              <span class="g">accumulator</span> gespeichert, der im nächsten
+              Iterationsschritt wiederverwendet wird.
+            </li>
+            <li>
+              Optional kann der Accumulator - Wert am Anfang festgelet werden.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p>
+            Es gibt viele eingebauten Array - Methoden, eine vollständige Liste
+            findes sich in der
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array?utm_source=chatgpt.com#iterative_methods"
+              target="_blank"
+              class="nohead"
+            >
+              MDN-Dokumentation zu Array-Methoden</a
+            >. Jede Methode hat folgende Abschnitte:
+          </p>
+          <ul>
+            <li>Eine kurze Definition</li>
+            <li>Die korrekte Syntax</li>
+            <li>Eine Liste der akzepierten Parameter</li>
+            <li>Der Rückgabewert der Methode</li>
+            <li>Eine erweiterte Beschreibung</li>
+            <li>Beispiele für die Verwendung der Methode</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
