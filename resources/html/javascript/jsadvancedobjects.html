@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wetasdf</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsadvancedobjects.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../../html/html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Fortgeschrittene Objekte</h1>
+        <div class="zweispaltig">
+          <p>
+            Objekte in JavaScript sind Container, die Daten und Funktionalität
+            speichern.
+          </p>
+        </div>
+        <section>
+          <h2>Das Schlüsselwort this</h2>
+          <p class="zweispaltig">
+            Objekte sind Sammlungen verwandter Daten und Funktionalitäten. Diese
+            Funktionalität wird in Methoden eines Objekts gespeichter:
+          </p>
+          <pre><code class="language-js">const ziege = {
+  ernährungsart: 'Pflanzenfresser',
+  macheGeräusch() {
+    console.log('bäää');
+  }
+};</code></pre>
+          <p>
+            Im ziege-Objekt gibt es eine Methode
+            <span class="g">.machGeräusch()</span>, die aufgerufen werden kann:
+          </p>
+          <pre><code class="language-js">ziege.macheGeräusch(); // Gibt "bäää" aus</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Wenn eine neue Methode
+              <span class="g">.ernährung()</span> hinzugefügt werden soll, die
+              die Eigenschaft <span class="g">ernährungsart</span> ausgibt:
+            </p>
+          </div>
+          <pre><code class="language-js">const ziege = {
+  ernährungsart: 'Pflanzenfresser',
+  macheGeräusch() {
+    console.log('bäää');
+  },
+  ernährung() {
+    console.log(ernährungsart);
+  }
+};
+ziege.ernährung(); 
+// Ausgabe: ReferenceError: ernährungsart ist nicht definiert</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Der fehler tritt auf, weil innerhalb der Methode
+              <span class="g">.ernährung()</span> nicht automatisch auf andere
+              Eigenschaften des Objekts zugegriffen werden kann.
+            </p>
+            <p>
+              Hier hilft das Schlüsselwort <span class="g">this</span>. Wird
+              <span class="g">.ernährung()</span> mit
+              <span class="g">this</span> geänder, funktioniert die Methode:
+            </p>
+          </div>
+          <pre><code class="language-js">const ziege = {
+  ernährungsart: 'Pflanzenfresser',
+  macheGeräusch() {
+    console.log('bäää');
+  },
+  ernährung() {
+    console.log(this.ernährungsart);
+  }
+};
+
+ziege.ernährung(); 
+// Ausgabe: Pflanzenfresser</code></pre>
+          <div class="zweispaltig">
+            <p>
+              <span class="g">this</span> verweist auf das aufrufende Objekt und
+              ermöglicht den zugriff auf dessen Eigenschaften. Im Beispiel ist
+              das aufrufende Objekt <span class="g">ziege</span>, und mit
+              <span class="g">this.ernährungsart</span> wird die Eigenschaft
+              angesprochen. <br /><br />
+              Ein anderes Beispiel:
+            </p>
+          </div>
+          <pre><code class="language-js">const roboter = {
+  modell: '1E78V2',
+  energieLevel: 100,
+  infoGeben() {
+    return `Ich bin ${this.modell} und mein aktueller Energielevel ist ${this.energieLevel}.`;
+  }
+};
+
+console.log(roboter.infoGeben()); // Ausgabe: Ich bin 1E78V2 und mein aktueller Energielevel ist 100.</code></pre>
+        </section>
+        <section>
+          <h2>Arrow Functions und this</h2>
+          <div class="zweispaltig">
+            <p>
+              In Methoden gehört <span class="g">this</span> standardmässig zum
+              aufrufenden Objekt. Bei Arrow Functions ist das anders:
+            </p>
+          </div>
+          <pre><code class="language-js">const ziege = {
+  ernährungsart: 'Pflanzenfresser',
+  macheGeräusch() {
+    console.log('bäää');
+  },
+  ernährung: () => {
+    console.log(this.ernährungsart);
+  }
+};
+
+ziege.ernährung(); // Ausgabe: undefined</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Die Arrow Function bindet <span class="g">this</span> an den
+              Kontext, in dem sie definiert wurde, meiost das globale Objekt,
+              das die Eigenschaft <span class="g">ernährungsart</span> nicht
+              hat. Deshalb <span class="g">undefined</span>.
+            </p>
+            <p>
+              Daraus folgt: Bei methoden, die
+              <span class="g">this</span> verwenden, keine Arrow Functions
+              nutzen!
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">const roboter = {
+  energieLevel: 100,
+  prüfeEnergie() {
+    console.log(`Energie beträgt aktuell ${this.energieLevel}%.`);
+  }
+};
+
+roboter.prüfeEnergie(); // Ausgabe: Energie beträgt aktuell 100%</code></pre>
+        </section>
+        <section>
+          <h2>Privatsphäre</h2>
+          <div class="zweispaltig">
+            <p>
+              Zugriff auf und Änderungen von Eigenschaften sind grundlegend bei
+              Objekten. Manchmal soll aber nicht jeder Code Zugriff oder
+              Änderungsmöglichkeiten haben.
+            </p>
+            <p>
+              JavaScript besitzt keine eingebaute Privatspähre, aber
+              Namenskonventionen helfen: Ein untertrich
+              <span class="g">_</span> vor einem Eigenschaftsnamen signalisiert,
+              dass die Eigenscshaft nicht direkt verändert werden soll:
+            </p>
+          </div>
+          <pre><code class="language-js">const bankkonto = {
+  _betrag: 1000
+}</code></pre>
+          <p>Trozdem ist direkte Änderung möglich:</p>
+          <pre><code class="language-js">bankkonto._betrag = 1000000;</code></pre>
+          <p>
+            Später werden Getter und Setter eingeführt, um den Zugriff
+            kontrollierter zu gestalten. <br /><br />
+            Beispiel für unerwartete Folgen ohne Setter:
+          </p>
+          <pre><code class="language-js">const roboter = {
+  _energieLevel: 100,
+  aufladen(){
+    this._energieLevel += 30;
+    console.log(`Aufgeladen! Energie beträgt jetzt ${this._energieLevel}%.`)
+  }
+};
+
+roboter._energieLevel = 'hoch';
+
+roboter.aufladen(); // Ausgabe: Aufgeladen! Energie beträgt jetzt hoch30%</code></pre>
+        </section>
+        <section>
+          <h2>Getter</h2>
+          <p class="zweispaltig">
+            Getter sind Methoden, die interne Eigenschaften eins objekts
+            zurückgeben, können aber mehr tun als nur Werte zurückgeben.
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const person = {
+  _vorname: 'John',
+  _nachname: 'Doe',
+  get vollerName() {
+    if (this._vorname && this._nachname){
+      return `${this._vorname} ${this._nachname}`;
+    } else {
+      return 'Vorname oder Nachname fehlt.';
+    }
+  }
+};
+
+person.vollerName; // 'John Doe'</code></pre>
+          <p>Wichtig:</p>
+          <ul>
+            <li>
+              <span class="g">get</span> vor einer Funktion definiert einen
+              Getter.
+            </li>
+            <li>Bedingungen ermöglichen verschiedene Rückgabewerte.</li>
+            <li>
+              Zugriff auf interne Eigenschaften erfolgen über
+              <span class="g">this</span>.
+            </li>
+            <li>Getter wird wie eine Eigenschaft aufgerufen, ohne Klammern.</li>
+          </ul>
+          <p>Vorteile:</p>
+          <ul>
+            <li>Aktionen beim Zugriff möglich.</li>
+            <li>Unterschiedliche Werte durch Bedingungen.</li>
+            <li>Klare Struktur und bessere Verständlichkeit.</li>
+          </ul>
+          <p>
+            Namensgleichheit von Eigenschaft und Getter vermeiden, oft durch
+            Unterstrich vor der Eigenschaft. <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">
+            const roboter = {
+  _modell: '1E78V2',
+  _energieLevel: 100,
+  
+  get energieLevel(){
+    if (typeof this._energieLevel === 'number') {
+      return `Mein aktueller Energielevel ist ${this._energieLevel}`;
+    } else {
+      return 'Systemfehler: Energielevel nicht abrufbar';
+    }
+  }
+};
+
+console.log(roboter.energieLevel); // Ausgabe: Mein aktueller Energielevel ist 100
+          </code></pre>
+        </section>
+        <section>
+          <h2>Setter</h2>
+          <p>
+            Setter sind Methoden, die Werte bestehender Eigenschaften ändern.
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">const person = {
+  _alter: 37,
+  set alter(neuesAlter){
+    if (typeof neuesAlter === 'number'){
+      this._alter = neuesAlter;
+    } else {
+      console.log('Alter muss eine Zahl sein');
+    }
+  }
+};
+
+person.alter = 40;
+console.log(person._alter); // 40
+person.alter = '40'; // Ausgabe: Alter muss eine Zahl sein</code></pre>
+          <div class="zweispaltig">
+            <p>Setter wird wie eine Eigenschaft ohne Klammern verwendet.</p>
+            <p>
+              Vorteile ähnlich wie bei Gettern: Validierung, Aktionen, klare
+              Absicht. Direkter Zugriff auf <span class="g">_alter</span> bleibt
+              möglich.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">const roboter = {
+  _modell: '1E78V2',
+  _energieLevel: 100,
+  _anzahlSensoren: 15,
+  get anzahlSensoren(){
+    if(typeof this._anzahlSensoren === 'number'){
+      return this._anzahlSensoren;
+    } else {
+      return 'Sensoren sind ausgefallen.';
+    }
+  },
+  set anzahlSensoren(anzahl) {
+    if (typeof anzahl === 'number' && anzahl >= 0) {
+      this._anzahlSensoren = anzahl;
+    } else {
+      console.log('Zahl größer oder gleich 0 eingeben');
+    }
+  }
+};
+
+roboter.anzahlSensoren = 100;
+console.log(roboter.anzahlSensoren); // Ausgabe: 100</code></pre>
+        </section>
+        <section>
+          <h2>Factory-Funktionen</h2>
+          <p class="zweispaltig">
+            Objekte können einzeln oder mehrfach erzeugt werden.
+            Factory-Funktionen erleichtern das schnelle Erstellen mehrerer
+            Objekte. sie nehmen Parameter und geben ein Objekt zurück.
+            <br /><br />
+            Beispiel Monster:
+          </p>
+          <pre><code class="language-js">const monsterFactory = (name, alter, energieQuelle, schreckensruf) => {
+  return { 
+    name: name,
+    alter: alter, 
+    energieQuelle: energieQuelle,
+    erschrecken() {
+      console.log(schreckensruf);
+    } 
+  }
+};
+
+const geist = monsterFactory('Geist', 251, 'Ektoplasma', 'BUH!');
+geist.erschrecken(); // BUH!</code></pre>
+          <p>
+            So müssen keine einzelne Objekte manuell erzeugt werden.
+            <br /><br />
+            Beispiel Roboter:
+          </p>
+          <pre><code class="language-js">function roboterFabrik(modell, mobil) {
+  return {
+    modell: modell,
+    mobil: mobil,
+    piep() {
+      console.log('Piep Boop');
+    }
+  };
+}
+
+const blechdose = roboterFabrik('P-500', true);
+
+blechdose.piep();
+
+console.log(blechdose.modell);
+console.log(blechdose.mobil);</code></pre>
+        </section>
+        <section>
+          <h2>Property Value Shorthand</h2>
+          <p>
+            ES6 erlaubt Kürzel, wenn Schlüssel und Wert denselben Namen haben.
+            Statt:
+          </p>
+          <pre><code class="language-js">return { 
+  name: name,
+  alter: alter
+}</code></pre>
+          <p>genügt:</p>
+          <pre><code class="language-js">return {
+  name,
+  alter
+}</code></pre>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">const roboterFabrik = (modell, mobil) => {
+  return {
+    modell,
+    mobil,
+    piep() {
+      console.log('Piep Boop');
+    }
+  };
+};
+
+const neuerRoboter = roboterFabrik('P-501', false);
+console.log(neuerRoboter.modell); // P-501
+console.log(neuerRoboter.mobil);  // false</code></pre>
+        </section>
+        <section>
+          <h2>Destrukturierte Zuweisung</h2>
+          <p>
+            Objekteigenschaften können einfach extrahiert und Variablen
+            zugewiesen werden:
+          </p>
+          <pre><code class="language-js">const vampir = {
+  name: 'Dracula',
+  wohnort: 'Transsilvanien',
+  vorlieben: {
+    tag: 'drinnen bleiben',
+    nacht: 'Appetit stillen'
+  }
+};
+
+const { wohnort } = vampir;
+console.log(wohnort); // Transsilvanien
+
+const { tag } = vampir.vorlieben;
+console.log(tag); // drinnen bleiben</code></pre>
+          <p>Beispiel Roboter:</p>
+          <pre><code class="language-js">const roboter = {
+  modell: '1E78V2',
+  energieLevel: 100,
+  funktionalität: {
+    piep() {
+      console.log('Piep Boop');
+    },
+    laserAbfeuern() {
+      console.log('Pew Pew');
+    },
+  }
+};
+
+const { funktionalität } = roboter;
+funktionalität.piep(); // Ausgabe: Piep Boop</code></pre>
+        </section>
+        <section>
+          <h2>Eingebaute Objektmethoden</h2>
+          <div class="zweispaltig">
+            <p>
+              JavaScript stellt eingebaute Methoden bereit, z.B.
+              <span class="g">.hasOwnProperty()</span>,
+              <span class="g">.valueOF()</span>,
+              <span class="g">Object.assign()</span>,
+              <span class="g"> Object.entries()</span>,
+              <span class="g">Object.keys()</span>. <br /><br />
+              Beispiel:
+            </p>
+          </div>
+          <pre><code class="language-js">const roboter = {
+  modell: 'SAL-1000',
+  mobil: true,
+  bewusst: false,
+  panzer: 'Stahlverstärkt',
+  energieLevel: 75
+};
+
+const roboterSchlüssel = Object.keys(roboter);
+console.log(roboterSchlüssel);
+
+const roboterEinträge = Object.entries(roboter);
+console.log(roboterEinträge);
+
+const neuerRoboter = Object.assign({}, roboter, { laserBlaster: true, sprachErkennung: true});
+console.log(neuerRoboter);</code></pre>
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p>Wichtige Punkte:</p>
+          <ul>
+            <li>
+              Das Objekt, zu dem eine methode gehört, heisst aufrufendes Objekt.
+            </li>
+            <li>
+              <span class="g">this</span> verweist auf das aufrufende Objekt und
+              ermöglicht Zugriff auf dessen Eigenschaften.
+            </li>
+            <li>
+              Methoden haben nicht automatisch Zugriff auf andere Eigenschaften.
+            </li>
+            <li>Wert von <span class="g">this</span> hängt vom Kontext ab.</li>
+            <li>
+              Arrow Functions sollten nicht als Methoden genutzt werden, wenn
+              <span class="g">this</span> benötigt wird.
+            </li>
+            <li>
+              JavaScript-Objekte besitzen keine eingebaute Privatsphäre, aber
+              Namenskonventionen mit <span class="g">_</span> signalisieren
+              dies.
+            </li>
+            <li>
+              Getter und Setter ermöglichen kontrollierten Zugriff und
+              Änderungen von Eigenschaften.
+            </li>
+            <li>
+              Factory-Funktionen erleichtern schnelles Erstellen von
+              Objektinstanzen.
+            </li>
+            <li>
+              Destrukturierun bietet elegante Möglichkeiten für Zuweisungen.
+            </li>
+            <li>
+              Nutzung der Dokumentation ist essentiell für gutes Verständnis und
+              Arbeit mit Objekten.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
