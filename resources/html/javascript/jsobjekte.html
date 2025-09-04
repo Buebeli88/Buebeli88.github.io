@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Objekte</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/javascript/jsobjekte.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a href="../../html/html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a href="" class="navlink">Profile</a>
+        <a href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Objekte</h1>
+        <div class="zweispaltig">
+          <p>
+            JavaScript kennt nur acht fundamentale Datentypen, von denen sieben
+            "primitive" Typen sind: string, number, boolean, null, undefined,
+            symbol und bigint. Der achte Typ, Objekte, eröffnet komplexere
+            Möglichkeiten. JavaScript - Objekte können verwendet werden, um
+            reale Dinge zu modellieren, z.B. einen Basketball, oder um
+            Datenstrukturen zu erstellen, die das Web ermöglichen.
+          </p>
+          <p>
+            Im Kern sind JavaScript - Objekte Container, die zusammengehörige
+            Daten und Funktionalitäten speichern. Diese scheinbar einfache
+            Aufgabe ist in der Praxis äusserst mächtig. Objekte wurden schon die
+            ganze Zeit verwendet, nun ist es an der Zeit, ihre Mechanik zu
+            verstehen und eigene zu erstellen!
+          </p>
+        </div>
+        <img
+          src="../../../Notes/JavaScript/image-6.png"
+          alt="Bsp Objekt"
+          width="500"
+        />
+
+        <section>
+          <h2>Erstellen von Objekt-Literalen</h2>
+          <div class="zweispaltig">
+            <p>
+              Objekte können Variablen zugewiesen werden, genauso wie jedem
+              anderen JavaScript-Typ. Geschweifte Klammern
+              <span class="g">{}</span> werden verwendet, um ein Objekt-Literal
+              zu kennzeichnen:
+            </p>
+          </div>
+          <pre><code class="language-js">let raumschiff = {}; // leeres Objekt</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Ein Objekt wird mit ungeordneten Daten gefüllt. Diese Daten sind
+              in Schlüssel-Wert-Paare organisiert. Ein Schlüssel ist wie ein
+              Variablenname, der auf eine Speicherstelle verweist, die einen
+              Wert hält.
+            </p>
+            <p>
+              Der Wert eines Schlüssels kann jeder Datentyp in der Sprache sein,
+              einschliesslich Funktionen oder andere Objekte.
+            </p>
+            <p>
+              Ein Schlüssel-Wert-Paar wird erzeugt, indem der Name des
+              Schlüssels (oder Identifikators) geschrieben wird, gefolgt von
+              einem Doppelpunkt und dann dem Wert. Jedes Schlüssel-Wert-Paar in
+              einem Objekt-Literal wird durch ein Komma getrennt, Schlüssel sind
+              Strings, aber wenn ein Schlüssel keine Sonderzeichen enthält,
+              dürfen die Anführungszeichen weggelassen werden:
+            </p>
+            <img src="../../../Notes/JavaScript/image-7.png" alt="" />
+          </div>
+          <pre><code class="language-js">let raumschiff = {
+  'Treibstoffart': 'Diesel',
+  farbe: 'silber'
+};</code></pre>
+          <img src="../../../Notes/JavaScript/image-8.png" alt="" width="500" />
+        </section>
+        <section>
+          <h2>Zugriff auf Eigenschaften</h2>
+          <div class="zweispaltig">
+            <p>
+              Es gibt zweiMöglichkeiten, auf eine Eigenschaft eines Objekts
+              zuzugreifen. Die erste Möglichkeit ist die Punktnotation (<span
+                class="g"
+                >.</span
+              >).
+            </p>
+            <p>
+              Die Punktnotation wurde genutzt, um auf Eigenschaften und Methoden
+              eingebauter Objekte und Dateninstanzen zuzugreifen:
+            </p>
+          </div>
+          <pre><code class="language-js">'hello'.length; // Gibt 5 zurück</code></pre>
+          <p>
+            Mit der Punktnotation wird der Name des Objekts geschrieben, gefolgt
+            vom Punktoperator und dann dem Eigenschaftsnamen (Schlüssel).:
+          </p>
+          <pre><code class="language-js">let raumschiff = {
+  heimatsplanet: 'Erde',
+  farbe: 'silber'
+};
+raumschiff.heimatsplanet; // Gibt 'Erde' zurück
+raumschiff.farbe; // Gibt 'silber' zurück</code></pre>
+          <img src="../../../Notes/JavaScript/image-9.png" alt="" />
+          <p>
+            Wenn versucht wird, auf eine nicht vorhandene Eigenschaft
+            zuzugreifen, wird <span class="g">undefined</span> zurückgegeben.
+          </p>
+          <pre><code class="language-js">raumschiff.lieblingsEis; // Gibt undefined zurück</code></pre>
+        </section>
+        <section>
+          <h2>Klammernotation</h2>
+          <div class="zweispaltig">
+            <p>
+              Die zweite Möglichkeit, auf den Wert eines Schlüssels zuzugreifen,
+              ist die Klammernotation (<span class="g">[]</span>).
+            </p>
+            <p>
+              Klammernotation wurde bereits beim Indizieren von Arrays
+              verwendet:
+            </p>
+          </div>
+          <pre><code class="language-js">['A', 'B', 'C'][0]; // Gibt 'A' zurück</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Um die Klammernotation bei Objekten zu nutzen, wird der
+              Schlüsselname als String in eckige Klammern gesetzt.
+            </p>
+            <p>
+              Die Klammernotation ist notwendig, wenn Schlüssel keine gültigen
+              Bezeichner sind (z.B. Schlüssel, die mit einer Zahl beginnen oder
+              Leerzeichen/Sonderzeichen enthalten).
+            </p>
+            <p>
+              Ohne Klammernotation würden solche Fälle einen Fehler verursachen.
+            </p>
+          </div>
+          <pre><code class="language-js">let raumschiff = {
+  'Treibstoffart': 'Turbo Treibstoff',
+  'Aktiv Dienst': true,
+  heimatsplanet: 'Erde',
+  mitgliederzahl: 5
+};
+raumschiff['Aktiv Dienst']; // Gibt true zurück
+raumschiff['Treibstoffart']; // Gibt 'Turbo Treibstoff' zurück
+raumschiff['mitgliederzahl']; // Gibt 5 zurück
+raumschiff['!!!!!!!!!!!']; // Gibt undefined zurück</code></pre>
+          <p>
+            In der Klammernotation kann auch eine Variable verwendet werden, um
+            den Schlüssel eines objekts auszuwählen. Dies ist besonder nützlich
+            bei Funktionen:
+          </p>
+          <pre><code class="language-js">let returnAnyProp = (objektName, propName) => objektName[propName];
+
+returnAnyProp(raumschiff, 'heimatsplanet'); // Gibt 'Erde' zurück</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Wenn Punktnotation anstelle von Klammernotation verwendet würde
+              (objektName.propName), würde der Computer nach einem Schlüssel mit
+              dem Namen <span class="g">'propName'</span> suchen, nicht dem Wert
+              der Variable <span class="g">propName</span>.
+            </p>
+            <img src="../../../Notes/JavaScript/image-10.png" alt="" />
+          </div>
+          <pre><code class="language-js">let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  'Active Mission' : true,
+  homePlanet : 'Earth', 
+  numCrew: 5
+ };
+
+let propName =  'Active Mission';
+
+let isActive = spaceship['Active Mission'];
+
+console.log(isActive);</code></pre>
+        </section>
+        <section>
+          <h2>Eigenschaftszuweisung</h2>
+          <div class="zweispaltig">
+            <p>
+              Einaml definierte Objekte können nachträglich verändert werden.
+              Objekte sind veränderbar (mutable), das bedeutet, Eigenschaften
+              können nach der Erstellung geändert oder hinzugefügt werden.
+            </p>
+            <p>
+              Sowohl die Punkt- als auch die Klammernotation können zusammen mit
+              dem Zuweisungsoperator <span class="g">=</span> verwendet werden,
+              um neue Schlüssel-Wert-Paare hinzuzufügen oder existierende
+              Eigenschaften zu ändern.
+            </p>
+          </div>
+          <img
+            src="../../../Notes/JavaScript/images/object_property_assignment.svg"
+            alt=""
+            width="500"
+          />
+          <div class="zweispaltig">
+            <p>
+              Wenn die Eigenschaft bereits existiert, wird ihr vorheriger Wert
+              durch den neuen ersetzt. Existiert die Eigenschaft noch nicht,
+              wird sie neu hinzugefügt.
+            </p>
+            <p>
+              Obwohl Objekte, die mit <span class="g">const</span> deklariert
+              sind, nicht neu zugewiesen werden können, können ihre
+              Eigenschaften verändert werden.
+            </p>
+          </div>
+          <pre><code class="language-js">const raumschiff = {typ: 'Shuttle'};
+raumschiff = {typ: 'Alien'}; // TypeError: Zuweisung an konstante Variable
+raumschiff.typ = 'Alien'; // Ändert den Wert der Eigenschaft 'typ'
+raumschiff.geschwindigkeit = 'Mach 5'; // Fügt eine neue Eigenschaft 'geschwindigkeit' hinzu</code></pre>
+          <p>
+            Eigenschaften können mit dem <span class="g">delete</span>-Operator
+            entfernt werden:
+          </p>
+          <pre><code class="language-js">const raumschiff = {
+  'Treibstoffart': 'Turbo Treibstoff',
+  heimatsplanet: 'Erde',
+  mission: 'Erkunde das Universum'
+};
+
+delete raumschiff.mission; // Entfernt die Eigenschaft 'mission'</code></pre>
+          <p>Weiteres Beispiel:</p>
+
+          <pre><code class="language-js">let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+// Write your code below
+spaceship.color = 'glorious gold';
+
+spaceship.numEngines = 8;
+
+delete spaceship['Secret Mission'];</code></pre>
+        </section>
+        <section>
+          <h2>Methoden</h2>
+          <div class="zweispaltig">
+            <p>
+              Wenn ein Wert einer Eigenschaft eine Funktion ist, nennt man diese
+              Eigenschaft eine Methode. Eine Eigenschaft beschreibt, was ein
+              Objekt hat, eine Methode beschreibt, was ein objekt tut.
+            </p>
+            <p>
+              Objekt-Methoden sind vertraut, da sie schon immer genutzt wurden,
+              Beispielsweise ist <span class="g">console</span> ein globales
+              JavaScript-Objekt, und <span class="g">.log()</span> ist eine
+              Methode davon. Auch <span class="g">Math</span> ist ein globales
+              Objekt mit Methoden wie <span class="g">.floor()</span>.
+            </p>
+            <p>
+              Methoden können in Objekt-Literalen durch gewöhnliche, durch
+              Doppelpunkte getrennte Schlüssel-Wert-Paare eingefügt werden,
+              wobei der Schlüssel der Methodenname ist und der Wert ein anonymer
+              Funktionsausdruck.
+            </p>
+          </div>
+          <pre><code class="language-js">const alienRaumschiff = {
+  eindringen: function () {
+    console.log('Hallo! Wir sind gekommen, euren Planeten zu dominieren. Statt Erde soll er New Xaculon heißen.')
+  }
+};</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Mit der neuen Methodensyntax ab ES6 können der Doppelpunkt und das
+              <span class="g">funktion</span>-Schlüsselwort weggelassen werden:
+            </p>
+          </div>
+          <pre><code class="language-js">const alienRaumschiff = {
+  eindringen () {
+    console.log('Hallo! Wir sind gekommen, euren Planeten zu dominieren. Statt Erde soll er New Xaculon heißen.')
+  }
+};</code></pre>
+          <p class="zweispaltig">
+            Methoden werden durch Anhä$ngen des Objektnamens, eines Punkts, dem
+            Methodennamen und Klammern aufgerufen:
+          </p>
+          <pre><code class="language-js">alienRaumschiff.eindringen(); // Gibt die Nachricht aus</code></pre>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">const alienShip = {
+  retreat () {
+    console.log(retreatMessage)
+  },
+  takeOff () {
+    console.log('Spim... Borp... Glix... Blastoff!')
+  }
+};
+
+alienShip.retreat();
+alienShip.takeOff();
+
+/*
+Ausgabe:
+We no longer wish to conquer your planet. It is full of dogs, which we do not care for.
+Spim... Borp... Glix... Blastoff!
+*/</code></pre>
+        </section>
+        <section>
+          <h2>Verschachtelte Objekte</h2>
+          <div class="zweispaltig">
+            <p>
+              In Anwendungen sind Objekte oft verschachtelt - ein Objekt kann
+              ein weiteres Objekt als Eigenschaft enthalten, das wiederum ein
+              Array von noch mehr Objekten enthalten kann.
+            </p>
+            <p>
+              Im <span class="g">raumschiff</span>-Objekt wird ein
+              <span class="g">crew</span>-Objekt benötigt, das alle
+              Cre-Mitglieder enthält. Jedes Cre-Mitglies ist selbst ein Objekt
+              mit Eigenschaften wie <span class="g">name</span> und
+              <span class="g">degree</span> und hat eigene Methoden je nach
+              Rolle.
+            </p>
+            <p>
+              Auch andere objekte können verschachtelt sein, wie ein
+              <span class="g">telescope</span> oder Details zum
+              <span class="g">nanoelecronics</span>-Objekt.
+            </p>
+          </div>
+          <pre><code class="language-js">const raumschiff = {
+  telescope: {
+    baujahr: 2018,
+    modell: '91031-XLT',
+    brennweite: 2032
+  },
+  crew: {
+    kapitän: {
+      name: 'Sandra',
+      abschluss: 'Computertechnik',
+      teamMotivation() { console.log('Wir schaffen das!') }
+    }
+  },
+  motor: {
+    modell: 'Nimbus2000'
+  },
+  nanoelektronik: {
+    computer: {
+      terabytes: 100,
+      monitore: 'HD'
+    },
+    'backup': {
+      batterie: 'Lithium',
+      terabytes: 50
+    }
+  }
+};</code></pre>
+          <p class="zweispaltig">
+            Verschachtelte Eigenschaften können durch Verkettung von Operatoren
+            erreicht werden:
+          </p>
+          <pre><code class="language-js">raumschiff.nanoelektronik['backup'].batterie; // Gibt 'Lithium' zurück</code></pre>
+        </section>
+        <section>
+          <h2>Übergabe durch Referenz</h2>
+          <div class="zweispaltig">
+            <p>
+              Objekte werden durch Referenz übergeben. Das bedeutet, wenn ein
+              Objekt in einer Funktion als Argument übergeben wird, zeigt der
+              Parameter auf denselben Speicherort.
+            </p>
+            <p>
+              Änderungen an Eigenschaften eines Objekts in einer Funktion wirken
+              sich dauerhaft auf das Objekt aus, auch wenn das Objekt mit
+              <span class="g">const</span> deklariert wurde
+            </p>
+          </div>
+          <pre><code class="language-js">const raumschiff = {
+  heimatsplanet: 'Erde',
+  farbe: 'silber'
+};
+
+let lackieren = obj => {
+  obj.farbe = 'glänzendes Gold';
+};
+
+lackieren(raumschiff);
+
+raumschiff.farbe; // Gibt 'glänzendes Gold' zurück</code></pre>
+          <p class="zweispaltig">
+            Eine Neue Zuweisung des objekts innerhalb einer Funktion
+            funktioniert nicht:
+          </p>
+          <pre><code class="language-js">let raumschiff = {
+  heimatsplanet: 'Erde',
+  farbe: 'rot'
+};
+
+let versucheNeuZuweisung = obj => {
+  obj = {
+    identifiziert: false,
+    'transporttyp': 'fliegend'
+  };
+  console.log(obj); // Gibt das neue Objekt aus
+};
+
+versucheNeuZuweisung(raumschiff); // Die Neue Zuweisung wirkt sich nicht aus
+raumschiff; // Bleibt unverändert</code></pre>
+        </section>
+        <section>
+          <h2>Schleifen durch Objekte</h2>
+          <div class="zweispaltig">
+            <p>
+              Schleifen sind Werkzeuge, um Codeblöcke wiederholt auszuführen.
+              Arrays werden durch numerische Indizes durchlaufen, aber
+              Schlüssel-Wert-Paare in Objekten sind ungeordnet.
+            </p>
+            <p>
+              JavaScript bietet mit der <span class="g">for...in</span>-Schleife
+              eine Lösung, um durch Eigenschaften eins Objekts zu iterieren.
+            </p>
+          </div>
+          <pre><code class="language-js">for (let mitglied in raumschiff.crew) {
+  console.log(`${mitglied}: ${raumschiff.crew[mitglied].name}`);
+}</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Die <span class="g">for...in</span>-Schleife iteriert durch alle
+              Eigenschaften eines Objekts. In jeder Iteration wird eine Variable
+              auf den aktuellen Schlüssel gesetzt, um auf die entsprechende
+              Eigenschaft zuzugreifen.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-js">for (let rolle in raumschiff.besatzung) {
+  console.log(`${rolle}: ${raumschiff.besatzung[rolle].name}`);
+}</code></pre>
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <ul>
+            <li>Objekte speichern Sammlungen von Schlüssel-Wert-Paaren.</li>
+            <li>
+              Eigenschaften sind Schlüssel-Wert-Paare, Methoden sind
+              Eigenschaften mit Funktionen
+            </li>
+            <li>
+              Objekt-Literale bestehen aus kommagetrennten Schlüssel-Wert-Paaren
+              in geschweiften Klammern.
+            </li>
+            <li>
+              Zugriff, Hinzufügen und Ändern von Eigenschaften mit Punkt- oder
+              Klammer-Notation.
+            </li>
+            <li>
+              Methoden können als anonyme Funktionen oder mit ES6-Syntax
+              definiert werden.
+            </li>
+            <li>
+              Verschachtelte Objekte können durch Verkettung von Operatoren
+              navigiert werden.
+            </li>
+            <li>
+              Objekte sind veränderbar (mutable), auch wenn mit
+              <span class="g">const</span> deklariert.
+            </li>
+            <li>
+              Objekte werden per Referenz übergeben, Änderungen innerhalb von
+              Funktionen sind dauerhaft.
+            </li>
+            <li>
+              Iteration über Objekte mit
+              <span class="g">for...in</span> möglich.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>
