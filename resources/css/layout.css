@@ -41,9 +41,8 @@ header {
     margin-top: 4px;
 }
 
-
-
-a {
+.header {
+    font-weight: 400;
     text-decoration: none;
     color: whitesmoke;
     font-size: 1.25rem;

@@ -6,11 +6,12 @@
     <title>Index</title>
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/liste.css" />
+    <script type="text/javascript" src="../../js/liste.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="left">
-        <a href="../../../index.html">
+        <a class="header" href="../../../index.html">
           <img
             src="../../images/justlogo/Just IT-horizontal.png"
             alt="Just IT Logo"
@@ -18,407 +19,753 @@
             height="85"
             class="logo"
         /></a>
-        <a href="liste.html" class="liste">Index</a>
+        <a class="header" href="liste.html" class="liste">Index</a>
       </div>
       <div class="right">
-        <a href="" class="navlink">Profile</a>
-        <a href="" class="navlink">Login</a>
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
       </div>
     </header>
     <div class="container">
       <main>
         <h1>Index</h1>
         <div class="htmlindex">
-          <a href="../html/html.html"><h3>HTML</h3></a>
+          <h3>HTML</h3>
           <ol>
             <li>
-              <a href="../html/elementcontent.html"><h4>Element Content</h4></a>
+              <a
+                onmouseover="toggleMenu(1, true)"
+                onmouseout="toggleMenu(1, false)"
+                href="../html/elementcontent.html"
+                >Element Content</a
+              >
             </li>
-            <ul>
-              <li>Opening Tag</li>
-              <li>Closing Tag</li>
-              <li>Attribute Name and Values</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(1, true)"
+              onmouseout="toggleMenu(1, false)"
+              id="ddmenu1"
+            >
+              <ul>
+                <li>Opening Tag</li>
+                <li>Closing Tag</li>
+                <li>Attribute Name and Values</li>
+              </ul>
+            </div>
             <li>
               <a href="../html/documenttypedeclaration.html"
-                ><h4>Document Type Declaratioin</h4></a
+                >Document Type Declaratioin</a
               >
             </li>
             <li>
-              <a href="../html/htmlstructure.html"><h4>Struktur</h4></a>
+              <a
+                onmouseover="toggleMenu(3, true)"
+                onmouseout="toggleMenu(3, false)"
+                href="../html/htmlstructure.html"
+                >Struktur</a
+              >
             </li>
-            <ul>
-              <li>Indentation</li>
-              <li>Comments</li>
-              <li>Whitespace</li>
-              <li>Semantic HTML Element</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(3, true)"
+              onmouseout="toggleMenu(3, false)"
+              id="ddmenu3"
+            >
+              <ul>
+                <li>Indentation</li>
+                <li>Comments</li>
+                <li>Whitespace</li>
+                <li>Semantic HTML Element</li>
+              </ul>
+            </div>
             <li>
-              <a href="../html/htmlelement.html"><h4>Element</h4></a>
+              <a
+                onmouseover="toggleMenu(4, true)"
+                onmouseout="toggleMenu(4, false)"
+                href="../html/htmlelement.html"
+                >Element</a
+              >
             </li>
-            <ul>
-              <li>HTML Element</li>
-              <li>Head Element</li>
-              <li>Meta Element</li>
-              <li>Title Element</li>
-              <li>Body Element</li>
-              <li>Heading Element</li>
-              <li>Paragraph Element</li>
-              <li>Line Break Element</li>
-              <li>Strong Element</li>
-              <li>Emphasis Element</li>
-              <li>Div Element</li>
-              <li>Span Element</li>
-              <li>List Item Element</li>
+            <div
+              onmouseover="toggleMenu(4, true)"
+              onmouseout="toggleMenu(4, false)"
+              id="ddmenu4"
+            >
               <ul>
-                <li>Ordered List Element</li>
-                <li>Unordered List Element</li>
+                <li>HTML Element</li>
+                <li>Head Element</li>
+                <li>Meta Element</li>
+                <li>Title Element</li>
+                <li>Body Element</li>
+                <li>Heading Element</li>
+                <li>Paragraph Element</li>
+                <li>Line Break Element</li>
+                <li>Strong Element</li>
+                <li>Emphasis Element</li>
+                <li>Div Element</li>
+                <li>Span Element</li>
+                <li>List Item Element</li>
+                <ul>
+                  <li>Ordered List Element</li>
+                  <li>Unordered List Element</li>
+                </ul>
+                <li>Anchor Element</li>
+                <ul>
+                  <li>Target Attribute</li>
+                  <li>Link to a Different Part of the Page</li>
+                  <li>File Path</li>
+                </ul>
+                <li>Image Element</li>
+                <ul>
+                  <li>Attribute</li>
+                </ul>
+                <li>Video Element</li>
+                <li>HTML Attribute</li>
+                <ul>
+                  <li>Class Attributes</li>
+                  <li>Unique ID Attributes</li>
+                </ul>
               </ul>
-              <li>Anchor Element</li>
-              <ul>
-                <li>Target Attribute</li>
-                <li>Link to a Different Part of the Page</li>
-                <li>File Path</li>
-              </ul>
-              <li>Image Element</li>
-              <ul>
-                <li>Attribute</li>
-              </ul>
-              <li>Video Element</li>
-              <li>HTML Attribute</li>
-              <ul>
-                <li>Class Attributes</li>
-                <li>Unique ID Attributes</li>
-              </ul>
-            </ul>
+            </div>
             <li>
-              <a href="../html/htmltables.html"><h4>HTML Tables</h4></a>
+              <a
+                onmouseover="toggleMenu(5, true)"
+                onmouseout="toggleMenu(5, false)"
+                href="../html/htmltables.html"
+                >HTML Tables</a
+              >
             </li>
-            <ul>
-              <li>Table Element</li>
-              <li>Table Head Element</li>
-              <li>Table Body Element</li>
-              <li>Table Footer Element</li>
-              <li>Table Row Element</li>
-              <li>Table Heading Element</li>
-              <li>Rowspan Attribute</li>
-              <li>Colspan Attribute</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(5, true)"
+              onmouseout="toggleMenu(5, false)"
+              id="ddmenu5"
+            >
+              <ul>
+                <li>Table Element</li>
+                <li>Table Head Element</li>
+                <li>Table Body Element</li>
+                <li>Table Footer Element</li>
+                <li>Table Row Element</li>
+                <li>Table Heading Element</li>
+                <li>Rowspan Attribute</li>
+                <li>Colspan Attribute</li>
+              </ul>
+            </div>
           </ol>
         </div>
         <div class="cssindex">
           <h3>CSS</h3>
           <ol>
             <li>
-              <a href="../css/css_ruleset_declarations.html"
-                ><h4>Ruleset and Declarations</h4></a
+              <a
+                onmouseover="toggleMenu(6, true)"
+                onmouseout="toggleMenu(6, false)"
+                href="../css/css_ruleset_declarations.html"
+                >Ruleset and Declarations</a
               >
             </li>
-            <ul>
-              <li>Comments</li>
-              <li>!important Rule</li>
-              <li>Resource URL's</li>
-            </ul>
-            <li>
-              <a href="../css/css_typography.html"><h4>Typography</h4></a>
-            </li>
-            <ul>
-              <li>Font Family</li>
-              <li>@font-face Rule</li>
-              <li>Linking Fonts</li>
-              <li>Fallback Fonts</li>
-              <li>Font Size</li>
+            <div
+              onmouseover="toggleMenu(6, true)"
+              onmouseout="toggleMenu(6, false)"
+              id="ddmenu6"
+            >
               <ul>
-                <li>Unit "em"</li>
-                <li>Unit "rem"</li>
+                <li>Comments</li>
+                <li>!important Rule</li>
+                <li>Resource URL's</li>
               </ul>
-              <li>Font-weight Property</li>
-              <li>Text align</li>
-              <li>Font-Style Property</li>
-              <li>Line-height Property</li>
-            </ul>
+            </div>
             <li>
-              <a href="../css/css_colors.html"><h4>Colors</h4></a>
-            </li>
-            <ul>
-              <li>Foreground Text Color</li>
-              <li>Background Color</li>
-              <li>Color Name Keywords</li>
-              <li>Hexadecimal Colors</li>
-              <li>Opadity</li>
-              <li>RGB() Colors</li>
-              <li>HSL Colors</li>
-              <li>Color Alpha Value</li>
-            </ul>
-            <li>
-              <a href="../css/css_images.html"><h4>Images</h4></a>
-            </li>
-            <ul>
-              <li>Bild zentrieren</li>
-              <ul>
-                <li>Horizontal</li>
-                <li>Vertikal</li>
-              </ul>
-              <li>Text und Bild Kombinationen</li>
-              <ul>
-                <li>Text unter dem Bild</li>
-                <li>Text über dem Bild</li>
-                <li>Text und Bild nebeneinander</li>
-              </ul>
-            </ul>
-            <li>
-              <a href="../css/css_boxmodel.html"><h4>Box Model</h4></a>
-            </li>
-            <ul>
-              <li>The Property box-sizing of CSS Box Model</li>
-              <li>Box-sizing: border-box</li>
-              <li>Height and Width Maximums/Minimums</li>
-              <li>Margin Collapse</li>
-              <li>Auto Keyword</li>
-              <li>Dealing with overflow</li>
-              <li>The visibility Property</li>
-            </ul>
-            <li>
-              <a href="../css/css_display_positioning.html"
-                ><h4>Display and Positioning</h4></a
+              <a
+                onmouseover="toggleMenu(7, true)"
+                onmouseout="toggleMenu(7, false)"
+                href="../css/css_typography.html"
+                >Typography</a
               >
             </li>
-            <ul>
-              <li>Fixed CSS Positioning</li>
-              <li>Display Property</li>
-              <li>Position: relative</li>
-              <li>Position: absolute</li>
-              <li>Float Property</li>
-              <li>Clear Property</li>
-              <li>Z-Index Property</li>
-              <li>Footer Positioning</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(7, true)"
+              onmouseout="toggleMenu(7, false)"
+              id="ddmenu7"
+            >
+              <ul>
+                <li>Font Family</li>
+                <li>@font-face Rule</li>
+                <li>Linking Fonts</li>
+                <li>Fallback Fonts</li>
+                <li>Font Size</li>
+                <ul>
+                  <li>Unit "em"</li>
+                  <li>Unit "rem"</li>
+                </ul>
+                <li>Font-weight Property</li>
+                <li>Text align</li>
+                <li>Font-Style Property</li>
+                <li>Line-height Property</li>
+              </ul>
+            </div>
             <li>
-              <a href="../css/css_responsivedesign.html"
-                ><h4>Responsive Design</h4></a
+              <a
+                onmouseover="toggleMenu(8, true)"
+                onmouseout="toggleMenu(8, false)"
+                href="../css/css_colors.html"
+                >Colors</a
               >
             </li>
-            <ul>
-              <li>Media Features in Media Queries</li>
-              <li>Media Query</li>
-              <li>Media Type in Media Queries</li>
-              <li>"AND" Operator Media Queries</li>
-              <li>Usage of Percentages in CSS</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(8, true)"
+              onmouseout="toggleMenu(8, false)"
+              id="ddmenu8"
+            >
+              <ul>
+                <li>Foreground Text Color</li>
+                <li>Background Color</li>
+                <li>Color Name Keywords</li>
+                <li>Hexadecimal Colors</li>
+                <li>Opadity</li>
+                <li>RGB() Colors</li>
+                <li>HSL Colors</li>
+                <li>Color Alpha Value</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(9, true)"
+                onmouseout="toggleMenu(9, false)"
+                href="../css/css_images.html"
+                >Images</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(9, true)"
+              onmouseout="toggleMenu(9, false)"
+              id="ddmenu9"
+            >
+              <ul>
+                <li>Bild zentrieren</li>
+                <ul>
+                  <li>Horizontal</li>
+                  <li>Vertikal</li>
+                </ul>
+                <li>Text und Bild Kombinationen</li>
+                <ul>
+                  <li>Text unter dem Bild</li>
+                  <li>Text über dem Bild</li>
+                  <li>Text und Bild nebeneinander</li>
+                </ul>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(10, true)"
+                onmouseout="toggleMenu(10, false)"
+                href="../css/css_boxmodel.html"
+                >Box Model</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(10, true)"
+              onmouseout="toggleMenu(10, false)"
+              id="ddmenu10"
+            >
+              <ul>
+                <li>The Property box-sizing of CSS Box Model</li>
+                <li>Box-sizing: border-box</li>
+                <li>Height and Width Maximums/Minimums</li>
+                <li>Margin Collapse</li>
+                <li>Auto Keyword</li>
+                <li>Dealing with overflow</li>
+                <li>The visibility Property</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(11, true)"
+                onmouseout="toggleMenu(11, false)"
+                href="../css/css_display_positioning.html"
+                >Display and Positioning</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(11, true)"
+              onmouseout="toggleMenu(11, false)"
+              id="ddmenu11"
+            >
+              <ul>
+                <li>Fixed CSS Positioning</li>
+                <li>Display Property</li>
+                <li>Position: relative</li>
+                <li>Position: absolute</li>
+                <li>Float Property</li>
+                <li>Clear Property</li>
+                <li>Z-Index Property</li>
+                <li>Footer Positioning</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(12, true)"
+                onmouseout="toggleMenu(12, false)"
+                href="../css/css_responsivedesign.html"
+                >Responsive Design</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(12, true)"
+              onmouseout="toggleMenu(12, false)"
+              id="ddmenu12"
+            >
+              <ul>
+                <li>Media Features in Media Queries</li>
+                <li>Media Query</li>
+                <li>Media Type in Media Queries</li>
+                <li>"AND" Operator Media Queries</li>
+                <li>Usage of Percentages in CSS</li>
+              </ul>
+            </div>
           </ol>
         </div>
         <div class="commandindex">
-          <a href="../commandlines/commandlines.html"><h3>Command Lines</h3></a>
-          <ol>
-            <li>Filesystem Structure</li>
-            <li>The Command Line</li>
-            <li>PWD = Print Working Directory</li>
-            <li>LS = List</li>
-            <li>CD = Change Directory</li>
-            <li>MKDIR = Make Directory</li>
-            <li>Touch = Create File</li>
-            <li>Helper Commands</li>
-          </ol>
+          <a
+            onmouseover="toggleMenu(13, true)"
+            onmouseout="toggleMenu(13, false)"
+            href="../commandlines/commandlines.html"
+            ><h3>Command Lines</h3></a
+          >
+          <div
+            onmouseover="toggleMenu(13, true)"
+            onmouseout="toggleMenu(13, false)"
+            id="ddmenu13"
+          >
+            <ol>
+              <li>Filesystem Structure</li>
+              <li>The Command Line</li>
+              <li>PWD = Print Working Directory</li>
+              <li>LS = List</li>
+              <li>CD = Change Directory</li>
+              <li>MKDIR = Make Directory</li>
+              <li>Touch = Create File</li>
+              <li>Helper Commands</li>
+            </ol>
+          </div>
         </div>
         <div class="javascript">
           <a href="../javascript/jsindex.html"><h3>JavaScript</h3></a>
           <ol>
             <li>
-              <a href="../javascript/jseinstieg.html"><h4>Einstieg</h4></a>
-            </li>
-            <ul>
-              <li>Konsole</li>
-              <li>Kommentare</li>
-              <li>Datentypen</li>
-              <li>Arithmetische Operatoren</li>
-              <li>String - Verkettung</li>
-              <li>Eigenschaften</li>
-              <li>Methoden</li>
-              <li>Eingebaute Objekte</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsversionen.html"><h4>Versionen</h4></a>
-            </li>
-            <ul>
-              <li>Ein Blick in die Geschichte von JavaScript</li>
-              <li>ECMAScript vs. JavaScript</li>
-              <li>Warum ist ES6 bis heute so wichtig?</li>
-              <li>ES6 in der Praxis</li>
-              <li>Was ist mit älterem Code?</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsvariables.html"><h4>Variablen</h4></a>
-            </li>
-            <ul>
-              <li>Eine Variable erstellen</li>
-              <li>Regeln für Variablennamen</li>
-              <li>Variable: var</li>
-              <li>Variable: let</li>
-              <li>Variable: const</li>
-              <li>Mathematische Zuweisungsoperatoren</li>
-              <li>Inkrement - und Dekrement - Operator</li>
-              <li>String - Verkettung mit Variablen</li>
-              <li>String - Interpolation</li>
-              <li>Der typeof - Operator</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsfunctions.html"><h4>Funktionen</h4></a>
-            </li>
-            <ul>
-              <li>Funktionsdeklarationen</li>
-              <li>Eine Funktion aufrufen</li>
-              <li>Parameter und Argumente</li>
-              <li>Standardparameter</li>
-              <li>Rückgabewert (Return)</li>
-              <li>Hilfsfunktionen</li>
-              <li>Funktionsausdrücke</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsconditionalstatements.html"
-                ><h4>Conditional Statements</h4></a
+              <a
+                onmouseover="toggleMenu(14, true)"
+                onmouseout="toggleMenu(14, false)"
+                href="../javascript/jseinstieg.html"
+                >Einstieg</a
               >
             </li>
-            <ul>
-              <li>if - Anweisung</li>
-              <li>if...else - Anweisung</li>
-              <li>Vergleichsoperatoren</li>
-              <li>Logische Operatoren</li>
-              <li>Truhy und Falsy</li>
-              <li>Zuweisung mit Truthy und Falsy</li>
-              <li>Ternärer Operator</li>
-              <li>else - if -Aneisung</li>
-              <li>Das Schlüsselwort switch</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(14, true)"
+              onmouseout="toggleMenu(14, false)"
+              id="ddmenu14"
+            >
+              <ul>
+                <li>Konsole</li>
+                <li>Kommentare</li>
+                <li>Datentypen</li>
+                <li>Arithmetische Operatoren</li>
+                <li>String - Verkettung</li>
+                <li>Eigenschaften</li>
+                <li>Methoden</li>
+                <li>Eingebaute Objekte</li>
+              </ul>
+            </div>
             <li>
-              <a href="../javascript/jsblöckeundscope.html"
-                ><h4>Blöcke und Scope</h4></a
+              <a
+                onmouseover="toggleMenu(15, true)"
+                onmouseout="toggleMenu(15, false)"
+                href="../javascript/jsversionen.html"
+                >Versionen</a
               >
             </li>
-            <ul>
-              <li>Globaler Scope</li>
-              <li>Block - Scope</li>
-              <li>Scope - Verschmutzung</li>
-              <li>Gute Praxis für Scoping</li>
-              <li>Zusammenfassung</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(15, true)"
+              onmouseout="toggleMenu(15, false)"
+              id="ddmenu15"
+            >
+              <ul>
+                <li>Ein Blick in die Geschichte von JavaScript</li>
+                <li>ECMAScript vs. JavaScript</li>
+                <li>Warum ist ES6 bis heute so wichtig?</li>
+                <li>ES6 in der Praxis</li>
+                <li>Was ist mit älterem Code?</li>
+              </ul>
+            </div>
             <li>
-              <a href="../javascript/jsarrays.html"><h4>Arrays</h4></a>
-            </li>
-            <ul>
-              <li>Ein Array erstellen</li>
-              <li>Elemente zugreifen</li>
-              <li>Arrays mit let und const</li>
-              <li>Die .length - Eigenschaft</li>
-              <li>Die .push() - Methode</li>
-              <li>Die .pop() - Methode</li>
-              <li>Weitere Array - Methoden</li>
-              <li>Arrays und Funktionen</li>
-              <li>Verschachtelte Arrays</li>
-              <li>Zusammenfassung</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsloop.html"><h4>Loops</h4></a>
-            </li>
-            <ul>
-              <li>Manuelles Wiederholen von Aufgaben</li>
-              <li>Die for - Schleife</li>
-              <li>Schleife rückwärts durchlaufen</li>
-              <li>Schleifen durch Arrays</li>
-              <li>Verschachtelte Schleifen</li>
-              <li>Die while - Schleife</li>
-              <li>Do...while - Schleife</li>
-              <li>Das break - Schlüsselwort</li>
-              <li>Zusammenfassung</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsiteratoren.html"><h4>Iteratoren</h4></a>
-            </li>
-            <ul>
-              <li>.forEach() - Methode</li>
-              <li>.map() - Methode</li>
-              <li>.filter() - Methode</li>
-              <li>.findIndex() - Methode</li>
-              <li>.reduce() - Methode</li>
-              <li>Zusammenfassung</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsobjekte.html"><h4>Objekte</h4></a>
-            </li>
-            <ul>
-              <li>Erstellen von Objekt-Literalen</li>
-              <li>Zugriff auf Eigenschaften</li>
-              <li>Klammernotation</li>
-              <li>Eigenschaftszuweisung</li>
-              <li>Methoden</li>
-              <li>Verschachtelte Objekte</li>
-              <li>Übergabe durch Referenz</li>
-              <li>Schleifen durch Objekte</li>
-              <li>zusammenfassung</li>
-            </ul>
-            <li>
-              <a href="../javascript/jsadvancedobjects.html"
-                ><h4>Fortgeschrittene objekte</h4></a
+              <a
+                onmouseover="toggleMenu(16, true)"
+                onmouseout="toggleMenu(16, false)"
+                href="../javascript/jsvariables.html"
+                >Variablen</a
               >
             </li>
-            <ul>
-              <li>Das Schlüsselwort this</li>
-              <li>Arrow Functions und this</li>
-              <li>Privatsphäre</li>
-              <li>Getter</li>
-              <li>Setter</li>
-              <li>Factory-Funktionen</li>
-              <li>Property Value Shorthand</li>
-              <li>Destrukturierte Zuweisung</li>
-              <li>Eingebaute Objektmethoden</li>
-              <li>Zusammenfassung</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(16, true)"
+              onmouseout="toggleMenu(16, false)"
+              id="ddmenu16"
+            >
+              <ul>
+                <li>Eine Variable erstellen</li>
+                <li>Regeln für Variablennamen</li>
+                <li>Variable: var</li>
+                <li>Variable: let</li>
+                <li>Variable: const</li>
+                <li>Mathematische Zuweisungsoperatoren</li>
+                <li>Inkrement - und Dekrement - Operator</li>
+                <li>String - Verkettung mit Variablen</li>
+                <li>String - Interpolation</li>
+                <li>Der typeof - Operator</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(17, true)"
+                onmouseout="toggleMenu(17, false)"
+                href="../javascript/jsfunctions.html"
+                >Funktionen</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(17, true)"
+              onmouseout="toggleMenu(17, false)"
+              id="ddmenu17"
+            >
+              <ul>
+                <li>Funktionsdeklarationen</li>
+                <li>Eine Funktion aufrufen</li>
+                <li>Parameter und Argumente</li>
+                <li>Standardparameter</li>
+                <li>Rückgabewert (Return)</li>
+                <li>Hilfsfunktionen</li>
+                <li>Funktionsausdrücke</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(18, true)"
+                onmouseout="toggleMenu(18, false)"
+                href="../javascript/jsconditionalstatements.html"
+                >Conditional Statements</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(18, true)"
+              onmouseout="toggleMenu(18, false)"
+              id="ddmenu18"
+            >
+              <ul>
+                <li>if - Anweisung</li>
+                <li>if...else - Anweisung</li>
+                <li>Vergleichsoperatoren</li>
+                <li>Logische Operatoren</li>
+                <li>Truhy und Falsy</li>
+                <li>Zuweisung mit Truthy und Falsy</li>
+                <li>Ternärer Operator</li>
+                <li>else - if -Aneisung</li>
+                <li>Das Schlüsselwort switch</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(19, true)"
+                onmouseout="toggleMenu(19, false)"
+                href="../javascript/jsblöckeundscope.html"
+                >Blöcke und Scope</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(19, true)"
+              onmouseout="toggleMenu(19, false)"
+              id="ddmenu19"
+            >
+              <ul>
+                <li>Globaler Scope</li>
+                <li>Block - Scope</li>
+                <li>Scope - Verschmutzung</li>
+                <li>Gute Praxis für Scoping</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(20, true)"
+                onmouseout="toggleMenu(20, false)"
+                href="../javascript/jsarrays.html"
+                >Arrays</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(20, true)"
+              onmouseout="toggleMenu(20, false)"
+              id="ddmenu20"
+            >
+              <ul>
+                <li>Ein Array erstellen</li>
+                <li>Elemente zugreifen</li>
+                <li>Arrays mit let und const</li>
+                <li>Die .length - Eigenschaft</li>
+                <li>Die .push() - Methode</li>
+                <li>Die .pop() - Methode</li>
+                <li>Weitere Array - Methoden</li>
+                <li>Arrays und Funktionen</li>
+                <li>Verschachtelte Arrays</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(21, true)"
+                onmouseout="toggleMenu(21, false)"
+                href="../javascript/jsloop.html"
+                >Loops</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(21, true)"
+              onmouseout="toggleMenu(21, false)"
+              id="ddmenu21"
+            >
+              <ul>
+                <li>Manuelles Wiederholen von Aufgaben</li>
+                <li>Die for - Schleife</li>
+                <li>Schleife rückwärts durchlaufen</li>
+                <li>Schleifen durch Arrays</li>
+                <li>Verschachtelte Schleifen</li>
+                <li>Die while - Schleife</li>
+                <li>Do...while - Schleife</li>
+                <li>Das break - Schlüsselwort</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(22, true)"
+                onmouseout="toggleMenu(22, false)"
+                href="../javascript/jsiteratoren.html"
+                >Iteratoren</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(22, true)"
+              onmouseout="toggleMenu(22, false)"
+              id="ddmenu22"
+            >
+              <ul>
+                <li>.forEach() - Methode</li>
+                <li>.map() - Methode</li>
+                <li>.filter() - Methode</li>
+                <li>.findIndex() - Methode</li>
+                <li>.reduce() - Methode</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(23, true)"
+                onmouseout="toggleMenu(23, false)"
+                href="../javascript/jsobjekte.html"
+                >Objekte</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(23, true)"
+              onmouseout="toggleMenu(23, false)"
+              id="ddmenu23"
+            >
+              <ul>
+                <li>Erstellen von Objekt-Literalen</li>
+                <li>Zugriff auf Eigenschaften</li>
+                <li>Klammernotation</li>
+                <li>Eigenschaftszuweisung</li>
+                <li>Methoden</li>
+                <li>Verschachtelte Objekte</li>
+                <li>Übergabe durch Referenz</li>
+                <li>Schleifen durch Objekte</li>
+                <li>zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(24, true)"
+                onmouseout="toggleMenu(24, false)"
+                href="../javascript/jsadvancedobjects.html"
+                >Fortgeschrittene objekte</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(24, true)"
+              onmouseout="toggleMenu(24, false)"
+              id="ddmenu24"
+            >
+              <ul>
+                <li>Das Schlüsselwort this</li>
+                <li>Arrow Functions und this</li>
+                <li>Privatsphäre</li>
+                <li>Getter</li>
+                <li>Setter</li>
+                <li>Factory-Funktionen</li>
+                <li>Property Value Shorthand</li>
+                <li>Destrukturierte Zuweisung</li>
+                <li>Eingebaute Objektmethoden</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+          </ol>
+        </div>
+        <div class="backend">
+          <h3>Back-End</h3>
+          <ol>
+            <li>
+              <a
+                onmouseover="toggleMenu(25, true)"
+                onmouseout="toggleMenu(25, false)"
+                href="../backend/whatisthebackend.html"
+                >Was ist das Back-End</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(25, true)"
+              onmouseout="toggleMenu(25, false)"
+              id="ddmenu25"
+            >
+              <ul>
+                <li>Frontend und Backend</li>
+                <li>Der Webserver</li>
+                <li>Was ist das Back-End</li>
+                <li>Datenspeicherung</li>
+                <li>Was ist eine API</li>
+                <li>Authentifizierung und Autorisierung</li>
+                <li>Verschiedene Back-End-Stacks</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
+            <li>
+              <a
+                onmouseover="toggleMenu(26, true)"
+                onmouseout="toggleMenu(26, false)"
+                href="../backend/whatisJSON.html"
+                >JSON</a
+              >
+            </li>
+            <div
+              onmouseover="toggleMenu(26, true)"
+              onmouseout="toggleMenu(26, false)"
+              id="ddmenu26"
+            >
+              <ul>
+                <li>Einleitung</li>
+                <li>Was ist JSON</li>
+                <li>Typische Anwendungsfälle von JSON</li>
+                <li>JSON-Syntax</li>
+                <li>JSON-Datentypen</li>
+                <li>Nicht unterstützte Datentypen</li>
+                <li>Zusammenfassung</li>
+              </ul>
+            </div>
           </ol>
         </div>
         <div class="zusätze">
-          <h2>Zusätze</h2>
+          <h3>Zusätze</h3>
           <ol>
             <li>
-              <a href="../zusätze/ContentManagementSystem.html"
-                ><h3>Content-Management-System</h3></a
+              <a
+                onmouseover="toggleMenu(27, true)"
+                onmouseout="toggleMenu(27, false)"
+                href="../zusätze/ContentManagementSystem.html"
+                >Content-Management-System</a
               >
             </li>
-            <ul>
-              <li>Wie ein CMS funktioniert</li>
-              <li>Vorteile eines CMS</li>
-              <li>Verschiedene Arten von CMS</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(27, true)"
+              onmouseout="toggleMenu(27, false)"
+              id="ddmenu27"
+            >
+              <ul>
+                <li>Wie ein CMS funktioniert</li>
+                <li>Vorteile eines CMS</li>
+                <li>Verschiedene Arten von CMS</li>
+              </ul>
+            </div>
             <li>
-              <a href="../zusätze/WordPress.html"><h3>WordPress</h3></a>
+              <a
+                onmouseover="toggleMenu(28, true)"
+                onmouseout="toggleMenu(28, false)"
+                href="../zusätze/WordPress.html"
+                >WordPress</a
+              >
             </li>
-            <ul>
-              <li>Content-Management-System</li>
-              <li>Beliebtheit</li>
-              <li>Kostenlos und Open Source</li>
-              <li>Flexibilität und Anpassbarkeit</li>
-              <li>Benutzerfreundlichkeit</li>
-              <li>Zwei Versionen</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(28, true)"
+              onmouseout="toggleMenu(28, false)"
+              id="ddmenu28"
+            >
+              <ul>
+                <li>Content-Management-System</li>
+                <li>Beliebtheit</li>
+                <li>Kostenlos und Open Source</li>
+                <li>Flexibilität und Anpassbarkeit</li>
+                <li>Benutzerfreundlichkeit</li>
+                <li>Zwei Versionen</li>
+              </ul>
+            </div>
             <li>
-              <a href="../zusätze/Plugin.html"><h3>Plugin</h3></a>
+              <a
+                onmouseover="toggleMenu(29, true)"
+                onmouseout="toggleMenu(29, false)"
+                href="../zusätze/Plugin.html"
+                >Plugin</a
+              >
             </li>
-            <ul>
-              <li>Merkmale eines Plugins</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(29, true)"
+              onmouseout="toggleMenu(29, false)"
+              id="ddmenu29"
+            >
+              <ul>
+                <li>Merkmale eines Plugins</li>
+              </ul>
+            </div>
             <li>
-              <a href="../zusätze/NinjaForms.html"><h3>NinjaForms</h3></a>
+              <a
+                onmouseover="toggleMenu(30, true)"
+                onmouseout="toggleMenu(30, false)"
+                href="../zusätze/NinjaForms.html"
+                >NinjaForms</a
+              >
             </li>
-            <ul>
-              <li>Funktionen und Vorteile</li>
-              <li>Wichtige Hinweise</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(30, true)"
+              onmouseout="toggleMenu(30, false)"
+              id="ddmenu30"
+            >
+              <ul>
+                <li>Funktionen und Vorteile</li>
+                <li>Wichtige Hinweise</li>
+              </ul>
+            </div>
             <li>
-              <a href="../zusätze/reCAPTCHA.html"><h3>reCAPTCHA</h3></a>
+              <a
+                onmouseover="toggleMenu(31, true)"
+                onmouseout="toggleMenu(31, false)"
+                href="../zusätze/reCAPTCHA.html"
+                >reCAPTCHA</a
+              >
             </li>
-            <ul>
-              <li>Was ist reCAPTCHA</li>
-              <li>Wie funktioniert es in der Praxis?</li>
-              <li>Warum ist reCAPTCHA wichtig?</li>
-            </ul>
+            <div
+              onmouseover="toggleMenu(31, true)"
+              onmouseout="toggleMenu(31, false)"
+              id="ddmenu31"
+            >
+              <ul>
+                <li>Was ist reCAPTCHA</li>
+                <li>Wie funktioniert es in der Praxis?</li>
+                <li>Warum ist reCAPTCHA wichtig?</li>
+              </ul>
+            </div>
           </ol>
         </div>
       </main>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/backend/whatisJSON.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../../html/html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>JSON</h1>
+        <section>
+          <h2>Einleitung</h2>
+          <div class="zweispaltig">
+            <p>
+              In einer datenüberfluteten Welt wird der Umgang mit verschiedenen
+              Datenformaten immer Wichtiger. Datenstrukturen müssen in ein
+              Format übertragen werden,
+            </p>
+            <p>
+              das von anderen Programmiersprachen und Plattformen erkannt und
+              gelesen werden kann. Glücklicherweise existiert ein solches Format
+              zum Datenaustausch.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Was ist JSON</h2>
+          <div class="zweispaltig">
+            <p>
+              <strong>JSON (JavaScript Object Notation)</strong> ist ein
+              beliebtes, sprachunabhängiges Standardformat zur Speicherung und
+              zum Austausch von Daten. Es wurde von
+              <strong>ECMA International</strong> übernommen - einer 1961
+              gegründeten Industrievereinigung zur Standardisierung von
+              Informations- und Kommunikationssystemen.
+            </p>
+            <p>
+              JSON hat sich als <strong>De-facto-Standard</strong> etabliert,
+              der die Speicherung und Übertragung von Daten zweischen allen
+              Programmiersprachen erleichtert.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Typische Anwendungsfälle von JSON</h2>
+          <div class="zweispaltig">
+            <p>
+              JSON wird häufiger verwendet, um den
+              <strong>Datentransfer in Webanwendungen</strong> zwischen einem
+              Client (z.B. einem Webbrowser) und einem Server zu ermöglichen.
+            </p>
+            <p>
+              Beispiel: Beim Ausfüllen eines Webformulars wird das Formular von
+              HTML in JavaScript-Objekte umgewandelt, anschliessend in
+              JSON-Objekte konvertiert und zur Verarbeitung an einem Webserver
+              gesendet. Solche Transaktionen reichen von einfachen Suchanfragen
+              bis hin zu mehrseitigen Bewerbungsformularen.
+            </p>
+            <p>
+              Wenn Unternehmen ihre Daten öffentlich für andere Anwendungen
+              bereitstellen - etwa Spotify seine Musikbibliothek oder Google
+              Kartendaten - erfolgt die Formatierung dieser Informationen meist
+              in JSON. So kann jede Anwendung, unabhängig von der verwendeten
+              Sprache, die Daten empfangen und verarbeiten.
+              <br /><br />
+              Beispiele beliebter Web-APIs, die JSON verwenden:
+            </p>
+            <ul>
+              <li>Google Maps</li>
+              <li>Google Auth 2.0 Authentication</li>
+              <li>Spotify Music Web API</li>
+              <li>LinkedIn Profile API</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>JSON-Syntax</h2>
+          <p class="zweispaltig">
+            Da Json aus der Programmiersprache JavaScript abgeleitet wurde,
+            ähnelt es in der Syntax stark JavaScript-Objekten.
+            <br /><br />
+            Beispiel:
+          </p>
+          <pre><code class="language-js">{
+  "student": {
+    "name": "Rumaisa Mahoney",
+    "age": 30,
+    "fullTime": true,
+    "languages": ["JavaScript", "HTML", "CSS"],
+    "GPA": 3.9,
+    "favoriteSubject": null
+  }
+}</code></pre>
+          <p>Wichtige Syntaxregeln:</p>
+          <ul>
+            <li>
+              Geschweifte Klammern <span class="g">{...}</span> enthalten
+              <strong>Objekte</strong>
+            </li>
+            <li>
+              Eckige Klammern <span class="g">[...]</span> enthalten
+              <strong>Arrays</strong>
+            </li>
+            <li>
+              Daten werden in <strong>Name-Wert-Parren</strong> gespeichert,
+              getrennt durch einen Doppelpunkt <span class="g">:</span>
+            </li>
+            <li>
+              Name-Wert-Paare sowie Array-Elemente werden durch ein
+              <strong>Komman</strong> <span class="g">,</span> getrennt
+            </li>
+            <li>
+              <strong>Keine abschliessenden Kommata erlaubt</strong>
+            </li>
+            <li>
+              Property-Name müssen in
+              <strong>doppelten Anführungszeichen</strong> stehen (anders als in
+              JavaScript)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>JSON-Datentypen</h2>
+          <p>Erlaubte Datentypen in JSON:</p>
+          <ul>
+            <li>
+              <strong>string</strong> (Zeichenkette in doppelten
+              Anführungszeichen)
+            </li>
+            <li><strong>number</strong> (Ganzzahlen oder Fliesskommazahlen)</li>
+            <li><strong>object</strong> (Name-Wert-Paare)</li>
+            <li>
+              <strong>array</strong> (durch Kommas getrennte Liste von Werten)
+            </li>
+            <li>
+              <strong>boolean</strong> (<span class="g">true</span> oder
+              <span class="g">false</span>)
+            </li>
+            <li>
+              <strong>null</strong>
+            </li>
+          </ul>
+          <p>In folgendem JSON-Beispiel sind alle Datentypen enthalten:</p>
+          <pre><code class="language-js">{
+  "student": {
+    "name": "Rumaisa Mahoney",
+    "age": 30,
+    "fullTime": true,
+    "languages": ["JavaScript", "HTML", "CSS"],
+    "GPA": 3.9,
+    "favoriteSubject": null
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h2>Nicht unterstützte Datentypen</h2>
+          <div class="zweispaltig">
+            <p>
+              Einige Datentypen werden in JSON
+              <strong>nicht direkt unterstützt</strong>, z.B.
+              <strong>Datumausgaben</strong>. Diese können jedoch als String
+              gespeichert und in der jeweiligen Sprache weiterverarbeitet
+              werden. <br /><br />
+              Beispiel für ein ISO 8691-Datum (gültiges Format):
+            </p>
+          </div>
+          <pre><code class="language-js">"2014-01-01T23:28:56.782Z"</code></pre>
+          <div class="zweispaltig">
+            <p>
+              Dieses Format enthält Informationen über Datum und Uhrzeit. Als
+              String ist es schwer direkt nutzbar, doch moderne
+              Programmiersprachen bieten Funktionen zur
+              <strong>Konvertierung</strong> in lesbare und bearbeitbare
+              Datumsobjekte. <br /><br />
+              Beispiel für eine konvertierte Darstellung:
+              <br /><br />
+              Wed Jan 01 2014 13:28:56 GMT-1000 (Hawaiian Standard Time)
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p class="zweispaltig">
+            JSON ist ein kompaktes, leicht lesbares Format zum Austausch
+            strukturierter Daten zwischen Systemen.
+            <br /><br />
+            Behandelte Inhalte:
+          </p>
+          <ul>
+            <li>Definition und Ursprung von JSON</li>
+            <li>Einsatzmöglichkeiten in Webanwendungen und APIs</li>
+            <li>JSON-Syntax und Regeln</li>
+            <li>Unterstützte Datentypen</li>
+            <li>Umgang mit nicht unterstützten Typen wie Datum</li>
+          </ul>
+          <p class="zweispaltig">
+            JSON hat sich als universelles Austauschformat zwischen
+            Programmiersprachen durchgesetzt. Verständnis für JSON bildet eine
+            wichtige Grundlage für moderne Softwareentwicklung.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

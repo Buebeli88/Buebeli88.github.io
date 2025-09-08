@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="left">
-        <a href="../../../index.html">
+        <a class="header" href="../../../index.html">
           <img
             src="../../images/justlogo/Just IT-horizontal.png"
             alt="Just IT Logo"
@@ -18,11 +18,11 @@
             height="85"
             class="logo"
         /></a>
-        <a href="../../html/html/liste.html" class="liste">Index</a>
+        <a class="header" href="../../html/html/liste.html" class="liste">Index</a>
       </div>
       <div class="right">
-        <a href="" class="navlink">Profile</a>
-        <a href="" class="navlink">Login</a>
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
       </div>
     </header>
     <div class="container">
@@ -63,22 +63,295 @@
           <h2>Der Webserver</h2>
           <div class="zweispaltig">
             <p>
-              Das Frontend besteht aus den Informationen, die an den Client
-              gesendet werden, aber woher stammen diese Informationen? Von einem
-              <strong>Webserver</strong>.
+              Woher kommt die Information, die an den Client geschickt wird? Die
+              Antwort: vom Webserver.
+              <br /><br />
+              "Server" kann in der informatik vieles bedeuten, hier geht es um
+              den Webserver. Ein Webserver ist ein Prozess auf einem Computer,
+              der Anfragen aus dem internet entgegennimmt und Antorten
+              zurücksendet.
             </p>
             <p>
-              Der Begriff "Server" kann vieles bedeuten. Ein
-              <strong>Webserver</strong> ist ein Prozess auf einem Computer, der
-              Anfragen über das Internet empfängt und darauf antwortet. Jedes
-              Mla, wenn eine Webseite im Browser aufgerufen wird, sendet der
-              Browser eine Anfrage an den Webserver der Seite. Jede Webseite
-              besitzt mindestens einen Webserver. Grosse Plattformen wie
-              Facebook betreiben Tausende leistungsstarker Server weltweit, aber
-              auch auf einem lokalen Computer kann ein einfacher Webserver
+              Jedes Mal, wenn eine Webseite aufgerufen wird, sendet der Broswer
+              eine Anfrage an den Webserver der Website. jede Website hat
+              mindestens einen Webserver. Grosse Unternehmen wie Facebook
+              betreiben Tausende leistungsstarke Computer weltweit, die
+              Webserver ausführen. Auch ein einfacher Webserver kann lokal
               betrieben werden.
             </p>
+            <p>
+              Das Format der Anfrage und Antworten wird als
+              <strong>Protokoll</strong> bezeichnet. Für Webseiten ist HTTP
+              (Hypertext Transfer Protocol) das gängigste Protokoll. Beim
+              Webseitenaufruf wird eine HTTP-Anfrage gesendet, um die notwendige
+              Ressourcen zu erhalten.
+            </p>
+            <p>
+              Bei einfachen Webseiten reicht eine einzige Anfrage, auf die der
+              Webserver mit allen notwendigen Inhalten antwortet. Dies nennt
+              sich <strong>statische Website</strong>. "Statisch" bedeutet hier,
+              dass die Inhalte sich nach dem Laden nicht mehr ändern. Solche
+              Seiten eignen sich gut für einfache Inhalte wie persönliche
+              Steckbriefe oder Fotoalben. Plattformen wie Twitter hingegen
+              benötigen dynamische Inhalte - eine statische Website wäre hier
+              ungegeignet.
+            </p>
+            <p>
+              Eine statische Website ist vergleichbar mit Lieferessen. Moderne
+              Webanwendungen ähneln eher einem Restaurantbesuch mit Service:
+              Bestellung nach Wunsch, Fragen an das Personal, individuelle
+              Anpassungen - entsprechend komplex muss das Back-End sein.
+            </p>
           </div>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/NodeBackEndFrontEnd_Update_1.gif"
+            alt=""
+            width="500"
+          />
+        </section>
+        <section>
+          <h2>Was ist das Back-End?</h2>
+          <div class="zweispaltig">
+            <p>
+              Beim Besuch von google.com wird die URL angefordert, aber nicht
+              der Dateiname des Google-Doodle. Die Logik zur Auswahl der
+              richtigen Inhalte liegt im Back-End. Moderne Anwendungen senden
+              zudem nicht dieselben Dateien an alle Nutzer, sondern erzeugen
+              <strong>dynamische Inhalte</strong>.
+            </p>
+            <p>
+              Vergleichbar mit einem Restaurantbesuch, bei dem das Essen
+              individuell zusammengestellt wird, liefert das Back-End für jeden
+              Besucher unterschiedliche, personalisierte Inhalte. zusätzlich
+              laufen im Hintergrund viele Prozesse: Zutatenbeschaffung,
+              Menüplanung, Personalverwaltung - analog dazu steuert das Back-End
+              Geschäftslogik, Datenverarbeitung, Sicherheit und vieles mehr.
+            </p>
+            <p>
+              Diese Programmierlogik zur Bereitstellung dynamischer Inhalte,
+              Sicherheitsmanagement, Zahlungsabwicklung uns. wird of als
+              <strong>Application Server</strong> bezeichnet. Dieser kann
+              Aufgaben wie Bestellbestätigungen oder die Ausführung komplexer
+              Suchalgorithmen übernehmen.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Datenspeicherung</h2>
+          <div class="zweispaltig">
+            <p>
+              Daten spielen eine zentrale Rolle. Ein Grossteil der weltweit
+              gespeicherten Daten wurden erst in den letzten Jahren erzeugt.
+              online-Shops speichern Kreditkartendate, Streaming-Dienste merken
+              sich Zeitstempel - all diese Daten müssen strukturiert gespeichert
+              werden.
+            </p>
+            <p>
+              Moderne Back-Ends verwenden dafür <strong>Datenbanken</strong> -
+              oft mehrere. Diese lassen sich grob in
+              <strong>relationale</strong> und
+              <strong>nicht-relationale (NoSQL)</strong> Datenbanken
+              unterteilen. Realtionale Datenbanken speichern Informationen
+              tabellarisch, NoSQL-Datenbanken arbeiten z.B. mit
+              Schlüssel-Wert-Paaren oder Dokumentenmodellen.
+            </p>
+            <p>
+              SQL (Structured Query Language) wird zur Abfrage und Änderung
+              relationaler Datenbaken verwendet. Bekannte relationale
+              Datenbaken: MySKL, PostgreSQL. Bekannte NoSQL-Datenbanken:
+              MongoDB, Redis.
+            </p>
+            <p>
+              Zusätzlich zur Datenbank benötigt das Back-End eine
+              programmierbare Schnittstelle zur Bearbeitung und Analyse der
+              Daten.
+            </p>
+          </div>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/Node_4_v4_Updated_1.svg"
+            alt=""
+            width="500"
+          />
+        </section>
+        <section>
+          <h2>Was ist eine API</h2>
+          <div class="zweispaltig">
+            <p>
+              Beim Aurfurgen eines Artikels in einem online-Shop stammt der
+              Preis aus der Datenbank. Bei Kauf muss der Lagerbestand
+              aktualisiert werden. Viele dieser Prozesse im Back-End bestehen
+              aus dem Lesen, Ändern oder Löschen von Daten.
+            </p>
+            <p>
+              Zur standardisierten Datenverarbeitung wird eine
+              <strong>Web-API</strong> eingesetzt. API steht für
+              <strong>Application Programming Interface</strong> und definiert
+              Regeln zur Interatkion mit Anwendungsdaten - meist über
+              HTTP-Anfragen.
+            </p>
+            <p>
+              Im Gegensatz zur klassischen HTTP-Anfrage zum Seitenaufruf sendet
+              die API-Anfrage zusätzlich Informationen zur gewünschten Aktion:
+              Daten erstellen, lese, aktualisieren oder löschen. Die Antwort
+              enthält dann entsprechende Daten.
+            </p>
+            <p>
+              Beispiel: Bei Bestellbestätigung auf einer Website wird zusätzlich
+              zur sichtbaren Ansicht eine unsichtbare Anfrage an die API
+              gesendet, um die Datenbank zu aktualisieren.
+            </p>
+            <p>
+              Einige Web-APIs sind öffentlich zugänglich (z.B. Instagram),
+              andere ausschliesslich für interne Zwecke.
+            </p>
+          </div>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/Node_5v2__Updated_1.gif"
+            alt=""
+            width="500"
+          />
+        </section>
+        <section>
+          <h2>Authentifizierung und Autorisierung</h2>
+          <div class="zweispaltig">
+            <p>
+              Zwei wiechtige Konzepte für die Serverseite:
+              <strong>Authentifizierung</strong> und
+              <strong>Autorisierung</strong>.
+            </p>
+            <p>
+              <strong>Authentifizierung</strong> prüft die Identität eines
+              Benutzers - z.B. über Benutzername und Passwort. Diese Daten
+              werden sicher in der Datenbank gespeichert und bei jedem Zugriff
+              überprüft. Alternativ kann Authentifizierung über Drittanbieter
+              wie Facebook, Goodle oder GitHub erfolgen.
+            </p>
+            <p>
+              <strong>Autorisierung</strong> steuert, wer auf welche inhalte und
+              Funktionen zugreifen darf. Bearbeitungsseiten oder Löschfunktionen
+              sind in der Regel nur bestimmten Nutzern zugänglich.
+            </p>
+            <p>
+              Ein sicheres und dynamisches Back-End integriert beide Prozesse,
+              um personalisierte Inhalte sicher bereitzustellen.
+            </p>
+          </div>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/NodeAnimation_6.gif"
+            alt=""
+            width="500"
+          />
+        </section>
+        <section>
+          <h2>Verschiedene Back-End-Stacks</h2>
+          <div class="zweispaltig">
+            <p>
+              Im Gegensatz zum Front-End (HTML, CSS, JavaScript) bietet das
+              Back-End viele Möglichkeiten bei der Wahl von Programmiersprachen
+              und Tools: PHP, Java, JavaScript; Python usw.
+            </p>
+            <p>
+              Zur Vereinfachung der Entwicklung werden meist
+              <strong>Frameworks</strong> verwendet. Diese liefern vorgefertigte
+              Strukturen und Funktionen.
+            </p>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <th>Framework</th>
+                <th>Sprache</th>
+              </tr>
+              <tr>
+                <td>Laravel</td>
+                <td>PHP</td>
+              </tr>
+              <tr>
+                <td>Express.js</td>
+                <td>JavaScript (Node)</td>
+              </tr>
+              <tr>
+                <td>Ruby on Rails</td>
+                <td>Ruby</td>
+              </tr>
+              <tr>
+                <td>Spring</td>
+                <td>Java</td>
+              </tr>
+              <tr>
+                <td>JSF</td>
+                <td>Java</td>
+              </tr>
+              <tr>
+                <td>Flask</td>
+                <td>Python</td>
+              </tr>
+              <tr>
+                <td>Django</td>
+                <td>Python</td>
+              </tr>
+              <tr>
+                <td>ASP.NET</td>
+                <td>C#</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="zweispaltig">
+            <p>
+              Die Kombination von Technolien für Front-End und Back-End wird als
+              <strong>Stack</strong> bezeischnet. Entwickler, die in beiden
+              Bereichen arbeiten, sind <strong>Full-Stack-Entwickler</strong>.
+              <br /><br />
+              Beispiele:
+            </p>
+          </div>
+          <ul>
+            <li>
+              <strong>MEAN-Stack</strong>: MongoDB, Express.js, Angular, Nodesjs
+            </li>
+            <li><strong>LAMP-Stack</strong>: Linux, Apache, MySQL, PHP</li>
+          </ul>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/Coders-2_Updated_1.gif"
+            alt=""
+            width="500"
+          />
+        </section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p>Das Back-End einer Webanwendung besteht aus vielen Komponenten:</p>
+          <ul>
+            <li>
+              Front-End: HTML, CSS, JavaScript und statische Dateien werden an
+              den Client gesendet.
+            </li>
+            <li>Webserver: Empfängt Anfragen, sendet Antworten.</li>
+            <li>
+              Datenmanagement: Speicherung und Bearbeitung in relationalen oder
+              NoSQL-Datenbanken.
+            </li>
+            <li>
+              Application Server: Führt Geschäftslogik aus, steuert
+              Authentifizierung und Autorisierung.
+            </li>
+            <li>
+              Web-API: Schnittstelle für strukturierte Kommunikation mit
+              Anwendungsdaten.
+            </li>
+            <li>Stack: Gesamtheit aller verwendeten Technologien</li>
+          </ul>
+          <img
+            class="be"
+            src="../../../Notes/BackEnd/WhatIsTheBackEnd/Node_8.svg"
+            alt=""
+            width="500"
+          />
         </section>
       </main>
     </div>

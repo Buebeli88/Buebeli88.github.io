@@ -1,3 +1,58 @@
 li {
     line-height: 1.5rem;
 }
+
+a {
+    display: inline-block;
+}
+
+#ddmenu1,
+#ddmenu2,
+#ddmenu3,
+#ddmenu4,
+#ddmenu5,
+#ddmenu6,
+#ddmenu7,
+#ddmenu8,
+#ddmenu9,
+#ddmenu10,
+#ddmenu11,
+#ddmenu12,
+#ddmenu13,
+#ddmenu14,
+#ddmenu15,
+#ddmenu16,
+#ddmenu17,
+#ddmenu18,
+#ddmenu19,
+#ddmenu20,
+#ddmenu21,
+#ddmenu22,
+#ddmenu23,
+#ddmenu24,
+#ddmenu25,
+#ddmenu26,
+#ddmenu27,
+#ddmenu28,
+#ddmenu29,
+#ddmenu30,
+#ddmenu31 {
+    display: none;
+}
+
+p {
+    color: black;
+}
+
+a {
+    color: darkred;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
