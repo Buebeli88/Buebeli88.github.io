@@ -29,3 +29,10 @@ li {
 .commandindex {
     border-top: 2px solid rgb(47, 125, 189)
 }
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}

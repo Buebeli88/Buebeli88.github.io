@@ -4,40 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git</title>
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/git.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/git/git.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../index.html">
+          <img
+            src="../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../html/liste.html" class="liste">Index</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
     <div class="container">
       <main>
         <h1>Git</h1>
-        <p>
-          Git ist eine Software, die es dir ermöglicht, Änderungen an einem
-          Projekt im Laufe der Zeit nachzuverfolgen. Git funktioniert, indem es
-          die von dir vorgenommenen Änderungen an einem Projekt aufzeichnet,
-          diese speichert und dir anschließend erlaubt, sie bei Bedarf
-          nachzuschlagen.
-          <br /><br />
-          Auf Windows z.B. GitBash
-        </p>
+        <div class="zweispaltig">
+          <p>
+            Git ist eine Software, die es dir ermöglicht, Änderungen an einem
+            Projekt im Laufe der Zeit nachzuverfolgen. Git funktioniert,
+          </p>
+          <p>
+            indem es die von dir vorgenommenen Änderungen an einem Projekt
+            aufzeichnet, diese speichert und dir anschließend erlaubt, sie bei
+            Bedarf nachzuschlagen.
+          </p>
+          <p>Auf Windows z.B. GitBash</p>
+        </div>
         <section class="gitinit">
           <h2>Befehl: git init</h2>
-          <p>
-            git init dient dazu, ein Repository zu initialisieren (init), um mit
-            der Nachverfolgung von Änderungen zu beginnen.
-            <br /><br />
-            Das bedeutet, dass ein lokales Repository erstellt wird, in dem
-            Änderungen gespeichert werden. Diese Änderungen kann man später zum
-            Beispiel mit git push auf GitHub hochladen.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code> $ git init </code>
+          <div class="zweispaltig">
+            <p>
+              git init dient dazu, ein Repository zu initialisieren (init), um
+              mit der Nachverfolgung von Änderungen zu beginnen.
+            </p>
+            <p>
+              Das bedeutet, dass ein lokales Repository erstellt wird, in dem
+              Änderungen gespeichert werden. Diese Änderungen kann man später
+              zum Beispiel mit git push auf GitHub hochladen.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">$ git init </code></pre>
         </section>
         <section class="GitWorkflow">
           <h2>Git Workflow</h2>
-          <p>Ein Git-Projekt kann man sich als drei Bereiche vorstellen:</p>
+          <p class="zweispaltig">
+            Ein Git-Projekt kann man sich als drei Bereiche vorstellen:
+          </p>
           <ol>
             <li>
               Ein Arbeitsverzeichnis (Working Directory): Hier erledigst du die
@@ -53,36 +82,52 @@
               verschiedene Versionen des Projekts.
             </li>
           </ol>
-          <p>
-            Der typische Git-Arbeitsablauf besteht darin, Dateien im
-            Arbeitsverzeichnis zu bearbeiten, Änderungen in den Staging-Bereich
-            zu verschieben und sie schließlich im Repository zu speichern. In
-            Git speichern wir Änderungen mit einem Commit, über den wir in
-            dieser Lektion noch mehr erfahren werden.
-          </p>
-          <p>
-            +------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+----------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+---------------------------+
-            <br />
-            | Working
-            Directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            ---> |&nbsp;Staging Area&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| --->
-            |&nbsp;Repository&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            <br />
-            | 📝 Dateien
-            erstellen&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            ✅ Änderungen |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 📦
-            Versionen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br />
-            | ✏️ Dateien bearbeiten
-            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            vormerken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            dauerhaft speichern | <br />
-            | 🗑️ Dateien
-            löschen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br />
-            +------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+----------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+---------------------------+
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der typische Git-Arbeitsablauf besteht darin, Dateien im
+              Arbeitsverzeichnis zu bearbeiten, Änderungen in den
+              Staging-Bereich zu verschieben und sie schließlich im Repository
+              zu speichern.
+            </p>
+            <p>
+              In Git speichern wir Änderungen mit einem Commit, über den wir in
+              dieser Lektion noch mehr erfahren werden.
+            </p>
+          </div>
+          <div class="tabcontainer">
+            <table>
+              <tr>
+                <th>Working Directory</th>
+              </tr>
+              <tr>
+                <td>📝 Dateien erstellen</td>
+              </tr>
+              <tr>
+                <td>✏️ Dateien bearbeiten</td>
+              </tr>
+              <tr>
+                <td>🗑️ Dateien löschen</td>
+              </tr>
+            </table>
+            →
+            <table>
+              <tr>
+                <th>Staging Area</th>
+              </tr>
+              <tr>
+                <td>✅ Änderungen vormerken</td>
+              </tr>
+            </table>
+            →
+            <table>
+              <tr>
+                <th>Repository</th>
+              </tr>
+              <tr>
+                <td>📦 Versionen dauerhaft speichern</td>
+              </tr>
+            </table>
+          </div>
           <p>Pfeile (→) zeigen den Ablauf:</p>
           <ul>
             <li>Du arbeitest im Working Directory.</li>
@@ -95,34 +140,43 @@
         </section>
         <section class="gitstatus">
           <h2>Befehl: git status</h2>
-          <p>
-            Der Befehl git status zeigt den aktuellen Status des Git-Repositorys
-            an. Er gibt Informationen darüber, welche Dateien geändert,
-            hinzugefügt oder gelöscht wurden und welche Änderungen noch nicht
-            committet sind. Außerdem zeigt er an, welche Dateien von Git nicht
-            verfolgt werden.
-            <br /><br />
-            Dateien in Rot bedeuten, dass sie nicht verfolgt werden (untracked).
-            Das heißt, Git erkennt sie, hat aber noch nicht begonnen, sie zu
-            verfolgen. Wenn eine Datei in Grün dargestellt wird, bedeutet das,
-            dass sie zum Staging-Bereich hinzugefügt wurde.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code> $ git status </code>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git status zeigt den aktuellen Status des
+              Git-Repositorys an. Er gibt Informationen darüber, welche Dateien
+              geändert, hinzugefügt oder gelöscht wurden und welche Änderungen
+              noch nicht committet sind. Außerdem zeigt er an, welche Dateien
+              von Git nicht verfolgt werden.
+            </p>
+            <p>
+              Dateien in Rot bedeuten, dass sie nicht verfolgt werden
+              (untracked). Das heißt, Git erkennt sie, hat aber noch nicht
+              begonnen, sie zu verfolgen. Wenn eine Datei in Grün dargestellt
+              wird, bedeutet das, dass sie zum Staging-Bereich hinzugefügt
+              wurde.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">$ git status </code></pre>
         </section>
         <section class="gitadd">
           <h2>Befehl: git add</h2>
-          <p>
-            Der Befehl git add in Git dient dazu, Änderungen im
-            Arbeitsverzeichnis für den nächsten Commit vorzubereiten. Er fügt
-            Dateien oder Verzeichnisse dem sogenannten "Staging-Bereich" (auch
-            Index genannt) hinzu, was bedeutet, dass diese Änderungen für den
-            nächsten Commit markiert werden.
-            <br /><br />
-            Es gibt drei einfache Möglichkeiten, um Änderungen zum
-            Staging-Bereich hinzuzufügen:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git add in Git dient dazu, Änderungen im
+              Arbeitsverzeichnis für den nächsten Commit vorzubereiten. Er fügt
+              Dateien oder Verzeichnisse dem sogenannten "Staging-Bereich" (auch
+              Index genannt) hinzu,
+            </p>
+            <p>
+              was bedeutet, dass diese Änderungen für den nächsten Commit
+              markiert werden.
+            </p>
+            <p>
+              Es gibt drei einfache Möglichkeiten, um Änderungen zum
+              Staging-Bereich hinzuzufügen:
+            </p>
+          </div>
           <ul>
             <li>git add scene-1.txt (Nur diese eine Datei wird vorgemerkt.)</li>
             <li>
@@ -133,70 +187,84 @@
               Unterordnern) werden vorgemerkt.)
             </li>
           </ul>
-          <p>
+          <p class="zweispaltig">
             So entscheidest du selbst, ob du nur einzelne Dateien oder gleich
             alles auf einmal hinzufügen willst.
             <br /><br />
             Beispiel:
           </p>
-          <code> $ git add -A </code>
+          <pre><code class="language-js">$ git add -A </code></pre>
         </section>
         <section class="gitdiff">
           <h2>Befehl: git diff</h2>
-          <p>
-            Der Befehl git diff wird verwendet, um Unterschiede zwischen
-            verschiedenen Zuständen eines Git-Repositorys anzuzeigen. Er kann
-            verwendet werden, um Änderungen im Arbeitsverzeichnis, im
-            Staging-Bereich oder zwischen Commits und Branches zu vergleichen.
-            <br /><br />
-            Hier die häufigsten Anwendungen von git diff:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git diff wird verwendet, um Unterschiede zwischen
+              verschiedenen Zuständen eines Git-Repositorys anzuzeigen.
+            </p>
+            <p>
+              Er kann verwendet werden, um Änderungen im Arbeitsverzeichnis, im
+              Staging-Bereich oder zwischen Commits und Branches zu vergleichen.
+            </p>
+            <p>Hier die häufigsten Anwendungen von git diff:</p>
+          </div>
           <ul>
-            <li>
-              git diff (Unterschiede im Arbeitsverzeichnis: Zeigt Änderugen an,
-              die noch nicht gestaged sind, also noch nicht für den nächsten
-              Commit bereitliegen.)
-            </li>
-            <li>
-              git diff --cache (Unterschiede im Stagin-Bereich: Zeigt
-              Änderungen, die bereits gestaged, aber noch nicht committet
-              wurden.)
-            </li>
-            <li>
-              git diff &lt;commit1&gt;&nbsp;&lt;commit2&gt; (Unteschiede
-              zwischen Commits: Zeigt die Änderungen zwischen zwei bestimmten
-              Commits an.)
-            </li>
-            <li>
-              git diff &lt;branch1&gt;&nbsp;&lt;branch2&gt; (Unterschiede
-              zwischen Branches: Zeigt die Unterschiede zwischen zwei Branches
-              an.)
-            </li>
-            <li>
-              git diff HEAD (Vergleiche Head: Zeigt Änderdugen zwischen dem
-              aktuellen Stand und der letzten Version im Remote-Repository an.)
-            </li>
+            <div class="zweispaltig">
+              <li>
+                git diff (Unterschiede im Arbeitsverzeichnis: Zeigt Änderugen
+                an, die noch nicht gestaged sind, also noch nicht für den
+                nächsten Commit bereitliegen.)
+              </li>
+              <li>
+                git diff --cache (Unterschiede im Stagin-Bereich: Zeigt
+                Änderungen, die bereits gestaged, aber noch nicht committet
+                wurden.)
+              </li>
+              <li>
+                git diff &lt;commit1&gt;&nbsp;&lt;commit2&gt; (Unteschiede
+                zwischen Commits: Zeigt die Änderungen zwischen zwei bestimmten
+                Commits an.)
+              </li>
+              <li>
+                git diff &lt;branch1&gt;&nbsp;&lt;branch2&gt; (Unterschiede
+                zwischen Branches: Zeigt die Unterschiede zwischen zwei Branches
+                an.)
+              </li>
+              <li>
+                git diff HEAD (Vergleiche Head: Zeigt Änderdugen zwischen dem
+                aktuellen Stand und der letzten Version im Remote-Repository
+                an.)
+              </li>
+            </div>
           </ul>
-          <p>
-            De Ausgabe von git diff zeigt die geänderten Zeilen mit einem +
-            (hinzugefüght) oder - (entfernt) vorangestellt, um die Änderugen zu
-            kennzeichnen. Es ist ein nützliches Werkzeug, um Änderugen zu
-            überprüfen, bevor sie committtet oder gemerged werden.
-            <br /><br />
-            Beispiel:
-          </p>
-          <code> $ git diff </code>
+          <div class="zweispaltig">
+            <p>
+              De Ausgabe von git diff zeigt die geänderten Zeilen mit einem +
+              (hinzugefüght) oder - (entfernt) vorangestellt, um die Änderugen
+              zu kennzeichnen.
+            </p>
+            <p>
+              Es ist ein nützliches Werkzeug, um Änderugen zu überprüfen, bevor
+              sie committtet oder gemerged werden.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-js">$ git diff </code></pre>
         </section>
         <section class="gitcommit">
           <h2>Befehl: git commit</h2>
-          <p>
-            Der Befehl git commit erstellt einen neuen Snapshot, der die aktuell
-            im Staging-Bereich befindlichen Änderungen enthält. Jeder Commit
-            erhält eine eindeutige ID (einen SHA-Hash) und wird mit einer
-            Nachricht versehen, die die vorgenommenen Änderungen beschreibt.
-            <br /><br />
-            Standardkonventionen für Commit-Nachrichten:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git commit erstellt einen neuen Snapshot, der die
+              aktuell im Staging-Bereich befindlichen Änderungen enthält.
+            </p>
+            <p>
+              Jeder Commit erhält eine eindeutige ID (einen SHA-Hash) und wird
+              mit einer Nachricht versehen, die die vorgenommenen Änderungen
+              beschreibt.
+            </p>
+            <p>Standardkonventionen für Commit-Nachrichten:</p>
+          </div>
           <ul>
             <li>Müdden in Anführungszeichen stehen.</li>
             <li>Im Präsens (Gegenwartsform) geschrieben sein.</li>
@@ -206,21 +274,23 @@
             </li>
           </ul>
           <p>Beispiel:</p>
-          <code
-            >$ git commit -m "Neue Zusammenfassung für Git hinzugefügt."</code
-          >
+          <pre><code class="language-js">$ git commit -m "Neue Zusammenfassung für Git hinzugefügt."</code></pre>
         </section>
         <section class="gitlog">
           <h2>Befehl: git log</h2>
-          <p>
-            Der Befehl git log zeigt den Commit-Verlauf eines Git-Repositorys
-            an. Er stellt eine Liste der Commits in umgekehrter chronologischer
-            Reihenfolge dar, wobei die neuesten Commits zuerst angezeigt werden.
-            Mit git log kann man den Verlauf eines Projekts einsehen, ihn
-            filtern und nach bestimmten Änderungen suchen.
-            <br /><br />
-            In der Ausgabe beachte:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git log zeigt den Commit-Verlauf eines Git-Repositorys
+              an. Er stellt eine Liste der Commits in umgekehrter
+              chronologischer Reihenfolge dar, wobei die neuesten Commits zuerst
+              angezeigt werden.
+            </p>
+            <p>
+              Mit git log kann man den Verlauf eines Projekts einsehen, ihn
+              filtern und nach bestimmten Änderungen suchen.
+            </p>
+            <p>In der Ausgabe beachte:</p>
+          </div>
           <ul>
             <li>
               Einen 40-stelligen Code, genannt SHA, der den Commit eindeutig
@@ -231,19 +301,23 @@
             <li>Die Commit-nachricht.</li>
           </ul>
           <p>Beispiel:</p>
-          <code> $ git log </code>
+          <pre><code class="language-js">$ git log</code></pre>
         </section>
         <section class="gitpush">
           <h2>Befehl: git push</h2>
-          <p>
-            Der Befehl git push wird verwendet, um Änderungen von einem lokalen
-            Git-Repository auf ein Remote-Repository (z.B. auf GitHub oder
-            GitLab) hochzuladen. Vereinfacht gesagt, synchronisiert git push den
-            lokalen Stand mit dem Remote-Repository, sodass andere Entwickler
-            deine Änderungen sehen und mit ihnen arbeiten können.
-            <br /><br />
-            Zwecke:
-          </p>
+          <div class="zweispaltig">
+            <p>
+              Der Befehl git push wird verwendet, um Änderungen von einem
+              lokalen Git-Repository auf ein Remote-Repository (z.B. auf GitHub
+              oder GitLab) hochzuladen. Vereinfacht gesagt,
+            </p>
+            <p>
+              synchronisiert git push den lokalen Stand mit dem
+              Remote-Repository, sodass andere Entwickler deine Änderungen sehen
+              und mit ihnen arbeiten können.
+            </p>
+            <p>Zwecke:</p>
+          </div>
           <ul>
             <li>
               Veröffentlichung von Änderungen: git push ist der primäre Weg, um
@@ -259,7 +333,7 @@
             </li>
           </ul>
           <p>Beispiel:</p>
-          <code> $ git push </code>
+          <pre><code class="language-js">$ git push</code></pre>
         </section>
       </main>
     </div>

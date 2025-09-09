@@ -1,7 +1,4 @@
 h2,
-h3,
-h4,
-h5,
 h6 {
     border-top: 1px solid black;
 }
@@ -56,3 +53,34 @@ table {
     border-collapse: collapse;
 }
 
+.nyan {
+    background-image: url("../../images/cat-space.gif");
+    height: 230px;
+    color: whitesmoke;
+}
+
+.nyan2 {
+    background-image: url("../../images/cat-space.gif");
+    background-size: cover;
+    height: 200px;
+    color: whitesmoke;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}

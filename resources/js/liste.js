@@ -59,7 +59,7 @@ function themenSuche() {
 // Suche beim Tippen starten
 document.addEventListener("DOMContentLoaded", function () {
     // Bestehender Code: Untermenüs verstecken + Suche reagieren
-    for (let i = 1; i <= 31; i++) {
+    for (let i = 1; i <= 99; i++) {
         const submenuDiv = document.getElementById("ddmenu" + i);
         if (submenuDiv) submenuDiv.style.display = "none";
     }

@@ -134,6 +134,3 @@ Code
 .image {
   margin-right: 20px; /* Add some space between the image and text */
 }
-
-Aus <https://www.google.com/search?q=html+text+zum+bild&sca_esv=623c97b4ff62327b&ei=LCdiaKG5LLbzi-gP46qTqQw&ved=0ahUKEwih_4iSu5iOAxW2-QIHHWPVJMUQ4dUDCBA&uact=5&oq=html+text+zum+bild&gs_lp=Egxnd3Mtd2l6LXNlcnAiEmh0bWwgdGV4dCB6dW0gYmlsZDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSPE7UPcJWJA6cAN4AZABAJgBU6ABtQiqAQIxOLgBA8gBAPgBAZgCFaACuwnCAgoQABiwAxjWBBhHwgIKEAAYgAQYQxiKBcICDhAAGIAEGLEDGIMBGIoFwgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICDRAAGIAEGLEDGEMYigXCAgUQABiABMICCBAAGIAEGKIEwgIFEAAY7wXCAgUQIRigAcICBRAhGJ8FmAMAiAYBkAYIkgcCMjGgB9JbsgcCMTi4B5wJwgcIMC4xLjE4LjLIB2g&sclient=gws-wiz-serp&safe=active&ssui=on> 
-

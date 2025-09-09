@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Images</title>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="">
-</head>
-<body>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/css/css_images.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
     <header class="header">
       <div class="left">
         <a class="header" href="../../../index.html">
@@ -26,8 +32,224 @@
       </div>
     </header>
     <div class="container">
-        <main></main>
+      <main>
+        <h1>Bilder</h1>
+        <section>
+          <h2>Hintergrundbild</h2>
+          <div class="zweispaltig">
+            <p>
+              Die CSS-Eigenschaft <span class="g">background-image</span> legt
+              das Hintergrundbild eines Elements fest. Dabei wird die Bild-URL
+              im Format <span class="g">url("bildname.jpg")</span> angegeben.
+            </p>
+          </div>
+          <div class="zweispaltig">
+            <div>
+              <p>Beispiel CSS</p>
+              <pre><code class="language-css">background-image: url("cat-space.gif");</code></pre>
+            </div>
+            <div class="nyan">
+              <p>Beispiel mit dem Hintergrundbild</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Grösse des Hintergrundbildes</h2>
+          <div class="zweispaltig">
+            <p>
+              Mit der CSS-Eigenschaft
+              <span class="g">background-size</span> lässt sich die Grösse des
+              hintergrundbildes bestimmen. Der Wert
+              <span class="g">cover</span> bewirkt, dass das Bild den gesamten
+              Hintergrundbereich des Containers abdeckt.
+            </p>
+            <p>
+              Dabei bleibt das Seitenverhältnis erhalten, sodass Teile des
+              Bildes abgeschnitten werden können, wenn das Bild grösser als der
+              Container ist.
+            </p>
+          </div>
+          <div class="zweispaltig">
+            <div>
+              <p>Beispiel:</p>
+              <pre><code class="language-css">background-size: cover;</code></pre>
+            </div>
+            <div class="nyan2">
+              <p>
+                Unterschied zum oberen Thema. <br />
+                Wie zu sehen, skaliert das bild bei "cover" automatisch
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Bild zentrieren</h2>
+          <div class="zweispaltig">
+            <p>
+              Das Zentrieren eines Bildes mit CSS kann auf verschiedene Arten
+              erfolgen, sowohl horizontal als auch vertikal.
+            </p>
+          </div>
+          <h3>Horizontales Zentrieren</h3>
+          <p class="zweispaltig">
+            Drei gängige Methoden zum horizontalen Zentrieren von Bildern:
+          </p>
+          <div class="zweispaltig">
+            <p>
+              <strong>1. margin: auto</strong><br />
+              Diese Methode funktioniert nur, wenn das Bild als Block-Element
+              definiert wird (<span>Display: block</span>) und eine feste Breite
+              besitzt (nicht 100%).
+            </p>
+            <p>
+              <br />
+              Dadurch wird der linke und rechte Aussenabstand automatisch
+              ausgeglichen.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-css">img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}</code></pre>
+          <div class="zweispaltig">
+            <p>
+              <strong>2. text-align: center</strong><br />
+              Funktioniert, wenn sich das Bild innerhalb eines Block-Containers
+              (z.b. <span class="g">&lt;div&gt;</span>) befindet.
+            </p>
+          </div>
+          <p>Beispiel:</p>
+          <pre><code class="language-css">div {
+  text-align: center;
+}</code></pre>
+          <div class="zweispaltig">
+            <p>
+              <strong>3. display: flex</strong><br />
+              Der Container wird mit
+              <span class="g">display: flex</span> definiert und durch
+              <span class="justify-content: center"></span> wird das Bild
+              horizontal zentriert.
+            </p>
+            <p>
+              <br />
+              Das Bild muss eine kleinere Breite als der Container haben, um
+              tatsächlich zentriert zu werden.
+            </p>
+            <p>Beispie:</p>
+          </div>
+          <pre><code class="language-css">div {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 50%;
+}</code></pre>
+          <h3>Vertikales Zentrieren</h3>
+          <div class="zweispaltig">
+            <p>
+              Das vertikale Zentrieren von Bildern gelingt ebenfalls mit
+              <span class="g">display: flex</span>. Neben
+              <span class="g">justify-content: center</span> muss zursätzlich
+              <span class="g">align-items: center</span> im Container definiert
+              werden.
+            </p>
+            <p>
+              Die Höhe des Containers und die Bildhöhe müssen berücksichtigt
+              werden.
+            </p>
+            <p>Beispiel:</p>
+          </div>
+          <pre><code class="language-css">div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
+img {
+  width: 50%;
+  height: 600px;
+}</code></pre>
+        </section>
+        <section>
+          <h2>Text zu Bildern in HTML hinzufügen</h2>
+          <p class="zweispaltig">
+            Text kann auf verschiedene Weise mit Bildern kombiniert werden:
+          </p>
+          <div class="zweispaltig">
+            <div>
+              <p>
+                <strong>1. Text unter dem Bild:</strong><br />
+                Bild mit <span class="g">&lt;img&gt;</span>-Tag und Text in
+                einem <span class="g">&lt;p&gt;</span>-Element direkt darunter.
+              </p>
+              <pre><code class="language-html">&lt;img src="../../images/ultramarine1.jpg" alt="Ein Ultramarine" width="300""&gt;
+<p>Dies ist ein Ultramarine!</p></code></pre>
+            </div>
+            <div class="test">
+              <p>Beispiel:</p>
+              <img
+                src="../../images/ultramarine1.jpg"
+                alt="Ein Ultramarine"
+                width="300"
+              />
+              <p>Dies ist ein Ultramarine!</p>
+            </div>
+          </div>
+          <div class="zweispaltig">
+            <div>
+              <p>
+                <strong>2. Text über dem Bild (overlay)</strong><br />
+                Ein Container-Element mit
+                <span class="g">position: relative</span> enthält das Bild und
+                den Text. Der text wird mit
+                <span class="g">position: absolute</span> über das Bild gelegt
+                und zentriert.
+              </p>
+              <div>
+                <pre><code class="language-html">&lt;div class="image-container"&gt;
+  &lt;img src="../../images/tyranid1.jpg" alt="Ein Tyranid" class="image"&gt;
+  &lt;div class="overlay-text"&gt;Dies ist ein Tyranid!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <pre><code class="language-css">.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}</code></pre>
+              </div>
+            </div>
+            <div class="test">
+              <p>Beispiel:</p>
+              <div class="image-container">
+                <img
+                  src="../../images/tyranid1.jpg"
+                  alt="Ein Tyranid"
+                  class="image"
+                  width="250"
+                />
+                <div class="overlay-text">Dies ist ein Tyranid!</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <footer></footer>
-</body>
+  </body>
 </html>
