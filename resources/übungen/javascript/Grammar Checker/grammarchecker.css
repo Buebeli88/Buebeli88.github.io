@@ -1,0 +1,67 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    line-height: 1.5rem;
+}
+
+.nohead {
+    color: black;
+}
+
+
+th,
+td {
+    border: 1px solid black;
+    width: 10rem;
+    text-align: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.hintergrund {
+    background-image: url("../../../images/grammarchecker.jpg");
+    background-size: cover;
+    padding: 10px;
+}
+
+.hintergrund p,
+.hintergrund div {
+    display: table;                     /* passt Breite an Inhalt an, bleibt Block */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 1rem;                /* Abstand nach unten */
+    max-width: 100%;                    /* kein Überlauf */
+    word-wrap: break-word;              /* lange Wörter umbrechen */
+}

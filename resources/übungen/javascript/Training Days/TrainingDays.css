@@ -1,0 +1,89 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: 1px solid black;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.g {
+    background-color: lightgray;
+}
+
+.zweispaltig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    line-height: 1.5rem;
+}
+
+.nohead {
+    color: black;
+}
+
+
+th,
+td {
+    border: 1px solid black;
+    width: 10rem;
+    text-align: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.event {
+    background-image: url("../../../images/trainingdays.jpg");
+    background-size: cover;
+    height: 800px;
+    position: relative;
+}
+
+.eventrow {
+    position: relative;
+    height: 100%;
+}
+
+.eventbutton,
+.eventresults {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+button {
+    height: 2rem;
+    width: 10rem;
+    font-size: 1rem;
+}
+
+.eventbutton {
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.eventresults {
+    right: 25%;
+    transform: translateX(50%);
+    background-color: rgba(255,255,255, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

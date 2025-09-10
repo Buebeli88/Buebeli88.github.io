@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traing Days</title>
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="TrainingDays.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../../index.html">
+          <img
+            src="../../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../../../html/html/liste.html" class="liste"
+          >Index</a
+        >
+        <a class="header" href="../jsübungen.html">Übungen</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Übung: Training Days</h1>
+        <div class="event">
+          <div class="eventrow">
+            <div class="eventbutton">
+              <button onclick="generateEvents()">New Event</button>
+            </div>
+            <div class="eventresults">
+              <p><strong>Training Days</strong></p>
+              <div id="result1"></div>
+              <div id="result2"></div>
+              <br />
+              <div id="result3"></div>
+              <div id="result4"></div>
+              <script src="JSTrainingDays.js"></script>
+            </div>
+          </div>
+        </div>
+        <br />
+        <p><strong>JavaScript:</strong></p>
+        <pre><code class="language-js">const name = 'Nala';
+
+const getRandEvent = () => {
+  const random = Math.floor(Math.random() * 3);
+  if (random === 0) {
+    return 'Marathon';
+  } else if (random === 1) {
+    return 'Triathlon';
+  } else if (random === 2) {
+    return 'Pentathlon';
+  }
+};
+
+const getTrainingDays = event => {
+  let days;
+  if (event === 'Marathon') {
+    days = 50;
+  } else if (event === 'Triathlon') {
+    days = 100;
+  } else if (event === 'Pentathlon') {
+    days = 200;
+  }
+
+  return days;
+};
+
+
+const logEvent = (name, event) => {
+  return `${name}'s event is: ${event}`;
+};
+
+const logTime = (name, days) => {
+  return `${name}'s time to train is: ${days} days`;
+};
+
+const event = getRandEvent();
+const days = getTrainingDays(event);
+
+
+logEvent(name, event);
+logTime(name, days);
+
+const event2 = getRandEvent();
+const days2 = getTrainingDays(event2);
+const name2 = 'Warren';
+
+logEvent(name2, event2);
+logTime(name2, days2);
+
+document.getElementById('result1').innerHTML = logEvent(name, event);
+document.getElementById('result2').innerHTML = logTime(name, days);
+document.getElementById('result3').innerHTML = logEvent(name2, event2);
+document.getElementById('result4').innerHTML = logTime(name2, days2);</code></pre>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
+</html>

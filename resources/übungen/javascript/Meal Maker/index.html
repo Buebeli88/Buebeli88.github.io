@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Meal Maker</h1>
-    <div id="result"></div>
-    <script src="mealmaker.js"></script>    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Maker</title>
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="mealmaker.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../../index.html">
+          <img
+            src="../../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../../../html/html/liste.html" class="liste"
+          >Index</a
+        >
+        <a class="header" href="../jsübungen.html">Übungen</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Übung: Meal Maker</h1>
+        <div class="hintergrund">
+          <p class="text-with-bg">Menu</p>
+          <br />
+          <ul class="text-with-bg">
+            <li>Burger for $10</li>
+            <li>Pizza for $10</li>
+            <li>Steak for $15</li>
+            <li>Salat for $7</li>
+          </ul>
+          <br /><br />
+          <div class="special-inputs">
+            <input
+              type="text"
+              id="mealInput"
+              placeholder="Neues Spezialgericht eingeben"
+            />
+            <input type="number" id="priceInput" placeholder="Preis eingeben" />
+            <button id="updateSpecialBtn">Spezialmenü aktualisieren</button>
+          </div>
+          <br /><br />
+          <div id="result" class="text-with-bg"></div>
+          <script src="mealmaker.js"></script>
+        </div>
+        <p>
+          <strong>JavaScript</strong>
+        </p>
+        <pre><code class="language-js">const menu = {
+  // Private Eigenschaft für das Gericht (Meal)
+  _meal: '',
+  // Private Eigenschaft für den Preis
+  _price: 0,
+
+  // Setter-Methode für meal
+  set meal(mealToCheck) {
+    // Prüfen, ob der übergebene Wert ein String ist
+    if (typeof mealToCheck === 'string') {
+      this._meal = mealToCheck;  // Wenn ja, _meal setzen
+    }
+  },
+
+  // Setter-Methode für price
+  set price(priceToCheck) {
+    // Prüfen, ob der übergebene Wert eine Zahl ist
+    if (typeof priceToCheck === 'number') {
+      this._price = priceToCheck;  // Wenn ja, _price setzen
+    }
+  },
+
+  // Getter-Methode für todaysSpecial
+  get todaysSpecial() {
+    // Prüfen, ob meal und price gesetzt wurden (nicht leer und nicht 0)
+    if (this._meal && this._price) {
+      // Gibt einen String mit dem Tagesangebot zurück
+      return `Today's Special is ${this._meal} for $${this._price}!`;
+    } else {
+      // Falls meal oder price nicht korrekt gesetzt sind, Fehlermeldung zurückgeben
+      return 'Meal or price was not set correctly!';
+    }
+  }
+};
+
+// Setzen des Gerichtes über den Setter
+menu.meal = 'Spaghetti';
+// Setzen des Preises über den Setter
+menu.price = 5;
+
+// Elemente holen
+const mealInput = document.getElementById('mealInput');
+const priceInput = document.getElementById('priceInput');
+const updateBtn = document.getElementById('updateSpecialBtn');
+
+updateBtn.addEventListener('click', () => {
+  const newMeal = mealInput.value.trim();
+  const newPrice = parseFloat(priceInput.value);
+
+  // Einfache Validierung
+  if (newMeal === '' || isNaN(newPrice) || newPrice <= 0) {
+    alert('Bitte gültiges Gericht und gültigen Preis eingeben!');
+    return;
+  }
+
+  // Werte im Objekt setzen
+  menu.meal = newMeal;
+  menu.price = newPrice;
+
+  // Ausgabe aktualisieren
+  document.getElementById('result').innerHTML = menu.todaysSpecial;
+
+  // Inputs zurücksetzen (optional)
+  mealInput.value = '';
+  priceInput.value = '';
+});
+
+// Ausgabe des Tagesangebots in der Konsole
+console.log(menu.todaysSpecial);
+
+// Ausgabe des Tagesangebots im HTML-Element mit der ID "result"
+document.getElementById("result").innerHTML = menu.todaysSpecial;</code></pre>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
 </html>
