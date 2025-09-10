@@ -247,9 +247,70 @@ img {
               </div>
             </div>
           </div>
+          <div class="zweispaltig">
+            <div>
+              <p>
+                <strong>3. Bild und Text nebeneinander (mit Flexbox)</strong
+                ><br />
+                Wenn Bild und Text <strong>nebeneinander</strong> angezeigt
+                werden sollen, wird
+                <span class="g">display: flex</span> verwendet.
+              </p>
+              <p>HTML:</p>
+              <pre><code class="language-html">&lt;div class="container"&gt;
+ &lt;img src="dein_bild.jpg" alt="Beschreibung" class="image"&gt;
+ &lt;p class="text"&gt;Hier ist der Text neben dem Bild.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              <p>CSS:</p>
+              <pre><code class="language-css">.container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 20px;
+}</code></pre>
+            </div>
+            <div class="test2">
+              <p>Beispiel:</p>
+              <div class="nacontainer">
+                <img
+                  src="../../images/necron1.jpg"
+                  alt="Ein Necron"
+                  class="naimage"
+                  width="250"
+                />
+                <p class="natext">Dies ist ein Necron!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Barrierefreiheit: <span class="g">alt</span>-Attribut</h2>
+          <div class="zweispaltig">
+            <p>
+              Das <span class="g">&lt;img&gt;</span>-Tag sollte
+              <strong>immer ein</strong> <span class="g">alt</span>- Attribut
+              enthalten, das den Bildinhalt beschreibt - wichtig für
+              Screenreader und bei Ladeproblemen.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Zusätzlicher Tipp: Inline vs. Block-Elemente</h2>
+          <div class="zweispaltig">
+            <p>
+              Bilder sind standardmässig <strong>inline-Elemente</strong>, daher
+              funktionieren manche Layout-Eigenschaften (wie
+              <span class="g">margin: auto</span>) nur, wenn das Bild mit
+              <span class="g">display: block</span> behandelt wird.
+            </p>
+          </div>
         </section>
       </main>
     </div>
-    <footer></footer>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
   </body>
 </html>
