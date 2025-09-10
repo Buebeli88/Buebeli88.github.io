@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rock Paper Scissors</title>
-</head>
-<body>
-  <h1>Rock Paper Scissors Game</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="RockPaperScissors.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../../index.html">
+          <img
+            src="../../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../../../html/html/liste.html" class="liste"
+          >Index</a
+        >
+        <a class="header" href="../jsübungen.html">Übungen</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Übung: Rock Paper Scissors</h1>
 
-  <button onclick="playGame('rock')">Rock</button>
-  <button onclick="playGame('paper')">Paper</button>
-  <button onclick="playGame('scissors')">Scissors</button>
-  <button onclick="playGame('bomb')">Bomb (Cheat)</button>
+        <div class="choices">
+          <img src="../../../images/rock.jpg" alt="Rock" onclick="playGame('rock')" />
+          <img src="../../../images/paper.jpg" alt="Paper" onclick="playGame('paper')" />
+          <img
+            src="../../../images/scissor.png"
+            alt="Scissors"
+            onclick="playGame('scissors')"
+          />
+          <img src="../../../images/bomb.png" alt="Bomb" onclick="playGame('bomb')" />
+        </div>
 
-  <div id="result" style="margin-top:20px;"></div>
+        <div id="result" style="margin-top: 20px"></div>
 
-  <script src="RockPaperScissors.js"></script>
-</body>
+        <div id="game-outcome-image" style="margin-top: 20px;"></div>
+
+        <script src="RockPaperScissors.js"></script>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+  </body>
 </html>

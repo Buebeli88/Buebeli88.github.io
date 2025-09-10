@@ -59,16 +59,26 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 };
 
-  const playGame = (userInput) => {
-    const userChoice = getUserChoice(userInput);
-    const computerChoice = getComputerChoice();
+const playGame = (userInput) => {
+  const userChoice = getUserChoice(userInput);
+  const computerChoice = getComputerChoice();
+  const resultText = determineWinner(userChoice, computerChoice);
 
-    const resultMessage = `
+  const resultMessage = `
     <p>You chose: <strong>${userChoice}</strong></p>
     <p>Computer chose: <strong>${computerChoice}</strong></p>
-    <p><strong>${determineWinner(userChoice, computerChoice)}</strong></p>
+    <p><strong>${resultText}</strong></p>
   `;
 
-    document.getElementById("result").innerHTML = resultMessage;
-  };
+  document.getElementById("result").innerHTML = resultMessage;
 
+  const outcomeImageDiv = document.getElementById("game-outcome-image");
+
+  if (resultText.includes("You win")) {
+    outcomeImageDiv.innerHTML = `<img src="win.jpg" alt="You Win!" style="width: 200px;" />`;
+  } else if (resultText.includes("Computer wins")) {
+    outcomeImageDiv.innerHTML = `<img src="lose.jpg" alt="You Lose!" style="width: 200px;" />`;
+  } else {
+    outcomeImageDiv.innerHTML = ""; // Kein Bild bei Unentschieden
+  }
+};
