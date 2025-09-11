@@ -1,61 +1,167 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sleep Debt Calculator</title>
-</head>
-<body>
-  <h1>Sleep Debt Calculator</h1>
-  <button onclick="calculateSleepDebt()">Check My Sleep Debt</button>
-  <p id="result"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sleep Debt Calculator</title>
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="sleepdebtcalculator.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <a class="header" href="../../../../index.html">
+          <img
+            src="../../../images/justlogo/Just IT-horizontal.png"
+            alt="Just IT Logo"
+            width="250"
+            height="85"
+            class="logo"
+        /></a>
+        <a class="header" href="../../../html/html/liste.html" class="liste"
+          >Index</a
+        >
+        <a class="header" href="../jsübungen.html">Übungen</a>
+      </div>
+      <div class="right">
+        <a class="header" href="" class="navlink">Profile</a>
+        <a class="header" href="" class="navlink">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Sleep Debt Calculator</h1>
+        <div class="background">
+          <p>
+            <strong>Enter your Sleep Hours</strong>
+          </p>
+          <div class="calculator-wrapper">
+            <form id="sleep-form">
+              <label
+                ><span>Monday:</span>
+                <input type="number" id="monday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Tuesday:</span>
+                <input type="number" id="tuesday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Wednesday:</span>
+                <input type="number" id="wednesday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Thursday:</span>
+                <input type="number" id="thursday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Friday:</span>
+                <input type="number" id="friday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Saturday:</span>
+                <input type="number" id="saturday" min="0" max="24" value="8"
+              /></label>
+              <label
+                ><span>Sunday:</span>
+                <input type="number" id="sunday" min="0" max="24" value="8"
+              /></label>
+            </form>
 
-  <script>
-    function getSleepHours(day) {
-      day = day.toLowerCase();
-      switch (day) {
-        case 'monday': return 7;
-        case 'tuesday': return 6;
-        case 'wednesday': return 8;
-        case 'thursday': return 5;
-        case 'friday': return 7;
-        case 'saturday': return 9;
-        case 'sunday': return 8;
-        default: return 0;
-      }
-    }
+            <div class="result-block">
+              <button id="check-sleep">Check My Sleep Debt</button>
+              <p id="result"></p>
+            </div>
+          </div>
+        </div>
+        <p>
+          <strong>JavaScript</strong>
+        </p>
+        <pre><code class="language-js">// Funktion, die die Schlafstunden für einen bestimmten Tag aus einem Input-Feld ausliest
+function getSleepHours(day) {
+  // Hole das Input-Element anhand der Tages-ID (z.B. "monday", "tuesday" etc.)
+  const input = document.getElementById(day.toLowerCase());
+  
+  // Falls das Input-Feld nicht existiert, gib 0 zurück
+  if (!input) return 0;
+  
+  // Versuche den eingegebenen Wert in eine Zahl umzuwandeln
+  const val = parseFloat(input.value);
+  
+  // Falls der Wert keine gültige Zahl ist, gib 0 zurück, sonst die Zahl selbst
+  return isNaN(val) ? 0 : val;
+}
 
-    function getActualSleepHours() {
-      return getSleepHours('Monday') +
-             getSleepHours('Tuesday') +
-             getSleepHours('Wednesday') +
-             getSleepHours('Thursday') +
-             getSleepHours('Friday') +
-             getSleepHours('Saturday') +
-             getSleepHours('Sunday');
-    }
+// Funktion, die die gesamten Schlafstunden der Woche berechnet
+function getActualSleepHours() {
+  // Array mit allen Wochentagen
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  
+  // Variable zum Summieren der Schlafstunden
+  let total = 0;
+  
+  // Für jeden Tag die Schlafstunden auslesen und addieren
+  days.forEach(day => {
+    total += getSleepHours(day);
+  });
+  
+  // Gesamtsumme der Schlafstunden zurückgeben
+  return total;
+}
 
-    function getIdealSleepHours() {
-      const idealHours = 8; // You can change this to your preferred amount
-      return idealHours * 7;
-    }
+// Funktion, die die idealen Schlafstunden für die Woche berechnet
+function getIdealSleepHours() {
+  const idealHours = 8; // Ideale Schlafdauer pro Tag (kann angepasst werden)
+  return idealHours * 7; // Idealstunden für 7 Tage
+}
 
-    function calculateSleepDebt() {
-      const actualSleepHours = getActualSleepHours();
-      const idealSleepHours = getIdealSleepHours();
-      let message = '';
+// Funktion, die das Schlafdefizit oder -überschuss berechnet und eine Nachricht anzeigt
+function calculateSleepDebt() {
+  // Tatsächliche Schlafstunden der Woche
+  const actualSleepHours = getActualSleepHours();
+  
+  // Ideale Schlafstunden der Woche
+  const idealSleepHours = getIdealSleepHours();
+  
+  let message = "";
 
-      if (actualSleepHours === idealSleepHours) {
-        message = 'You got the perfect amount of sleep!';
-      } else if (actualSleepHours > idealSleepHours) {
-        const overSleep = actualSleepHours - idealSleepHours;
-        message = `You got more sleep than needed — ${overSleep} hour(s) over your ideal.`;
-      } else {
-        const underSleep = idealSleepHours - actualSleepHours;
-        message = `You should get some rest — you are ${underSleep} hour(s) under your ideal.`;
-      }
+  // Wenn die tatsächlichen Schlafstunden genau den idealen entsprechen
+  if (actualSleepHours === idealSleepHours) {
+    message = "You got the perfect amount of sleep!";
+  }
+  // Wenn mehr geschlafen wurde als ideal
+  else if (actualSleepHours > idealSleepHours) {
+    const overSleep = actualSleepHours - idealSleepHours;
+    message = `You got more sleep than needed — ${overSleep} hour(s) over your ideal.`;
+  }
+  // Wenn weniger geschlafen wurde als ideal
+  else {
+    const underSleep = idealSleepHours - actualSleepHours;
+    message = `You should get some rest — you are ${underSleep} hour(s) under your ideal.`;
+  }
 
-      // Show the message on the web page
-      document.getElementById('result').textContent = message;
-    }
-  </script>
-</body>
+  // Ergebnis-Nachricht im HTML-Element mit der ID "result" anzeigen
+  document.getElementById("result").textContent = message;
+}
+
+// Warte, bis das DOM komplett geladen ist, bevor Event-Listener hinzugefügt wird
+document.addEventListener("DOMContentLoaded", () => {
+  // Button zum Prüfen des Schlafes auswählen
+  const btn = document.getElementById("check-sleep");
+  
+  // Klick-Event auf den Button registrieren, das die Berechnung ausführt
+  btn.addEventListener("click", calculateSleepDebt);
+});</code></pre>
+      </main>
+    </div>
+    <footer>
+      <p class="pfooter">Creator Steven Justice</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

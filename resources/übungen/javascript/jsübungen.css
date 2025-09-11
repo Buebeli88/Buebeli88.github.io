@@ -48,3 +48,8 @@ table {
     justify-content: center;
     border-collapse: collapse;
 }
+
+li a {
+    text-decoration: none;
+    color: black;
+}
