@@ -37,22 +37,162 @@
     <div class="container">
       <main>
         <h1>Übung: Rock Paper Scissors</h1>
-
-        <div class="choices">
-          <img src="../../../images/rock.jpg" alt="Rock" onclick="playGame('rock')" />
-          <img src="../../../images/paper.jpg" alt="Paper" onclick="playGame('paper')" />
+        <br /><br />
+        <div class="ecken">
           <img
-            src="../../../images/scissor.png"
-            alt="Scissors"
-            onclick="playGame('scissors')"
+            src="../../../images/rockpaperscissor.jpg"
+            class="corner top-left"
+            alt="Corner Top Left"
           />
-          <img src="../../../images/bomb.png" alt="Bomb" onclick="playGame('bomb')" />
+          <img
+            src="../../../images/rockpaperscissor.jpg"
+            class="corner top-right"
+            alt="Corner Top Right"
+          />
+          <img
+            src="../../../images/rockpaperscissor.jpg"
+            class="corner bottom-left"
+            alt="Corner Bottom Left"
+          />
+          <img
+            src="../../../images/rockpaperscissor.jpg"
+            class="corner bottom-right"
+            alt="Corner Bottom Right"
+          />
+          <div class="choices">
+            <img
+              src="../../../images/rock.jpg"
+              alt="Rock"
+              onclick="playGame('rock')"
+            />
+            <img
+              src="../../../images/paper.jpg"
+              alt="Paper"
+              onclick="playGame('paper')"
+            />
+            <img
+              src="../../../images/scissor.png"
+              alt="Scissors"
+              onclick="playGame('scissors')"
+            />
+            <img
+              src="../../../images/bomb.png"
+              alt="Bomb"
+              onclick="playGame('bomb')"
+            />
+          </div>
+          <br /><br />
+          <div id="result" style="margin-top: 20px"></div>
+          <br /><br />
+          <div id="game-outcome-image" style="margin-top: 20px"></div>
         </div>
+        <br><br>
+        <p>
+          <strong>JavaScript</strong>
+        </p>
+<pre><code class="language-js">// Funktion zur Validierung und Umwandlung der Benutzerauswahl in Kleinbuchstaben
+const getUserChoice = (userInput) => {
+  const choice = userInput.toLowerCase(); // Umwandlung in Kleinbuchstaben zur Sicherheit
 
-        <div id="result" style="margin-top: 20px"></div>
+  // Überprüfung, ob die Eingabe gültig ist
+  if (
+    choice === "rock" ||
+    choice === "paper" ||
+    choice === "scissors" ||
+    choice === "bomb" // "bomb" ist ein geheimer Cheat-Code
+  ) {
+    return choice;
+  } else {
+    console.log("Error: Invalid choice."); // Fehlermeldung bei ungültiger Eingabe
+  }
+};
 
-        <div id="game-outcome-image" style="margin-top: 20px;"></div>
+// Funktion, die eine zufällige Wahl für den Computer generiert
+const getComputerChoice = () => {
+  const randomNumber = Math.floor(Math.random() * 3); // Zufallszahl zwischen 0 und 2
 
+  // Rückgabe der Wahl anhand der Zufallszahl
+  switch (randomNumber) {
+    case 0:
+      return "rock";
+      break;
+    case 1:
+      return "paper";
+      break;
+    case 2:
+      return "scissors";
+      break;
+  }
+};
+
+// Funktion zur Bestimmung des Gewinners basierend auf den Regeln
+const determineWinner = (userChoice, computerChoice) => {
+  // Sonderfall: Cheat-Code "bomb"
+  if (userChoice === "bomb") {
+    return "BOOM! You used the secret cheat code. You win!";
+  }
+
+  // Wenn beide dieselbe Wahl getroffen haben, ist es ein Unentschieden
+  if (userChoice === computerChoice) {
+    return "It's a tie!";
+  }
+
+  // Spielregeln: Wer gewinnt gegen wen?
+  if (userChoice === "rock") {
+    if (computerChoice === "paper") {
+      return "Computer wins! Paper covers rock.";
+    } else {
+      return "You win! Rock smashes scissors.";
+    }
+  }
+
+  if (userChoice === "paper") {
+    if (computerChoice === "scissors") {
+      return "Computer wins! Scissors cut paper.";
+    } else {
+      return "You win! Paper covers rock.";
+    }
+  }
+
+  if (userChoice === "scissors") {
+    if (computerChoice === "rock") {
+      return "Computer wins! Rock smashes scissors.";
+    } else {
+      return "You win! Scissors cut paper.";
+    }
+  }
+};
+
+// Hauptfunktion, die das Spiel startet
+const playGame = (userInput) => {
+  const userChoice = getUserChoice(userInput);           // Benutzerauswahl
+  const computerChoice = getComputerChoice();            // Computerauswahl
+  const resultText = determineWinner(userChoice, computerChoice); // Ergebnis
+
+  // HTML-Ausgabe für das Spielergebnis
+  const resultMessage = `
+    <p>You chose: <strong>${userChoice}</strong></p>
+    <p>Computer chose: <strong>${computerChoice}</strong></p>
+    <p><strong>${resultText}</strong></p>
+  `;
+
+  // Setzt das Spielergebnis in das HTML-Dokument ein
+  document.getElementById("result").innerHTML = resultMessage;
+
+  // Anzeige eines Bildes je nach Ausgang des Spiels
+  const outcomeImageDiv = document.getElementById("game-outcome-image");
+
+  if (resultText.includes("You win")) {
+    // Bei Spielgewinn des Spielers: Gewinnbild anzeigen
+    outcomeImageDiv.innerHTML = `<img src="win.jpg" alt="You Win!" style="width: 200px;" />`;
+  } else if (resultText.includes("Computer wins")) {
+    // Bei Niederlage: Verlustbild anzeigen
+    outcomeImageDiv.innerHTML = `<img src="lose.jpg" alt="You Lose!" style="width: 200px;" />`;
+  } else {
+    // Bei Unentschieden kein Bild anzeigen
+    outcomeImageDiv.innerHTML = "";
+  }
+};</code></pre>
         <script src="RockPaperScissors.js"></script>
       </main>
     </div>

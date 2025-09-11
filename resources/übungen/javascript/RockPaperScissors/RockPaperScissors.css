@@ -35,7 +35,6 @@ li {
     color: black;
 }
 
-
 th,
 td {
     border: 1px solid black;
@@ -59,4 +58,51 @@ table {
 
 .choices img:hover {
   transform: scale(1.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+#result {
+    text-align: center;
+}
+
+#game-outcome-image {
+    text-align: center;
+}
+
+.ecken {
+  position: relative; /* This allows absolute children to position relative to this */
+  padding: 40px;
+  height: 600px;
+}
+
+.corner {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
 }
