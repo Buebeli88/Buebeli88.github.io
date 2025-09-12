@@ -11,7 +11,7 @@ function themenSuche() {
     const listItems = container.getElementsByTagName("li");
 
     const alleDdmenus = [];
-    for (let i = 1; i <= 31; i++) {
+    for (let i = 1; i <= 99; i++) {
         const menu = document.getElementById("ddmenu" + i);
         if (menu) alleDdmenus.push(menu);
     }
